@@ -1,13 +1,32 @@
 import React from 'react'
 import * as THREE from 'three';
+import {useThree, useFrame} from 'react-three-fiber'
 
+const Ceiling = () => {
+  return (
+    <mesh position={[0,9.9,0]}>
+      <cylinderBufferGeometry
+        attach="geometry"
+        args={[7,21.18301,8,64,1,true]}
+      />
+      <meshStandardMaterial 
+        attach="material" 
+        color="#c40b00" 
+        emissive="0x6b4600" 
+        roughness="0.6" 
+        metalness="0.4"
+        side={THREE.DoubleSide} 
+      />
+    </mesh>
+  )
+}
 
-function GroundPlane(props) {
+const GroundPlane = (props) => {
     return (
       <mesh  
         receiveShadow  
         rotation={[4.7, 0, 0]} 
-        position={[0, -2.0, 5]}>
+        position={[0, -2.0, 0]}>
           <planeBufferGeometry 
             attach="geometry" 
             args={[40, 40 ]} 
@@ -26,9 +45,10 @@ function GroundPlane(props) {
   }
 
 
-function FloorMolding () {
+const Backwall = (props) => {
+
   return (
-    <mesh position={[0,1.418,5]}>
+    <mesh position={[0,1.418,0]}>
       <cylinderBufferGeometry
         attach="geometry"
         args={[21.183,20,9,64,1,true,3.60,5.38]}
@@ -42,15 +62,14 @@ function FloorMolding () {
           reflectivity="1"
           clearcoat="1"
           side={THREE.DoubleSide}
-          // envMap={props.cubeCam.current.renderTarget}
         />
     </mesh>
   )
 }
 
-function FloorRiseMolding () {
+const FloorMoldingBevel = () => {
   return (
-    <mesh position={[0,0.1,5]}>
+    <mesh position={[0,0.1,0]}>
       <cylinderBufferGeometry
         attach="geometry"
         args={[21,6.94,1.5,64,1,true,3.606,5.355]}
@@ -67,9 +86,9 @@ function FloorRiseMolding () {
   )
 }
 
-function FloorInnerMolding () {
+const FloorMoldingRise = () => {
   return (
-    <mesh position={[0,-1.3,5]}>
+    <mesh position={[0,-1.3,0]}>
       <cylinderBufferGeometry
         attach="geometry"
         args={[6.94,6.92,1.3,64,1,true,3.606,2]}
@@ -86,35 +105,16 @@ function FloorInnerMolding () {
   )
 }
 
-function CeilingMolding () {
-  return (
-    <mesh position={[0,9.9,5]}>
-      <cylinderBufferGeometry
-        attach="geometry"
-        args={[7,21.18301,8,64,1,true]}
-      />
-      <meshStandardMaterial 
-        attach="material" 
-        color="#c40b00" 
-        emissive="0x6b4600" 
-        roughness="0.6" 
-        metalness="0.4"
-        side={THREE.DoubleSide} 
-      />
-    </mesh>
-  )
-}
 
 
-export default function Structure() {
-
+export default function Structure(props) {
   return (
     <group>
       <GroundPlane />
-      <FloorMolding />
-      <FloorRiseMolding />
-      <FloorInnerMolding />
-      <CeilingMolding />
+      <Backwall />
+      <FloorMoldingBevel />
+      <FloorMoldingRise />
+      <Ceiling />
     </group>
   )
 }

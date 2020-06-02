@@ -8,22 +8,24 @@ export default function Model(props) {
   const { nodes, materials } = useLoader(GLTFLoader, '3d/blueMountains_v2.gltf', draco('/draco-gltf/'))
   const [ref, mountainModel] = useResource()
   
-  // const {renderer, scene} = useThree()
+
     // console.log(mountainModel)
-    // console.log( props.cubeCam.current)
-    // useFrame(state => {
-    //   mountainModel.position.z = -6 + Math.sin(state.clock.getElapsedTime() * 1) * 2
+    // console.log( props.cubeCamRef.current)
+
+    // const {renderer, scene} = useThree()
+
+    // useFrame( () => {
+    //   props.cubeCamRef.current.update(renderer, scene);
     // })
 
 
   return (
     <group 
-    {...props} 
-    // onClick={() => props.lightColorHandler()}
-    dispose={null}
+      {...props} 
+      dispose={null}
     >
       <mesh  
-    position={[0,0,-2.2]}
+          position={[0,0,-7.2]}
           geometry={nodes.mesh_0.geometry} 
           ref={ref} 
       >
@@ -33,10 +35,10 @@ export default function Model(props) {
             emissive="#000000" 
             roughness="0.35" 
             metalness="0.4"
-            reflectivity="3"
+            reflectivity="1"
             clearcoat="1"
             side={THREE.DoubleSide}
-            // envMap={props.cubeCam.current.renderTarget}
+            envMap={props.cubeCamRef.current.renderTarget}
           />
       </mesh>
     </group>
