@@ -1,0 +1,63 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+body .App {
+  height: 100%;
+  width: 100%;
+  background: #bebebe;
+  text-align: center;
+}
+
+body .App .header {
+  position: absolute;
+  z-index: 1;
+  height: 20vh;
+  width: 100%;
+  color: white;
+}
+
+body .App .state-display {
+  position: fixed;
+  z-index: 2;
+  height: 10%;
+  width: 25%;
+  background: rgba(0, 0, 0, 0.363);
+  top: 0;
+  left: 75%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  justify-items: start;
+  color: white;
+}
+
+body .App .state-display #mainLightColor {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  padding: 0;
+  margin: 0;
+}
+
+body .App .state-display #cameraPos {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  padding: 0;
+  margin: 0;
+}
+
+body .App .state-display #cameraPos-button {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  padding: 0;
+  margin: 0;
+}
+
+body .App canvas {
+  height: 100vh;
+  width: 100vw;
+}
+/*# sourceMappingURL=App.css.map */
