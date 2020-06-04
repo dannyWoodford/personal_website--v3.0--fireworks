@@ -61,9 +61,9 @@ export default function Model({ cubeCam, ...props }) {
   const { nodes } = useLoader(GLTFLoader, "3d/blueMountains_v2.gltf", draco("/draco-gltf/"))
   return (
     <group {...props} dispose={null}>
-      <cubeCamera args={[0.1, 50, 512]} ref={ref} position={[0, 0, -2.2]} />
+      <cubeCamera args={[0.1, 50, 512]} ref={ref} position={[0, 0, 17.2]} />
       {ref.current && (
-        <mesh position={[0, 0, -7.2]} geometry={nodes.mesh_0.geometry}>
+        <mesh position={[0, 0, 17.2]} geometry={nodes.mesh_0.geometry}>
           <meshPhysicalMaterial
             attach="material"
             color="#b76e79"

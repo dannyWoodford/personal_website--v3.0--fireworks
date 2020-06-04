@@ -121,8 +121,9 @@ function BackDrop() {
         attach="material"
         color="#ffffff"
         emissive="#000000"
-        roughness="0.4"
+        roughness="0.6"
         metalness="0.2"
+        side={THREE.DoubleSide} 
       />
     </mesh>
   );
@@ -130,15 +131,15 @@ function BackDrop() {
 
 function GroundPlane() {
   return (
-    <mesh receiveShadow rotation={[4.8, 0, 0]} position={[0, -4, 0]}>
+    <mesh receiveShadow rotation={[4.8, 0, 0]} position={[0, -3.257, 0]}>
       <planeBufferGeometry attach="geometry" args={[100, 50]} />
       <meshStandardMaterial
         attach="material"
         color="#ffffff"
         emissive="#000000"
-        roughness="0.4"
-        metalness="0.2"
-        
+        roughness="0.6"
+        metalness="0.4"
+        side={THREE.DoubleSide} 
       />
     </mesh>
   );
