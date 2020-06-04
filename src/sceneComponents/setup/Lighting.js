@@ -1,53 +1,5 @@
 
-import React from 'react'
-// import * as THREE from 'three';
-// import {useResource, useThree} from 'react-three-fiber'
-
-
-export default function Lighting(props) {
-
-    function MainPointLight({ brightness, color }) {
-      // const [ref, mainLightRef] = useResource();
-        return (
-          <pointLight
-            // ref={ref}
-            color={color}
-            intensity={brightness}
-            position={[-16, 10, 5]}
-            castShadow
-            {...props}
-          >
-              {/* {mainLightRef && <pointLightHelper args={[mainLightRef]} />} */}
-          </pointLight>
-        );
-      }
-    
-    function SecondaryPointLight({ brightness, color }) {
-        return (
-          <pointLight
-            color={color}
-            intensity={brightness}
-            position={[16, -15, 20]}
-            castShadow
-          />
-        );
-      }
-      
-
-    return (
-        <group>
-            <MainPointLight brightness={1.3} color={props.mainLightColor} />
-            <SecondaryPointLight brightness={.4} color={"#ff0e00"} />
-        </group>
-    )
-}
-
-
-
-
-
-
-// import React, {useMemo} from 'react'
+import React, {useRef} from 'react'
 // import * as THREE from 'three';
 // import {useResource, useThree} from 'react-three-fiber'
 
@@ -55,17 +7,17 @@ export default function Lighting(props) {
 // export default function Lighting(props) {
 
 //     function MainPointLight({ brightness, color }) {
-//       const [ref, mainLightRef] = useResource();
+//       // const [ref, mainLightRef] = useResource();
 //         return (
 //           <pointLight
-//             ref={ref}
+//             // ref={ref}
 //             color={color}
 //             intensity={brightness}
-//             position={[-14, 14, 9]}
+//             position={[-16, 10, 5]}
 //             castShadow
 //             {...props}
 //           >
-//               {mainLightRef && <pointLightHelper args={[mainLightRef]} />}
+//               {/* {mainLightRef && <pointLightHelper args={[mainLightRef]} />} */}
 //           </pointLight>
 //         );
 //       }
@@ -75,38 +27,46 @@ export default function Lighting(props) {
 //           <pointLight
 //             color={color}
 //             intensity={brightness}
-//             position={[10,-8,15]}
+//             position={[16, -5, 20]}
 //             castShadow
 //           />
 //         );
 //       }
       
 
-//     function SunLight({ brightness, color }) {
-//       const light = useMemo(() => new THREE.SpotLight(color, brightness), [])
-
-//       return (
-//         <>
-//           <primitive 
-//             object={light}
-//             color={color}
-//             intensity={brightness}
-//             position={[-4, 15, 6]}
-//             angle={0.6}
-//             penumbra={.9} 
-//             castShadow={true}
-//           />
-//           <primitive object={light.target} position={[-9, 2.7, -7]}  />
-//         </>
-//       )
-//     }
-
 //     return (
 //         <group>
-//             <MainPointLight brightness={1.1} color={props.mainLightColor} />
-//             {/* <SunLight brightness={0.5} color={"rgb(226, 219, 115)"} /> */}
-//             <SecondaryPointLight brightness={.1} color={"#960303"} />
-//             <ambientLight color={"white"} intensity=".2" />
+//             <MainPointLight brightness={1.0} color={props.mainLightColor} />
+//             <SecondaryPointLight brightness={.2} color={"#ff0e00"} />
 //         </group>
 //     )
 // }
+
+
+import { useFrame } from "react-three-fiber"
+
+export default function Lighting(props) {
+  // setMainLightColorState(`rgb(${Math.round((e.clientY/e.target.offsetWidth)* Math.PI * 90 )},${Math.round((e.clientY/e.target.offsetHeight)* Math.PI * 30 )},${Math.round((e.clientX/e.target.offsetWidth)* Math.PI * 90)})`);
+  const ref = useRef()
+  useFrame(state => {
+    const x = (1 + state.mouse.x) / 2
+    const y = (1 + state.mouse.y) / 2
+    const color = `rgb(${Math.ceil(y * 255)},${Math.ceil(y * 155)},${Math.ceil(x * 255)})`
+    ref.current.color.set(color)
+  })
+  return (
+    <>
+      <pointLight 
+        ref={ref} 
+        intensity={0.8} 
+        position={[-16, 10, 5]} 
+        castShadow
+         />
+      <pointLight 
+        intensity={0.1} 
+        color="#ff0e00" 
+        position={[8, 4, 20]} 
+        castShadow />
+    </>
+  )
+}
