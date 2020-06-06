@@ -1,67 +1,29 @@
-import React, {Suspense, useRef, useState} from 'react'
-// import * as THREE from 'three'
+import React, {Suspense} from 'react'
 import { OrbitControls, Stats } from 'drei'
 import {Canvas} from 'react-three-fiber'
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-
 import Loading from "../sceneComponents/setup/Loading.js"
-import Nav from "../containers/Nav.js"
+import NavRep from "../containers/NavRep.js"
 import Statue from "../sceneComponents/Statue.js"
 import Lighting from "../sceneComponents/setup/Lighting.js"
 import Structure from "../sceneComponents/Structure.js"
 
 // extend({OrbitControls})
 
-export default function Scene(props) {
+export default function Scene({ active, setActive, ...props }) {
   
-  // const cam = useRef()
-  
-  // function Camera () {  
-    
-    //   console.log(cam.current)
-    
-    //   // useFrame(state => {
-      //   //   cam.current.position.z = 3 + Math.sin(state.clock.getElapsedTime() * 1.3) * 2
-  //   // })
-  
-  //   return(
-    //       <perspectiveCamera 
-    //         makeDefault 
-  //         ref={cam}   
-  //         fov={48}
-  //         position={[0,0,20]}
-  //       />
-  //     ) 
-  //   }
-  
-  
-  
-  
-  
-  // const loadingComplete = () => {
-    //   let loadingAnimation = document.querySelector(".full-screen-loading-background")
-    //   loadingAnimation.classList.remove('hide-loading-page')
-    // }
-    
-    
-    // softShadows()
-    
+
     return (
-    <div>
-      
       <div>
         <Canvas  
-          camera={{fov:48, position:[0,0,5]}}
-          // shadowMap
-          // shadowMap-type={ THREE.BasicShadowMap}
+          camera={{fov:55}}
           // gl={{ alpha: true, antialias: true, logarithmicDepthBuffer: true }}  
         >
           <OrbitControls />
-          {/* <Camera /> */}
           <Lighting />
 
-          <Nav />
+          <NavRep active={props.active} setActive={props.set}/>
           <Structure />
 
           <Suspense fallback={<Loading />}>
@@ -70,7 +32,7 @@ export default function Scene(props) {
 
           <Stats />
         </Canvas>
+
       </div>
-    </div>
   )
 }

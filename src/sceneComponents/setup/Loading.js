@@ -1,5 +1,11 @@
 import React from 'react'
 
+
+// const loadingComplete = () => {
+    //   let loadingAnimation = document.querySelector(".full-screen-loading-background")
+    //   loadingAnimation.classList.remove('hide-loading-page')
+    // }
+    
 // export default function Loading() {
 //     return (
 //       <div class="full-screen-loading-background">

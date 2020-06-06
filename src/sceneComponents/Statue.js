@@ -8,7 +8,7 @@ title: Rhetorician
 
 import * as THREE from 'three'
 import React, { useRef } from 'react'
-import { useLoader, useFrame, useResource, useThree } from 'react-three-fiber'
+import { useLoader, useFrame, useResource, useThree, useUpdate } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { draco } from 'drei'
 
@@ -27,7 +27,7 @@ export default function Statue(...props) {
   // const actions = useRef()
   // const [mixer] = useState(() => new THREE.AnimationMixer())
   // useFrame((state, delta) => mixer.update(delta))
-  useFrame(state => {
+  useUpdate(state => {
     crownRingTop.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 8) * Math.PI
     crownRingMiddle.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 2) * Math.PI
     crownRingBottom.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 4) * Math.PI
@@ -42,19 +42,19 @@ export default function Statue(...props) {
 // console.log(nodes)
 
   return (
-    <group ref={group} {...props} dispose={null} position={[3,-3,-3]}>
+    <group ref={group} {...props} dispose={null} scale={[1.4,1.4,1.4]} rotation={[0,-.4,0]} position={[5,-3.3,-5]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[-0.27, 0.12, 1.33]}>
-        <cubeCamera args={[0.1, 50, 512]} ref={ref} position={[2,-3,-3]} />
+        <cubeCamera args={[0.1, 5000, 512]} ref={ref} position={[-0.27, 0.12, 1.33]} />
       {ref.current && (
         <mesh  receiveShadow castShadow geometry={nodes.mentor_roman_retopo_0.geometry}  >
             <meshPhysicalMaterial
               attach="material"
-              color="#b76e79"
+              color="#6e88b7"
               emissive="#000000"
-              roughness="0.5"
+              roughness="0.1"
               metalness="0.2"
-              reflectivity="3"
+              reflectivity="1.5"
               clearcoat="1"
               side={THREE.DoubleSide}
               envMap={ref.current.renderTarget.texture}

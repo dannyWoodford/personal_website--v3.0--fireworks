@@ -1,50 +1,112 @@
 import React from 'react'
 import * as THREE from 'three';
-import {useThree, useFrame} from 'react-three-fiber'
 
-// const Ceiling = () => {
-//   return (
-//     <mesh position={[0,9.9,0]}>
-//       <cylinderBufferGeometry
-//         attach="geometry"
-//         args={[7,21.18301,8,64,64,true]}
+
+function GroundPlane() {
+  return (
+    <mesh receiveShadow rotation={[4.7, 0, 0]} position={[0, -3.257, 0]}>
+      <planeBufferGeometry attach="geometry" args={[80, 80]} />
+      <meshStandardMaterial
+        attach="material"
+        color="#ffffff"
+        emissive="#000000"
+        roughness="0.7"
+        metalness="0.3"
+        side={THREE.FrontSide} 
+      />
+    </mesh>
+  );
+}
+
+
+const Dome = (props) => {
+
+  return (
+    <mesh position={[0,1.418, 0]}>
+      <sphereBufferGeometry
+        attach="geometry"
+        args={[40,32,32,0,6.3,0,1.7]}
+      />
+        <meshStandardMaterial
+        attach="material"
+        color="#ffffff"
+        emissive="#000000"
+        roughness="0.8"
+        metalness="0.4"
+        side={THREE.BackSide} 
+      />
+    </mesh>
+  )
+}
+
+
+
+export default function Structure(props) {
+  return (
+    <group>
+      <Dome />
+      <GroundPlane  />
+    </group>
+  )
+}
+
+
+
+// function BackDrop() {
+//   const backwall = new THREE.Shape();
+//   const startX = 0
+//   const startY = 0
+//   const height = 20
+//   const width = 100
+//           backwall.moveTo(startX, startY) //start bottom-left
+//           backwall.lineTo(startX, startY+ height) //top-left
+//           backwall.lineTo(startX+ width, startY+ height)//top-right
+//           backwall.lineTo(startX+ width, startY)//bottom-right
+//           backwall.lineTo(startX, startY) //end bottom-left
+      
+//   const holePath = new THREE.Path();
+//   const holeStartX = 39.5
+//   const holeStarY = 5.7
+//   const holeHeight = 4.1
+//   const holeWidth = 13
+ 
+//         // holePath.moveTo(holeStartX, holeStarY) //start bottom-left
+//         // holePath.lineTo(holeStartX, holeStarY+ holeHeight) //top-left
+//         // holePath.lineTo(holeStartX+ holeWidth, holeStarY+ holeHeight)//top-right
+//         // holePath.lineTo(holeStartX+ holeWidth, holeStarY)//bottom-right
+//         // holePath.lineTo(holeStartX, holeStarY) //end bottom-left
+//         holePath.moveTo(holeStartX, holeStarY) //start bottom-left
+//         holePath.lineTo(holeStartX, holeStarY+ holeHeight) //top-left
+//         holePath.lineTo(holeStartX+ holeWidth, holeStarY+ holeHeight)//top-right
+//         holePath.lineTo(holeStartX+ holeWidth, holeStarY)//bottom-right
+//         holePath.lineTo(holeStartX, holeStarY) //end bottom-left
+        
+//         // backwall.holes.push(holePath)
+//           // console.dir(backwall)
+
+    
+//       return (
+//         <mesh receiveShadow 
+//         // position={[0, 0, -10]}
+//         position={[-50, -5, -10]}
+//         >
+//           <shapeBufferGeometry 
+//             attach="geometry" 
+//             args={backwall}
+//             // holes={holePath}
+//           />
+//       <meshStandardMaterial
+//         attach="material"
+//         color="#ffffff"
+//         emissive="#000000"
+//         roughness="0.6"
+//         metalness="0.2"
+//         side={THREE.DoubleSide} 
 //       />
-//       <meshPhysicalMaterial
-//           attach="material"
-//           color="#E3AEB1" 
-//           emissive="#000000"  
-//           roughness={0.3} 
-//           metalness={0.4}
-//           reflectivity={1}
-//           clearcoat={1}
-//           side={THREE.BackSide}
-//         />
 //     </mesh>
-//   )
+//   );
 // }
 
-
-// const Backwall = (props) => {
-
-//   return (
-//     <mesh position={[0,1.418,0]}>
-//       <cylinderBufferGeometry
-//         attach="geometry"
-//         args={[21.183,20,9,64,64,true,3.60,5.38]}
-//       />
-//         <meshPhysicalMaterial
-//           attach="material"
-//           color="#ffffff" 
-//           emissive="#000000"  
-//           roughness={0.3} 
-//           metalness={0.4}
-//           reflectivity={1}
-//           clearcoat={1}
-//           side={THREE.BackSide}
-//         />
-//     </mesh>
-//   )
-// }
 
 // const FloorMoldingBevel = () => {
 //   return (
@@ -110,100 +172,3 @@ import {useThree, useFrame} from 'react-three-fiber'
 //   );
 // }
 
-
-
-function BackDrop() {
-  return (
-    <mesh receiveShadow position={[0, 15, -10]}>
-      
-      <planeBufferGeometry attach="geometry" args={[100, 50]} />
-      <meshStandardMaterial
-        attach="material"
-        color="#ffffff"
-        emissive="#000000"
-        roughness="0.6"
-        metalness="0.2"
-        side={THREE.DoubleSide} 
-      />
-    </mesh>
-  );
-}
-
-function GroundPlane() {
-  return (
-    <mesh receiveShadow rotation={[4.8, 0, 0]} position={[0, -3.257, 0]}>
-      <planeBufferGeometry attach="geometry" args={[100, 50]} />
-      <meshStandardMaterial
-        attach="material"
-        color="#ffffff"
-        emissive="#000000"
-        roughness="0.6"
-        metalness="0.4"
-        side={THREE.DoubleSide} 
-      />
-    </mesh>
-  );
-}
-
-
-
-
-
-
-export default function Structure(props) {
-  return (
-    <group>
-      {/* <Ceiling /> */}
-      {/* <Backwall />
-      <FloorMoldingBevel />
-      <FloorMoldingRise /> */}
-      <BackDrop     />
-      <GroundPlane  />
-    </group>
-  )
-}
-
-
-
-
-
-// export function Backwall() {
-
-//     const holeShape = new THREE.Path();
-//     const startwidth = -4.3
-//     const startHeight = -2.65
-//     const holeHeight = 5.28
-//     const holeWidth = 8.45
-//       holeShape.moveTo(startwidth, startHeight);
-//       holeShape.lineTo(startwidth + holeWidth, startHeight);
-//       holeShape.lineTo(startwidth + holeWidth, startHeight + holeHeight);
-//       holeShape.lineTo(startwidth, startHeight + holeHeight);
-  
-  
-//     const height = 15
-//     const width = 5
-//     const shape = new THREE.Shape();
-//       shape.moveTo(-15, -5);
-//       shape.lineTo(-15 + width, -5);
-//       shape.lineTo(-15 + width, -5 + height);
-//       shape.lineTo(-15, -5 + height);
-//       shape.holes.push(holeShape)
-  
-//     return (
-//       <mesh receiveShadow position={[0, 0, -2.5]}>
-//         <shapeBufferGeometry 
-//           attach="geometry" 
-//           args={shape} 
-//         />
-//         <meshStandardMaterial 
-//           attach="material" 
-//           color="#ffffff" 
-//           emissive="#000000" 
-//           roughness="0.0" 
-//           metalness="0.7"
-//         />
-//       </mesh>
-//     )
-//   }
-  
-  
