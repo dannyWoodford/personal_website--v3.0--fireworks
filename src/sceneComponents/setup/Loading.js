@@ -1,10 +1,5 @@
 import React from 'react'
 
-
-// const loadingComplete = () => {
-    //   let loadingAnimation = document.querySelector(".full-screen-loading-background")
-    //   loadingAnimation.classList.remove('hide-loading-page')
-    // }
     
 // export default function Loading() {
 //     return (
@@ -17,6 +12,12 @@ import React from 'react'
 //     );
 // }
 export default function Loading() {
+
+  // const loadingComplete = () => {
+    //   let loadingAnimation = document.querySelector(".full-screen-loading-background")
+    //   loadingAnimation.classList.remove('hide-loading-page')
+    // }
+
     return (
         <mesh visible position={[0, 0, 0]} rotation={[0, 0, 0]}>
           <sphereGeometry attach="geometry" args={[1, 16, 16]} />

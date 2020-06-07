@@ -8,7 +8,7 @@ title: Rhetorician
 
 import * as THREE from 'three'
 import React, { useRef } from 'react'
-import { useLoader, useFrame, useResource, useThree, useUpdate } from 'react-three-fiber'
+import { useLoader, useFrame, useResource, useThree } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { draco } from 'drei'
 
@@ -27,7 +27,7 @@ export default function Statue(...props) {
   // const actions = useRef()
   // const [mixer] = useState(() => new THREE.AnimationMixer())
   // useFrame((state, delta) => mixer.update(delta))
-  useUpdate(state => {
+  useFrame(state => {
     crownRingTop.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 8) * Math.PI
     crownRingMiddle.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 2) * Math.PI
     crownRingBottom.current.rotation.z = Math.sin(state.clock.getElapsedTime() / 4) * Math.PI

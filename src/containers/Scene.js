@@ -8,31 +8,31 @@ import NavRep from "../containers/NavRep.js"
 import Statue from "../sceneComponents/Statue.js"
 import Lighting from "../sceneComponents/setup/Lighting.js"
 import Structure from "../sceneComponents/Structure.js"
+import Projects from "../containers/Projects.js"
 
 // extend({OrbitControls})
 
 export default function Scene({ active, setActive, ...props }) {
-  
 
     return (
-      <div>
-        <Canvas  
-          camera={{fov:55}}
-          // gl={{ alpha: true, antialias: true, logarithmicDepthBuffer: true }}  
-        >
-          <OrbitControls />
-          <Lighting />
 
-          <NavRep active={props.active} setActive={props.set}/>
-          <Structure />
+            <Canvas  
+              camera={{fov:55}}
+              // gl={{ alpha: true, antialias: true, logarithmicDepthBuffer: true }}  
+            >
+              <OrbitControls />
+              <Lighting />
 
-          <Suspense fallback={<Loading />}>
-            <Statue  />
-          </Suspense>
+              <NavRep active={props.active} setActive={props.set}/>
+              <Structure />
+              
+              <Suspense fallback={<Loading />}>
+                <Statue  />
+                <Projects />
+              </Suspense>
 
-          <Stats />
-        </Canvas>
-
-      </div>
+              <Stats />
+            </Canvas>
+       
   )
 }
