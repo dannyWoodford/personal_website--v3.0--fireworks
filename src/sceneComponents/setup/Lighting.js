@@ -15,8 +15,8 @@ export default function Lighting(props) {
     }
   }
   useFrame(state => {
-    const x = (1 + state.mouse.x) / 2 //2.7 
-    const y = (1 + state.mouse.y) / 2 //1
+    const x = (1 + state.mouse.x) / 2.7 //2.7 
+    const y = (1 + state.mouse.y) / 1 //1
     const color = `rgb(${setRange(Math.ceil(x * 255))},${setRange(Math.ceil(x * 155))},${setRange(Math.ceil(y * 255))})`
     ref.current.color.set(color)
   })
@@ -26,13 +26,19 @@ export default function Lighting(props) {
         ref={ref} 
         intensity={0.8} 
         position={[-16, 10, 5]} 
-        castShadow
-         />
+        
+        />
       <pointLight 
         intensity={0.1} 
         color="#ff0e00" 
         position={[8, 4, 20]} 
-        castShadow />
+        />
+
+      <spotLight 
+        position={[0, -4, -10]}
+        penumbra="1"
+        intensity=".5"
+      />
     </>
   )
 }

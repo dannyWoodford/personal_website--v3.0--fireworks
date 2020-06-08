@@ -3,15 +3,15 @@
   font-family: 'Raleway', sans-serif;
 }
 
-
-
-$red: #F37272;
+$red: rgba(251, 255, 241, 0);
 $brown: #584E4A;
 $whitey: #f0f0f0;
 
 $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
+$break-mobile: 450px;
+$break-tablet: 1100px;
 
 
 body {
@@ -19,7 +19,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Raleway', sans-serif;
-
+  
   .App {
     height: 100%;
     width: 100%;
@@ -28,6 +28,7 @@ body {
     .page {
       height: 100%;
       background-color: $brown;
+      
     }
     .content {
       // essential
@@ -37,14 +38,18 @@ body {
     }
     .content_inner {
       // essential
-      height: 50%; // compensate for higher .content
-      overflow-y: auto; // set expected overflow
+      height: 100vh; // compensate for higher .content
+      overflow-y: hidden; // set expected overflow
+      canvas {
+        height: 100%;
+        width: 100%;
+      }
       
     }
 
-    /* basically all styling from now on */
+
     .menu_toggle {
-      z-index: 900;
+      z-index: 1;
       position: fixed;
       top: 0;
       left: 0;
@@ -54,7 +59,8 @@ body {
       height: 80px;
       background-color: $red;
       border-bottom-right-radius: 100%;
-      
+      border-bottom: 10px solid #ffffff;;
+
       &:active {
         i {
           opacity: 0.8
@@ -68,8 +74,8 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -15px;
-        margin-left: -12px;
+        margin-top: -25px;
+        margin-left: -20px;
         transition: transform .7s $snap;
       }
       .menu_open {
@@ -82,43 +88,46 @@ body {
     }
     .menu_items {
       position: fixed;
-      bottom: 0;
-      left: 50px;
-      list-style-type: none;
+      bottom: 18vh;
       margin: 0;
       padding: 0;
-      
-      li {
-        height: 60px;
-        margin-bottom: 30px;
-        transform: translateX(-300px);
-        transition: transform .7s 0s $snap;
-        
-        &:nth-child(2){
-          margin-left: 40px;
-        }
-        &:nth-child(3){
-          margin-left: 80px;
-        }
-      }
-      a {
-        display: block;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: darken($whitey, 30%);
-        transition: color .2s;
-        
-        .icon {
-          position: relative;
-          display: inline-block;
-          margin-right: 25px;
-          color: $whitey;
 
-          &:after {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+      ul {
+        left: 20px;
+        list-style-type: none;
+        
+        li {
+          height: 60px;
+          margin-bottom: 60px;
+          transform: translateX(-300px);
+          transition: transform .7s 0s $snap;
+          
+          &:nth-child(2){
+            margin-left: 3vw;
+          }
+          &:nth-child(3){
+            margin-left: 5.9vw;
+            margin-bottom: 0px;
+          }
+        }
+        .menu-item {
+          display: block;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: darken($whitey, 30%);
+          transition: color .2s;
+          
+          .menu-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            color: $whitey;
+            
+            &:after {
+              position: absolute;
+              top: 50%;
+              left: 50%;
             content: '';
             display: block;
             width: 60px;
@@ -133,35 +142,103 @@ body {
         
         &:hover {
           color: $whitey;
-          .icon {
+          .menu-icon {
             &:after {
               border-color: $red;
             }
           }
         }
         &:active {
-          .icon {
+          .menu-icon {
             color: $red;
           }
         }
       }
     }
 
+    .contact-info {
+      position: fixed;
+      bottom: 15vh;
+      transition: transform .35s .45s $bounce;
+      transform: translateX(1500px);
+      transition: transform .7s 0s $snap;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      letter-spacing: 2px;
+      color: darken($whitey, 30%);
+
+        #name {
+          border-bottom: 6px solid white;
+          
+          p {
+            margin: 10px;
+            color: rgba(255, 255, 255, 0.637);
+            font-size: 4vw;
+          }
+        }
+        #occupation {
+        
+          p {
+            margin: 6px;
+            color: white;
+            font-size: 2.5vw;
+          }
+        }
+    }
+
+    .icon-container {
+      position: fixed;
+      left: 30px;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      color: darken($whitey, 30%);
+      
+      #linkedin-icon {
+        margin: 15px;
+      }
+
+      #linkedin-icon:hover {
+        filter: drop-shadow(0px 5px 10px white);
+      }
+
+      #github-icon {
+        margin: 15px;
+      }
+      #github-icon:hover {
+        filter: drop-shadow(0px 5px 10px white);
+      }
+
+      #mail-icon {
+        margin: 15px;
+        cursor: pointer;
+      }
+
+      #mail-icon:hover {
+        filter: drop-shadow(0px 5px 10px white);
+      }
+
+      #phone-icon {
+        margin: 15px;
+      }
+
+      #phone-icon:hover {
+        filter: drop-shadow(0px 5px 10px white);
+      }
+    }
+
+  
+  }
+
+
 
     /* Let's open up the menu */
     .shazam {
+
       .content {
         transform: rotate(-30deg);
       }
-      
-      // this will show hidden content overflow when rotated,
-      // but will result in a jump, if you've already scrolled down the content
-      // plus, you will lose your current reading position
-      // fixable with JS, not gonna bother
-      
-      /*.content_inner {
-        height: 100%;
-      }*/
       
       .menu_open {
         transform: rotate(-20deg);
@@ -183,7 +260,140 @@ body {
           }
         }
       }
+
+      .contact-info {
+        transform: translateX(750px);
+      }
     }
+
+
+
+
+@media screen and (max-width: $break-mobile) {
+  .menu_items {
+    bottom: 24vh;
+    font-size: xx-small;
+    
+    ul {
+      list-style-type: none;
+      padding: 6vw;
+      
+      li {
+        height: 60px;
+        margin-bottom: 30px;
+        transform: translateX(-300px);
+        transition: transform .7s 0s $snap;
+        
+        &:nth-child(2){
+          margin-left: 9vw;
+        }
+        &:nth-child(3){
+          margin-left: 18vw;
+        }
+      }
+      .menu-icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 18px;
+  
+        .menu-icon-sgv {
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+
+
+    .contact-info {
+      bottom: 10vh;
+
+        #name {
+          border-bottom: 2px solid white;
+          
+          p {
+            margin: 5px;
+            font-size: large;
+          }
+        }
+        #occupation {
+        
+          p {
+            margin: 3px;
+            font-size: medium;
+          }
+        }
+    }
+
+  }
+  .shazam {
+
+    .contact-info {
+      transform: translateX(20px);
+    }
+  }
+}
+
+@media screen and (min-width: $break-mobile) and (max-width: $break-tablet) {
+  .menu_items {
+    bottom: 37vh;
+    // font-size: xx-small;
+    
+    ul {
+      list-style-type: none;
+      padding: 6vw;
+      
+      li {
+        height: 60px;
+        margin-bottom: 30px;
+        transform: translateX(-300px);
+        transition: transform .7s 0s $snap;
+        
+        &:nth-child(2){
+          margin-left: 4vw;
+        }
+        &:nth-child(3){
+          margin-left: 8vw;
+        }
+      }
+      .menu-icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 18px;
+  
+        .menu-icon-sgv {
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+    .contact-info {
+      bottom: 10vh;
+
+        #name {
+          border-bottom: 4px solid white;
+          
+          p {
+            margin: 10px;
+            font-size: xx-large;
+          }
+        }
+        #occupation {
+        
+          p {
+            margin: 5px;
+            font-size: x-large;
+          }
+        }
+    }
+
+  }
+  .shazam {
+
+    .contact-info {
+      transform: translateX(30px);
+    }
+  }
+}
 
 
 
@@ -239,10 +449,13 @@ body {
     //   }
     // }
     
-    canvas {
-      height: 100vh;
-      width: 100vw;
-    }
+    // .canvas-container{
+    //   canvas {
+    //     height: 100vh;
+    //     width: 100vw;
+    //     position: absolute;
+    //   }
+    // }
 
   }
 }

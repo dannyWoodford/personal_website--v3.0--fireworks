@@ -45,24 +45,24 @@ export default function Statue(...props) {
     <group ref={group} {...props} dispose={null} scale={[1.4,1.4,1.4]} rotation={[0,-.4,0]} position={[5,-3.3,-5]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group position={[-0.27, 0.12, 1.33]}>
-        <cubeCamera args={[0.1, 5000, 512]} ref={ref} position={[-0.27, 0.12, 1.33]} />
+        <cubeCamera args={[0.1, 50, 512]} ref={ref} position={[-0.27, 0.12, 1.33]} />
       {ref.current && (
-        <mesh  receiveShadow castShadow geometry={nodes.mentor_roman_retopo_0.geometry}  >
+        <mesh   geometry={nodes.mentor_roman_retopo_0.geometry}  >
             <meshPhysicalMaterial
               attach="material"
-              color="#6e88b7"
+              color="#554A3C"
               emissive="#000000"
-              roughness="0.1"
+              roughness="0.4"
               metalness="0.2"
               reflectivity="1.5"
-              clearcoat="1"
+              // clearcoat="1"
               side={THREE.DoubleSide}
               envMap={ref.current.renderTarget.texture}
             />
           </mesh>
         )}
         </group>
-        <group position={[0.16, -0.17, 4.81]} rotation={[-0.1, 0.1, 0]} scale={[0.89, 0.89, 0.89]}>
+        <group position={[0.16, -0.17, 4.81]} rotation={[-0.1, 0.1, 0]} scale={[0.9, 0.9, 0.9]}>
           <mesh ref={crownRingTop} material={materials.Crown} geometry={nodes.nimbus002_0.geometry} />
           <mesh ref={crownRingMiddle} material={materials.Crown} geometry={nodes.nimbus001_0.geometry} />
           <mesh ref={crownRingBottom} material={materials.Crown} geometry={nodes.nimbus003_0.geometry} />

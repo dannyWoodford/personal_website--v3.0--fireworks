@@ -41,9 +41,55 @@ const Dome = (props) => {
 
 
 
+const DomeRing = () => {
+  return (
+    <mesh position={[0,16,0]}>
+      <cylinderBufferGeometry
+        attach="geometry"
+        args={[32,32,3,64,64,true]}
+      />
+        <meshStandardMaterial
+          // transparent
+          // opacity=".5"
+          attach="material"
+          color="#ffffff"
+          emissive="#000000"
+          roughness=".5"
+          metalness="0.6"
+          side={THREE.DoubleSide} 
+        />
+    </mesh>
+  )
+}
+
+const DomeTop = (props) => {
+
+  return (
+    <mesh position={[0,1.3, 0]}>
+      <sphereBufferGeometry
+        attach="geometry"
+        args={[40,32,32,0,6.3,0,0.4]}
+      />
+        <meshStandardMaterial
+        attach="material"
+        color="#ffffff"
+        emissive="#000000"
+        roughness="0.3"
+        metalness="0.8"
+        side={THREE.BackSide} 
+      />
+    </mesh>
+  )
+}
+
+
+
+
 export default function Structure(props) {
   return (
     <group>
+      <DomeTop />
+      <DomeRing />
       <Dome />
       <GroundPlane  />
     </group>

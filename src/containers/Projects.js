@@ -18,11 +18,11 @@ function useActive(width, height, initial, minFactor, maxFactor) {
 }
 
 
-function Image({ texture, width, height }) {
-    const [onPointerOver, x, y, factor] = useActive(width, height, true, 3.2, 1)
+function Image({ texture, width, height, position, rotation}) {
+    const [onPointerOver, x, y, factor] = useActive(width, height, true, 1, 1.2)
     return (
         <AnimatedPlane 
-                args={[1, .5, 32, 32]} rotation={[0,3.0,0]} position={[0,0,20]} scale-x={x} scale-y={y} onPointerOver={onPointerOver}>
+                args={[1, .5, 32, 32]} rotation={rotation} position={position}  scale-x={x} scale-y={y} onPointerOver={onPointerOver}>
             <AnimatedWobbleMaterial 
                 map={texture} 
                 factor={factor} 
@@ -40,11 +40,31 @@ function Image({ texture, width, height }) {
 
 
 export default function Projects() {
-    const texture = useLoader(TextureLoader, 'images/projects/Notflix-img.png')
-    const [width, height] = useAspect('cover', 4168, 4168)
+    const texture1 = useLoader(TextureLoader, 'images/projects/Notflix-img.png')
+    const texture2 = useLoader(TextureLoader, 'images/projects/storm.png')
+    const texture3 = useLoader(TextureLoader, 'images/projects/sunrise.png')
+    const texture4 = useLoader(TextureLoader, 'images/projects/ali.png')
+    const texture5 = useLoader(TextureLoader, 'images/projects/3d-spotify.png')
+    const texture6 = useLoader(TextureLoader, 'images/projects/indika.png')
+    const texture7 = useLoader(TextureLoader, 'images/projects/Labyrinth.png')
+    const texture8 = useLoader(TextureLoader, 'images/projects/responsive_text.png')
+    const texture9 = useLoader(TextureLoader, 'images/projects/ZSL.png')
+    
+    const [width, height] = useAspect('cover', 2168, 2168)
     return (
-      <>
-        <Image texture={texture} width={width} height={height} />
-      </>
+      <group>
+        <Image texture={texture1} width={width} height={height} rotation={[0,3.9,0]} position={[10,0,10]} />
+        <Image texture={texture2} width={width} height={height} rotation={[0,3.3,0]} position={[2,0,14]} />
+        <Image texture={texture3} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,0,13]} />
+        
+        <Image texture={texture4} width={width} height={height} rotation={[0,3.9,0]} position={[10,5,10]} />
+        <Image texture={texture5} width={width} height={height} rotation={[0,3.3,0]} position={[2,5,14]} />
+        <Image texture={texture6} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,5,13]} />
+        
+        <Image texture={texture7} width={width} height={height} rotation={[0,3.9,0]} position={[10,10,10]} />
+        <Image texture={texture8} width={width} height={height} rotation={[0,3.3,0]} position={[2,10,14]} />
+        <Image texture={texture9} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,10,13]} />
+        
+4    </group>
     )
 }
