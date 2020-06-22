@@ -36,8 +36,8 @@ export default function Lighting(props) {
 
       <spotLight 
         position={[0, -4, -10]}
-        penumbra="1"
-        intensity=".5"
+        penumbra={1}
+        intensity={0.5}
       />
     </>
   )

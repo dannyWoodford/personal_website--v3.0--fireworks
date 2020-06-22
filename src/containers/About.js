@@ -38,8 +38,8 @@ const AboutContainer = () => {
                 attach="material"
                 color="#ffffff"
                 emissive="#000000"
-                roughness="0.8"
-                metalness="0.3"
+                roughness={0.8}
+                metalness={0.3}
                 side={THREE.DoubleSide} 
             />
           </mesh>

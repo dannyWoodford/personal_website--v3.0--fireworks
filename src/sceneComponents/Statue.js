@@ -8,14 +8,14 @@ title: Rhetorician
 
 import * as THREE from 'three'
 import React, { useRef } from 'react'
-import { useLoader, useFrame, useResource, useThree } from 'react-three-fiber'
+import { useLoader, useFrame, useResource } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { draco } from 'drei'
 
 export default function Statue(...props) {
   const [ref] = useResource()
-  const { gl, scene } = useThree()
-  useFrame(() => ref.current.update(gl, scene))
+  // const { gl, scene } = useThree()
+  // useFrame(() => ref.current.update(gl, scene))
 
   const group = useRef()
   const { nodes, materials } = useLoader(GLTFLoader, '3d/statue/scene.gltf', draco('/draco-gltf/'))
@@ -39,7 +39,7 @@ export default function Statue(...props) {
 //     return () => animations.forEach((clip) => mixer.uncacheClip(clip))
 //     // return () => animations[0].mixer.uncacheClip(clip)
 //   }, [animations, mixer])
-// console.log(nodes)
+
 
   return (
     <group ref={group} {...props} dispose={null} scale={[1.4,1.4,1.4]} rotation={[0,-.4,0]} position={[5,-3.3,-5]}>
@@ -52,10 +52,10 @@ export default function Statue(...props) {
               attach="material"
               color="#554A3C"
               emissive="#000000"
-              roughness="0.4"
-              metalness="0.2"
-              reflectivity="1.5"
-              // clearcoat="1"
+              roughness={0.4}
+              metalness={0.2}
+              reflectivity={1.5}
+              clearcoat={1}
               side={THREE.DoubleSide}
               envMap={ref.current.renderTarget.texture}
             />

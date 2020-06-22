@@ -10,8 +10,8 @@ function GroundPlane() {
         attach="material"
         color="#ffffff"
         emissive="#000000"
-        roughness="0.7"
-        metalness="0.3"
+        roughness={0.7}
+        metalness={0.3}
         side={THREE.FrontSide} 
       />
     </mesh>
@@ -31,8 +31,8 @@ const Dome = (props) => {
         attach="material"
         color="#ffffff"
         emissive="#000000"
-        roughness="0.8"
-        metalness="0.4"
+        roughness={0.8}
+        metalness={0.4}
         side={THREE.BackSide} 
       />
     </mesh>
@@ -54,8 +54,8 @@ const DomeRing = () => {
           attach="material"
           color="#ffffff"
           emissive="#000000"
-          roughness=".5"
-          metalness="0.6"
+          roughness={.5}
+          metalness={0.6}
           side={THREE.DoubleSide} 
         />
     </mesh>
@@ -75,7 +75,7 @@ const DomeTop = (props) => {
         color="#ffffff"
         emissive="#000000"
         roughness="0.3"
-        metalness="0.8"
+        metalness={0.8}
         side={THREE.BackSide} 
       />
     </mesh>

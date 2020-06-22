@@ -23,8 +23,8 @@ export default function Logo() {
                   attach="material"
                   color="#ffffff"
                   emissive="#000000"
-                  roughness="0.4"
-                  metalness="0.3"
+                  roughness={0.4}
+                  metalness={0.3}
                   map={texture}
                   side={THREE.DoubleSide}
                 />

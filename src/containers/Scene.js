@@ -5,8 +5,8 @@ import {useSpring, a} from 'react-spring/three'
 // import * as THREE from 'three'
 // import { DeviceOrientationControls } from 'three/examples/jsm/controls/DeviceOrientationControls.js';
 
-import About from "../containers/About.js"
-import Projects from "../containers/Projects.js"
+import About from "./About.js"
+import Projects from "./Projects.js"
 
 import Loading from "../sceneComponents/setup/Loading.js"
 import Lighting from "../sceneComponents/setup/Lighting.js"
@@ -17,13 +17,14 @@ import Structure from "../sceneComponents/Structure.js"
 // extend({DeviceOrientationControls})
 
 
-
 export default function Scene({ ...props }) {
 
     const group = useRef()
     const sectionRotation = useSpring({
         rotateTo: props.sectionSelection.rotation, delay: 800
       })
+
+      
   
 
     return (
