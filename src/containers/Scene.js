@@ -47,7 +47,7 @@ export default function Scene({ ...props }) {
               </Suspense>
             </a.group> 
 
-          <Stats />
+          {/* <Stats /> */}
         </Canvas>
   )
 }
