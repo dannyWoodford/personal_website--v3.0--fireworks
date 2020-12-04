@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "core-js": "^3.6.5",
     "drei": "0.0.54",
-    "gltfjsx": "^2.0.3",
+    "gltfjsx": "^2.0.5",
     "konva": "^6.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

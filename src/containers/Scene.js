@@ -11,6 +11,7 @@ import Projects from "./Projects.js"
 import Loading from "../sceneComponents/setup/Loading.js"
 import Lighting from "../sceneComponents/setup/Lighting.js"
 import Statue from "../sceneComponents/Statue.js"
+import FireworkSolidColored from "../sceneComponents/FireworkSolidColored.js"
 import Logo from "../sceneComponents/Logo.js"
 import Structure from "../sceneComponents/Structure.js"
 
@@ -28,7 +29,8 @@ export default function Scene({ ...props }) {
   
 
     return (
-        <Canvas  camera={{fov: window.innerWidth > 1100 ? 55 : 90}}  >
+        <Canvas  camera={{fov: 90}}  >
+        {/* <Canvas  camera={{fov: window.innerWidth > 1100 ? 55 : 90}}  > */}
           <OrbitControls 
           // enableZoom={false}
           // maxPolarAngle={Math.PI / 1}
@@ -39,15 +41,16 @@ export default function Scene({ ...props }) {
             <a.group ref={group} rotation={sectionRotation.rotateTo}>
               <Lighting />
               <Suspense fallback={<Loading />}>
-                <About />
-                <Structure />
-                <Logo />
-                <Statue  />
-                <Projects />
+                {/* <About /> */}
+                {/* <Structure /> */}
+                <FireworkSolidColored />
+                {/* <Logo /> */}
+                {/* <Statue  /> */}
+                {/* <Projects /> */}
               </Suspense>
             </a.group> 
 
-          {/* <Stats /> */}
+          <Stats />
         </Canvas>
   )
 }
