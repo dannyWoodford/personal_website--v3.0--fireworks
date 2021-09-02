@@ -1,22 +1,6 @@
 import React from 'react'
 
-    
-// export default function Loading() {
-//     return (
-//       <div class="full-screen-loading-background">
-//         <div class="loading-container">
-//           <div class="text">Loading ...</div>
-//           <div class="loading-ring"></div>
-//         </div>
-//       </div>
-//     );
-// }
 export default function Loading() {
-
-  // const loadingComplete = () => {
-    //   let loadingAnimation = document.querySelector(".full-screen-loading-background")
-    //   loadingAnimation.classList.remove('hide-loading-page')
-    // }
 
     return (
         <mesh visible position={[0, 0, 0]} rotation={[0, 0, 0]}>

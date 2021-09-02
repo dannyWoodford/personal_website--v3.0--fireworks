@@ -1,56 +1,22 @@
-import React, {Suspense, useRef} from 'react'
-import { OrbitControls, Stats } from 'drei'
-import {Canvas} from 'react-three-fiber'
-import {useSpring, a} from 'react-spring/three'
-// import * as THREE from 'three'
-// import { DeviceOrientationControls } from 'three/examples/jsm/controls/DeviceOrientationControls.js';
+import React, { Suspense } from 'react'
+import { Stats } from 'drei'
+import { Canvas } from 'react-three-fiber'
 
-import About from "./About.js"
-import Projects from "./Projects.js"
+import Projects from './Projects.js'
 
-import Loading from "../sceneComponents/setup/Loading.js"
-import Lighting from "../sceneComponents/setup/Lighting.js"
-import Statue from "../sceneComponents/Statue.js"
-import FireworkSolidColored from "../sceneComponents/FireworkSolidColored.js"
-import Logo from "../sceneComponents/Logo.js"
-import Structure from "../sceneComponents/Structure.js"
-
-// extend({DeviceOrientationControls})
-
+import Loading from '../sceneComponents/setup/Loading.js'
+import Statue from '../sceneComponents/Statue.js'
+import FireworkSolidColored from '../sceneComponents/FireworkSolidColored.js'
 
 export default function Scene({ ...props }) {
-
-    const group = useRef()
-    const sectionRotation = useSpring({
-        rotateTo: props.sectionSelection.rotation, delay: 800
-      })
-
-      
-  
-
-    return (
-        <Canvas  camera={{fov: 90}}  >
-        {/* <Canvas  camera={{fov: window.innerWidth > 1100 ? 55 : 90}}  > */}
-          <OrbitControls 
-          // enableZoom={false}
-          // maxPolarAngle={Math.PI / 1}
-          // minPolarAngle={Math.PI / 2}
-          />
-      
-
-            <a.group ref={group} rotation={sectionRotation.rotateTo}>
-              <Lighting />
-              <Suspense fallback={<Loading />}>
-                {/* <About /> */}
-                {/* <Structure /> */}
-                <FireworkSolidColored />
-                {/* <Logo /> */}
-                {/* <Statue  /> */}
-                {/* <Projects /> */}
-              </Suspense>
-            </a.group> 
-
-          <Stats />
-        </Canvas>
-  )
+	return (
+		<Canvas camera={{ fov: 80 }}>
+			<Suspense fallback={<Loading />}>
+				<FireworkSolidColored />
+				{/* <Statue  /> */}
+				{/* <Projects /> */}
+			</Suspense>
+			<Stats />
+		</Canvas>
+	)
 }

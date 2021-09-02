@@ -10,14 +10,17 @@ import { draco } from 'drei'
 
 export default function FireworkSolidColored(props) {
   const group = useRef()
-  const { nodes, materials } = useLoader(GLTFLoader, '3d/fireworks/COLORED-firework-solid.gltf', draco('/draco-gltf/'))
+  const { nodes, materials } = useLoader(GLTFLoader, '3d/fireworks/COLORED-firework-solid_shadeless.glb', draco('/draco-gltf/'))
   
-  // useFrame(state => {
-  //   const x = (1 + state.mouse.y) / 5 
-  //   const y = (1 + state.mouse.x) / 5
-  //   group.current.rotation.x = x
-  //   group.current.rotation.y = y
-  // })
+  useFrame(state => {
+    const x = (1 + state.mouse.y) / 5 
+    const y = (1 + state.mouse.x) / 5
+    // console.log("x:", x.toFixed(2))
+    // console.log("y:", y.toFixed(2))
+    group.current.rotation.x = x / 2 - .1
+    group.current.rotation.y = y / 2 - .1
+    group.current.position.z = x * 25 - 8
+  })
 
   return (
     <group ref={group} {...props} dispose={null}>
