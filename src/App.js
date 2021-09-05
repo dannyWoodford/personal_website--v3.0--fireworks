@@ -31,6 +31,12 @@ const App = props => {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'page shazam' : 'page'}>
+				<Icons />
+				<div className='contact-info'>
+					<div id='name'><p>DANNY WOODFORD</p></div>
+					<div id='occupation'><p>FULL STACK DEVELOPER</p></div>
+				</div>
+
 				<span className='menu_toggle' onClick={() => setMenuToggle(!menuToggle)}>
 					<i className='menu_open'><img src={process.env.PUBLIC_URL + '/icons/menu.svg'} alt='menu-icon' /></i><i className='menu_close'><img src={process.env.PUBLIC_URL + '/icons/exit.svg'} alt='close-icon' /></i>
 				</span>
@@ -55,15 +61,11 @@ const App = props => {
 							</div>
 						</li>
 					</ul>
-					<div className='contact-info'>
-						<div id='name'><p>DANNY WOODFORD</p></div>
-						<div id='occupation'><p>FULL STACK DEVELOPER</p></div>
-					</div>
-					<Icons />
 				</div>
 				<div
 					className='content'
-					onClick={() => (menuToggle ? closeMenu() : '')}>
+					onClick={() => (menuToggle ? closeMenu() : '')}
+				>
 					<div className='content_inner'>
 						<Scene />
 					</div>

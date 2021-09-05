@@ -10,13 +10,13 @@ import FireworkSolidColored from '../sceneComponents/FireworkSolidColored.js'
 
 export default function Scene({ ...props }) {
 	return (
-		<Canvas camera={{ fov: 80 }}>
+		<Canvas style={{height: '100%', width:'100%'}} camera={{ fov: 80 }}>
 			<Suspense fallback={<Loading />}>
 				<FireworkSolidColored />
 				{/* <Statue  /> */}
 				{/* <Projects /> */}
 			</Suspense>
-			<Stats />
+			{/* <Stats /> */}
 		</Canvas>
 	)
 }
