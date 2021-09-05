@@ -7,7 +7,7 @@ import { useLoader, useFrame } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { draco } from 'drei'
 
-import useMousePosition from './setup/useMousePosition.js'
+import useMousePosition from '../setup/useMousePosition.js'
 
 export default function FireworkSolidColored(props) {
 	const group = useRef()

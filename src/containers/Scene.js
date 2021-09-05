@@ -5,8 +5,8 @@ import { Canvas } from 'react-three-fiber'
 import Projects from './Projects.js'
 
 import Loading from '../sceneComponents/setup/Loading.js'
-import Statue from '../sceneComponents/Statue.js'
-import FireworkSolidColored from '../sceneComponents/FireworkSolidColored.js'
+import Statue from '../sceneComponents/models/Statue.js'
+import FireworkSolidColored from '../sceneComponents/models/FireworkSolidColored.js'
 
 export default function Scene({ ...props }) {
 	return (
