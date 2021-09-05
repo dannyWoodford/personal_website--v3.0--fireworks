@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './App.scss'
-import Scene from './containers/Scene.js'
+import '../css/App.scss'
+import Canvas from './containers/Canvas.js'
 
 const Icons = () => {
 	return (
@@ -67,7 +67,7 @@ const App = props => {
 					onClick={() => (menuToggle ? closeMenu() : '')}
 				>
 					<div className='content_inner'>
-						<Scene />
+						<Canvas />
 					</div>
 				</div>
 			</div>
