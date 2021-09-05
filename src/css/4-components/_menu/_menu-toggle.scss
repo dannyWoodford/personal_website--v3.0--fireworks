@@ -1,0 +1,39 @@
+.menu_toggle {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: block;
+	cursor: pointer;
+	width: 100px;
+	height: 80px;
+	border-bottom-right-radius: 100%;
+	border-bottom: 10px solid #ffffff;
+
+	&:active {
+		i {
+			opacity: 0.8;
+		}
+	}
+	
+	i {
+		color: $color-white;
+	}
+
+	.menu_open,
+	.menu_close {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -25px;
+		margin-left: -20px;
+		transition: transform 0.7s $snap;
+	}
+	.menu_open {
+		transform-origin: -100px -100px;
+	}
+	.menu_close {
+		transform: rotate(20deg);
+		transform-origin: -100px -160px;
+	}
+}

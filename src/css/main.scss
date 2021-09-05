@@ -1,0 +1,36 @@
+
+@import "1-settings/fonts";
+@import "1-settings/colors";
+@import "2-tools/breakpoints";
+@import "2-tools/variables";
+@import "3-base/misc";
+@import "4-components/_top-most/contact-info";
+@import "4-components/_top-most/icons";
+@import "4-components/_menu/menu-toggle";
+@import "4-components/_menu/menu-items";
+@import "4-components/_menu/menu-is-opened";
+
+.page {
+	height: 100%;
+	background-color: $color-black;
+}
+
+.content {
+	// essential
+	height: 200%; // make higher or you'll see background when rotated
+	transform-origin: top left;
+	transition: transform 0.7s $snap;
+	
+	.content_inner {
+		// essential
+		height: 100vh; // compensate for higher .content
+		overflow-y: hidden; // set expected overflow
+	
+		canvas {
+			height: 100%;
+			width: 100%;
+			outline: none;
+			background: $color-black;
+		}
+	}
+}

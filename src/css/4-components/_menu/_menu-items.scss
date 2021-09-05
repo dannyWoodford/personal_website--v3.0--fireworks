@@ -1,0 +1,143 @@
+.menu_items {
+	position: fixed;
+	bottom: 18vh;
+	margin: 0;
+	padding: 0;
+
+	ul {
+		left: 20px;
+		list-style-type: none;
+
+		li {
+			height: 60px;
+			margin-bottom: 60px;
+			transform: translateX(-300px);
+			transition: transform 0.7s 0s $snap;
+
+			&:nth-child(2) {
+				margin-left: 3vw;
+			}
+			&:nth-child(3) {
+				margin-left: 5.9vw;
+				margin-bottom: 0px;
+			}
+		}
+
+		.menu-item {
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: darken($color-white, 30%);
+			transition: color 0.2s;
+
+			.menu-icon {
+				position: relative;
+				display: inline-block;
+				margin-right: 15px;
+				color: $color-white;
+
+				&:after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					content: '';
+					display: block;
+					width: 60px;
+					height: 60px;
+					margin-left: -33px;
+					margin-top: -32px;
+					border-radius: 100%;
+					border: 2px solid $color-white;
+					transition: border-color 0.2s;
+				}
+			}
+
+			&:hover {
+				color: $color-white;
+				.menu-icon {
+					&:after {
+						border-color: $transparent;
+					}
+				}
+			}
+			&:active {
+				.menu-icon {
+					color: $transparent;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $bp-small) {
+	.menu_items {
+		bottom: 24vh;
+		font-size: xx-small;
+
+		ul {
+			list-style-type: none;
+			padding: 6vw;
+
+			li {
+				height: 60px;
+				margin-bottom: 30px;
+				transform: translateX(-300px);
+				transition: transform 0.7s 0s $snap;
+
+				&:nth-child(2) {
+					margin-left: 9vw;
+				}
+				&:nth-child(3) {
+					margin-left: 18vw;
+				}
+			}
+			.menu-icon {
+				height: 30px;
+				width: 30px;
+				margin-right: 18px;
+
+				.menu-icon-sgv {
+					height: 35px;
+					width: 35px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $bp-small) and (max-width: $bp-large) {
+	.menu_items {
+		bottom: 37vh;
+		// font-size: xx-small;
+
+		ul {
+			list-style-type: none;
+			padding: 6vw;
+
+			li {
+				height: 60px;
+				margin-bottom: 30px;
+				transform: translateX(-300px);
+				transition: transform 0.7s 0s $snap;
+
+				&:nth-child(2) {
+					margin-left: 4vw;
+				}
+				&:nth-child(3) {
+					margin-left: 8vw;
+				}
+			}
+			.menu-icon {
+				height: 30px;
+				width: 30px;
+				margin-right: 18px;
+
+				.menu-icon-sgv {
+					height: 35px;
+					width: 35px;
+				}
+			}
+		}
+	}
+}
