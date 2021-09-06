@@ -10,10 +10,13 @@
 @import "4-components/_menu/menu-toggle";
 @import "4-components/_menu/menu-items";
 @import "4-components/_menu/menu-is-opened";
+@import "5-pages/about";
+@import "5-pages/projects";
 
 .page {
 	height: 100%;
 	background-color: $color-black;
+	background-color: #000000;
 	overflow: hidden;
 	display: block;
 }
@@ -33,6 +36,7 @@
 			display: block;
 			outline: none;
 			background: $color-black;
+			transition: background 2s ease-in-out;
 		}
 	}
 }

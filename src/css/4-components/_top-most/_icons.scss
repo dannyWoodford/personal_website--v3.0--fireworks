@@ -12,6 +12,11 @@
 	a {
 		margin: 15px auto;
 		padding: 0 4px;
+		display: flex;
+
+		img {
+			width: 50px;
+		}
 		
 		&:hover {
 			filter: drop-shadow(0px 5px 10px darken($color-white, 80%));

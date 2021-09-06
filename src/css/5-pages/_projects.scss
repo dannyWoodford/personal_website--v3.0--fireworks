@@ -1,0 +1,22 @@
+.projects-page {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+
+    .projects-container {
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: auto;
+        border: 2px solid white;
+        padding: 20px;
+        text-align: center;
+        color: $color-white;
+    }
+}
