@@ -25,9 +25,9 @@ export default function Scene({ ...props }) {
 			camera={{ fov: 80}}
 		>
 			<Suspense fallback={<Loading />}>
-				<Suspense fallback={<Firework url={'/3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb'} menuIsOpen={props.menuIsOpen} menuState={props.menuState}/>}>
+				<Suspense fallback={<Firework url={'./3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb'} menuIsOpen={props.menuIsOpen} menuState={props.menuState}/>}>
 					<Firework 
-						url={'/3d/fireworks/COLORED-firework-solid_shadeless.glb'}
+						url={'./3d/fireworks/COLORED-firework-solid_shadeless.glb'}
 						menuIsOpen={props.menuIsOpen}
 						menuState={props.menuState}
 					/>

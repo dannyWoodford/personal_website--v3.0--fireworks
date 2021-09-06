@@ -13,7 +13,7 @@ export default function Menu({...props}) {
                 <ul>
                     <li>
                         <div className='menu-item' onClick={() => props.setMenuStateHandler('main')}>
-                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/resume.svg' } alt='about-icon' /></i>
+                            <i className='menu-icon resume-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/resume.svg' } alt='about-icon' /></i>
                             Home
                         </div>
                     </li>
