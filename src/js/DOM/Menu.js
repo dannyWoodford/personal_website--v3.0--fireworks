@@ -3,7 +3,10 @@ import React from 'react'
 export default function Menu({...props}) {
     return (
         <>
-            <span className='menu_toggle' onClick={() => props.setMenuToggle(!props.menuToggle)}>
+            <span 
+                className='menu_toggle' 
+                onClick={() => props.toggleMenu()}
+            >
                 <i className='menu_open'><img src={process.env.PUBLIC_URL + '/icons/menu.svg'} alt='menu-icon' /></i><i className='menu_close'><img src={process.env.PUBLIC_URL + '/icons/exit.svg'} alt='close-icon' /></i>
             </span>
             <div className='menu_items'>

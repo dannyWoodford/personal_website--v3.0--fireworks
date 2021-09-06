@@ -28,10 +28,9 @@
 		// essential
 		height: 100vh; // compensate for higher .content
 		overflow-y: hidden; // set expected overflow
-	
+
 		canvas {
-			height: 100%;
-			width: 100%;
+			display: block;
 			outline: none;
 			background: $color-black;
 		}

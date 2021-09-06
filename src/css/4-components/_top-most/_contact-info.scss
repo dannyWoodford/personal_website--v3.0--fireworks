@@ -10,11 +10,11 @@
 	letter-spacing: 2px;
 	color: darken($color-white, 30%);
 	z-index: 10;
+    text-align: center;
 
 	#name {
 		border-bottom: 3px solid $color-white;
         width: 112%;
-        text-align: center;
 
 		p {
 			margin: 2px;

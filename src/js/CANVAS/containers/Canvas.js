@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 
 
 import Loading from '../components/setup/Loading.js'
-import FireworkSolidColored from '../components/models/FireworkSolidColored.js'
+import Firework from '../components/models/Firework.js'
 
 export default function Scene({ ...props }) {
 
@@ -12,11 +12,10 @@ export default function Scene({ ...props }) {
 		<Canvas 
 			AdaptivePixelRatio
 			concurrent
-			style={{height: '100%', width:'100%'}} 
 			camera={{ fov: 80 }}
 		>
 			<Suspense fallback={<Loading />}>
-				<FireworkSolidColored />
+				<Firework menuIsOpen={props.menuIsOpen}/>
 				{/* <Projects /> */}
 			</Suspense>
 			<Stats className="stats" />

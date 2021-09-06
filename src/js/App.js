@@ -9,8 +9,8 @@ import Menu from './DOM/Menu.js'
 const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)
 
-	const closeMenu = () => {
-		setMenuToggle(false)
+	const toggleMenu = () => {
+		setMenuToggle(!menuToggle)
 	}
 
 	return (
@@ -19,13 +19,10 @@ const App = props => {
 				<Icons />
 				<ContactInfo />
 
-				<Menu setMenuToggle={setMenuToggle} menuToggle={menuToggle}/>
-				<div
-					className='content'
-					onClick={() => (menuToggle ? closeMenu() : '')}
-				>
+				<Menu toggleMenu={toggleMenu}/>
+				<div className='content' >
 					<div className='content_inner'>
-						<Canvas />
+						<Canvas menuIsOpen={menuToggle}/>
 					</div>
 				</div>
 			</div>
