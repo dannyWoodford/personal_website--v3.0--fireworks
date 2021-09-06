@@ -1,7 +1,8 @@
 
 @import "1-settings/fonts";
 @import "1-settings/colors";
-@import "2-tools/breakpoints";
+@import "1-settings/breakpoints";
+@import "2-tools/breakpoint-sass";
 @import "2-tools/variables";
 @import "3-base/misc";
 @import "4-components/_top-most/contact-info";
@@ -13,6 +14,8 @@
 .page {
 	height: 100%;
 	background-color: $color-black;
+	overflow: hidden;
+	display: block;
 }
 
 .content {
@@ -33,4 +36,9 @@
 			background: $color-black;
 		}
 	}
+}
+
+.stats {
+	left: auto !important;
+	right: 0 !important;
 }

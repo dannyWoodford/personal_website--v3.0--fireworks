@@ -1,41 +1,30 @@
 .icon-container {
 	position: fixed;
-	left: 30px;
+	width: 100%;
 	bottom: 0;
 	display: flex;
 	flex-direction: row;
-	color: darken($color-white, 30%);
-	z-index: 3;
+	justify-content: center;
+	z-index: 1;
+	padding: 0 10px;
+	transition: all .1s ease-in-out;
 
-	#linkedin-icon {
-		margin: 15px;
+	a {
+		margin: 15px auto;
+		padding: 0 4px;
+		
+		&:hover {
+			filter: drop-shadow(0px 5px 10px darken($color-white, 80%));
+			transform: scale(1.1);
+		}
 	}
 
-	#linkedin-icon:hover {
-		filter: drop-shadow(0px 5px 10px $color-white);
-	}
+	@include breakpoint ($bp-small) {
+		padding-left: 30px;
+		justify-content: flex-start;
 
-	#github-icon {
-		margin: 15px;
-	}
-	#github-icon:hover {
-		filter: drop-shadow(0px 5px 10px $color-white);
-	}
-
-	#mail-icon {
-		margin: 15px;
-		cursor: pointer;
-	}
-
-	#mail-icon:hover {
-		filter: drop-shadow(0px 5px 10px $color-white);
-	}
-
-	#phone-icon {
-		margin: 15px;
-	}
-
-	#phone-icon:hover {
-		filter: drop-shadow(0px 5px 10px $color-white);
+		a {
+			margin: 15px;
+		}
 	}
 }

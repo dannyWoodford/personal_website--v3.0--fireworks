@@ -52,19 +52,19 @@ export default function Projects() {
     
     const [width, height] = useAspect('cover', 2168, 2168)
     return (
-      <group>
-        <Image texture={texture1} width={width} height={height} rotation={[0,3.9,0]} position={[10,0,10]} />
-        <Image texture={texture2} width={width} height={height} rotation={[0,3.3,0]} position={[2,0,14]} />
-        <Image texture={texture3} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,0,13]} />
-        
-        <Image texture={texture4} width={width} height={height} rotation={[0,3.9,0]} position={[10,5,10]} />
-        <Image texture={texture5} width={width} height={height} rotation={[0,3.3,0]} position={[2,5,14]} />
-        <Image texture={texture6} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,5,13]} />
-        
-        <Image texture={texture7} width={width} height={height} rotation={[0,3.9,0]} position={[10,10,10]} />
-        <Image texture={texture8} width={width} height={height} rotation={[0,3.3,0]} position={[2,10,14]} />
-        <Image texture={texture9} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,10,13]} />
-        
-4    </group>
+        <group>
+            <Image texture={texture1} width={width} height={height} rotation={[0,3.9,0]} position={[-10,0,-10]} />
+            <Image texture={texture2} width={width} height={height} rotation={[0,3.3,0]} position={[2,0,14]} />
+            <Image texture={texture3} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,0,13]} />
+            
+            <Image texture={texture4} width={width} height={height} rotation={[0,3.9,0]} position={[10,5,10]} />
+            <Image texture={texture5} width={width} height={height} rotation={[0,3.3,0]} position={[2,5,14]} />
+            <Image texture={texture6} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,5,13]} />
+            
+            <Image texture={texture7} width={width} height={height} rotation={[0,3.9,0]} position={[10,10,10]} />
+            <Image texture={texture8} width={width} height={height} rotation={[0,3.3,0]} position={[2,10,14]} />
+            <Image texture={texture9} width={width} height={height} rotation={[0,2.6,0]} position={[-6.5,10,13]} />
+            
+        </group>
     )
 }

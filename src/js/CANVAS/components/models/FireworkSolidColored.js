@@ -21,7 +21,7 @@ export default function FireworkSolidColored(props) {
 		
 		group.current.rotation.x = newX / 2 - 0.1
 		group.current.rotation.y = newY / 2 - 0.1
-		group.current.position.z = -(newX * 25 - 1.9)
+		group.current.position.z = -(newY * 25 - 1.9)
 	})
 
 	return (
