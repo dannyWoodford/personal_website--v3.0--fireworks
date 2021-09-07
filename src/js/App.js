@@ -50,7 +50,6 @@ const App = props => {
 					currentCanvasColor: findMenuItem[0].canvasColor
 				}
 			})
-			console.log('menuState.currentName', menuState.currentName)
 		}
 	}, [location, menuItems])
 
