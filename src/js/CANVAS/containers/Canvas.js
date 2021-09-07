@@ -23,7 +23,6 @@ export default function Scene({ ...props }) {
 		>
 			<Suspense fallback={<Loading />}>
 				<Firework 
-					url={'./3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb'}
 					menuIsOpen={props.menuIsOpen}
 					menuState={props.menuState}
 				/>
