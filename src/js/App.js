@@ -72,15 +72,15 @@ const App = props => {
 							menuIsOpen={menuToggle}
 							menuState={menuState}
 						/>
-								<div
-									className='page home-page'
-									style={{
-										transition: 'opacity 2s ease-in-out .6s',
-										opacity: menuState.currentName === 'home' ? 0 : 1,
-										background: 'transparent',
-									}}
-								>
-								</div>
+						<div
+							className='page home-page'
+							style={{
+								transition: 'opacity 1.5s ease-in-out',
+								opacity: menuState.currentName === 'home' ? 0 : 1,
+								background: 'transparent',
+							}}
+						>
+						</div>
 						<Switch>
 							<Route path='/home'>
 							</Route>
