@@ -32,7 +32,7 @@ export default function Firework({url,...props}) {
 		} 
 		
 		if (menuStateCurrentName === 'home' && group.current.position.z <= 0 && group.current.visible === false) {
-			group.current.position.z += 0.1
+			group.current.position.z += 0.3
 			group.current.visible = true
 		}
 	})
