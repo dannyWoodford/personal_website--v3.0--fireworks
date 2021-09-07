@@ -21,7 +21,7 @@ export default function Menu({...props}) {
                     <li onClick={() => props.toggleMenuHandler()}>
                         <NavLink to='/skills' className='menu-item' activeClassName="is-selected">
                             <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/about.svg' } alt='skills-icon' /></i>
-                            Skills
+                            About
                         </NavLink>
                     </li>
                     <li onClick={() => props.toggleMenuHandler()}>

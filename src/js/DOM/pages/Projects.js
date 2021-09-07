@@ -8,16 +8,13 @@ export default function Projects({...props}) {
         <div 
             className='page projects-page'
             style={{
-                opacity: menuStateCurrentName === 'projects' ? 1 : 0
+                transition: 'opacity 2s ease-in-out .6s',
+                opacity: menuStateCurrentName === 'projects' ? 1 : 0,
             }}
         >
-            <div 
-                className='container'
-                // style={{
-                //     opacity: menuStateCurrentName === 'projects' ? 1 : 0
-                // }}
-            >
+            <div className='container'>
                 <h1>Projects</h1>
+                <p>coming soon...</p>
             </div>
         </div>
     )

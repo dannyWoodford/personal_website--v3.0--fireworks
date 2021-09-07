@@ -25,9 +25,9 @@ export default function Firework({url,...props}) {
 			group.current.rotation.x = newX / 2 - 0.1
 			group.current.rotation.y = newY / 2 - 0.1
 			group.current.position.z = -(newY * 25 - 1.9)
-		} else if (!menuIsOpen && group.current.position.z > -15) {
+		} else if (!menuIsOpen && group.current.position.z > -50) {
 			group.current.position.z -= 0.3
-		} else if (!menuIsOpen && group.current.position.z <= -15 && group.current.visible === true) {
+		} else if (!menuIsOpen && group.current.position.z <= -50 && group.current.visible === true) {
 			group.current.visible = false
 		} 
 		

@@ -26,7 +26,7 @@ export default function Icons() {
 				</a>
 			</span>
 			<span>
-				<a href={process.env.PUBLIC_URL + '/Resume.pdf'} target='_blank' rel='noopener noreferrer' className='copy-icon'>
+				<a href={process.env.PUBLIC_URL + '/Danny_Woodford_Resume.pdf'} target='_blank' rel='noopener noreferrer' className='copy-icon'>
 					<img src={process.env.PUBLIC_URL + '/icons/resume.svg'} alt='resume-icon' />
 				</a>
 			</span>

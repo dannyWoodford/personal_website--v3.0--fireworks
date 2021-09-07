@@ -50,6 +50,7 @@ const App = props => {
 					currentCanvasColor: findMenuItem[0].canvasColor
 				}
 			})
+			console.log('menuState.currentName', menuState.currentName)
 		}
 	}, [location, menuItems])
 
@@ -72,8 +73,18 @@ const App = props => {
 							menuIsOpen={menuToggle}
 							menuState={menuState}
 						/>
+								<div
+									className='page home-page'
+									style={{
+										transition: 'opacity 2s ease-in-out .6s',
+										opacity: menuState.currentName === 'home' ? 0 : 1,
+										background: 'transparent',
+									}}
+								>
+								</div>
 						<Switch>
-							<Route path='/home'></Route>
+							<Route path='/home'>
+							</Route>
 							<Route path='/skills'>
 								<Skills 
 									menuIsOpen={menuToggle}
