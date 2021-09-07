@@ -6,7 +6,7 @@ import Canvas from './CANVAS/containers/Canvas.js'
 import Icons from './DOM/Icons.js'
 import ContactInfo from './DOM/ContactInfo.js'
 import Menu from './DOM/Menu.js'
-import About from './DOM/pages/About.js'
+import Skills from './DOM/pages/Skills.js'
 import Projects from './DOM/pages/Projects.js'
 
 const App = props => {
@@ -21,7 +21,7 @@ const App = props => {
 					canvasColor: '#000000'
 				},
 				{
-					name: "about",
+					name: "skills",
 					canvasColor: '#2C5B8B'
 				},
 				{
@@ -73,10 +73,9 @@ const App = props => {
 							menuState={menuState}
 						/>
 						<Switch>
-							<Route path='/home'>
-							</Route>
-							<Route path='/about'>
-								<About 
+							<Route path='/home'></Route>
+							<Route path='/skills'>
+								<Skills 
 									menuIsOpen={menuToggle}
 									menuState={menuState}
 								/>

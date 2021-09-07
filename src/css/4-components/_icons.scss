@@ -9,10 +9,11 @@
 	padding: 0 10px;
 	transition: all .1s ease-in-out;
 
-	a {
+	.copy-icon {
 		margin: 15px auto;
 		padding: 0 4px;
 		display: flex;
+		cursor: pointer;
 
 		img {
 			width: 50px;
@@ -28,7 +29,7 @@
 		padding-left: 30px;
 		justify-content: flex-start;
 
-		a {
+		.copy-icon {
 			margin: 15px;
 		}
 	}

@@ -14,14 +14,14 @@ export default function Menu({...props}) {
                 <ul>
                     <li onClick={() => props.toggleMenuHandler()}>
                         <NavLink to='/home' className='menu-item' activeClassName="is-selected">
-                            <i className='menu-icon resume-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/resume.svg' } alt='about-icon' /></i>
+                            <i className='menu-icon resume-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/resume.svg' } alt='skills-icon' /></i>
                             Home
                         </NavLink>
                     </li>
                     <li onClick={() => props.toggleMenuHandler()}>
-                        <NavLink to='/about' className='menu-item' activeClassName="is-selected">
-                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/about.svg' } alt='about-icon' /></i>
-                            About
+                        <NavLink to='/skills' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/about.svg' } alt='skills-icon' /></i>
+                            Skills
                         </NavLink>
                     </li>
                     <li onClick={() => props.toggleMenuHandler()}>

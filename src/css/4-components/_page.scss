@@ -7,9 +7,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    transition: opacity 0.5s ease-in-out .5s;
     z-index: $z-Index-pages;
-
+    
     .container {
         display: block;
         margin: auto;
