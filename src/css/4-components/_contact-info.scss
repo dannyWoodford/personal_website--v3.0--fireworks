@@ -9,7 +9,7 @@
 	align-items: center;
 	letter-spacing: 2px;
 	color: darken($color-white, 30%);
-	z-index: 10;
+	z-index:  $z-Index-highest;
     text-align: center;
 
 	#name {

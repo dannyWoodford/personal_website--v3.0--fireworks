@@ -4,8 +4,8 @@
 	bottom: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	z-index: 1;
+	justify-content: space-around;
+	z-index:  $z-Index-highest;
 	padding: 0 10px;
 	transition: all .1s ease-in-out;
 
@@ -19,7 +19,7 @@
 		}
 		
 		&:hover {
-			filter: drop-shadow(0px 5px 10px darken($color-white, 80%));
+			filter: drop-shadow(0px 5px 10px rgba(255, 255, 255, 0.6));
 			transform: scale(1.1);
 		}
 	}

@@ -6,13 +6,12 @@ export default function Projects({...props}) {
 
     return (
         <div 
-            className='projects-page'
+            className='page projects-page'
             style={{
-                transition: 'opacity 0.5s ease-in-out .5s',
                 opacity: menuStateCurrentName === 'projects' ? 1 : 0
             }}
         >
-            <div className='projects-container'>
+            <div className='container'>
                 <h1>Projects</h1>
             </div>
         </div>

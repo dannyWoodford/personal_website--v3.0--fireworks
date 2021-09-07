@@ -8,16 +8,13 @@ import Firework from '../components/models/Firework.js'
 export default function Scene({ ...props }) {
 	const canvas = document.querySelector('canvas')
 	const currentCanvasColor = props.menuState.currentCanvasColor
-	const menuIsOpen = props.menuIsOpen
 
 	useEffect(() => {
-		if (canvas && !menuIsOpen) {
-			// console.log('canvas',canvas)
-			// console.log('currentCanvasColor',currentCanvasColor)
+		if (canvas && currentCanvasColor) {
 			canvas.style.background = currentCanvasColor
 		}
-	}, [canvas, currentCanvasColor, menuIsOpen])
-
+	}, [canvas, currentCanvasColor])
+	
 	return (
 		<Canvas 
 			AdaptivePixelRatio
@@ -25,14 +22,11 @@ export default function Scene({ ...props }) {
 			camera={{ fov: 80}}
 		>
 			<Suspense fallback={<Loading />}>
-				<Suspense fallback={<Firework url={'./3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb'} menuIsOpen={props.menuIsOpen} menuState={props.menuState}/>}>
-					<Firework 
-						url={'./3d/fireworks/COLORED-firework-solid_shadeless.glb'}
-						menuIsOpen={props.menuIsOpen}
-						menuState={props.menuState}
-					/>
-					{/* <Projects /> */}
-				</Suspense>
+				<Firework 
+					url={'./3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb'}
+					menuIsOpen={props.menuIsOpen}
+					menuState={props.menuState}
+				/>
 			</Suspense>
 			<Stats className="stats" />
 		</Canvas>

@@ -1,0 +1,23 @@
+.page {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out .5s;
+    z-index: $z-Index-pages;
+
+    .container {
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 600px;
+        border: 2px solid white;
+        padding: 20px;
+        text-align: center;
+        color: $color-white;
+    }
+}

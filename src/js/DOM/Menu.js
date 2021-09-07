@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 
 export default function Menu({...props}) {
     return (
@@ -11,23 +12,23 @@ export default function Menu({...props}) {
             </span>
             <div className='menu_items'>
                 <ul>
-                    <li>
-                        <div className='menu-item' onClick={() => props.setMenuStateHandler('main')}>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/home' className='menu-item' activeClassName="is-selected">
                             <i className='menu-icon resume-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/resume.svg' } alt='about-icon' /></i>
                             Home
-                        </div>
+                        </NavLink>
                     </li>
-                    <li>
-                        <div className='menu-item' onClick={() => props.setMenuStateHandler('about')}>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/about' className='menu-item' activeClassName="is-selected">
                             <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/about.svg' } alt='about-icon' /></i>
                             About
-                        </div>
+                        </NavLink>
                     </li>
-                    <li>
-                        <div className='menu-item' onClick={() => props.setMenuStateHandler('projects')}>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/projects' className='menu-item' activeClassName="is-selected">
                             <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
                             Projects
-                        </div>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

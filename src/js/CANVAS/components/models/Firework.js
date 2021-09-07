@@ -9,7 +9,7 @@ import useMousePosition from '../setup/useMousePosition.js'
 
 export default function Firework({url,...props}) {
 	const group = useRef()
-	console.log('url',url)
+
 	const { nodes, materials } = useGLTF(`${url}`)
 
 	let { x, y } = useMousePosition()
@@ -21,17 +21,17 @@ export default function Firework({url,...props}) {
 		const newX = (1 + y) / 2900
 		const newY = (1 + x) / 2900
 
-		if (!menuIsOpen && menuStateCurrentName === 'main') {
+		if (!menuIsOpen && menuStateCurrentName === 'home') {
 			group.current.rotation.x = newX / 2 - 0.1
 			group.current.rotation.y = newY / 2 - 0.1
 			group.current.position.z = -(newY * 25 - 1.9)
-		} else if (!menuIsOpen && group.current.position.z > -10) {
+		} else if (!menuIsOpen && group.current.position.z > -15) {
 			group.current.position.z -= 0.3
-		} else if (!menuIsOpen && group.current.position.z <= -10 && group.current.visible === true) {
+		} else if (!menuIsOpen && group.current.position.z <= -15 && group.current.visible === true) {
 			group.current.visible = false
 		} 
 		
-		if (menuStateCurrentName === 'main' && group.current.position.z <= 0 && group.current.visible === false) {
+		if (menuStateCurrentName === 'home' && group.current.position.z <= 0 && group.current.visible === false) {
 			group.current.position.z += 0.1
 			group.current.visible = true
 		}
@@ -48,4 +48,4 @@ export default function Firework({url,...props}) {
 	)
 }
 
-// useGLTF.preload('/COLORED-firework-solid_shadeless-transformed.glb')
+useGLTF.preload('./3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb')
