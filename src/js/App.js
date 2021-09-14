@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
-import {Switch, Route, useLocation} from "react-router-dom";
+import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 
 import Canvas from './CANVAS/containers/Canvas.js'
 import Icons from './DOM/Icons.js'
@@ -13,8 +13,8 @@ const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)
 	const [menuState, setMenuState] = useState(
 		{
-			currentName: 'home',
-			currentCanvasColor: '#000000',
+			currentName: '',
+			currentCanvasColor: '',
 			menuItems: [
 				{
 					name: "home",
@@ -42,12 +42,12 @@ const App = props => {
 			let findMenuItem = menuItems.filter((x) => {
 				return x.name === strippedLocation
 			})
-				
+
 			setMenuState((prevPerson) => {
 				return { 
 					...prevPerson, 
-					currentName: findMenuItem[0].name,
-					currentCanvasColor: findMenuItem[0].canvasColor
+					currentName: findMenuItem ? 'home' : findMenuItem[0].name,
+					currentCanvasColor: findMenuItem ? '#000000' :findMenuItem[0].canvasColor
 				}
 			})
 		}
@@ -82,7 +82,8 @@ const App = props => {
 						>
 						</div>
 						<Switch>
-							<Route path='/home'>
+							<Route exact path="/">
+								<Redirect to="/home" />
 							</Route>
 							<Route path='/skills'>
 								<Skills 
