@@ -10,7 +10,7 @@ import useMousePosition from '../setup/useMousePosition.js'
 export default function Firework({...props}) {
 	const group = useRef()
 
-	const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb')
+	const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/3d/fireworks/COLORED-firework-solid_shadeless.glb')
 
 	let { x, y } = useMousePosition()
 
@@ -48,4 +48,3 @@ export default function Firework({...props}) {
 	)
 }
 
-useGLTF.preload(process.env.PUBLIC_URL + '/3d/fireworks/COLORED-firework-solid_shadeless-transformed.glb')

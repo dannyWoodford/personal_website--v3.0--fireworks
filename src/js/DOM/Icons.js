@@ -64,6 +64,10 @@ export default function Icons() {
 			</span>
 			<ReactTooltip id='copyPhoneNumber' getContent={() => iconHasBeenCopied.copyPhoneNumber ? 'E-mail has been copied to clipboard!' : 'Copy e-mail to clipboard'}/>
 			<ReactTooltip id='copyEMail' getContent={() => iconHasBeenCopied.copyEMail ? 'Phone number has been copied to clipboard!' : 'Copy phone number to clipboard'}/>
+
+			<span className="action-tip">
+				<h1>Move you're mouse around</h1>
+			</span>
 		</div>
 	)
 }

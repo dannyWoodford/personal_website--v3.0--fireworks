@@ -13,6 +13,7 @@
 @import "4-components/page";
 @import "5-pages/projects";
 @import "5-pages/skills";
+@import "5-pages/home";
 
 .main {
 	height: 100%;
@@ -45,4 +46,8 @@
 .stats {
 	left: auto !important;
 	right: 0 !important;
+}
+
+.nav-link {
+	display: contents;
 }
