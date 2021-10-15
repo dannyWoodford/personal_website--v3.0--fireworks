@@ -3,7 +3,7 @@ import '../css/main.scss'
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 
 import Canvas from './CANVAS/containers/Canvas.js'
-import Icons from './DOM/Icons.js'
+// import Icons from './DOM/Icons.js'
 import ContactInfo from './DOM/ContactInfo.js'
 import Menu from './DOM/Menu.js'
 import Skills from './DOM/pages/Skills.js'
@@ -60,7 +60,7 @@ const App = props => {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
-				<Icons />
+				{/* <Icons /> */}
 				<ContactInfo />
 				<Menu 
 					toggleMenuHandler={toggleMenuHandler}
