@@ -8,7 +8,18 @@
     height: 100%;
     width: 100%;
     z-index: $z-Index-pages;
+	overflow: auto;
     
+	.max-width-container {
+		max-width: $max-width;
+		position: absolute;
+		top: 0;
+		display: flex;
+		align-content: center;
+		height: 100%;
+		width: 100%;
+	}
+
     .container {
         display: block;
         margin: auto;

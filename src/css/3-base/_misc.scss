@@ -10,7 +10,7 @@ body {
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
-	font-family: 'Raleway', sans-serif;
+	font-family: $font-family, sans-serif;
 	outline: none;
 	background: $color-black;
 }
