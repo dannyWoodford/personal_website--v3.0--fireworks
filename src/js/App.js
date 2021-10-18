@@ -5,8 +5,13 @@ import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 import Canvas from './CANVAS/containers/Canvas.js'
 import ContactInfo from './DOM/ContactInfo.js'
 import Menu from './DOM/Menu.js'
-import Projects from './DOM/pages/Projects.js'
+import Home from './DOM/pages/Home.js'
 import About from './DOM/pages/About.js'
+import Art from './DOM/pages/Art.js'
+import Flatiron from './DOM/pages/Flatiron.js'
+import Projects from './DOM/pages/Projects.js'
+import Blender from './DOM/pages/Blender.js'
+import Brandgage from './DOM/pages/Brandgage.js'
 
 const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)
@@ -22,7 +27,27 @@ const App = props => {
 				{
 					name: "about",
 					canvasColor: '#000000'
-				}
+				},
+				{
+					name: "art",
+					canvasColor: '#3e54b0'
+				},
+				{
+					name: "flatiron",
+					canvasColor: '#f175f6'
+				},
+				{
+					name: "projects",
+					canvasColor: '#00ffbe'
+				},
+				{
+					name: "blender",
+					canvasColor: '#fff100'
+				},
+				{
+					name: "brandgage",
+					canvasColor: '#990000'
+				},
 			]
 		}
 	)
@@ -41,7 +66,7 @@ const App = props => {
 			setMenuState((prevPerson) => {
 				return { 
 					...prevPerson, 
-					currentName: findMenuItem[0] !== undefined ? findMenuItem[0].name : 'about',
+					currentName: findMenuItem[0] !== undefined ? findMenuItem[0].name : 'home',
 					currentCanvasColor: findMenuItem[0] !== undefined ? findMenuItem[0].canvasColor : '#000000'
 				}
 			})
@@ -54,11 +79,9 @@ const App = props => {
 
 	const linkToPageHandler = ( delay ) => {
 		setMenuToggle(true)
-		console.log('fire 1', menuToggle)
 
 		setTimeout(() => {
 			setMenuToggle(false)
-			console.log('fire 2', menuToggle)
 		}, delay);
 	}
 
@@ -89,8 +112,43 @@ const App = props => {
 										menuState={menuState}
 									/>
 								</Route>
-								<Route path='/home'>
+								<Route path="/art">
+									<Art 
+										menuIsOpen={menuToggle}
+										toggleMenuHandler={toggleMenuHandler}
+										menuState={menuState}
+									/>
+								</Route>
+								<Route path="/flatiron">
+									<Flatiron 
+										menuIsOpen={menuToggle}
+										toggleMenuHandler={toggleMenuHandler}
+										menuState={menuState}
+									/>
+								</Route>
+								<Route path="/projects">
 									<Projects 
+										menuIsOpen={menuToggle}
+										toggleMenuHandler={toggleMenuHandler}
+										menuState={menuState}
+									/>
+								</Route>
+								<Route path="/blender">
+									<Blender 
+										menuIsOpen={menuToggle}
+										toggleMenuHandler={toggleMenuHandler}
+										menuState={menuState}
+									/>
+								</Route>
+								<Route path="/brandgage">
+									<Brandgage 
+										menuIsOpen={menuToggle}
+										toggleMenuHandler={toggleMenuHandler}
+										menuState={menuState}
+									/>
+								</Route>
+								<Route path='/home'>
+									<Home 
 										menuIsOpen={menuToggle}
 										linkToPageHandler={linkToPageHandler}
 										menuState={menuState}

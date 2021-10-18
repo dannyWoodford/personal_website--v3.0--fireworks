@@ -24,6 +24,36 @@ export default function Menu({...props}) {
                             About
                         </NavLink>
                     </li>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/art' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
+                            Art
+                        </NavLink>
+                    </li>
+                    {/* <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/blender' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
+                            Blender
+                        </NavLink>
+                    </li>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/projects' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
+                            Projects
+                        </NavLink>
+                    </li>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/brandgage' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
+                            Brandgage
+                        </NavLink>
+                    </li>
+                    <li onClick={() => props.toggleMenuHandler()}>
+                        <NavLink to='/flatiron' className='menu-item' activeClassName="is-selected">
+                            <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i>
+                            Flatiron
+                        </NavLink>
+                    </li> */}
                 </ul>
             </div>
         </>
