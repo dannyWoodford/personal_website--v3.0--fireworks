@@ -21,7 +21,7 @@ export default function Firework({...props}) {
 		const newX = (1 + y) / 2900
 		const newY = (1 + x) / 2900
 
-		if (!menuIsOpen && menuStateCurrentName === 'about') {
+		if ((!menuIsOpen && menuStateCurrentName === 'about') || (!menuIsOpen && menuStateCurrentName === 'art')) {
 			group.current.rotation.x = newX / 2 - 0.1
 			group.current.rotation.y = newY / 2 - 0.1
 			group.current.position.z = -(newY * 25 - 1.9)
@@ -31,7 +31,7 @@ export default function Firework({...props}) {
 			group.current.visible = false
 		} 
 		
-		if (menuStateCurrentName === 'about' && group.current.position.z <= 0 && group.current.visible === false) {
+		if ((menuStateCurrentName === 'about' && group.current.position.z <= 0 && group.current.visible === false) || (menuStateCurrentName === 'art' && group.current.position.z <= 0 && group.current.visible === false)) {
 			group.current.position.z += 0.3
 			group.current.visible = true
 		}

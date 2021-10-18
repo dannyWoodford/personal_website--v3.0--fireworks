@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useState} from 'react'
 
 export default function Art({...props}) {
 
     const menuStateCurrentName = props.menuState.currentName
 
+	const artArray = [
+		{
+			name: 'art-1',
+			type: 'image',
+			png: '/images/art/sunrise.png'
+		},
+		{
+			name: 'art-2',
+			type: 'image',
+			png: '/images/art/storm.png'
+		},
+		{
+			name: 'art-3',
+			type: 'image',
+			png: '/images/art/Notflix.png'
+		},
+	]
+
+	const displayArtItems = artArray.map(item => (
+		<div className="item" key={item.name} onClick={() => updateDisplayArt(item.png)}>
+			<div className="item__border">
+				<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + item.png }/>
+			</div>
+		</div>
+	));
+
+	const [displayArtSrc, setDisplayArtSrc] = useState('/images/art/sunrise.png')
+	const [displayArtSelected, setDisplayArtSelected] = useState(false)
+
+	const updateDisplayArt = (itemSrc) => {
+		setDisplayArtSrc(itemSrc)
+		setDisplayArtSelected(true)
+	}
     return (
         <div className='page art-page'
 			style={{
@@ -13,9 +46,12 @@ export default function Art({...props}) {
 		>
 			<div className='max-width-container'>
 				<div className='container'>
-					<div className='art-container' >
-						<h1>Art</h1>
-						<p>Former carpenter turned full-stack developer in the pursuit of more challenging and ornate work. Renovating and building houses exposed a passion for engineering and building where I learned to see big jobs through from start to finish independently. I graduated from the Flatiron School where I learned JavaScript, React, Ruby, and Ruby on Rails mainly, and discovered canvas for the first time. While there I started and lead the first cross-discipline collaboration event. In my personal life, I like to write jokes and make things like paintings, replica movie props, woodworking projects for fun. I am a semi-professional stand-up comedian and a part from doing it for the love of it I believe to grow as a person you must chase the things that make you inherently anxious such as expressing ideas publicly or overcoming failure; along with creative problem solving, skills I now consider to be some of my greatest strengths.</p>
+					<div className='art-container'>
+						<div className="display-art">
+							<img className="display-art-image" alt="" src={process.env.PUBLIC_URL + displayArtSrc} style={{opacity: !displayArtSelected ? 0 : 1}}/>
+						</div>
+						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
+						{displayArtItems}
 					</div>
 				</div>
 			</div>
