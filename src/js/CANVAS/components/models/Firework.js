@@ -25,14 +25,19 @@ export default function Firework({...props}) {
 			group.current.rotation.x = newX / 2 - 0.1
 			group.current.rotation.y = newY / 2 - 0.1
 			group.current.position.z = -(newY * 25 - 1.9)
-		} else if (!menuIsOpen && group.current.position.z > -35) {
-			group.current.position.z -= 0.4
-		} else if (!menuIsOpen && group.current.position.z <= -35 && group.current.visible === true) {
+			// console.log('1', group.current.position.z)
+		} else if (!menuIsOpen && group.current.position.z < 25) {
+			group.current.position.z += 0.2
+			group.current.rotation.z -= 0.02
+			// console.log('2', group.current.position.z)
+		} else if (!menuIsOpen && group.current.position.z >= 25 && group.current.visible === true) {
+			// console.log('3', group.current.position.z)
 			group.current.visible = false
 		} 
 		
 		if ((menuStateCurrentName !== 'home' && group.current.position.z <= 0 && group.current.visible === false)) {
-			group.current.position.z += 0.3
+			group.current.position.z += 0.8
+			// console.log('4', group.current.position.z)
 			group.current.visible = true
 		}
 	})
