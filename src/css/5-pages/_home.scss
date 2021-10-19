@@ -59,8 +59,10 @@
 				
 				.item__border {
 					height: 120px;
-					box-shadow: 15px 15px 30px #663333, -15px -15px 30px #ffcbcb;
+					box-shadow: none;
 					cursor: auto;
+					border: none;
+					background: transparent;
 
 					& .item__image.hover-image {
 						position: absolute;

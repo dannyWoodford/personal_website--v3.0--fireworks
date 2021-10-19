@@ -85,10 +85,10 @@ export default function Home({...props}) {
 					<div className="double-item">
 					<div className="item item__welcome">
 							<div className="item__border">
-								{/* <img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/art-gif.gif'} /> */}
-								{/* <div className="inset-text">
+								{/* <img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/welcome-gif.gif'} /> */}
+								<div className="inset-text">
 									<div id='welcome'><p>Welcome</p></div>
-								</div> */}
+								</div>
 							</div>
 						</div>
 						<div className="item item__clock">
