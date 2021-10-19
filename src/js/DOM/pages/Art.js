@@ -8,17 +8,37 @@ export default function Art({...props}) {
 		{
 			name: 'art-1',
 			type: 'image',
-			png: '/images/art/sunrise.png'
+			png: '/images/art/art-1.jpeg'
 		},
 		{
 			name: 'art-2',
 			type: 'image',
-			png: '/images/art/storm.png'
+			png: '/images/art/art-2.jpeg'
 		},
 		{
 			name: 'art-3',
 			type: 'image',
-			png: '/images/art/Notflix.png'
+			png: '/images/art/art-3.jpeg'
+		},
+		{
+			name: 'art-4',
+			type: 'image',
+			png: '/images/art/art-4.jpeg'
+		},
+		{
+			name: 'art-5',
+			type: 'image',
+			png: '/images/art/art-5.JPG'
+		},
+		{
+			name: 'art-6',
+			type: 'image',
+			png: '/images/art/art-6.JPG'
+		},
+		{
+			name: 'art-7',
+			type: 'image',
+			png: '/images/art/art-7.JPG'
 		},
 	]
 
