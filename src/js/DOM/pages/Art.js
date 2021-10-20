@@ -62,6 +62,11 @@ export default function Art({...props}) {
 		</div>
 	))
 
+	const changeHandler = (index, item) => {
+		console.log('index', index)
+		console.log('item', item.props.children)
+	}
+
     return (
         <div className='page art-page'
 			style={{
@@ -83,6 +88,7 @@ export default function Art({...props}) {
 								autoPlay={false} 
 								interval={600000}
 								centerMode={true}
+								onChange={(index, item) => changeHandler(index, item)}
 							>
 								{displayItems}
 							</Carousel>
