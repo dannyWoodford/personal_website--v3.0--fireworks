@@ -68,7 +68,7 @@ export default function Flatiron({...props}) {
 				<div className='container'>
 					<div className='page-container'>
 						<div className="display-item">
-							<img className="display-item-image" alt="" src={process.env.PUBLIC_URL + displayItemSrc} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+							<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItemSrc} style={{opacity: !displayItemSelected ? 0 : 1}}/>
 						</div>
 						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
 						{displayItems}

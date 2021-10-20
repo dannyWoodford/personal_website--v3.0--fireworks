@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 export default function Art({...props}) {
-
     const menuStateCurrentName = props.menuState.currentName
 
 	const itemArray = [
@@ -18,7 +17,7 @@ export default function Art({...props}) {
 			url: '/images/art/art-2.jpeg'
 		},
 		{
-			name: 'art-video',
+			name: 'art-video-1',
 			type: 'video',
 			url: '/videos/Chess-demo.mp4'
 		},
@@ -26,6 +25,11 @@ export default function Art({...props}) {
 			name: 'art-3',
 			type: 'image',
 			url: '/images/art/art-3.jpeg'
+		},
+		{
+			name: 'art-video-2',
+			type: 'video',
+			url: '/videos/3d-spotify-visualizer-trimmed.mp4'
 		},
 		{
 			name: 'art-4',
@@ -50,10 +54,10 @@ export default function Art({...props}) {
 	]
 
 	const displayItems = itemArray.map(item => (
-		<div key={item.name}>
+		<div className="item-wrapper" key={item.name}>
 			{item.type === 'image' ? 
 				<img src={process.env.PUBLIC_URL + item.url } alt={item.name} /> : 
-				<video src={process.env.PUBLIC_URL + item.url } className='videoItem' autoPlay loop muted ></video>
+				<video src={process.env.PUBLIC_URL + item.url } className='video-item' autoPlay loop controls ></video>
 			}
 		</div>
 	))
@@ -69,7 +73,7 @@ export default function Art({...props}) {
 				<div className='container'>
 					<div className='page-container'>
 						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
-						<div className="display-item">
+						<div className="display-item" >
 							<Carousel 
 								emulateTouch={true} 
 								swipeable={true}
@@ -77,6 +81,8 @@ export default function Art({...props}) {
 								infiniteLoop={false} 
 								showThumbs={false}
 								autoPlay={false} 
+								interval={600000}
+								centerMode={true}
 							>
 								{displayItems}
 							</Carousel>
