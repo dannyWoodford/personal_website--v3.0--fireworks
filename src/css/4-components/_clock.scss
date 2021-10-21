@@ -48,7 +48,8 @@
 
 .clock__minute,
 .clock__hour,
-.clock__indicator {
+.clock__indicator,
+.clock__second {
 	position: absolute;
 	left: calc(50% - 1px);
 	width: 2px;
@@ -58,13 +59,24 @@
 	border-radius: 10px;
 }
 
-.clock__minute {
-	height: 50%;
+.clock__hour {
+	height: 22%;
     bottom: 50%;
     width: 8px;
     margin-left: -4px;
     border-radius: 100% 100% 0 0;
-	background: #333170;
+	background: white;
+	-webkit-animation: time 43200s linear infinite;
+	animation: time 43200s linear infinite;
+}
+
+.clock__minute {
+	height: 30%;
+    bottom: 50%;
+    width: 6px;
+    margin-left: -3px;
+    border-radius: 100% 100% 0 0;
+	background: white;
 	opacity: 0.75;
 	-webkit-animation: time 3600s linear infinite;
 	animation: time 3600s linear infinite;
@@ -72,17 +84,13 @@
 	box-shadow: 5px -12px 15px 0px rgba(170, 159, 159, 0.78);
 }
 
-.clock__hour {
-	height: 37%;
-    bottom: 50%;
-    width: 8px;
-    margin-left: -4px;
-    border-radius: 100% 100% 0 0;
-	background: #333170;
-	-webkit-animation: time 43200s linear infinite;
-	animation: time 43200s linear infinite;
-	-webkit-box-shadow: 0px -12px 15px 0px rgba(179, 171, 171, 0.78);
-	box-shadow: 0px -12px 15px 0px rgba(170, 159, 159, 0.78);
+.clock__second {
+	height: 40%;
+	bottom: 50%;
+	-webkit-animation: time 60s infinite steps(60);
+	animation: time 60s infinite steps(60);
+	z-index: 3;
+	background: white;
 }
 
 .clock__axis {
@@ -94,7 +102,7 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
-	background: rgb(63, 49, 70);
+	background: white;
 }
 
 .clock__axis__hex {
@@ -123,7 +131,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%) scaleY(.33);
-	filter: url(#round) drop-shadow(13px 13px 20px #323054);
+	filter: url(#round);
 	
 	&:before {
 		content: "";
@@ -161,6 +169,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-90%, -25%) rotate(-120deg);
+	backdrop-filter: hue-rotate(52deg);
 }
 
 .hex-outer-2 {
@@ -171,6 +180,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-5%, -75%) rotate(60deg);
+	backdrop-filter: hue-rotate(200deg);
 }
 
 .hex-middle-1 {
@@ -181,6 +191,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -100%) rotate(0deg);
+	backdrop-filter: hue-rotate(315deg);
 }
 
 .hex-middle-2 {
@@ -191,6 +202,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(0%, -20%) rotate(120deg);
+	backdrop-filter: hue-rotate(271deg);
 }
 
 .hex-inner-1 {
@@ -201,6 +213,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-90%, -70%) rotate(-60deg);
+	backdrop-filter: hue-rotate(118deg);
 }
 
 .hex-inner-2 {
@@ -211,6 +224,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -5%) rotate(180deg);
+	backdrop-filter: hue-rotate(284deg);
 }
 
 .orange-hex {

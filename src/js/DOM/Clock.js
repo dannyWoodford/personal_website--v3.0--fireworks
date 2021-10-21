@@ -12,8 +12,6 @@ export default function Clock() {
 
     return (
 		<div className="clock-border-outer">
-
-
 			<div className="clock">
 				<div className="hex-outer-1">
 					<div className="hex-body"></div>
@@ -47,7 +45,11 @@ export default function Clock() {
 					className='clock__minute'
 					style={{transform: `rotateZ(${time.getMinutes() * 6 }deg)`,}}
 				/>
-
+				<div
+					className='clock__second'
+					style={{transform: `rotateZ(${time.getSeconds() * 6 }deg)`,}}
+				/>
+				
 				<div className="clock__axis"></div>
 				<div className="clock__axis__hex"></div>
 			</div>
