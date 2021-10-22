@@ -112,7 +112,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%) rotate(90deg);
-	filter: url(#round) drop-shadow(-13px -13px 20px #c8c2ff);
+	// filter: url(#round) drop-shadow(-13px -13px 20px #c8c2ff);
 	z-index: -1;
 
 	&:before {
@@ -131,7 +131,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%) scaleY(.33);
-	filter: url(#round);
+	// filter: url(#round);
 	
 	&:before {
 		content: "";
@@ -149,7 +149,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%) scaleY(.33);
-	filter: url(#round) drop-shadow(-13px -13px 20px #c8c2ff);
+	// filter: url(#round) drop-shadow(-13px -13px 20px #c8c2ff);
 	z-index: -1;
 
 	&:before {
@@ -169,7 +169,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-90%, -25%) rotate(-120deg);
-	backdrop-filter: hue-rotate(52deg);
+	// backdrop-filter: hue-rotate(52deg);
 }
 
 .hex-outer-2 {
@@ -180,7 +180,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-5%, -75%) rotate(60deg);
-	backdrop-filter: hue-rotate(200deg);
+	// backdrop-filter: hue-rotate(200deg);
 }
 
 .hex-middle-1 {
@@ -191,7 +191,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -100%) rotate(0deg);
-	backdrop-filter: hue-rotate(315deg);
+	// backdrop-filter: hue-rotate(315deg);
 }
 
 .hex-middle-2 {
@@ -202,7 +202,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(0%, -20%) rotate(120deg);
-	backdrop-filter: hue-rotate(271deg);
+	// backdrop-filter: hue-rotate(271deg);
 }
 
 .hex-inner-1 {
@@ -213,7 +213,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-90%, -70%) rotate(-60deg);
-	backdrop-filter: hue-rotate(118deg);
+	// backdrop-filter: hue-rotate(118deg);
 }
 
 .hex-inner-2 {
@@ -224,7 +224,7 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -5%) rotate(180deg);
-	backdrop-filter: hue-rotate(284deg);
+	// backdrop-filter: hue-rotate(284deg);
 }
 
 .orange-hex {
@@ -235,6 +235,6 @@
 	}
 
 	.hex-shadow {
-		filter: url(#round) drop-shadow(-13px -13px 20px #ffdad8);
+		// filter: url(#round) drop-shadow(-13px -13px 20px #ffdad8);
 	}
 }

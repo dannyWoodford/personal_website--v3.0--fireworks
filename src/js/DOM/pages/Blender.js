@@ -7,24 +7,49 @@ export default function Blender({...props}) {
 
 	const itemArray = [
 		{
-			name: 'blender-video-1',
-			type: 'video',
-			url: '/blender/blender-1.mov'
-		},
-		{
-			name: 'blender-video-2',
-			type: 'video',
-			url: '/blender/blender-2.mov'
-		},
-		{
-			name: 'blender-video-3',
-			type: 'video',
-			url: '/blender/blender-4.mov'
-		},
-		{
-			name: 'blender-1',
+			name: 'art-1',
 			type: 'image',
-			url: '/images/blender/blender-4.png'
+			url: '/images/art/art-1.jpeg'
+		},
+		{
+			name: 'art-2',
+			type: 'image',
+			url: '/images/art/art-2.jpeg'
+		},
+		{
+			name: 'art-video-1',
+			type: 'video',
+			url: '/videos/Chess-demo.mp4'
+		},
+		{
+			name: 'art-3',
+			type: 'image',
+			url: '/images/art/art-3.jpeg'
+		},
+		{
+			name: 'art-video-2',
+			type: 'video',
+			url: '/videos/3d-spotify-visualizer-trimmed.mp4'
+		},
+		{
+			name: 'art-4',
+			type: 'image',
+			url: '/images/art/art-4.jpeg'
+		},
+		{
+			name: 'art-5',
+			type: 'image',
+			url: '/images/art/art-5.JPG'
+		},
+		{
+			name: 'art-6',
+			type: 'image',
+			url: '/images/art/art-6.JPG'
+		},
+		{
+			name: 'art-7',
+			type: 'image',
+			url: '/images/art/art-7.JPG'
 		},
 	]
 

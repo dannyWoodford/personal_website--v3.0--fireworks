@@ -17,19 +17,9 @@ export default function Art({...props}) {
 			url: '/images/art/art-2.jpeg'
 		},
 		{
-			name: 'art-video-1',
-			type: 'video',
-			url: '/videos/Chess-demo.mp4'
-		},
-		{
 			name: 'art-3',
 			type: 'image',
 			url: '/images/art/art-3.jpeg'
-		},
-		{
-			name: 'art-video-2',
-			type: 'video',
-			url: '/videos/3d-spotify-visualizer-trimmed.mp4'
 		},
 		{
 			name: 'art-4',
