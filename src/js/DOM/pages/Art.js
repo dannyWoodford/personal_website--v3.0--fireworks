@@ -1,61 +1,46 @@
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import ItemCarousel from '../ItemCarousel.js'
 
 export default function Art({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 
 	const itemArray = [
 		{
-			name: 'art-1',
+			_id: 'art-1',
 			type: 'image',
-			url: '/images/art/art-1.jpeg'
+			itemUrl: '/images/art/art-1.jpeg'
 		},
 		{
-			name: 'art-2',
+			_id: 'art-2',
 			type: 'image',
-			url: '/images/art/art-2.jpeg'
+			itemUrl: '/images/art/art-2.jpeg'
 		},
 		{
-			name: 'art-3',
+			_id: 'art-3',
 			type: 'image',
-			url: '/images/art/art-3.jpeg'
+			itemUrl: '/images/art/art-3.jpeg'
 		},
 		{
-			name: 'art-4',
+			_id: 'art-4',
 			type: 'image',
-			url: '/images/art/art-4.jpeg'
+			itemUrl: '/images/art/art-4.jpeg'
 		},
 		{
-			name: 'art-5',
+			_id: 'art-5',
 			type: 'image',
-			url: '/images/art/art-5.JPG'
+			itemUrl: '/images/art/art-5.JPG'
 		},
 		{
-			name: 'art-6',
+			_id: 'art-6',
 			type: 'image',
-			url: '/images/art/art-6.JPG'
+			itemUrl: '/images/art/art-6.JPG'
 		},
 		{
-			name: 'art-7',
+			_id: 'art-7',
 			type: 'image',
-			url: '/images/art/art-7.JPG'
+			itemUrl: '/images/art/art-7.JPG'
 		},
 	]
-
-	const displayItems = itemArray.map(item => (
-		<div className="item-wrapper" key={item.name}>
-			{item.type === 'image' ? 
-				<img src={process.env.PUBLIC_URL + item.url } alt={item.name} /> : 
-				<video src={process.env.PUBLIC_URL + item.url } className='video-item' autoPlay loop controls ></video>
-			}
-		</div>
-	))
-
-	const changeHandler = (index, item) => {
-		console.log('index', index)
-		console.log('item', item.props.children)
-	}
 
     return (
         <div className='page art-page'
@@ -67,9 +52,9 @@ export default function Art({...props}) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
 						<div className="display-item" >
-							<Carousel 
+						<h2 className="text" >I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
+							<ItemCarousel 
 								emulateTouch={true} 
 								swipeable={true}
 								dynamicHeight={true} 
@@ -78,10 +63,8 @@ export default function Art({...props}) {
 								autoPlay={false} 
 								interval={600000}
 								centerMode={true}
-								onChange={(index, item) => changeHandler(index, item)}
-							>
-								{displayItems}
-							</Carousel>
+								data={itemArray}
+							/>
 						</div>
 					</div>
 				</div>

@@ -1,66 +1,41 @@
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import ItemCarousel from '../ItemCarousel.js'
 
 export default function Blender({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 
 	const itemArray = [
 		{
-			name: 'art-1',
+			_id: 'blender-booth',
 			type: 'image',
-			url: '/images/art/art-1.jpeg'
+			itemUrl: '/assets-by-page/blender/blender-booth.jpg'
 		},
 		{
-			name: 'art-2',
+			_id: 'blender-couch',
 			type: 'image',
-			url: '/images/art/art-2.jpeg'
+			itemUrl: '/assets-by-page/blender/blender-couch.jpg'
 		},
 		{
-			name: 'art-video-1',
+			_id: 'blender-steve',
 			type: 'video',
-			url: '/videos/Chess-demo.mp4'
+			itemUrl: '/assets-by-page/blender-steve.mp4'
 		},
 		{
-			name: 'art-3',
-			type: 'image',
-			url: '/images/art/art-3.jpeg'
-		},
-		{
-			name: 'art-video-2',
+			_id: 'blender-al',
 			type: 'video',
-			url: '/videos/3d-spotify-visualizer-trimmed.mp4'
+			itemUrl: '/assets-by-page/blender/blender-al.mp4'
 		},
 		{
-			name: 'art-4',
-			type: 'image',
-			url: '/images/art/art-4.jpeg'
+			_id: 'blender-chair',
+			type: 'video',
+			itemUrl: '/assets-by-page/blender/blender-chair.mp4'
 		},
 		{
-			name: 'art-5',
+			_id: 'blender-donut',
 			type: 'image',
-			url: '/images/art/art-5.JPG'
-		},
-		{
-			name: 'art-6',
-			type: 'image',
-			url: '/images/art/art-6.JPG'
-		},
-		{
-			name: 'art-7',
-			type: 'image',
-			url: '/images/art/art-7.JPG'
+			itemUrl: '/assets-by-page/blender/blender-donut.jpg'
 		},
 	]
-
-	const displayItems = itemArray.map(item => (
-		<div className="item-wrapper" key={item.name}>
-			{item.type === 'image' ? 
-				<img src={process.env.PUBLIC_URL + item.url } alt={item.name} /> : 
-				<video src={process.env.PUBLIC_URL + item.url } className='video-item' autoPlay loop controls ></video>
-			}
-		</div>
-	))
 
     return (
         <div className='page blender-page'
@@ -72,9 +47,9 @@ export default function Blender({...props}) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						{/* <h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2> */}
 						<div className="display-item" >
-							<Carousel 
+						<h2 className="text">I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
+							<ItemCarousel 
 								emulateTouch={true} 
 								swipeable={true}
 								dynamicHeight={true} 
@@ -83,9 +58,8 @@ export default function Blender({...props}) {
 								autoPlay={false} 
 								interval={600000}
 								centerMode={true}
-							>
-								{displayItems}
-							</Carousel>
+								data={itemArray}
+							/>
 						</div>
 					</div>
 				</div>

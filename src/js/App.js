@@ -3,7 +3,7 @@ import '../css/main.scss'
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 
 import Canvas from './CANVAS/containers/Canvas.js'
-import ContactInfo from './DOM/ContactInfo.js'
+// import ContactInfo from './DOM/ContactInfo.js'
 import Menu from './DOM/Menu.js'
 import Home from './DOM/pages/Home.js'
 import About from './DOM/pages/About.js'
@@ -88,7 +88,7 @@ const App = props => {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
-				<ContactInfo />
+				{/* <ContactInfo /> */}
 				<Menu 
 					toggleMenuHandler={toggleMenuHandler}
 					menuState={menuState}
