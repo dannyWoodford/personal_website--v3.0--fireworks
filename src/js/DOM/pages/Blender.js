@@ -18,7 +18,7 @@ export default function Blender({...props}) {
 		{
 			_id: 'blender-steve',
 			type: 'video',
-			itemUrl: '/assets-by-page/blender-steve.mp4'
+			itemUrl: '/assets-by-page/blender/blender-steve.mp4'
 		},
 		{
 			_id: 'blender-al',
