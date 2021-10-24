@@ -11,6 +11,11 @@ export default function Art({...props}) {
 			itemUrl: '/images/art/art-1.jpeg'
 		},
 		{
+			_id: 'art-7',
+			type: 'image',
+			itemUrl: '/images/art/art-7.JPG'
+		},
+		{
 			_id: 'art-2',
 			type: 'image',
 			itemUrl: '/images/art/art-2.jpeg'
@@ -34,11 +39,6 @@ export default function Art({...props}) {
 			_id: 'art-6',
 			type: 'image',
 			itemUrl: '/images/art/art-6.JPG'
-		},
-		{
-			_id: 'art-7',
-			type: 'image',
-			itemUrl: '/images/art/art-7.JPG'
 		},
 	]
 
