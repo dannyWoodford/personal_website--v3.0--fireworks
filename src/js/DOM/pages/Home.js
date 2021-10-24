@@ -91,7 +91,7 @@ export default function Home({...props}) {
 						<DelayLink to={'/about'} delay={delay} className="nav-link">
 							<div className="item__border">
 								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/about-me-logo.png'}/>
-								<img alt="" className="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577" />
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
 							</div>
 						</DelayLink>
 					</div>
@@ -99,7 +99,7 @@ export default function Home({...props}) {
 						<div className="item small">
 							<div className="item__border">
 								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/resume-logo.png'}/>
-								<img alt="" className="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577" />
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
 							</div>
 						</div>
 					</a>
@@ -120,7 +120,7 @@ export default function Home({...props}) {
 							<div className="item small" onPointerOut={() => resetTooltip()}>
 								<div className="item__border">
 								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/phone-logo.png'}/>
-							<img alt="" className="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577" />
+							<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
 								</div>
 							</div>  
 						</CopyToClipboard>
@@ -143,7 +143,7 @@ export default function Home({...props}) {
 							<div className="item small" onPointerOut={() => resetTooltip()}>
 								<div className="item__border">
 										<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/email-logo.png'}/>
-										<img alt="" className="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577" />
+										<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
 								</div>
 							</div>  
 						</CopyToClipboard>
@@ -153,7 +153,7 @@ export default function Home({...props}) {
 						<div className="item">
 							<div className="item__border">
 								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/linkedIn-logo.png'}/>
-								<img alt="" className="item__image hover-image" src="https://prod-ripcut-delivery.disney-plus.net/v1/rawFiles/disney/RAW_59F432D7A600A8F1CE36AE4D0B96570AC7C8277A0E8855BC06FABBAE090E6577" />
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
 							</div>
 						</div>
 					</a>

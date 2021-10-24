@@ -32,7 +32,7 @@ const SlideItem = ({ url, isSelected, type, name }) => (
 				autoPlay={true}
 				loop={false} 
 				controls={true}
-				volume={.3}
+				volume={.05}
 			/>
 		}
 	</div>

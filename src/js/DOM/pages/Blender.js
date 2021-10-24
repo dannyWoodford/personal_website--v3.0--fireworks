@@ -30,11 +30,11 @@ export default function Blender({...props}) {
 			type: 'video',
 			itemUrl: '/assets-by-page/blender/blender-chair.mp4'
 		},
-		{
-			_id: 'blender-donut',
-			type: 'image',
-			itemUrl: '/assets-by-page/blender/blender-donut.jpg'
-		},
+		// {
+		// 	_id: 'blender-donut',
+		// 	type: 'image',
+		// 	itemUrl: '/assets-by-page/blender/blender-donut.jpg'
+		// },
 	]
 
     return (
