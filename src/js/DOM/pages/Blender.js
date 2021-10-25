@@ -48,16 +48,8 @@ export default function Blender({...props}) {
 				<div className='container'>
 					<div className='page-container'>
 						<div className="display-item" >
-						<h2 className="text">I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
+						<h2 className="text">Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to make them "game ready" or positioning objects for the Brandgage VR virtual booths.</h2>
 							<ItemCarousel 
-								emulateTouch={true} 
-								swipeable={true}
-								dynamicHeight={true} 
-								infiniteLoop={false} 
-								showThumbs={false}
-								autoPlay={false} 
-								interval={600000}
-								centerMode={true}
 								data={itemArray}
 							/>
 						</div>

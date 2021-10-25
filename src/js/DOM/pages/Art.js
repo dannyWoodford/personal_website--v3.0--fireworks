@@ -8,37 +8,37 @@ export default function Art({...props}) {
 		{
 			_id: 'art-1',
 			type: 'image',
-			itemUrl: '/images/art/art-1.jpeg'
+			itemUrl: '/assets-by-page/art/art-1.jpeg'
 		},
 		{
 			_id: 'art-7',
 			type: 'image',
-			itemUrl: '/images/art/art-7.JPG'
+			itemUrl: '/assets-by-page/art/art-7.JPG'
 		},
 		{
 			_id: 'art-2',
 			type: 'image',
-			itemUrl: '/images/art/art-2.jpeg'
+			itemUrl: '/assets-by-page/art/art-2.jpeg'
 		},
 		{
 			_id: 'art-3',
 			type: 'image',
-			itemUrl: '/images/art/art-3.jpeg'
+			itemUrl: '/assets-by-page/art/art-3.jpeg'
 		},
 		{
 			_id: 'art-4',
 			type: 'image',
-			itemUrl: '/images/art/art-4.jpeg'
+			itemUrl: '/assets-by-page/art/art-4.jpeg'
 		},
 		{
 			_id: 'art-5',
 			type: 'image',
-			itemUrl: '/images/art/art-5.JPG'
+			itemUrl: '/assets-by-page/art/art-5.JPG'
 		},
 		{
 			_id: 'art-6',
 			type: 'image',
-			itemUrl: '/images/art/art-6.JPG'
+			itemUrl: '/assets-by-page/art/art-6.JPG'
 		},
 	]
 
@@ -55,14 +55,6 @@ export default function Art({...props}) {
 						<div className="display-item" >
 						<h2 className="text" >I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
 							<ItemCarousel 
-								emulateTouch={true} 
-								swipeable={true}
-								dynamicHeight={true} 
-								infiniteLoop={false} 
-								showThumbs={false}
-								autoPlay={false} 
-								interval={600000}
-								centerMode={true}
 								data={itemArray}
 							/>
 						</div>

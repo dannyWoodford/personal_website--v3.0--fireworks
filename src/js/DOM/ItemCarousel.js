@@ -23,7 +23,7 @@ const SlideItem = ({ url, isSelected, type, name }) => (
 			<img 
 				src={process.env.PUBLIC_URL + url } 
 				alt={name} 
-				className=".displayed-item"
+				className="displayed-item"
 			/> : 
 			<ReactPlayer 
 				className='react-player' 
@@ -68,7 +68,6 @@ const ItemCarousel = ({ data }) => {
 			renderItem={customRenderItem}
 			emulateTouch={true} 
 			swipeable={true}
-			dynamicHeight={true} 
 			infiniteLoop={false} 
 			showThumbs={false}
 			autoPlay={false} 

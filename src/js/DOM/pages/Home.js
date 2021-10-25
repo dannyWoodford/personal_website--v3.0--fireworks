@@ -35,24 +35,24 @@ export default function Home({...props}) {
 					<div className="item medium" onClick={() => props.linkToPageHandler(delay)}>
 						<DelayLink to={'/flatiron'} delay={delay} className="nav-link">
 							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/flatiron-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/flatiron-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
 							</div>
 						</DelayLink>
 					</div>
 					<div className="item medium" onClick={() => props.linkToPageHandler(delay)}>
 						<DelayLink to={'/brandgage'} delay={delay} className="nav-link">
 							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/brandgage-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/brandgage-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
 							</div>
 						</DelayLink>
 					</div>  
 					<div className="item medium" onClick={() => props.linkToPageHandler(delay)}>
 						<DelayLink to={'/projects'} delay={delay} className="nav-link">
 							<div className="item__border">
-								<img className="item__image inver-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/PersonalProjects-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/PersonalProjects-gif.gif'} />
+								<img className="item__image inver-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/PersonalProjects-gif.gif'} />
 							</div>
 						</DelayLink>
 					</div>  
@@ -60,16 +60,16 @@ export default function Home({...props}) {
 						<div className="item" onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/blender'} delay={delay} className="nav-link">
 								<div className="item__border">
-									<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/blender-logo.png'}/>
-									<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/blender-gif.gif'} />
+									<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/blender-logo.png'}/>
+									<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/blender-gif.gif'} />
 								</div>
 							</DelayLink>
 						</div>
 						<div className="item" onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/art'} delay={delay} className="nav-link">
 								<div className="item__border">
-									<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/art-logo.png'}/>
-									<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/art-gif.gif'} />
+									<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/art-logo.png'}/>
+									<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/art-gif.gif'} />
 								</div>
 							</DelayLink>
 						</div>
@@ -82,24 +82,24 @@ export default function Home({...props}) {
 							</div>
 						</div>
 					</div>
-					<div className="double-item">
+					<div className="double-item double-item-clock">
 						<div className="item__clock">
 							<Clock />
 						</div>
 					</div>
-					<div className="item" onClick={() => props.linkToPageHandler(delay)}>
+					<div className="item item-mobile-break" onClick={() => props.linkToPageHandler(delay)}>
 						<DelayLink to={'/about'} delay={delay} className="nav-link">
 							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/about-me-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/about-me-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 							</div>
 						</DelayLink>
 					</div>
 					<a href={process.env.PUBLIC_URL + '/Danny_Woodford_Resume.pdf'} target='_blank' rel='noopener noreferrer' className='display-contents'>
 						<div className="item small">
 							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/resume-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/resume-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 							</div>
 						</div>
 					</a>
@@ -119,8 +119,8 @@ export default function Home({...props}) {
 						>
 							<div className="item small" onPointerOut={() => resetTooltip()}>
 								<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/phone-logo.png'}/>
-							<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/phone-logo.png'}/>
+							<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 								</div>
 							</div>  
 						</CopyToClipboard>
@@ -142,18 +142,18 @@ export default function Home({...props}) {
 						>
 							<div className="item small" onPointerOut={() => resetTooltip()}>
 								<div className="item__border">
-										<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/email-logo.png'}/>
-										<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
+										<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/email-logo.png'}/>
+										<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 								</div>
 							</div>  
 						</CopyToClipboard>
 						<ReactTooltip id='copyEMail' getContent={() => iconHasBeenCopied.copyEMail ? 'E-mail has been copied to clipboard!' : 'Copy e-mail to clipboard'}/>
 					</span>
 					<a href='https://www.linkedin.com/in/danny-woodford-54b418126/' target='_blank' rel='noopener noreferrer' className='display-contents'>
-						<div className="item">
+						<div className="item item-mobile-break">
 							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/images/home/thumbnails/linkedIn-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/gifs/home/space-gif.gif'} />
+								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/linkedIn-logo.png'}/>
+								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 							</div>
 						</div>
 					</a>

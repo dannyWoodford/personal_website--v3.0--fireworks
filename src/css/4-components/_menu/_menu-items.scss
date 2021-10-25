@@ -3,8 +3,10 @@
 	display: block;
 	margin: 0;
 	padding: 0 15px;
-	bottom: 100px;
-	width: 400px;
+	bottom: 0;
+	width: 100%;
+	max-height: 80vh;
+    overflow: auto;
 
 	ul {
 		margin: 0;
@@ -17,14 +19,6 @@
 			transform: translateX(-300px);
 			transition: transform 0.7s 0s $snap;
 			cursor: pointer;
-
-			&:nth-child(2) {
-				margin-left: 30px;
-			}
-			&:nth-child(3) {
-				margin-left: 60px;
-				margin-bottom: 0px;
-			}
 
 			&:hover {
 				.menu-item {
@@ -106,29 +100,15 @@
 		}
 	}
 
-	@include breakpoint ($vertical-small) {
-		bottom: 150px;
-	}
-
 	@include breakpoint ($vertical-medium) {
-		bottom: 175px;
 		padding: 0 25px;
 
 		ul {
 			li {
-				height: 85px;
 				margin-bottom: 30px;
 				list-style: none;
 				transform: translateX(-300px);
 				transition: transform 0.7s 0s $snap;
-
-				&:nth-child(2) {
-					margin-left: 30px;
-				}
-				&:nth-child(3) {
-					margin-left: 60px;
-					margin-bottom: 0px;
-				}
 			}
 		}
 	}

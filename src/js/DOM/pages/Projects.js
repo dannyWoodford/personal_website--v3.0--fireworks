@@ -1,59 +1,108 @@
 import React, { useState} from 'react'
+import ReactPlayer from 'react-player'
 
 export default function Projects({...props}) {
     
     const menuStateCurrentName = props.menuState.currentName
-	const [displayItemSrc, setDisplayItemSrc] = useState('/images/placeholder.jpg')
+	const [displayItem, setDisplayItem] = useState(
+		{
+			_id: '',
+			name: "",
+			description: '',
+			language: "",
+			github: "",
+			type: 'image',
+			itemUrl: '/placeholder.jpg'
+		},
+	)
 	const [displayItemSelected, setDisplayItemSelected] = useState(false)
 
 	const itemArray = [
 		{
-			name: 'art-1',
-			type: 'image',
-			url: '/images/art/art-1.jpeg'
+			_id: 'Chess',
+			name: "Chess",
+			description: 'React-Three-Fiber demo with editable textures and transform controls.',
+			language: "React / React-Three-Fiber",
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/Chess-demo.mp4'
 		},
 		{
-			name: 'art-2',
-			type: 'image',
-			url: '/images/art/art-2.jpeg'
+			_id: 'Storm',
+			name: "Storm",
+			description: 'Three.js dummy home page.',
+			language: "JavaScript / Three.js",
+			demo: 'https://stormflight-threejs.firebaseapp.com/',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/trimed-storm-demo.mp4'
 		},
 		{
-			name: 'art-3',
-			type: 'image',
-			url: '/images/art/art-3.jpeg'
+			_id: 'Sunrise / Sunset',
+			name: "Sunrise / Sunset",
+			description: 'The idea for this project was a literal light and dark mode.',
+			language: "JavaScript / Three.js",
+			github: "https://github.com/dannyWoodford/sunrise_sunset-THREE.js",
+			demo: 'https://sunrise-sunset-2a89d.web.app/',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/sunrise_sunset_demo.mp4'
 		},
 		{
-			name: 'art-4',
-			type: 'image',
-			url: '/images/art/art-4.jpeg'
+			_id: 'Ali',
+			name: "Ali",
+			language: "JavaScript / Three.js",
+			demo: 'https://ali-tribute.web.app/',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/ali-tribute-demo.mp4'
 		},
 		{
-			name: 'art-5',
-			type: 'image',
-			url: '/images/art/art-5.JPG'
+			_id: 'Indika',
+			name: "Indika",
+			description: 'UI demo website.',
+			language: "JavaScript",
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/indika_demo.mp4'
 		},
 		{
-			name: 'art-6',
-			type: 'image',
-			url: '/images/art/art-6.JPG'
+			_id: 'Former Personal Website',
+			name: "Former Personal Website",
+			description: 'My original website made shortly after graduating Flatiron School in 2019.',
+			language: "JavaScript / WebGL",
+			github: "https://github.com/dannyWoodford/dannyWoodford.github.io",
+			demo: 'https://dannywoodford.github.io/',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/personal_website_demo.mp4'
 		},
 		{
-			name: 'art-7',
+			_id: 'Quick Search Chrome Extension',
+			name: "Quick Search Chrome Extension",
+			description: "I made a simple chrome extension for myself so I can highlight text and search for it with a single keypress to be more efficient.",
+			language: "JavaScript / Chromium",
 			type: 'image',
-			url: '/images/art/art-7.JPG'
+			itemUrl: '/assets-by-page/projects/chrome-logo.jpg'
+		},
+		{
+			_id: 'LinkedIn Connecter Chrome Extension',
+			name: "LinkedIn Connecter Chrome Extension",
+			description: "I made a chrome extension that automates browser events to grow your LinkedIn network. From manpower to horsepower, analog to digital, technology increases our speed and efficiency. As programmers, speed and efficiency should ring especially cogent as largely the goal of our code, taking the heavy lifting off of us and on to the machine. However, when it comes to the advancement of our careers we take a step back to espouse twentieth-century conventions. Automation has been on my mind lately and largely the reason I created this chrome extension.",
+			language: "JavaScript / Chromium",
+			type: 'image',
+			itemUrl: '/assets-by-page/projects/chrome-logo.jpg'
 		},
 	]
 
 	const displayItems = itemArray.map(item => (
-		<div className="item" key={item.name} onClick={() => updateDisplayItem(item.url)}>
+		<div className="item" key={item._id} onClick={() => updateDisplayItem(item)}>
 			<div className="item__border">
-				<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + item.url }/>
+				<div className="item__thumbnail">
+					<p className="item__title">
+						{item._id}
+					</p>
+				</div>
 			</div>
 		</div>
 	))
 
-	const updateDisplayItem = (itemSrc) => {
-		setDisplayItemSrc(itemSrc)
+	const updateDisplayItem = (item) => {
+		setDisplayItem(item)
 		setDisplayItemSelected(true)
 	}
 
@@ -68,10 +117,34 @@ export default function Projects({...props}) {
 				<div className='container'>
 					<div className='page-container'>
 						<div className="display-item">
-							<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItemSrc} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+							<div className="display-item-image" style={{display: displayItem.type === 'image' ? 'block' : 'none'}}>
+								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+							</div>
+							<div className="display-item-video" style={{display: displayItem.type === 'video' ? 'block' : 'none'}}>
+								<ReactPlayer 
+									className='react-player' 
+									url={process.env.PUBLIC_URL + displayItem.itemUrl} 
+									playing={true} 
+									autoPlay={true}
+									loop={true}
+									controls={false}
+									muted={true}
+								/>
+							</div>
+							<div className="display-item-description" style={{display: displayItemSelected ? 'block' : 'none'}}>
+								<p><span className="strong">Name:</span> {displayItem.name}</p>
+								<p style={{display: displayItem.description ? 'block' : 'none'}}><span className="strong">Description:</span> {displayItem.description}</p>
+								<p style={{display: displayItem.language ? 'block' : 'none'}}><span className="strong">Built with:</span> {displayItem.language}</p>
+								<div className="link-container">
+									<a href={displayItem.github} target="_blank" rel="noreferrer" className="link" style={{display: displayItem.github ? 'block' : 'none'}}>Github</a>
+										<span className="link-separator" style={{display: displayItem.demo && displayItem.github ? 'block' : 'none'}}>|</span>
+									<a href={displayItem.demo} target="_blank" rel="noreferrer" className="link" style={{display: displayItem.demo ? 'block' : 'none'}}>Demo</a>
+								</div>
+							</div>
 						</div>
-						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
-						{displayItems}
+						<div className="display-items-container">
+							{displayItems}
+						</div>
 					</div>
 				</div>
 			</div>

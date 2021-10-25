@@ -21,15 +21,15 @@
 	position: relative;
 	display: block;
 
-	& {
-		transform: scale(0.6);
+	@include breakpoint($bp-large) {
+		transform: scale(0.7);
 	}
 
-	@include breakpoint($bp-medium) {
+	@include breakpoint($bp-xlarge) {
 		transform: scale(0.9);
 	}
 
-	@include breakpoint($bp-large) {
+	@include breakpoint($bp-xxlarge) {
 		transform: scale(1);
 	}
 }
@@ -189,7 +189,7 @@
 	transform: translate(-90%, -25%) rotate(-120deg);
 
 	.hex-body {
-		filter: url(#round) drop-shadow(3px -39px 14px #53517e);
+		filter: url(#round) drop-shadow(18px -10px 18px #53517e);
 		
 		&:before {
 			background:linear-gradient(320deg, #e67070, #9090e4);

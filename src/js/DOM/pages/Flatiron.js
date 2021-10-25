@@ -1,59 +1,83 @@
 import React, { useState} from 'react'
+import ReactPlayer from 'react-player'
 
 export default function Flatiron({...props}) {
     
     const menuStateCurrentName = props.menuState.currentName
-	const [displayItemSrc, setDisplayItemSrc] = useState('/images/placeholder.jpg')
+	const [displayItem, setDisplayItem] = useState(
+		{
+			_id: '',
+			name: "",
+			description: '',
+			language: "",
+			github: "",
+			type: 'image',
+			itemUrl: '/placeholder.jpg'
+		},
+	)
 	const [displayItemSelected, setDisplayItemSelected] = useState(false)
 
 	const itemArray = [
 		{
-			name: 'art-1',
-			type: 'image',
-			url: '/images/art/art-1.jpeg'
+			_id: 'Final Project',
+			name: "Spotify 3D music Visualizer",
+			description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
+			language: "JavaScript / React / Ruby on Rails Backend / Three.js",
+			github: "https://github.com/dannyWoodford/3D-spotify-visualizer-",
+			type: 'video',
+			itemUrl: '/assets-by-page/flatiron/3d-spotify-visualizer-trimmed.mp4'
 		},
 		{
-			name: 'art-2',
-			type: 'image',
-			url: '/images/art/art-2.jpeg'
+			_id: 'Mod 4 Project',
+			name: "Ziehbare Stimme Leinwand",
+			description: 'This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.',
+			language: "JavaScript / React / Ruby on Rails Backend / Three.js",
+			github: "https://github.com/jwsharpe/ZiehbareStimmeLeinwand",
+			type: 'video',
+			itemUrl: '/assets-by-page/flatiron/ZSL-demo.mp4'
 		},
 		{
-			name: 'art-3',
-			type: 'image',
-			url: '/images/art/art-3.jpeg'
+			_id: 'Mod 3 Project',
+			name: "Enter the Labyrinth",
+			description: 'Complete the maze before the fire catches you.',
+			language: "JavaScript / Ruby on Rails Backend / Canvas",
+			github: "https://github.com/TenNga/Maze-Game-Front-End",
+			demo: "https://pure-reaches-70099.herokuapp.com/",
+			type: 'video',
+			itemUrl: '/assets-by-page/flatiron/labryinth-demo.mp4'
 		},
 		{
-			name: 'art-4',
-			type: 'image',
-			url: '/images/art/art-4.jpeg'
+			_id: 'Mod 2 Project',
+			name: "NOTFLIX",
+			description: 'Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.',
+			language: "Ruby on Rails",
+			github: "https://github.com/ntel-91/mod2-project",
+			type: 'video',
+			itemUrl: '/assets-by-page/flatiron/notflix-demo.mp4'
 		},
 		{
-			name: 'art-5',
+			_id: 'Flatiron Cross-Discipline Collaboration Event',
+			name: "Flatiron Cross-Discipline Collaboration Event",
+			description: "While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.",
 			type: 'image',
-			url: '/images/art/art-5.JPG'
-		},
-		{
-			name: 'art-6',
-			type: 'image',
-			url: '/images/art/art-6.JPG'
-		},
-		{
-			name: 'art-7',
-			type: 'image',
-			url: '/images/art/art-7.JPG'
+			itemUrl: '/assets-by-page/flatiron/cross-colab.jpg'
 		},
 	]
 
 	const displayItems = itemArray.map(item => (
-		<div className="item" key={item.name} onClick={() => updateDisplayItem(item.url)}>
+		<div className="item" key={item._id} onClick={() => updateDisplayItem(item)}>
 			<div className="item__border">
-				<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + item.url }/>
+				<div className="item__thumbnail">
+					<p className="item__title">
+						{item._id}
+					</p>
+				</div>
 			</div>
 		</div>
 	))
 
-	const updateDisplayItem = (itemSrc) => {
-		setDisplayItemSrc(itemSrc)
+	const updateDisplayItem = (item) => {
+		setDisplayItem(item)
 		setDisplayItemSelected(true)
 	}
 
@@ -68,10 +92,34 @@ export default function Flatiron({...props}) {
 				<div className='container'>
 					<div className='page-container'>
 						<div className="display-item">
-							<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItemSrc} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+							<div className="display-item-image" style={{display: displayItem.type === 'image' ? 'block' : 'none'}}>
+								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+							</div>
+							<div className="display-item-video" style={{display: displayItem.type === 'video' ? 'block' : 'none'}}>
+								<ReactPlayer 
+									className='react-player' 
+									url={process.env.PUBLIC_URL + displayItem.itemUrl} 
+									playing={true} 
+									autoPlay={true}
+									loop={true}
+									controls={false}
+									muted={true}
+								/>
+							</div>
+							<div className="display-item-description" style={{display: displayItemSelected ? 'block' : 'none'}}>
+								<p><span className="strong">Name:</span> {displayItem.name}</p>
+								<p style={{display: displayItem.description ? 'block' : 'none'}}><span className="strong">Description:</span> {displayItem.description}</p>
+								<p style={{display: displayItem.language ? 'block' : 'none'}}><span className="strong">Built with:</span> {displayItem.language}</p>
+								<div className="link-container">
+									<a href={displayItem.github} target="_blank" rel="noreferrer" className="link" style={{display: displayItem.github ? 'block' : 'none'}}>Github</a>
+										<span className="link-separator" style={{display: displayItem.demo && displayItem.github ? 'block' : 'none'}}>|</span>
+									<a href={displayItem.demo} target="_blank" rel="noreferrer" className="link" style={{display: displayItem.demo ? 'block' : 'none'}}>Demo</a>
+								</div>
+							</div>
 						</div>
-						<h2>I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely important to animation and 3D in general because of their visual/spacial nature.</h2>
-						{displayItems}
+						<div className="display-items-container">
+							{displayItems}
+						</div>
 					</div>
 				</div>
 			</div>

@@ -97,9 +97,52 @@
 	}
 		
 	.display-item-target {
-		width: 100%;
+		width: auto;
+		margin: auto;
+		height: 360px;
 		display: block;
 		transition: opacity 250ms ease-in-out;
+	}
+
+	.display-item-description {
+		padding-top: 15px;
+		text-align: left;
+
+		p {
+			margin-top: 0;
+		}
+
+		.strong {
+			font-weight: 900;
+		}
+
+		.link-container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.link-separator {
+			padding: 0 5px;
+			font-size: 25px;
+			margin-top: -4px;
+		}
+
+		.link {
+			color: $color-white;
+			font-weight: bold;
+			font-size: 22px;
+		}
+	}
+
+	.react-player {
+		width: 100% !important;
+		height: 100% !important;
+		margin: auto;
+
+		@include breakpoint($bp-large) {
+			height: 360px !important;
+			width: 640px !important;
+		}
 	}
 
 	.no-pointer-events {

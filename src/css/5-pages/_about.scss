@@ -1,9 +1,5 @@
 .about-page {
-    overflow: visible;
-
-	h1 {
-		text-decoration: underline;
-	}
+    overflow: auto;
 
 	.glass-container {
 		background: rgba( 255, 255, 255, 0.4 );
@@ -15,14 +11,23 @@
 		height: min-content;
 		padding: 20px;
 		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
+		position: relative;
 		z-index: 1;
+		
+		@include breakpoint($bp-medium) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
 	} 
 
 	.floating-glass {
 		padding: 60px;
+		display: none;
+
+		@include breakpoint($bp-medium) {
+			display: block;
+		}
 
 		&.glass-1 {
 			transform: translate(-50px, -360px);
@@ -54,17 +59,65 @@
 	}
 	
 	.about-container {
-		transform: translate(-500px, -300px);
-		width: 500px;
+		width: 100%;
+		margin: 5%;
+		border: 1px solid $color-white;
+		
+		@include breakpoint($bp-medium) {
+			border: none;
+			width: 500px;
+			transform: translate(-500px, -300px);
+		}
 
 		p {
 			font-size: 20px;
 		}
 	}
 	
+	.skills-container-mobile {
+		display: table;
+		width: auto;
+		text-align: left;
+		border: 1px solid $color-white;
+		border-radius: 19px;
+		padding-bottom: 20px;
+		margin: auto;
+
+		@include breakpoint($bp-medium) {
+			display: none;
+		}
+
+		.title {
+			text-align: center;
+		}
+	}
+
+	.skills-list-mobile {
+		p {
+			font-size: 20px;
+			margin: 0;
+		}
+
+		.skills-list {
+			text-align: left;
+			display: flex;
+			justify-content: center;
+		}
+		
+		ul {
+			margin: 0;
+		}
+	}
+	
 	.skills-container {
-		width: 230px;
-		transform: translate(200px, -70px);
+		width: 100%;
+		display: none;
+		
+		@include breakpoint($bp-medium) {
+			display: block;
+			width: 230px;
+			transform: translate(200px, -70px);
+		}
 
 		p {
 			font-size: 20px;
