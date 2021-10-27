@@ -29,11 +29,20 @@ export default function Projects({...props}) {
 		{
 			_id: 'Storm',
 			name: "Storm",
-			description: 'Three.js dummy home page.',
+			description: 'Interactive homepage demo. features(Positional Audio, model animation bound to key interactions)',
 			language: "JavaScript / Three.js",
 			demo: 'https://stormflight-threejs.firebaseapp.com/',
 			type: 'video',
 			itemUrl: '/assets-by-page/projects/trimed-storm-demo.mp4'
+		},
+		{
+			_id: 'Responsive Text',
+			name: "Responsive Text",
+			description: 'React-Three-Fiber demo.',
+			language: "React / React-Three-Fiber / React-Spring / drei",
+			demo: 'https://codesandbox.io/s/zb5ps?file=/src/components/ResponsiveText.js:141-145',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/responsive-text.mp4'
 		},
 		{
 			_id: 'Sunrise / Sunset',
