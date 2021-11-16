@@ -6,16 +6,15 @@ export default function Flatiron({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 	const [displayItem, setDisplayItem] = useState(
 		{
-			_id: '',
-			name: "",
-			description: '',
-			language: "",
-			github: "",
-			type: 'image',
-			itemUrl: '/placeholder.jpg'
+			_id: 'Final Project',
+			name: "Spotify 3D music Visualizer",
+			description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
+			language: "JavaScript / React / Ruby on Rails Backend / Three.js",
+			github: "https://github.com/dannyWoodford/3D-spotify-visualizer-",
+			type: 'video',
+			itemUrl: '/assets-by-page/flatiron/3d-spotify-visualizer-trimmed.mp4'
 		},
 	)
-	const [displayItemSelected, setDisplayItemSelected] = useState(false)
 
 	const itemArray = [
 		{
@@ -78,7 +77,6 @@ export default function Flatiron({...props}) {
 
 	const updateDisplayItem = (item) => {
 		setDisplayItem(item)
-		setDisplayItemSelected(true)
 	}
 
     return (
@@ -93,7 +91,7 @@ export default function Flatiron({...props}) {
 					<div className='page-container'>
 						<div className="display-item">
 							<div className="display-item-image" style={{display: displayItem.type === 'image' ? 'block' : 'none'}}>
-								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl}/>
 							</div>
 							<div className="display-item-video" style={{display: displayItem.type === 'video' ? 'block' : 'none'}}>
 								<ReactPlayer 
@@ -106,7 +104,7 @@ export default function Flatiron({...props}) {
 									muted={true}
 								/>
 							</div>
-							<div className="display-item-description" style={{display: displayItemSelected ? 'block' : 'none'}}>
+							<div className="display-item-description">
 								<p><span className="strong">Name:</span> {displayItem.name}</p>
 								<p style={{display: displayItem.description ? 'block' : 'none'}}><span className="strong">Description:</span> {displayItem.description}</p>
 								<p style={{display: displayItem.language ? 'block' : 'none'}}><span className="strong">Built with:</span> {displayItem.language}</p>

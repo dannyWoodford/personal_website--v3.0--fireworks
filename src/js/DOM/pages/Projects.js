@@ -6,16 +6,14 @@ export default function Projects({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 	const [displayItem, setDisplayItem] = useState(
 		{
-			_id: '',
-			name: "",
-			description: '',
-			language: "",
-			github: "",
-			type: 'image',
-			itemUrl: '/placeholder.jpg'
+			_id: 'Chess',
+			name: "Chess",
+			description: 'React-Three-Fiber demo with editable textures and transform controls.',
+			language: "React / React-Three-Fiber",
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/Chess-demo.mp4'
 		},
 	)
-	const [displayItemSelected, setDisplayItemSelected] = useState(false)
 
 	const itemArray = [
 		{
@@ -112,7 +110,6 @@ export default function Projects({...props}) {
 
 	const updateDisplayItem = (item) => {
 		setDisplayItem(item)
-		setDisplayItemSelected(true)
 	}
 
     return (
@@ -127,7 +124,7 @@ export default function Projects({...props}) {
 					<div className='page-container'>
 						<div className="display-item">
 							<div className="display-item-image" style={{display: displayItem.type === 'image' ? 'block' : 'none'}}>
-								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl} style={{opacity: !displayItemSelected ? 0 : 1}}/>
+								<img className="display-item-target" alt="" src={process.env.PUBLIC_URL + displayItem.itemUrl}/>
 							</div>
 							<div className="display-item-video" style={{display: displayItem.type === 'video' ? 'block' : 'none'}}>
 								<ReactPlayer 
@@ -140,7 +137,7 @@ export default function Projects({...props}) {
 									muted={true}
 								/>
 							</div>
-							<div className="display-item-description" style={{display: displayItemSelected ? 'block' : 'none'}}>
+							<div className="display-item-description">
 								<p><span className="strong">Name:</span> {displayItem.name}</p>
 								<p style={{display: displayItem.description ? 'block' : 'none'}}><span className="strong">Description:</span> {displayItem.description}</p>
 								<p style={{display: displayItem.language ? 'block' : 'none'}}><span className="strong">Built with:</span> {displayItem.language}</p>
