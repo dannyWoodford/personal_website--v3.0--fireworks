@@ -47,8 +47,10 @@ export default function Blender({...props}) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<div className="display-item" >
-						<h2 className="text">Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to make them "game ready" or positioning objects for the Brandgage VR virtual booths.</h2>
+						<div className="display-item non-project-display-item">
+						<div className="text-container">
+							<h2 className="text">Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to make them "game ready" or positioning objects for the Brandgage VR virtual booths.</h2>
+						</div>
 							<ItemCarousel 
 								data={itemArray}
 							/>

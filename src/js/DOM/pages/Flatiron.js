@@ -115,6 +115,7 @@ export default function Flatiron({...props}) {
 								</div>
 							</div>
 						</div>
+						<h3>Here are some of the projects I built while at Flatiron School</h3>
 						<div className="display-items-container">
 							{displayItems}
 						</div>

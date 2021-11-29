@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react'
-import { Stats } from '@react-three/drei'
+// import { Stats } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 
 import Loading from '../components/setup/Loading.js'
@@ -27,7 +27,7 @@ export default function Scene({ ...props }) {
 					menuState={props.menuState}
 				/>
 			</Suspense>
-			<Stats className="stats" />
+			{/* <Stats className="stats" /> */}
 		</Canvas>
 	)
 }

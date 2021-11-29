@@ -125,6 +125,7 @@ export default function Brandgage({...props}) {
 								</div>
 							</div>
 						</div>
+							<h3>Here are a few of the over 40 project I've worked on while employed at Brandgage</h3>
 							<p>** Websites are up during the dates of the trade show it was built for so links may or may not work. **</p>
 						<div className="display-items-container">
 							{displayItems}

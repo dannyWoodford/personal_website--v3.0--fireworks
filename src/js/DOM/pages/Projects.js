@@ -148,6 +148,7 @@ export default function Projects({...props}) {
 								</div>
 							</div>
 						</div>
+						<h3>Here are some of the personal projects I've built in my free time</h3>
 						<div className="display-items-container">
 							{displayItems}
 						</div>

@@ -18,8 +18,9 @@
 		padding: 0px;
 
 		li {
+			display: block;
 			height: 70px;
-			margin-bottom: 30px;
+			margin: 0;
 			list-style: none;
 			transform: translateX(-300px);
 			transition: transform 0.7s 0s $snap;
@@ -62,7 +63,6 @@
 			top: 0;
 			height: 100%;
 			width: 100%;
-			transform: translate(12px, 12px);
 			text-decoration: none;
 			text-transform: uppercase;
 			letter-spacing: 2px;
@@ -110,7 +110,7 @@
 
 		ul {
 			li {
-				margin-bottom: 30px;
+				padding-bottom: 100px;
 				list-style: none;
 				transform: translateX(-300px);
 				transition: transform 0.7s 0s $snap;

@@ -1,6 +1,5 @@
 .display-item {
 	max-width: 75vh;
-	min-height: 100%;
 	height: min-content;
 	border: 2px solid rgb(255, 255, 255);
 	padding: 5vh 3vh;
@@ -20,14 +19,26 @@
 	@include breakpoint($bp-large) {
 		padding: 30px;
 	}
+	.non-project-display-item {
+		min-height: 81vh;
+	}
+
+	.text-container {
+		display: block;
+		width: 100%;
+    	min-height: 16vh;
+	}
 
 	.text {
-		margin: 1vh 0 5vh 0;
+		padding: 1vh 0 5vh 0;
 		font-weight: 300;
+		margin: 0;
+		font-size: 24px;
 	}
 
 	.carousel-root {
 		height: 100%;
+		min-height: 58vh;
 
 		.carousel-slider, 
 		.carousel {
@@ -78,6 +89,7 @@
 						display: flex;
 						height: 100% !important;
 						align-items: center;
+						min-height: 55vh;
 						
 						.react-player {
 							width: 100% !important;
