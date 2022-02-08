@@ -10,6 +10,7 @@ export default function Projects({...props}) {
 			name: "R3F False3D Photosphere Face Tracker",
 			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
 			language: "React / React-Three-Fiber / Zapworks AR / Drei",
+			demo: 'https://zulu.zappar.io/8509415544824374152/1.1.0/',
 			type: 'video',
 			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
 		},
@@ -21,6 +22,7 @@ export default function Projects({...props}) {
 			name: "R3F False3D Photosphere Face Tracker",
 			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
 			language: "React / React-Three-Fiber / Zapworks AR / Drei",
+			demo: 'https://zulu.zappar.io/8509415544824374152/1.1.0/',
 			type: 'video',
 			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
 		},
