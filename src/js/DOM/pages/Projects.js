@@ -6,16 +6,24 @@ export default function Projects({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 	const [displayItem, setDisplayItem] = useState(
 		{
-			_id: 'Chess',
-			name: "Chess",
-			description: 'React-Three-Fiber demo with editable textures and transform controls.',
-			language: "React / React-Three-Fiber",
+			_id: 'R3F False3D Photosphere Face Tracker',
+			name: "R3F False3D Photosphere Face Tracker",
+			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
+			language: "React / React-Three-Fiber / Zapworks AR / Drei",
 			type: 'video',
-			itemUrl: '/assets-by-page/projects/Chess-demo.mp4'
+			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
 		},
 	)
 
 	const itemArray = [
+		{
+			_id: 'R3F False3D Photosphere Face Tracker',
+			name: "R3F False3D Photosphere Face Tracker",
+			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
+			language: "React / React-Three-Fiber / Zapworks AR / Drei",
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
+		},
 		{
 			_id: 'Chess',
 			name: "Chess",
@@ -37,7 +45,7 @@ export default function Projects({...props}) {
 			_id: 'Responsive Text',
 			name: "Responsive Text",
 			description: 'React-Three-Fiber demo.',
-			language: "React / React-Three-Fiber / React-Spring / drei",
+			language: "React / React-Three-Fiber / React-Spring / Drei",
 			demo: 'https://codesandbox.io/s/zb5ps?file=/src/components/ResponsiveText.js:141-145',
 			type: 'video',
 			itemUrl: '/assets-by-page/projects/responsive-text.mp4'
