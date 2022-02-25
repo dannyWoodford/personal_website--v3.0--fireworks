@@ -6,17 +6,26 @@ export default function Projects({...props}) {
     const menuStateCurrentName = props.menuState.currentName
 	const [displayItem, setDisplayItem] = useState(
 		{
-			_id: 'Stereographic Projection -- Volumetric Light',
-			name: "Stereographic Projection -- Volumetric Light",
-			description: 'Demonstarting the concept of stereographic projection in react-three-fiber wiht some volumetric light thrown in there just for fun.',
-			language: "React / React-Three-Fiber / Postprocessing / Drei",
-			demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
+			_id: 'R3F False3D Photosphere Face Tracker (360\u00b0 Glasses-less 3D Image)',
+			name: "R3F False3D Photosphere Face Tracker (360\u00b0 Glasses-less 3D Image)",
+			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
+			language: "React / React-Three-Fiber / Zapworks AR / Drei",
+			demo: 'https://mfwj.zappar.io/5957180484379593482/1.0.0/',
 			type: 'video',
-			itemUrl: '/assets-by-page/projects/StereographicProjection--VolumetricLight.mp4'
+			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
 		},
 	)
 
 	const itemArray = [
+		{
+			_id: 'R3F False3D Photosphere Face Tracker (360\u00b0 Glasses-less 3D Image)',
+			name: "R3F False3D Photosphere Face Tracker (360\u00b0 Glasses-less 3D Image)",
+			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
+			language: "React / React-Three-Fiber / Zapworks AR / Drei",
+			demo: 'https://mfwj.zappar.io/5957180484379593482/1.0.0/',
+			type: 'video',
+			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
+		},
 		{
 			_id: 'Stereographic Projection -- Volumetric Light',
 			name: "Stereographic Projection -- Volumetric Light",
@@ -25,15 +34,6 @@ export default function Projects({...props}) {
 			demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
 			type: 'video',
 			itemUrl: '/assets-by-page/projects/StereographicProjection--VolumetricLight.mp4'
-		},
-		{
-			_id: 'R3F False3D Photosphere Face Tracker',
-			name: "R3F False3D Photosphere Face Tracker",
-			description: 'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
-			language: "React / React-Three-Fiber / Zapworks AR / Drei",
-			demo: 'https://zulu.zappar.io/8509415544824374152/1.1.0/',
-			type: 'video',
-			itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4'
 		},
 		{
 			_id: 'Chess',
