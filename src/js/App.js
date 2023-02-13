@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
 import {Switch, Route, useLocation, Redirect} from "react-router-dom";
 
-import Canvas from './CANVAS/containers/Canvas.js'
-import Menu from './DOM/Menu.js'
-import Home from './DOM/pages/Home.js'
-import About from './DOM/pages/About.js'
-import Art from './DOM/pages/Art.js'
-import Flatiron from './DOM/pages/Flatiron.js'
-import Projects from './DOM/pages/Projects.js'
-import Blender from './DOM/pages/Blender.js'
-import Brandgage from './DOM/pages/Brandgage.js'
+import Canvas from './CANVAS/containers/Canvas'
+import Menu from './DOM/Menu'
+import Home from './DOM/pages/Home'
+import About from './DOM/pages/About'
+import Art from './DOM/pages/Art'
+import Flatiron from './DOM/pages/Flatiron'
+import Projects from './DOM/pages/Projects'
+import Blender from './DOM/pages/Blender'
+import Brandgage from './DOM/pages/Brandgage'
 
 const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)

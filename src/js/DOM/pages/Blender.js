@@ -1,44 +1,50 @@
 import React from 'react'
 import ItemCarousel from '../ItemCarousel.js'
 
-export default function Blender({...props}) {
-    const menuStateCurrentName = props.menuState.currentName
+export default function Blender({ ...props }) {
+	const menuStateCurrentName = props.menuState.currentName
 
 	const itemArray = [
 		{
+			_id: 'blender-wile-e-coyote',
+			type: 'image',
+			itemUrl: '/assets-by-page/blender/blender-wile-e-coyote.jpeg',
+		},
+		{
 			_id: 'blender-booth',
 			type: 'image',
-			itemUrl: '/assets-by-page/blender/blender-booth.jpg'
+			itemUrl: '/assets-by-page/blender/blender-booth.jpg',
 		},
 		{
 			_id: 'blender-couch',
 			type: 'image',
-			itemUrl: '/assets-by-page/blender/blender-couch.jpg'
+			itemUrl: '/assets-by-page/blender/blender-couch.jpg',
 		},
 		{
 			_id: 'blender-steve',
 			type: 'video',
-			itemUrl: '/assets-by-page/blender/blender-steve.mp4'
+			itemUrl: '/assets-by-page/blender/blender-steve.mp4',
 		},
 		{
 			_id: 'blender-al',
 			type: 'video',
-			itemUrl: '/assets-by-page/blender/blender-al.mp4'
+			itemUrl: '/assets-by-page/blender/blender-al.mp4',
 		},
 		{
 			_id: 'blender-chair',
 			type: 'video',
-			itemUrl: '/assets-by-page/blender/blender-chair.mp4'
+			itemUrl: '/assets-by-page/blender/blender-chair.mp4',
 		},
-		// {
-		// 	_id: 'blender-donut',
-		// 	type: 'image',
-		// 	itemUrl: '/assets-by-page/blender/blender-donut.jpg'
-		// },
+		{
+			_id: 'blender-donut',
+			type: 'image',
+			itemUrl: '/assets-by-page/blender/blender-donut.jpg',
+		},
 	]
 
-    return (
-        <div className='page blender-page'
+	return (
+		<div
+			className='page blender-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
 				opacity: menuStateCurrentName === 'blender' ? 1 : 0,
@@ -47,17 +53,20 @@ export default function Blender({...props}) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<div className="display-item non-project-display-item">
-						<div className="text-container">
-							<h2 className="text">Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to make them "game ready" or positioning objects for the Brandgage VR virtual booths.</h2>
-						</div>
-							<ItemCarousel 
-								data={itemArray}
-							/>
+						<div className='display-item non-project-display-item'>
+							<div className='text-container'>
+								<h2 className='text'>
+									Here are some original blender models I have created. However,
+									much of my experience with blender has been optimizing already
+									built models to make them "game ready" or positioning objects
+									for the Brandgage VR virtual booths.
+								</h2>
+							</div>
+							<ItemCarousel data={itemArray} />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-    )
+	)
 }
