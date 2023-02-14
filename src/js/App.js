@@ -10,7 +10,6 @@ import Art from './DOM/pages/Art'
 import Flatiron from './DOM/pages/Flatiron'
 import Projects from './DOM/pages/Projects'
 import Blender from './DOM/pages/Blender'
-import Brandgage from './DOM/pages/Brandgage'
 
 const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)
@@ -42,10 +41,6 @@ const App = props => {
 				{
 					name: "blender",
 					canvasColor: '#fff100'
-				},
-				{
-					name: "brandgage",
-					canvasColor: '#990000'
 				},
 			]
 		}
@@ -133,13 +128,6 @@ const App = props => {
 								</Route>
 								<Route path="/blender">
 									<Blender 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
-								</Route>
-								<Route path="/brandgage">
-									<Brandgage 
 										menuIsOpen={menuToggle}
 										toggleMenuHandler={toggleMenuHandler}
 										menuState={menuState}

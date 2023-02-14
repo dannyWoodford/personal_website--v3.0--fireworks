@@ -1,9 +1,193 @@
 .projects-page {
 	background: linear-gradient(90deg, rgba(230, 112, 112, 0.8), rgba(144, 144, 228, 0.8));
 
-	.project-switch-container {
+	// .page-container {
+	// 	max-width: none;
+	// }
+
+	.display-item-panel {
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: left;
+		align-items: center;
+		max-width: 100%;
+
+		@include breakpoint($bp-xlarge) {
+			flex-direction: row;
+			align-items: normal;
+		}
+
+		p {
+			margin-top: 0;
+			font-size: 14px;
+
+			@include breakpoint($bp-xlarge) {
+				font-size: 17px;
+			}
+
+			@include breakpoint($bp-xxlarge) {
+				font-size: 20px;
+			}
+		}
+
+		.strong {
+			font-weight: 900;
+			margin-right: 8px;
+			white-space: nowrap;
+			margin-bottom: 6px;
+		}
+
+		.link {
+			color: $color-white;
+			font-weight: bold;
+			// font-size: 16px;
+
+			// @include breakpoint($bp-xlarge) {
+			// 	font-size: 19px;
+			// }
+
+			// @include breakpoint($bp-xxlarge) {
+			// 	font-size: 22px;
+			// }
+		}
+
+		.tab-info {
+			display: none;
+		}
+
+		&.has-tab-info {
+			.display-item {
+				margin: 0;
+				height: auto;
+
+				@include breakpoint($bp-xlarge) {
+					max-width: none;
+				}
+			}
+
+			.tab-info {
+				display: block;
+				height: auto;
+				margin: 15px 0 0 0;
+				padding: 3vh 2vh;
+
+				@include breakpoint($bp-large) {
+					padding: 20px;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					padding: 30px;
+				}
+
+				p {
+					white-space: nowrap;
+				}
+
+				& > div:first-of-type {
+					display: flex;
+					flex-direction: column;
+
+					@include breakpoint($bp-small) {
+						flex-direction: row;
+					}
+
+					@include breakpoint($bp-xlarge) {
+						flex-direction: column;
+					}
+
+					& > div:first-of-type {
+						padding-right: 30px;
+
+						@include breakpoint($bp-xlarge) {
+							padding: 0;
+						}
+					}
+				}
+
+				& > div:last-of-type {
+					p {
+						white-space: break-spaces;
+						margin: 0;
+						margin-top: 10px;
+						font-size: 18px;
+						font-weight: 600;
+
+						@include breakpoint($bp-xlarge) {
+							margin-top: 25px;
+							font-size: 20px;
+						}
+					}
+				}
+
+				@include breakpoint($bp-xlarge) {
+					flex-direction: column;
+					margin: 0 15px 0 0;
+					flex-basis: 45%;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					min-width: 400px;
+				}
+
+				.tab-info-name {
+					margin-top: 0;
+					font-size: 20px;
+
+					@include breakpoint($bp-large) {
+						font-size: 22px;
+					}
+
+					@include breakpoint($bp-xlarge) {
+						font-size: 25px;
+					}
+
+					@include breakpoint($bp-xxlarge) {
+						font-size: 28px;
+					}
+				}
+
+				.tab-info-flex {
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
+
+			.react-player {
+				@include breakpoint($bp-large) {
+					width: auto !important;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					height: 480px !important;
+				}
+			}
+		}
+	}
+
+	.display-items-container {
+		&.has-display-items-message {
+			padding: 0;
+		}
+	}
+
+	.tab-switch-message {
+		margin-top: 0;
+	}
+
+	.tab-switch-container {
 		display: flex;
 		flex-direction: row;
+		padding-bottom: 15px;
+
+		.item {
+			padding: 10px;
+		}
+
+		@include breakpoint($bp-large) {
+			.item {
+				padding: 12px;
+			}
+		}
 	}
 
 	.item {
@@ -15,9 +199,10 @@
 		align-items: center;
 		flex-grow: 1;
 		flex-shrink: 1;
-		min-height: 150px;
+		min-height: 100px;
 
 		@include breakpoint($bp-large) {
+			min-height: 150px;
 			padding: 15px;
 		}
 	}
@@ -35,13 +220,17 @@
 		box-shadow: 5px 5px 15px #663333, -5px -5px 15px #ffcbcb;
 		border: 4px solid #cc89a4;
 		transition: transform 250ms ease-in-out, border 250ms ease-in-out, box-shadow 250ms ease-in-out, border-radius 250ms ease-in-out;
-		padding: 30px 0;
+		padding: 20px 0;
 		border-radius: 19px;
 		background: linear-gradient(145deg, rgb(230, 112, 112), $color-bg-blue);
 		overflow: hidden;
 		cursor: pointer;
 		width: 100%;
 		height: 100%;
+
+		@include breakpoint($bp-xlarge) {
+			padding: 30px 0;
+		}
 	}
 
 	.item__image {
@@ -55,7 +244,11 @@
 	}
 
 	.add-padding {
-		padding: 0 30px;
+		padding: 0 10px;
+
+		@include breakpoint($bp-large) {
+			padding: 0 30px;
+		}
 	}
 
 	.item__image.hover-image {

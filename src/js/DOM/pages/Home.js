@@ -57,14 +57,6 @@ export default function Home({ ...props }) {
 								</div>
 							</DelayLink>
 						</div>
-						{/* <div className="item medium" onClick={() => props.linkToPageHandler(delay)}>
-						<DelayLink to={'/brandgage'} delay={delay} className="nav-link">
-							<div className="item__border">
-								<img className="item__image" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'}/>
-								<img alt="" className="item__image hover-image" src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
-							</div>
-						</DelayLink>
-					</div>   */}
 						<div
 							className='item large'
 							onClick={() => props.linkToPageHandler(delay)}
