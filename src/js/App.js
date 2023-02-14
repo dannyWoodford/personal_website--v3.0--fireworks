@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
-import { Switch, Route, useLocation, Redirect } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 
 import Canvas from './CANVAS/containers/Canvas'
 import Menu from './DOM/Menu'
@@ -85,9 +85,9 @@ const App = props => {
 					<div className='content'>
 						<div className='content_inner'>
 							<Canvas menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
-							<Switch>
+							<Routes>
 								<Route exact path='/'>
-									<Redirect to='/home' />
+									<Navigate to='/home' />
 								</Route>
 								<Route path='/about'>
 									<About menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
@@ -107,7 +107,7 @@ const App = props => {
 								<Route path='/home'>
 									<Home menuIsOpen={menuToggle} linkToPageHandler={linkToPageHandler} menuState={menuState} />
 								</Route>
-							</Switch>
+							</Routes>
 						</div>
 					</div>
 				</div>

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Link, useHistory, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 // Functional link component which delays page navigation
 export const DelayLink = props => {
 	const { delay, onDelayStart, onDelayEnd, replace, to, ...rest } = props
 	let timeout = null
-	let history = useHistory()
+	let history = useNavigate()
 	let location = useLocation()
 
 	useEffect(() => {
