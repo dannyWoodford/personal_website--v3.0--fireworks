@@ -1,5 +1,5 @@
 .menu_toggle {
-	z-index:  $z-Index-highest;
+	z-index: $z-Index-highest;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -15,7 +15,7 @@
 			opacity: 0.8;
 		}
 	}
-	
+
 	i {
 		color: $color-white;
 	}

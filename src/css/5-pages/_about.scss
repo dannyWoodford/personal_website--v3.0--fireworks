@@ -1,25 +1,25 @@
 .about-page {
-    overflow: auto;
+	overflow: auto;
 
 	.glass-container {
-		background: rgba( 255, 255, 255, 0.4 );
-		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-		backdrop-filter: blur( 13.5px );
-		-webkit-backdrop-filter: blur( 13.5px );
+		background: rgba(255, 255, 255, 0.4);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur(13.5px);
+		-webkit-backdrop-filter: blur(13.5px);
 		border-radius: 10px;
-		border: 1px solid rgba( 255, 255, 255, 0.18 );
+		border: 1px solid rgba(255, 255, 255, 0.18);
 		height: min-content;
 		padding: 20px;
 		display: block;
 		position: relative;
 		z-index: 1;
-		
+
 		@include breakpoint($bp-medium) {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 		}
-	} 
+	}
 
 	.floating-glass {
 		padding: 60px;
@@ -57,12 +57,12 @@
 			padding: 120px;
 		}
 	}
-	
+
 	.about-container {
 		width: 100%;
 		margin: 5%;
 		border: 1px solid $color-white;
-		
+
 		@include breakpoint($bp-medium) {
 			border: none;
 			width: 500px;
@@ -73,7 +73,7 @@
 			font-size: 20px;
 		}
 	}
-	
+
 	.skills-container-mobile {
 		display: table;
 		width: auto;
@@ -103,16 +103,16 @@
 			display: flex;
 			justify-content: center;
 		}
-		
+
 		ul {
 			margin: 0;
 		}
 	}
-	
+
 	.skills-container {
 		width: 100%;
 		display: none;
-		
+
 		@include breakpoint($bp-medium) {
 			display: block;
 			width: 230px;
@@ -129,7 +129,7 @@
 			display: flex;
 			justify-content: center;
 		}
-		
+
 		ul {
 			margin: 0;
 		}

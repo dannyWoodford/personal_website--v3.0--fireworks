@@ -6,9 +6,9 @@
 	bottom: 0;
 	width: 100%;
 	max-height: 60vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-	
+	overflow-y: auto;
+	overflow-x: hidden;
+
 	@include breakpoint($bp-large) {
 		max-height: 80vh;
 	}
@@ -33,13 +33,13 @@
 					.menu-icon {
 						&:after {
 							border-color: darken($color-white, 70%);
-							filter: drop-shadow(0px 5px 7px rgba(255, 255, 255, 0.5));
+							filter: drop-shadow(0 5px 7px rgba(255, 255, 255, 0.5));
 						}
 					}
 
 					&.is-selected {
-						filter: drop-shadow(0px 0px 20px white);
-	
+						filter: drop-shadow(0 0 20px white);
+
 						.menu-icon {
 							&:after {
 								filter: none;
@@ -48,7 +48,7 @@
 					}
 				}
 			}
-			
+
 			&:active {
 				.menu-icon {
 					color: $transparent;
@@ -67,10 +67,10 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			color: darken($color-white, 0%);
-			transition: color .1s ease-in-out;
+			transition: color 0.1s ease-in-out;
 
 			&.is-selected {
-				filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+				filter: drop-shadow(0 0 10px rgb(255, 255, 255));
 			}
 
 			.menu-icon {
@@ -89,7 +89,7 @@
 					height: 60px;
 					border-radius: 50%;
 					border: 2px solid darken($color-white, 0%);
-					transition: border-color .1s ease-in-out;
+					transition: border-color 0.1s ease-in-out;
 				}
 
 				img {
@@ -105,7 +105,7 @@
 		}
 	}
 
-	@include breakpoint ($vertical-medium) {
+	@include breakpoint($vertical-medium) {
 		padding: 0 25px;
 
 		ul {

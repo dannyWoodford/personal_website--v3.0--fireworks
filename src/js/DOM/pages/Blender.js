@@ -48,18 +48,15 @@ export default function Blender({ ...props }) {
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
 				opacity: menuStateCurrentName === 'blender' ? 1 : 0,
-			}}
-		>
+			}}>
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
 						<div className='display-item non-project-display-item'>
 							<div className='text-container'>
 								<h2 className='text'>
-									Here are some original blender models I have created. However,
-									much of my experience with blender has been optimizing already
-									built models to make them "game ready" or positioning objects
-									for the Brandgage VR virtual booths.
+									Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to
+									make them "game ready" or positioning objects for the Brandgage VR virtual booths.
 								</h2>
 							</div>
 							<ItemCarousel data={itemArray} />

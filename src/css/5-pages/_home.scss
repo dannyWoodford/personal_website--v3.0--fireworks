@@ -302,9 +302,13 @@
 			}
 
 			#occupation {
+				display: flex;
+				flex-wrap: wrap;
+
 				p {
 					font-size: 35px;
 					margin: 10px;
+					white-space: nowrap;
 
 					@include breakpoint($bp-medium) {
 						font-size: 50px;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
-import {Switch, Route, useLocation, Redirect} from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from 'react-router-dom'
 
 import Canvas from './CANVAS/containers/Canvas'
 import Menu from './DOM/Menu'
@@ -13,38 +13,36 @@ import Blender from './DOM/pages/Blender'
 
 const App = props => {
 	const [menuToggle, setMenuToggle] = useState(false)
-	const [menuState, setMenuState] = useState(
-		{
-			currentName: '',
-			currentCanvasColor: '',
-			menuItems: [
-				{
-					name: "home",
-					canvasColor: '#FF7F7F'
-				},
-				{
-					name: "about",
-					canvasColor: '#000000'
-				},
-				{
-					name: "art",
-					canvasColor: '#3e54b0'
-				},
-				{
-					name: "flatiron",
-					canvasColor: '#f175f6'
-				},
-				{
-					name: "projects",
-					canvasColor: '#00ffbe'
-				},
-				{
-					name: "blender",
-					canvasColor: '#fff100'
-				},
-			]
-		}
-	)
+	const [menuState, setMenuState] = useState({
+		currentName: '',
+		currentCanvasColor: '',
+		menuItems: [
+			{
+				name: 'home',
+				canvasColor: '#FF7F7F',
+			},
+			{
+				name: 'about',
+				canvasColor: '#000000',
+			},
+			{
+				name: 'art',
+				canvasColor: '#3e54b0',
+			},
+			{
+				name: 'flatiron',
+				canvasColor: '#f175f6',
+			},
+			{
+				name: 'projects',
+				canvasColor: '#00ffbe',
+			},
+			{
+				name: 'blender',
+				canvasColor: '#fff100',
+			},
+		],
+	})
 
 	let location = useLocation()
 	let menuItems = menuState.menuItems
@@ -52,16 +50,16 @@ const App = props => {
 	useEffect(() => {
 		if (location) {
 			let strippedLocation = location.pathname.replace(/^\/|\/$/g, '')
-			
-			let findMenuItem = menuItems.filter((x) => {
+
+			let findMenuItem = menuItems.filter(x => {
 				return x.name === strippedLocation
 			})
 
-			setMenuState((prevPerson) => {
-				return { 
-					...prevPerson, 
+			setMenuState(prevPerson => {
+				return {
+					...prevPerson,
 					currentName: findMenuItem[0] !== undefined ? findMenuItem[0].name : 'home',
-					currentCanvasColor: findMenuItem[0] !== undefined ? findMenuItem[0].canvasColor : '#000000'
+					currentCanvasColor: findMenuItem[0] !== undefined ? findMenuItem[0].canvasColor : '#000000',
 				}
 			})
 		}
@@ -71,74 +69,43 @@ const App = props => {
 		setMenuToggle(!menuToggle)
 	}
 
-	const linkToPageHandler = ( delay ) => {
+	const linkToPageHandler = delay => {
 		setMenuToggle(true)
 
 		setTimeout(() => {
 			setMenuToggle(false)
-		}, delay);
+		}, delay)
 	}
 
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
-				<Menu 
-					toggleMenuHandler={toggleMenuHandler}
-					menuState={menuState}
-				/>
+				<Menu toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 				<div className='max-width-container'>
-					<div className='content' >
+					<div className='content'>
 						<div className='content_inner'>
-							<Canvas 
-								menuIsOpen={menuToggle}
-								menuState={menuState}
-								toggleMenuHandler={toggleMenuHandler}
-							/>
+							<Canvas menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
 							<Switch>
-								<Route exact path="/">
-									<Redirect to="/home" />
+								<Route exact path='/'>
+									<Redirect to='/home' />
 								</Route>
-								<Route path="/about">
-									<About 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
+								<Route path='/about'>
+									<About menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 								</Route>
-								<Route path="/art">
-									<Art 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
+								<Route path='/art'>
+									<Art menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 								</Route>
-								<Route path="/flatiron">
-									<Flatiron 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
+								<Route path='/flatiron'>
+									<Flatiron menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 								</Route>
-								<Route path="/projects">
-									<Projects 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
+								<Route path='/projects'>
+									<Projects menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 								</Route>
-								<Route path="/blender">
-									<Blender 
-										menuIsOpen={menuToggle}
-										toggleMenuHandler={toggleMenuHandler}
-										menuState={menuState}
-									/>
+								<Route path='/blender'>
+									<Blender menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 								</Route>
 								<Route path='/home'>
-									<Home 
-										menuIsOpen={menuToggle}
-										linkToPageHandler={linkToPageHandler}
-										menuState={menuState}
-									/>
+									<Home menuIsOpen={menuToggle} linkToPageHandler={linkToPageHandler} menuState={menuState} />
 								</Route>
 							</Switch>
 						</div>
