@@ -1,8 +1,10 @@
 .about-page {
 	overflow: auto;
+	background: $color-bg--about;
 
 	.glass-container {
-		background: rgba(255, 255, 255, 0.4);
+		background: $color-bg-gradient-opacity;
+		// background: rgba($color-white, .4);
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(13.5px);
 		-webkit-backdrop-filter: blur(13.5px);
@@ -74,41 +76,6 @@
 		}
 	}
 
-	.skills-container-mobile {
-		display: table;
-		width: auto;
-		text-align: left;
-		border: 1px solid $color-white;
-		border-radius: 19px;
-		padding-bottom: 20px;
-		margin: auto;
-
-		@include breakpoint($bp-medium) {
-			display: none;
-		}
-
-		.title {
-			text-align: center;
-		}
-	}
-
-	.skills-list-mobile {
-		p {
-			font-size: 20px;
-			margin: 0;
-		}
-
-		.skills-list {
-			text-align: left;
-			display: flex;
-			justify-content: center;
-		}
-
-		ul {
-			margin: 0;
-		}
-	}
-
 	.skills-container {
 		width: 100%;
 		display: none;
@@ -132,6 +99,24 @@
 
 		ul {
 			margin: 0;
+		}
+
+		&.--mobile {
+			display: table;
+			width: auto;
+			text-align: left;
+			border: 1px solid $color-white;
+			border-radius: 19px;
+			padding: 0 10px 20px;
+			margin: auto;
+
+			@include breakpoint($bp-medium) {
+				display: none;
+			}
+
+			.title {
+				text-align: center;
+			}
 		}
 	}
 }

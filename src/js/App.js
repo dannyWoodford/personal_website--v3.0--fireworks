@@ -35,7 +35,7 @@ const App = props => {
 			},
 			{
 				name: 'projects',
-				canvasColor: '#00ffbe',
+				canvasColor: '#ffa200',
 			},
 			{
 				name: 'blender',

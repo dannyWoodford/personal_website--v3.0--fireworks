@@ -1,10 +1,17 @@
 $transparent: transparent;
 $color-white: #ffffff;
 $color-black: #000000;
+
 $color-bg-pink: #e67070;
 $color-bg-pink-neon: #ff4290;
 $color-bg-blue: #9090e4;
 $color-bg-gradient: linear-gradient(90deg, $color-bg-pink, $color-bg-blue);
+$color-bg-gradient-opacity: linear-gradient(90deg, rgba($color-bg-pink, 0.4), rgba($color-bg-blue, 0.4));
 
-$color-about: #2c5b8b;
-$color-projects: #ff7f7f;
+$color-bg--home: $color-bg-gradient;
+$color-bg--about: $transparent;
+// $color-bg--about: linear-gradient(90deg, rgba($color-bg-pink, 0.4), rgba($color-bg-blue, 0.4));
+$color-bg--art: linear-gradient(90deg, rgba($color-bg-pink, 1), rgba($color-bg-blue, 1));
+$color-bg--blender: linear-gradient(90deg, rgba($color-bg-pink, 1), rgba($color-bg-blue, 1));
+$color-bg--flatiron: linear-gradient(90deg, rgba($color-bg-pink, 1), rgba($color-bg-blue, 1));
+$color-bg--projects: linear-gradient(90deg, rgba($color-bg-pink, 1), rgba($color-bg-blue, 1));

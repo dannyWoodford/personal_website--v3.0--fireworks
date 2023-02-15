@@ -34,7 +34,6 @@ export default function About({ ...props }) {
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
 				opacity: menuStateCurrentName === 'about' ? 1 : 0,
-				background: 'transparent',
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>
@@ -50,40 +49,55 @@ export default function About({ ...props }) {
 						<div>
 							<h1>About</h1>
 							<p>
-								Former carpenter turned full-stack developer in the pursuit of more challenging and ornate work. Renovating and building houses exposed a
-								passion for engineering and building where I learned to see big jobs through from start to finish independently. I graduated from the Flatiron
-								School where I learned JavaScript, React, Ruby, and Ruby on Rails mainly, and discovered canvas for the first time. While there I started and
-								lead the first cross-discipline collaboration event. In my personal life, I like to write jokes and make things like paintings, replica movie
-								props, woodworking projects for fun. I am a semi-professional stand-up comedian and a part from doing it for the love of it I believe to grow as
-								a person you must chase the things that make you inherently anxious such as expressing ideas publicly or overcoming failure; along with creative
-								problem solving, skills I now consider to be some of my greatest strengths.
+								Former carpenter turned 3D developer/3D artist in order to pursue more intelectually and creativly challenging work. I graduated from the
+								Flatiron School where I learned JavaScript, React, Ruby, and Ruby on Rails. It was there that I discovered Canvas for the first time and became
+								interested in 3D. At Flatiron, I started their first cross-discipline collaboration event that brought together students from the software
+								engineering, data science, and UI/UX tracks to collaborate on projects. In my personal life, I like to write jokes, read philosophy, and create
+								things like paintings, replica movie props, and woodworking projects for fun. I am a semi-professional stand-up comedian, and apart from doing
+								it for the love of it, I believe to grow as a person you must chase the things that make you inherently anxious such as expressing ideas
+								publicly or overcoming failure; along with creative problem solving, skills I now consider to be some of my greatest strengths.
 							</p>
 						</div>
 
-						<div className='skills-container-mobile'>
+						<div className='skills-container --mobile'>
 							<h2 className='title'>Skills</h2>
-							<div className='skills-list-mobile'>
+							<div className='skills-list'>
 								<ul>
-									<li>
-										<p>JavaScript</p>
-									</li>
 									<li>
 										<p>React</p>
 									</li>
 									<li>
-										<p>Three.js/React-Three-Fiber</p>
+										<p>React-Three-Fiber</p>
 									</li>
 									<li>
-										<p>HTML/Twig</p>
+										<p>R3F Ecosystem</p>
 									</li>
 									<li>
-										<p>CSS/SASS</p>
+										<p>JavaScript</p>
+									</li>
+									<li>
+										<p>Three.js</p>
 									</li>
 									<li>
 										<p>Blender</p>
 									</li>
 									<li>
 										<p>GLTF Optimization</p>
+									</li>
+									<li>
+										<p>GLSL</p>
+									</li>
+									<li>
+										<p>CSS/SASS</p>
+									</li>
+									<li>
+										<p>Postman</p>
+									</li>
+									<li>
+										<p>HTML/Twig</p>
+									</li>
+									<li>
+										<p>Cypress</p>
 									</li>
 									<li>
 										<p>Sketch</p>
@@ -102,25 +116,40 @@ export default function About({ ...props }) {
 						<div className='skills-list'>
 							<ul>
 								<li>
-									<p>JavaScript</p>
-								</li>
-								<li>
 									<p>React</p>
 								</li>
 								<li>
-									<p>Three.js/React-Three-Fiber</p>
+									<p>React-Three-Fiber</p>
 								</li>
 								<li>
-									<p>HTML/Twig</p>
+									<p>R3F Ecosystem</p>
 								</li>
 								<li>
-									<p>CSS/SASS</p>
+									<p>JavaScript</p>
+								</li>
+								<li>
+									<p>Three.js</p>
 								</li>
 								<li>
 									<p>Blender</p>
 								</li>
 								<li>
 									<p>GLTF Optimization</p>
+								</li>
+								<li>
+									<p>GLSL</p>
+								</li>
+								<li>
+									<p>CSS/SASS</p>
+								</li>
+								<li>
+									<p>Postman</p>
+								</li>
+								<li>
+									<p>HTML/Twig</p>
+								</li>
+								<li>
+									<p>Cypress</p>
 								</li>
 								<li>
 									<p>Sketch</p>

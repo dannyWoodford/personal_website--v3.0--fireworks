@@ -219,7 +219,7 @@ const rocketItemArray = [
 	{
 		name: 'Shaders',
 		description:
-			'I wrote several custom glsl shaders to get the final appearance of the earth. Including 2 for the atmosphere (earth surface and outer glow), moving clouds, and the most complex being city night lights that respond to the position of the sun.',
+			'I wrote several custom GLSL shaders to get the final appearance of the earth. Including 2 for the atmosphere (earth surface and outer glow), moving clouds, and the most complex being city night lights that respond to the position of the sun.',
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -248,9 +248,9 @@ const displayCategoryArray = {
 		description: (
 			<>
 				<p>
-					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage I worked on over 40 website and apps almost exclusively
-					for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade shows mixing
-					standard web development, video transitions, and virtual reality.
+					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage, I worked on over 40 websites and apps, almost
+					exclusively for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade
+					shows mixing standard web development, video transitions, and virtual reality.
 				</p>
 			</>
 		),
