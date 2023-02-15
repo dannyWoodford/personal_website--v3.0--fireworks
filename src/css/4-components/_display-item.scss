@@ -129,6 +129,10 @@
 		padding-top: 15px;
 		text-align: left;
 
+		@include breakpoint($bp-xlarge) {
+			min-height: 240px;
+		}
+
 		p {
 			margin-top: 0;
 		}
@@ -159,10 +163,18 @@
 		width: 100% !important;
 		height: 100% !important;
 		margin: auto;
+		display: flex;
+		align-items: center;
 
 		@include breakpoint($bp-large) {
 			height: 360px !important;
-			width: 640px !important;
+			// width: 640px !important;
+			// min-height: 550px !important;
+		}
+		@include breakpoint($bp-xxxlarge) {
+			height: auto !important;
+			width: auto !important;
+			min-height: 550px !important;
 		}
 	}
 

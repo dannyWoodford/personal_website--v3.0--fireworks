@@ -70,7 +70,8 @@ export default function Home({ ...props }) {
 						<div className='item__border'>
 							<div className='inset-text'>
 								<div id='name'>
-									<p>DANNY WOODFORD</p>
+									<p>DANNY</p>
+									<p>WOODFORD</p>
 								</div>
 								<div id='occupation'>
 									<p>3D Developer</p>

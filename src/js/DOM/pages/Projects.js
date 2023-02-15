@@ -13,7 +13,7 @@ const personalProjectsItemArray = [
 	},
 	{
 		name: 'Stereographic Projection -- Volumetric Light',
-		description: 'Demonstrating the concept of stereographic projection in react-three-fiber wiht some volumetric light thrown in there just for fun.',
+		description: 'Demonstrating the concept of stereographic projection in react-three-fiber with some volumetric light thrown in there just for fun.',
 		language: 'React / React-Three-Fiber / Postprocessing / Drei',
 		demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
 		type: 'video',
@@ -156,19 +156,83 @@ const rocketItemArray = [
 	{
 		name: 'Space ACME',
 		description:
-			'A 3D visualization tool, built for the Space Force, to aid stellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuvre options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
+			'A 3D visualization tool, built for the Space Force, to aid stellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
 		language: 'React / TypeScript / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		thumbnail: '/assets-by-page/home/thumbnails/space-acme-logo.png',
+		thumbnailName: 'Overview',
+	},
+	{
+		name: 'Stylized Intro',
+		description: 'Into I made for the project using Theatre.js . This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
+		language: 'React / React-Three-Fiber / Drei / Theatre.js',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/intro-v2.mp4',
+	},
+	{
+		name: 'Real-Time Sun Position',
+		description:
+			'The "sun" responds to the draggable timeline at the bottom of the render window and is accurately positioned to match its real world counterpart.',
+		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
 	},
 	{
-		name: 'Space ACME Intro',
-		description: 'Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera push in it is fully interactive.',
-		language: 'React / React-Three-Fiber / Drei / Theatre.js',
+		name: 'State Vector Plotting / Interpolation',
+		description:
+			'Probably the most challenging feature was plotting orbital state vectors and interpolating between them to position the satellites and achieve a smooth animation. 4 other companies failed to achieve this feat and solving this is ultimately what won us the defense department contract.',
+		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/intro-v2.mp4',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+	},
+	{
+		name: 'Event Creation / Editing',
+		description:
+			'Users can create and edit events to visualize a change in altitude, inclination, period or suppress satellites entirely. The orbit and satellite label turn green after the start of an event to distinguish between the two.',
+		language: 'React / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+	},
+	{
+		name: 'Search Satellites',
+		description: 'Users can search for satellites and visualize thousands of instances at once.',
+		language: 'React / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/sat-search.mp4',
+	},
+	{
+		name: 'Orbits and Mouse Interaction',
+		description:
+			'Users can visualize orbits that also respond to hover and selected states. These states affect the list (outside of the canvas) in the left panel. Interacting with the list, conversely, affects the orbits.',
+		language: 'React / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+	},
+	{
+		name: 'Shaders',
+		description:
+			'I wrote several custom glsl shaders to get the final appearance of the earth. Including 2 for the atmosphere (earth surface and outer glow), moving clouds, and the most complex being city night lights that respond to the position of the sun.',
+		language: 'React / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+	},
+	{
+		name: 'Helper Tools',
+		description:
+			'To aid in the development of the app it was necessary to build several tools and global settings. Including a sun positioning helper, altitude lines, interpolation helper, and setting up GUI controls with Theatre.js(s) new Theatric api to fine tune almost all aesthetic features.',
+		language: 'React / React-Three-Fiber / Drei',
+		demo: 'https://space-acme.netlify.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
 	},
 ]
 
@@ -180,15 +244,18 @@ const displayCategoryArray = {
 		duration: 'June 2020 - March 2022',
 		location: 'Pittsburgh, Pa (In-Person)',
 		website: 'https://www.brandgage.com/',
-		websiteDisplayName: 'brandgage.com',
+		websiteDisplayName: 'Brandgage.com',
 		description: (
 			<>
-				<p>While at Brandgage I worked on over 40 projects </p>
+				<p>
+					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage I worked on over 40 website and apps almost exclusively
+					for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade shows mixing
+					standard web development, video transitions, and virtual reality.
+				</p>
 			</>
 		),
 		message: (
 			<>
-				<h3>Here are a few of the over 40 project I've worked on while employed at Brandgage</h3>
 				<p>** Websites are up during the dates of the trade show it was built for so links may or may not work. **</p>
 			</>
 		),
@@ -200,10 +267,14 @@ const displayCategoryArray = {
 		duration: 'March 2021 - present',
 		location: 'San Francisco, Ca (Remote)',
 		website: 'https://www.rocketcom.com/',
-		websiteDisplayName: 'rocketcom.com',
+		websiteDisplayName: 'Rocketcom.com',
 		description: (
 			<>
-				<p>The entirety of my time at Rocket has been spent working on the Space ACME project. Along with a </p>
+				<p>
+					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
+					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career as well as
+					creatively since I was given almost full creative control over the look of the 3D.
+				</p>
 			</>
 		),
 	},
@@ -231,13 +302,21 @@ export default function Projects({ ...props }) {
 		setDisplayItem(item)
 	}
 
-	const displayItemsFactory = useCallback(catatgoryArray => {
-		return catatgoryArray.map(item => (
+	const displayItemsFactory = useCallback(categoryArray => {
+		return categoryArray.map(item => (
 			<div className='item' key={item.name} onClick={() => updateDisplayItem(item)}>
 				<div className='item__border'>
-					<div className='item__thumbnail'>
-						<p className='item__title'>{item.name}</p>
-					</div>
+					{item.thumbnail ? (
+						<div className='item__thumbnail overview'>
+							<img className='item__image add-padding' draggable='false' alt='' src={process.env.PUBLIC_URL + item.thumbnail} />
+							<img alt='' className='item__hover__image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
+							<p className='item__title'>{item.thumbnailName}</p>
+						</div>
+					) : (
+						<div className='item__thumbnail'>
+							<p className='item__title'>{item.name}</p>
+						</div>
+					)}
 				</div>
 			</div>
 		))
@@ -306,7 +385,7 @@ export default function Projects({ ...props }) {
 									<div>
 										<div className='tab-info-flex'>
 											<p className='strong'>Title:</p>
-											<p>{displayCategoryArray[displayCategory].name}</p>
+											<p>{displayCategoryArray[displayCategory].title}</p>
 										</div>
 										<div className='tab-info-flex'>
 											<p className='strong'>Start/End Date:</p>
