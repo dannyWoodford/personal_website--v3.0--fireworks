@@ -264,7 +264,7 @@ const displayCategoryArray = {
 		hasTabInfo: true,
 		name: 'Rocket Communications, Inc.',
 		title: '3D Developer / 3D Artist',
-		duration: 'March 2021 - present',
+		duration: 'March 2022 - present',
 		location: 'San Francisco, Ca (Remote)',
 		website: 'https://www.rocketcom.com/',
 		websiteDisplayName: 'Rocketcom.com',
