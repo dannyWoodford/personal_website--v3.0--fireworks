@@ -217,7 +217,7 @@ const rocketItemArray = [
 		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
 	},
 	{
-		name: 'Shaders',
+		name: 'Custom Shaders',
 		description:
 			'I wrote several custom GLSL shaders to get the final appearance of the earth. Including 2 for the atmosphere (earth surface and outer glow), moving clouds, and the most complex being city night lights that respond to the position of the sun.',
 		language: 'React / React-Three-Fiber / Drei',
