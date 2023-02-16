@@ -49,13 +49,13 @@ export default function About({ ...props }) {
 						<div>
 							<h1>About</h1>
 							<p>
-								Former carpenter turned 3D developer/3D artist in order to pursue more intelectually and creativly challenging work. I graduated from the
+								Former carpenter turned 3D developer/3D artist in order to pursue more intellectually and creatively challenging work. I graduated from the
 								Flatiron School where I learned JavaScript, React, Ruby, and Ruby on Rails. It was there that I discovered Canvas for the first time and became
 								interested in 3D. At Flatiron, I started their first cross-discipline collaboration event that brought together students from the software
 								engineering, data science, and UI/UX tracks to collaborate on projects. In my personal life, I like to write jokes, read philosophy, and create
 								things like paintings, replica movie props, and woodworking projects for fun. I am a semi-professional stand-up comedian, and apart from doing
 								it for the love of it, I believe to grow as a person you must chase the things that make you inherently anxious such as expressing ideas
-								publicly or overcoming failure; along with creative problem solving, skills I now consider to be some of my greatest strengths.
+								publicly or overcoming failure; along with creative problem-solving, skills I now consider to be some of my greatest strengths.
 							</p>
 						</div>
 
