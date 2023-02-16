@@ -272,8 +272,8 @@ const displayCategoryArray = {
 			<>
 				<p>
 					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
-					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career as well as
-					creatively since I was given almost full creative control over the look of the 3D.
+					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career, as well as
+					creatively fulfilling since I was given almost full creative control over the look of the 3D.
 				</p>
 			</>
 		),
