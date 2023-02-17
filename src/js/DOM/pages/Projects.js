@@ -154,6 +154,14 @@ const brandgageItemArray = [
 
 const rocketItemArray = [
 	{
+		name: 'Animated Rocket Logo',
+		description: 'Animated logo I made for Rocket using Theatre.js.',
+		language: 'React / React-Three-Fiber / Theatre.js / Drei',
+		demo: 'https://codesandbox.io/s/rocket-logo-animation-22wpji?file=/src/Scene.js:702-810',
+		type: 'video',
+		itemUrl: '/assets-by-page/rocket/rocket_animated_logo.mp4',
+	},
+	{
 		name: 'Space ACME',
 		description:
 			'A 3D visualization tool, built for the Space Force, to aid stellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
@@ -292,7 +300,7 @@ export default function Projects({ ...props }) {
 
 	// Brandgage, Rocket, PersonalProjects
 	const [displayCategory, setDisplayCategory] = useState('Rocket')
-	const [displayItem, setDisplayItem] = useState(rocketItemArray[0])
+	const [displayItem, setDisplayItem] = useState(rocketItemArray[1])
 
 	const updateDisplayCategory = category => {
 		setDisplayCategory(category)
@@ -327,7 +335,7 @@ export default function Projects({ ...props }) {
 			updateDisplayItem(brandgageItemArray[0])
 			return displayItemsFactory(brandgageItemArray)
 		} else if (displayCategory === 'Rocket') {
-			updateDisplayItem(rocketItemArray[0])
+			updateDisplayItem(rocketItemArray[1])
 			return displayItemsFactory(rocketItemArray)
 		} else if (displayCategory === 'PersonalProjects') {
 			updateDisplayItem(personalProjectsItemArray[0])
