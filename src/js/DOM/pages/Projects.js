@@ -99,6 +99,7 @@ const brandgageItemArray = [
 		demo: 'https://3d.gesvirtualexhibits.com/show/gjk39k/esmo-2021/',
 		type: 'video',
 		itemUrl: '/assets-by-page/brandgage/msd.mp4',
+		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
 		name: 'Company Website',
@@ -115,6 +116,7 @@ const brandgageItemArray = [
 		demo: 'https://cibinqovirtualexperience.com/show/zx93mk/aad-2021/',
 		type: 'video',
 		itemUrl: '/assets-by-page/brandgage/Cibinqo.mp4',
+		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
 		name: 'Pfizer Rare Disease',
@@ -123,6 +125,7 @@ const brandgageItemArray = [
 		demo: 'https://pfizerrarediseasecongressresources.com/show/jl09pa/endo-2021/',
 		type: 'video',
 		itemUrl: '/assets-by-page/brandgage/Pfizer-Rare-Disease.mp4',
+		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
 		name: 'Takeda',
@@ -131,6 +134,7 @@ const brandgageItemArray = [
 		demo: 'https://everymileofthejourney.com/show/booth/',
 		type: 'video',
 		itemUrl: '/assets-by-page/brandgage/Takeda-demo.mp4',
+		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
 		name: 'R&D 3D Virtual Booth',
@@ -262,17 +266,12 @@ const displayCategoryArray = {
 				</p>
 			</>
 		),
-		message: (
-			<>
-				<p>** Websites are up during the dates of the trade show it was built for so links may or may not work. **</p>
-			</>
-		),
 	},
 	Rocket: {
 		hasTabInfo: true,
 		name: 'Rocket Communications, Inc.',
 		title: '3D Developer / 3D Artist',
-		duration: 'March 2022 - present',
+		duration: 'March 2022 - Present',
 		location: 'San Francisco, Ca (Remote)',
 		website: 'https://www.rocketcom.com/',
 		websiteDisplayName: 'Rocketcom.com',
@@ -287,6 +286,7 @@ const displayCategoryArray = {
 		),
 	},
 	PersonalProjects: {
+		duration: '2019 - Present',
 		message: (
 			<>
 				<h3>Here are some of the personal projects I've built in my free time</h3>
@@ -353,7 +353,7 @@ export default function Projects({ ...props }) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<h3 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h3>
+						<h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2>
 
 						<div className='tab-switch-container'>
 							<div className='item medium' onClick={() => updateDisplayCategory('Brandgage')}>
@@ -361,6 +361,7 @@ export default function Projects({ ...props }) {
 									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
 								</div>
+								<h3 className='duration'>{displayCategoryArray['Brandgage'].duration}</h3>
 							</div>
 							<div className='item medium' onClick={() => updateDisplayCategory('Rocket')}>
 								<div className='item__border'>
@@ -372,6 +373,7 @@ export default function Projects({ ...props }) {
 									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
 								</div>
+								<h3 className='duration'>{displayCategoryArray['Rocket'].duration}</h3>
 							</div>
 							<div className='item medium' onClick={() => updateDisplayCategory('PersonalProjects')}>
 								<div className='item__border'>
@@ -383,28 +385,25 @@ export default function Projects({ ...props }) {
 									/>
 									<img alt='' className='item__image hover-image blur-on-hover' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
 								</div>
+								<h3 className='duration'>{displayCategoryArray['PersonalProjects'].duration}</h3>
 							</div>
 						</div>
 
 						<div className={`display-item-panel ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}>
 							<div className='display-item tab-info'>
 								<h1 className='tab-info-name'>{displayCategoryArray[displayCategory].name}</h1>
-								<div>
-									<div>
+								<div className='tab-info-details'>
+									<div className='tab-info-columns'>
 										<div className='tab-info-flex'>
 											<p className='strong'>Title:</p>
 											<p>{displayCategoryArray[displayCategory].title}</p>
 										</div>
 										<div className='tab-info-flex'>
-											<p className='strong'>Start/End Date:</p>
-											<p>{displayCategoryArray[displayCategory].duration}</p>
-										</div>
-									</div>
-									<div>
-										<div className='tab-info-flex'>
 											<p className='strong'>Location:</p>
 											<p>{displayCategoryArray[displayCategory].location}</p>
 										</div>
+									</div>
+									<div>
 										<div className='tab-info-flex'>
 											<p className='strong'>Website:</p>
 											<a href={displayCategoryArray[displayCategory].website} target='_blank' rel='noreferrer' className='link'>
@@ -451,11 +450,13 @@ export default function Projects({ ...props }) {
 											Demo
 										</a>
 									</div>
+									<p className='display-item-message' style={{ display: displayItem.message ? 'block' : 'none' }}>
+										{displayItem.message}
+									</p>
 								</div>
 							</div>
 						</div>
-						{displayCategoryArray[displayCategory].message}
-						<div className={`display-items-container ${displayCategoryArray[displayCategory].message ? 'has-display-items-message' : ''}`}>{displayItems}</div>
+						<div className={'display-items-container'}>{displayItems}</div>
 					</div>
 				</div>
 			</div>

@@ -1,16 +1,23 @@
 .projects-page {
 	background: $color-bg--projects;
 
-	// .page-container {
-	// 	max-width: none;
-	// }
+	.container {
+		max-width: $projects-max-width;
+	}
+
+	.tab-switch-message {
+		font-size: 16px;
+
+		@include breakpoint($bp-xlarge) {
+			font-size: 24px;
+		}
+	}
 
 	.display-item-panel {
 		display: flex;
 		flex-direction: column-reverse;
 		text-align: left;
 		align-items: center;
-		max-width: 100%;
 
 		@include breakpoint($bp-xlarge) {
 			flex-direction: row;
@@ -69,7 +76,7 @@
 				justify-content: space-around;
 				flex-direction: column;
 				height: auto;
-				margin: 15px 0 0 0;
+				margin: 30px 0 0 0;
 				padding: 3vh 2vh;
 
 				@include breakpoint($bp-large) {
@@ -88,9 +95,10 @@
 					white-space: nowrap;
 				}
 
-				& > div:first-of-type {
+				& > .tab-info-details {
 					display: flex;
 					flex-direction: column;
+					width: 100%;
 
 					@include breakpoint($bp-small) {
 						flex-direction: row;
@@ -104,12 +112,10 @@
 						margin-top: 30px;
 					}
 
-					& > div:first-of-type {
-						padding-right: 30px;
-
-						@include breakpoint($bp-xlarge) {
-							padding: 0;
-						}
+					.tab-info-columns {
+						display: block;
+						width: 50%;
+						margin-bottom: 10px;
 					}
 				}
 
@@ -169,22 +175,6 @@
 					flex-wrap: wrap;
 				}
 			}
-
-			// .react-player {
-			// 	@include breakpoint($bp-large) {
-			// 		width: auto !important;
-			// 	}
-
-			// 	@include breakpoint($bp-xxlarge) {
-			// 		height: 480px !important;
-			// 	}
-			// }
-		}
-	}
-
-	.display-items-container {
-		&.has-display-items-message {
-			padding: 0;
 		}
 	}
 
@@ -199,12 +189,26 @@
 
 		.item {
 			padding: 10px;
+			display: flex;
+			flex-direction: column;
 		}
 
 		@include breakpoint($bp-large) {
 			.item {
 				padding: 12px;
 			}
+		}
+	}
+
+	.display-item {
+		padding: 2vh;
+
+		@include breakpoint($bp-large) {
+			padding: 20px;
+		}
+
+		@include breakpoint($bp-xxlarge) {
+			padding: 30px;
 		}
 	}
 
@@ -222,6 +226,19 @@
 		@include breakpoint($bp-large) {
 			min-height: 150px;
 			padding: 15px;
+		}
+
+		.duration {
+			margin-bottom: 0;
+			font-size: 14px;
+
+			@include breakpoint($bp-xlarge) {
+				font-size: 18px;
+			}
+
+			@include breakpoint($bp-xxxlarge) {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -271,7 +288,11 @@
 			}
 
 			.add-padding {
-				padding: 0 30px;
+				padding: 0 15px;
+
+				@include breakpoint($bp-medium) {
+					padding: 0 30px;
+				}
 
 				@include breakpoint($bp-large) {
 					padding: 0 40px;
@@ -279,6 +300,11 @@
 
 				@include breakpoint($bp-xxlarge) {
 					padding: 0 90px;
+				}
+
+				@include breakpoint($bp-xxxlarge) {
+					padding: 0 120px;
+					max-width: 500px;
 				}
 			}
 

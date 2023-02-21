@@ -157,6 +157,13 @@
 			font-weight: bold;
 			font-size: 22px;
 		}
+
+		.display-item-message {
+			color: $color-off-white;
+			margin-top: 50px;
+			margin-bottom: 0;
+			text-align: center;
+		}
 	}
 
 	.react-player {
@@ -166,15 +173,15 @@
 		display: flex;
 		align-items: center;
 
-		@include breakpoint($bp-large) {
+		@include breakpoint($bp-xlarge) {
 			height: 360px !important;
-			// width: 640px !important;
-			// min-height: 550px !important;
+		}
+
+		@include breakpoint($bp-xxlarge) {
+			height: 510px !important;
 		}
 		@include breakpoint($bp-xxxlarge) {
-			height: auto !important;
-			width: auto !important;
-			min-height: 550px !important;
+			height: 630px !important;
 		}
 	}
 
