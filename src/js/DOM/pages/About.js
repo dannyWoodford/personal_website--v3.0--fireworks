@@ -1,32 +1,7 @@
-import React, { useState } from 'react'
-import { useSpring, a } from 'react-spring'
+import React from 'react'
 
 export default function About({ ...props }) {
 	const menuStateCurrentName = props.menuState.currentName
-
-	const [hovered, setHovered] = useState({
-		about: false,
-		skills: false,
-	})
-
-	const animate = useSpring({
-		marginAbout: hovered.about ? '20px' : '30px',
-		marginSkills: hovered.skills ? '30px' : '20px',
-	})
-
-	const onPointerOverHandler = sectionName => {
-		setHovered(prevState => ({
-			...prevState,
-			[sectionName]: true,
-		}))
-	}
-
-	const onPointerOutHandler = sectionName => {
-		setHovered(prevState => ({
-			...prevState,
-			[sectionName]: false,
-		}))
-	}
 
 	return (
 		<div
@@ -37,15 +12,12 @@ export default function About({ ...props }) {
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>
-					<a.div className='glass-container floating-glass glass-1' style={{ margin: animate.marginAbout }}></a.div>
-					<a.div className='glass-container floating-glass glass-2' style={{ margin: animate.marginAbout }}></a.div>
-					<a.div className='glass-container floating-glass glass-3' style={{ margin: animate.marginSkills }}></a.div>
-					<a.div className='glass-container floating-glass glass-4' style={{ margin: animate.marginSkills }}></a.div>
-					<a.div className='glass-container floating-glass glass-5' style={{ margin: animate.marginAbout }}></a.div>
-					<div
-						className='glass-container about-container'
-						onPointerOver={() => onPointerOverHandler('about')}
-						onPointerOut={() => onPointerOutHandler('about')}>
+					<div className='glass-container floating-glass glass-1' style={{ margin: '30px' }}></div>
+					<div className='glass-container floating-glass glass-2' style={{ margin: '30px' }}></div>
+					<div className='glass-container floating-glass glass-3' style={{ margin: '20px' }}></div>
+					<div className='glass-container floating-glass glass-4' style={{ margin: '20px' }}></div>
+					<div className='glass-container floating-glass glass-5' style={{ margin: '30px' }}></div>
+					<div className='glass-container about-container'>
 						<div>
 							<h1>About</h1>
 							<p>
@@ -109,10 +81,7 @@ export default function About({ ...props }) {
 							</div>
 						</div>
 					</div>
-					<div
-						className='glass-container skills-container'
-						onPointerOver={() => onPointerOverHandler('skills')}
-						onPointerOut={() => onPointerOutHandler('skills')}>
+					<div className='glass-container skills-container'>
 						<div className='skills-list'>
 							<ul>
 								<li>

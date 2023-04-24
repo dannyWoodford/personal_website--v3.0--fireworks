@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
+import React, { useState, useEffect } from 'react'
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom'
 
-import Canvas from './CANVAS/containers/Canvas'
+// import Canvas from './CANVAS/containers/Canvas'
+import Intro from './CANVAS/Intro/Intro'
 import Menu from './DOM/Menu'
 import Home from './DOM/pages/Home'
 import About from './DOM/pages/About'
@@ -19,7 +20,7 @@ const App = props => {
 		menuItems: [
 			{
 				name: 'home',
-				canvasColor: '#FF7F7F',
+				canvasColor: 'black',
 			},
 			{
 				name: 'about',
@@ -84,7 +85,8 @@ const App = props => {
 				<div className='max-width-container'>
 					<div className='content'>
 						<div className='content_inner'>
-							<Canvas menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
+							{/* <Canvas menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} /> */}
+							<Intro menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
 							<Switch>
 								<Route exact path='/'>
 									<Redirect to='/home' />

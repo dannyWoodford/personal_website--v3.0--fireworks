@@ -14,6 +14,7 @@ export default function Home({ ...props }) {
 	})
 
 	const resetTooltip = () => {
+		console.log('resetTooltip')
 		setIconHasBeenCopied({
 			copyPhoneNumber: false,
 			copyEMail: false,
@@ -24,7 +25,7 @@ export default function Home({ ...props }) {
 		<div
 			className='page home-page'
 			style={{
-				transition: 'opacity 2s ease-in-out .6s',
+				transition: 'opacity 2s ease-in-out 4.6s',
 				opacity: menuStateCurrentName === 'home' ? 1 : 0,
 			}}>
 			<div className='max-width-container'>
@@ -41,8 +42,7 @@ export default function Home({ ...props }) {
 						<div className='item large' onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/projects'} delay={delay} className='nav-link'>
 								<div className='item__border'>
-									<h1 className='neonText invert-on-hover'>Projects</h1>
-									{/* <img className="item__image invert-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/> */}
+									<h1 className='neonText'>Portfolio</h1>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/projects-gif.gif'} />
 								</div>
 							</DelayLink>
@@ -60,7 +60,12 @@ export default function Home({ ...props }) {
 						<div className='item' onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/art'} delay={delay} className='nav-link'>
 								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/art-logo.png'} />
+									<img
+										className='item__image invert-color'
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/art-logo.png'}
+									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/art-gif.gif'} />
 								</div>
 							</DelayLink>
@@ -68,7 +73,7 @@ export default function Home({ ...props }) {
 					</div>
 					<div className='item is-welcome-item'>
 						<div className='item__border'>
-							<div className='inset-text'>
+							{/* <div className='inset-text'>
 								<div id='name'>
 									<p>DANNY</p>
 									<p>WOODFORD</p>
@@ -78,7 +83,7 @@ export default function Home({ ...props }) {
 									<p>/</p>
 									<p>3D Artist</p>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className='double-item double-item-clock'>

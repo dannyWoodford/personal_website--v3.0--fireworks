@@ -40,9 +40,8 @@
 		canvas {
 			display: block;
 			outline: none;
-			background: $color-black;
-			transition: background 0.9s ease-in-out;
-			z-index: $z-Index-canvas;
+			z-index: 2;
+			position: relative;
 		}
 	}
 }
