@@ -15,7 +15,7 @@ export default function Lights() {
 				angle={2.5}
 				attenuation={5}
 				anglePower={4}
-				intensity={1}
+				intensity={9}
 				position={[0, 12, 3]}
 			/>
 			{/* ___ Back Light ____________________________*/}
