@@ -18,6 +18,7 @@ export default function Lights() {
 				intensity={9}
 				position={[0, 12, 3]}
 			/> 
+			
 			{/* ___ Back Light ____________________________*/}
 			<spotLight penumbra={1} distance={13} angle={1.25} attenuation={5} anglePower={4} intensity={1} position={[0, 0, -5]} />
 		</>
