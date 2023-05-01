@@ -3,8 +3,8 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-off-white: #bcbcbc;
 
-// $color-bg-pink: #001c95;
-$color-bg-pink: rgb(230, 112, 112);
+$color-bg-pink: #001c95;
+// $color-bg-pink: rgb(230, 112, 112);
 $color-bg-pink-border: adjust-color($color-bg-pink, $red: -26, $green: 25, $blue: 52);
 $color-bg-pink-border-dark: adjust-color($color-bg-pink, $red: -128, $green: -61, $blue: -61);
 $color-bg-pink-border-light: adjust-color($color-bg-pink, $red: 25, $green: 91, $blue: 91);
@@ -23,7 +23,6 @@ $color-bg-blue-clock: adjust-color($color-bg-blue, $red: -19, $green: -23, $blue
 $color-bg-blue-clock-shadow-light: adjust-color($color-bg-blue, $red: -61, $green: -63, $blue: -102);
 $color-bg-blue-clock-shadow-dark: adjust-color($color-bg-blue, $red: -116, $green: -117, $blue: -186);
 
-
 $color-bg-gradient: linear-gradient(90deg, $color-bg-pink, $color-bg-blue);
 $color-bg-gradient-opacity: linear-gradient(90deg, rgba($color-bg-pink, 0.4), rgba($color-bg-blue, 0.4));
 
@@ -33,8 +32,6 @@ $color-bg--art: linear-gradient(90deg, rgba($color-bg-pink, 0.8), rgba($color-bg
 $color-bg--blender: linear-gradient(90deg, rgba($color-bg-pink, 0.8), rgba($color-bg-blue, 0.8));
 $color-bg--flatiron: linear-gradient(90deg, rgba($color-bg-pink, 0.8), rgba($color-bg-blue, 0.8));
 $color-bg--projects: linear-gradient(90deg, rgba($color-bg-pink, 0.8), rgba($color-bg-blue, 0.8));
-
-
 
 // ORIG
 // $color-bg-pink: rgb(230, 112, 112);
