@@ -4,8 +4,8 @@
 	padding: 5vh 2vh;
 	border-radius: 19px;
 	background: rgba(0, 0, 0, 0.5);
-	box-shadow: 5px 5px 15px #663333, -5px -5px 15px #ffcbcb;
-	border: 4px solid #cc89a4;
+	box-shadow: 5px 5px 15px $color-bg-pink-border-dark, -5px -5px 15px $color-bg-pink-border-light;
+	border: 4px solid $color-bg-pink-border;
 	transition: transform 250ms ease-in-out, border 250ms ease-in-out, box-shadow 250ms ease-in-out, border-radius 250ms ease-in-out;
 	overflow: hidden;
 	margin: auto;
