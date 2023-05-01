@@ -168,7 +168,7 @@ const rocketItemArray = [
 	{
 		name: 'Space ACME',
 		description:
-			'A 3D visualization tool, built for the Space Force, to aid stellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
+			'A 3D visualization tool, built for the Space Force, to aid satellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
 		language: 'React / TypeScript / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -271,7 +271,7 @@ const displayCategoryArray = {
 		hasTabInfo: true,
 		name: 'Rocket Communications, Inc.',
 		title: '3D Developer / 3D Artist',
-		duration: 'March 2022 - Present',
+		duration: 'March 2022 - Feb 2023',
 		location: 'San Francisco, Ca (Remote)',
 		website: 'https://www.rocketcom.com/',
 		websiteDisplayName: 'Rocketcom.com',
@@ -356,13 +356,6 @@ export default function Projects({ ...props }) {
 						<h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2>
 
 						<div className='tab-switch-container'>
-							<div className='item medium' onClick={() => updateDisplayCategory('Brandgage')}>
-								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
-									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
-								</div>
-								<h3 className='duration'>{displayCategoryArray['Brandgage'].duration}</h3>
-							</div>
 							<div className='item medium' onClick={() => updateDisplayCategory('Rocket')}>
 								<div className='item__border'>
 									<img
@@ -374,6 +367,13 @@ export default function Projects({ ...props }) {
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
 								</div>
 								<h3 className='duration'>{displayCategoryArray['Rocket'].duration}</h3>
+							</div>
+							<div className='item medium' onClick={() => updateDisplayCategory('Brandgage')}>
+								<div className='item__border'>
+									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
+								</div>
+								<h3 className='duration'>{displayCategoryArray['Brandgage'].duration}</h3>
 							</div>
 							<div className='item medium' onClick={() => updateDisplayCategory('PersonalProjects')}>
 								<div className='item__border'>
@@ -420,7 +420,7 @@ export default function Projects({ ...props }) {
 								</div>
 								<div className='display-item-video' style={{ display: displayItem.type === 'video' ? 'block' : 'none' }}>
 									<ReactPlayer
-										className='react-player'
+										className={`react-player ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}
 										url={process.env.PUBLIC_URL + displayItem.itemUrl}
 										playing={true}
 										autoPlay={true}

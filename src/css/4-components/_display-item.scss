@@ -173,15 +173,17 @@
 		display: flex;
 		align-items: center;
 
-		@include breakpoint($bp-xlarge) {
-			height: 360px !important;
-		}
+		&.has-tab-info {
+			@include breakpoint($bp-xlarge) {
+				height: 360px !important;
+			}
 
-		@include breakpoint($bp-xxlarge) {
-			height: 510px !important;
-		}
-		@include breakpoint($bp-xxxlarge) {
-			height: 630px !important;
+			@include breakpoint($bp-xxlarge) {
+				height: 510px !important;
+			}
+			@include breakpoint($bp-xxxlarge) {
+				height: 630px !important;
+			}
 		}
 	}
 
