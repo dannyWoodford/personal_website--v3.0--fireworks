@@ -4,6 +4,7 @@ $color-black: #000000;
 $color-off-white: #bcbcbc;
 
 $color-bg-pink: rgb(0, 28, 149);
+$color-bg-pink-neon: #4245ff;
 $color-bg-pink-border: adjust-color($color-bg-pink, $red: -26, $green: 25, $blue: 52);
 $color-bg-pink-border-dark: adjust-color($color-bg-pink, $red: -128, $green: -61, $blue: -61);
 $color-bg-pink-border-light: adjust-color($color-bg-pink, $red: 25, $green: 91, $blue: 91);
