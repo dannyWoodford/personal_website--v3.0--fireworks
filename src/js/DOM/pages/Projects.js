@@ -248,13 +248,60 @@ const rocketItemArray = [
 	},
 ]
 
+const flatironItemArray = [
+	{
+		name: 'Spotify 3D music Visualizer',
+		description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
+		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
+		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
+		type: 'video',
+		itemUrl: '/assets-by-page/flatiron/3d-spotify-visualizer-trimmed.mp4',
+	},
+	{
+		_id: 'Mod 4 Project',
+		name: 'Ziehbare Stimme Leinwand',
+		description: 'This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.',
+		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
+		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
+		type: 'video',
+		itemUrl: '/assets-by-page/flatiron/ZSL-demo.mp4',
+	},
+	{
+		_id: 'Mod 3 Project',
+		name: 'Enter the Labyrinth',
+		description: 'Complete the maze before the fire catches you.',
+		language: 'JavaScript / Ruby on Rails Backend / Canvas',
+		github: 'https://github.com/TenNga/Maze-Game-Front-End',
+		demo: 'https://pure-reaches-70099.herokuapp.com/',
+		type: 'video',
+		itemUrl: '/assets-by-page/flatiron/labryinth-demo.mp4',
+	},
+	{
+		_id: 'Mod 2 Project',
+		name: 'NOTFLIX',
+		description: 'Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.',
+		language: 'Ruby on Rails',
+		github: 'https://github.com/ntel-91/mod2-project',
+		type: 'video',
+		itemUrl: '/assets-by-page/flatiron/notflix-demo.mp4',
+	},
+	{
+		_id: 'Flatiron Cross-Discipline Collaboration Event',
+		name: 'Flatiron Cross-Discipline Collaboration Event',
+		description:
+			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
+		type: 'image',
+		itemUrl: '/assets-by-page/flatiron/cross-colab.jpg',
+	},
+]
+
 const displayCategoryArray = {
 	Brandgage: {
 		hasTabInfo: true,
 		name: 'Brandgage',
 		title: '3D Javascript Developer',
 		duration: 'June 2020 - March 2022',
-		location: 'Pittsburgh, Pa (In-Person)',
+		location: 'Pittsburgh, Pa (On-Site)',
 		website: 'https://www.brandgage.com/',
 		websiteDisplayName: 'Brandgage.com',
 		description: (
@@ -289,7 +336,20 @@ const displayCategoryArray = {
 		duration: '2019 - Present',
 		message: (
 			<>
-				<h3>Here are some of the personal projects I've built in my free time</h3>
+				<h3>Here are some of the personal projects I've built in my free time.</h3>
+			</>
+		),
+	},
+	Flatiron: {
+		hasTabInfo: true,
+		name: 'Flatiron School',
+		duration: '2019',
+		location: 'Manhattan, NY (On-Site)',
+		website: 'https://flatironschool.com/',
+		websiteDisplayName: 'Flatironschool.com',
+		description: (
+			<>
+				<p>Flatiron School is a coding bootcamp that was rated the number 1# by Course Report when I attended in 2019.</p>
 			</>
 		),
 	},
@@ -340,6 +400,9 @@ export default function Projects({ ...props }) {
 		} else if (displayCategory === 'PersonalProjects') {
 			updateDisplayItem(personalProjectsItemArray[0])
 			return displayItemsFactory(personalProjectsItemArray)
+		} else if (displayCategory === 'Flatiron') {
+			updateDisplayItem(flatironItemArray[0])
+			return displayItemsFactory(flatironItemArray)
 		}
 	}, [displayCategory, displayItemsFactory])
 
@@ -387,6 +450,13 @@ export default function Projects({ ...props }) {
 								</div>
 								<h3 className='duration'>{displayCategoryArray['PersonalProjects'].duration}</h3>
 							</div>
+							<div className='item medium' onClick={() => updateDisplayCategory('Flatiron')}>
+								<div className='item__border'>
+									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'} />
+									<img alt='' className='item__image hover-image blur-on-hover' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
+								</div>
+								<h3 className='duration'>{displayCategoryArray['Flatiron'].duration}</h3>
+							</div>
 						</div>
 
 						<div className={`display-item-panel ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}>
@@ -394,7 +464,7 @@ export default function Projects({ ...props }) {
 								<h1 className='tab-info-name'>{displayCategoryArray[displayCategory].name}</h1>
 								<div className='tab-info-details'>
 									<div className='tab-info-columns'>
-										<div className='tab-info-flex'>
+										<div className={`tab-info-flex ${displayCategoryArray[displayCategory].title ? '' : 'no-title'}`}>
 											<p className='strong'>Title:</p>
 											<p>{displayCategoryArray[displayCategory].title}</p>
 										</div>
@@ -416,7 +486,11 @@ export default function Projects({ ...props }) {
 							</div>
 							<div className='display-item'>
 								<div className='display-item-image' style={{ display: displayItem.type === 'image' ? 'block' : 'none' }}>
-									<img className='display-item-target' alt='' src={process.env.PUBLIC_URL + displayItem.itemUrl} />
+									<img
+										className={`display-item-target ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}
+										alt=''
+										src={process.env.PUBLIC_URL + displayItem.itemUrl}
+									/>
 								</div>
 								<div className='display-item-video' style={{ display: displayItem.type === 'video' ? 'block' : 'none' }}>
 									<ReactPlayer

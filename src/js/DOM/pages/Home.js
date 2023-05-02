@@ -30,18 +30,36 @@ export default function Home({ ...props }) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='double-item top-row'>
-						<div className='item medium' onClick={() => props.linkToPageHandler(delay)}>
-							<DelayLink to={'/flatiron'} delay={delay} className='nav-link'>
+						{/* <div className='item medium neonText' onClick={() => props.linkToPageHandler(delay)}>
+							<DelayLink to={'/about'} delay={delay} className='nav-link'>
 								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'} />
-									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
+									<img
+										className='item__image codesandbox-padding'
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/codesandbox-logo.webp'}
+									/>
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
+								</div>
+							</DelayLink>
+						</div> */}
+						<div className='item neonText medium' onClick={() => props.linkToPageHandler(delay)}>
+							<DelayLink to={'/about'} delay={delay} className='nav-link'>
+								<div className='item__border'>
+									<img
+										className='item__image about-padding'
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/about-me-logo.png'}
+									/>
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
 								</div>
 							</DelayLink>
 						</div>
-						<div className='item large' onClick={() => props.linkToPageHandler(delay)}>
+						<div className='item neonText large' onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/projects'} delay={delay} className='nav-link'>
 								<div className='item__border'>
-									<h1 className='neonText invert-on-hover'>Projects</h1>
+									<h1>Projects</h1>
 									{/* <img className="item__image invert-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/> */}
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/projects-gif.gif'} />
 								</div>
@@ -52,7 +70,12 @@ export default function Home({ ...props }) {
 						<div className='item' onClick={() => props.linkToPageHandler(delay)}>
 							<DelayLink to={'/blender'} delay={delay} className='nav-link'>
 								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/blender-logo.png'} />
+									<img
+										className='item__image add-padding'
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/blender-logo.png'}
+									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/blender-gif.gif'} />
 								</div>
 							</DelayLink>
@@ -86,14 +109,19 @@ export default function Home({ ...props }) {
 							<Clock />
 						</div>
 					</div>
-					<div className='item item-mobile-break' onClick={() => props.linkToPageHandler(delay)}>
-						<DelayLink to={'/about'} delay={delay} className='nav-link'>
+					<a href='https://github.com/dannyWoodford' target='_blank' rel='noopener noreferrer' className='display-contents'>
+						<div className='item item-mobile-break'>
 							<div className='item__border'>
-								<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/about-me-logo.png'} />
+								<img
+									className='item__image add-padding invert-on-hover'
+									draggable='false'
+									alt=''
+									src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/github-logo.png'}
+								/>
 								<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 							</div>
-						</DelayLink>
-					</div>
+						</div>
+					</a>
 					<a href={process.env.PUBLIC_URL + '/Danny_Woodford_Resume_2023.pdf'} target='_blank' rel='noopener noreferrer' className='display-contents'>
 						<div className='item small'>
 							<div className='item__border'>

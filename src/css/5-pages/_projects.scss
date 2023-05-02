@@ -173,6 +173,10 @@
 				.tab-info-flex {
 					display: flex;
 					flex-wrap: wrap;
+
+					&.no-title {
+						display: none;
+					}
 				}
 			}
 		}

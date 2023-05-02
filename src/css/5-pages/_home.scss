@@ -53,6 +53,46 @@
 			}
 		}
 
+		.neonText {
+			display: block;
+
+			h1 {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				color: $color-white;
+				font-family: $font-family-script, sans-serif;
+				text-align: center;
+				font-size: 35px;
+				font-weight: 400;
+				padding: 30px 0;
+
+				@include breakpoint($bp-small) {
+					font-size: 50px;
+				}
+
+				@include breakpoint($bp-medium) {
+					font-size: 80px;
+				}
+
+				@include breakpoint($bp-large) {
+					font-size: 90px;
+				}
+
+				@include breakpoint($bp-xlarge) {
+					font-size: 110px;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					font-size: 135px;
+				}
+			}
+		}
+
 		.double-item {
 			width: 100%;
 			// min-width: 340px;
@@ -76,55 +116,12 @@
 				.item__border {
 					padding: 0;
 				}
-
+				
 				.large {
 					width: 66%;
 				}
-
-				&.large {
-					.neonText {
-						height: 100%;
-						width: 100%;
-						position: absolute;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						margin: 0;
-						color: $color-white;
-						font-family: $font-family-script, sans-serif;
-						text-align: center;
-						font-size: 35px;
-						font-weight: 400;
-
-						@include breakpoint($bp-small) {
-							font-size: 50px;
-						}
-
-						@include breakpoint($bp-medium) {
-							font-size: 80px;
-						}
-
-						@include breakpoint($bp-large) {
-							font-size: 90px;
-						}
-
-						@include breakpoint($bp-xlarge) {
-							font-size: 110px;
-						}
-
-						@include breakpoint($bp-xxlarge) {
-							font-size: 135px;
-						}
-					}
-				}
-
-				&.large:hover .item__border {
-					.neonText.invert-on-hover {
-						filter: none;
-					}
-				}
 			}
-
+			
 			.item__clock {
 				display: none;
 				width: 23.995vw;
@@ -150,7 +147,7 @@
 					width: 100%;
 
 					.medium {
-						width: 66%;
+						width: 45%;
 					}
 				}
 			}
@@ -194,6 +191,14 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+
+			&.add-padding {
+				padding: 0 20px;
+			}
+
+			&.about-padding {
+				padding: 10px 0;
+			}
 		}
 
 		.item__image.hover-image {
@@ -213,10 +218,6 @@
 		.item:hover .item__border {
 			box-shadow: 15px 15px 30px $color-bg-pink-border-dark, -15px -15px 30px $color-bg-pink-border-light;
 			transform: scale(1.06);
-
-			.invert-on-hover {
-				filter: invert(1);
-			}
 		}
 
 		.item:hover .item__image.hover-image {
@@ -224,6 +225,10 @@
 			z-index: -1;
 			opacity: 1;
 			visibility: visible;
+		}
+
+		.item:hover .item__image.invert-on-hover {
+			filter: invert(1);
 		}
 
 		.item.is-welcome-item {

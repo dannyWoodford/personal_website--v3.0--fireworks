@@ -122,6 +122,13 @@
 		height: 360px;
 		display: block;
 		transition: opacity 250ms ease-in-out;
+
+		&.has-tab-info {
+			@include breakpoint($bp-large) {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 
 	.display-item-description {
