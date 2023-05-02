@@ -76,6 +76,9 @@ export default function About({ ...props }) {
 										<p>JavaScript</p>
 									</li>
 									<li>
+										<p>Typescript</p>
+									</li>
+									<li>
 										<p>Three.js</p>
 									</li>
 									<li>
@@ -126,6 +129,9 @@ export default function About({ ...props }) {
 								</li>
 								<li>
 									<p>JavaScript</p>
+								</li>
+								<li>
+									<p>Typescript</p>
 								</li>
 								<li>
 									<p>Three.js</p>

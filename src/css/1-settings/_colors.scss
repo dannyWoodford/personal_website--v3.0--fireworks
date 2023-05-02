@@ -3,8 +3,7 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-off-white: #bcbcbc;
 
-// $color-bg-pink: #001c95;
-$color-bg-pink: rgb(230, 112, 112);
+$color-bg-pink: rgb(0, 28, 149);
 $color-bg-pink-border: adjust-color($color-bg-pink, $red: -26, $green: 25, $blue: 52);
 $color-bg-pink-border-dark: adjust-color($color-bg-pink, $red: -128, $green: -61, $blue: -61);
 $color-bg-pink-border-light: adjust-color($color-bg-pink, $red: 25, $green: 91, $blue: 91);
@@ -19,9 +18,8 @@ $color-bg-pink-center-text-dark: adjust-color($color-bg-pink, $red: -22, $green:
 $color-bg-pink-center-text-light: adjust-color($color-bg-pink, $red: 25, $green: 91, $blue: 91);
 
 $color-bg-blue: adjust-color($color-bg-pink, $red: -86, $green: 32, $blue: 116);
-$color-bg-blue-clock: adjust-color($color-bg-blue, $red: -19, $green: -23, $blue: -19);
-$color-bg-blue-clock-shadow-light: adjust-color($color-bg-blue, $red: -61, $green: -63, $blue: -102);
-$color-bg-blue-clock-shadow-dark: adjust-color($color-bg-blue, $red: -116, $green: -117, $blue: -186);
+$color-bg-blue-clock-shadow-light: adjust-color($color-bg-blue, $red: 30, $green: -31, $blue: -31);
+$color-bg-blue-clock-shadow-dark: adjust-color($color-bg-blue, $red: 0, $green: -60, $blue: -203);
 
 
 $color-bg-gradient: linear-gradient(90deg, $color-bg-pink, $color-bg-blue);
