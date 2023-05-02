@@ -1,17 +1,18 @@
+import { createRoot } from 'react-dom/client'
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 import App from './js/App.js'
 import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container) // createRoot(container!) if you use TypeScript
+root.render(
 	<React.StrictMode>
 		<Router>
 			<App />
 		</Router>
-	</React.StrictMode>,
-	document.getElementById('root')
+	</React.StrictMode>
 )
 
 // If you want your app to work offline and load faster, you can change
