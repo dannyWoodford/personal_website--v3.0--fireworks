@@ -17,11 +17,15 @@ export default function Scene({ ...props }) {
 	}, [canvas, currentCanvasColor])
 
 	return (
-		<Canvas camera={{ fov: 80 }}>
-			<Suspense fallback={<Loading />}>
-				<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
-			</Suspense>
-			{/* <Stats className="stats" /> */}
-		</Canvas>
+		<>
+			{currentName !== 'about' && (
+				<Canvas camera={{ fov: 80 }}>
+					<Suspense fallback={<Loading />}>
+						<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
+					</Suspense>
+					{/* <Stats className="stats" /> */}
+				</Canvas>
+			)}
+		</>
 	)
 }
