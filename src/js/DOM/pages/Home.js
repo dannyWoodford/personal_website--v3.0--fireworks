@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip'
 
 import DelayLink from '../DelayLink.js'
 import Clock from '../Clock.js'
@@ -135,7 +135,8 @@ export default function Home({ ...props }) {
 							onCopy={() => setIconHasBeenCopied({ copyPhoneNumber: true })}
 							className='item small'
 							text={'9089078680'}
-							data-for='copyPhoneNumber'
+							data-tooltip-id='copy-phone-number'
+							data-tooltip-content={iconHasBeenCopied.copyPhoneNumber ? 'Phone number has been copied to clipboard!' : 'Copy phone number to clipboard'}
 							data-tip=''
 							data-border={true}
 							data-border-color='white'
@@ -147,17 +148,15 @@ export default function Home({ ...props }) {
 								</div>
 							</div>
 						</CopyToClipboard>
-						<ReactTooltip
-							id='copyPhoneNumber'
-							getContent={() => (iconHasBeenCopied.copyPhoneNumber ? 'Phone number has been copied to clipboard!' : 'Copy phone number to clipboard')}
-						/>
+						<Tooltip id='copy-phone-number' />
 					</span>
 					<span onPointerOut={() => resetTooltip()} className='display-contents'>
 						<CopyToClipboard
 							onCopy={() => setIconHasBeenCopied({ copyEMail: true })}
 							className='item small'
 							text={'daniel.woodford.g@gmail.com'}
-							data-for='copyEMail'
+							data-tooltip-id='copyEMail'
+							data-tooltip-content={iconHasBeenCopied.copyEMail ? 'E-mail has been copied to clipboard!' : 'Copy e-mail to clipboard'}
 							data-tip=''
 							data-border={true}
 							data-border-color='white'
@@ -169,10 +168,7 @@ export default function Home({ ...props }) {
 								</div>
 							</div>
 						</CopyToClipboard>
-						<ReactTooltip
-							id='copyEMail'
-							getContent={() => (iconHasBeenCopied.copyEMail ? 'E-mail has been copied to clipboard!' : 'Copy e-mail to clipboard')}
-						/>
+						<Tooltip id='copyEMail' />
 					</span>
 					<a href='https://www.linkedin.com/in/danny-woodford-54b418126/' target='_blank' rel='noopener noreferrer' className='display-contents'>
 						<div className='item item-mobile-break'>

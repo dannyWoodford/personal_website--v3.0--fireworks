@@ -47,7 +47,7 @@ export default function Blender({ ...props }) {
 			className='page blender-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'blender' ? 1 : 0,
+				opacity: menuStateCurrentName === 'blender' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>

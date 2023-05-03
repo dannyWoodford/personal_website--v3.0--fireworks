@@ -16,7 +16,7 @@ export default function Scene({ ...props }) {
 	}, [canvas, currentCanvasColor])
 
 	return (
-		<Canvas AdaptivePixelRatio concurrent camera={{ fov: 80 }}>
+		<Canvas camera={{ fov: 80 }}>
 			<Suspense fallback={<Loading />}>
 				<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
 			</Suspense>

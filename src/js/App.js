@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
-import { Switch, Route, useLocation, Redirect } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 
 import Scene from './CANVAS/containers/Scene'
 import Menu from './DOM/Menu'
@@ -85,29 +85,15 @@ const App = props => {
 					<div className='content'>
 						<div className='content_inner'>
 							<Scene menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
-							<Switch>
-								<Route exact path='/'>
-									<Redirect to='/home' />
-								</Route>
-								<Route path='/about'>
-									<About menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
-								</Route>
-								<Route path='/art'>
-									<Art menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
-								</Route>
-								<Route path='/flatiron'>
-									<Flatiron menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
-								</Route>
-								<Route path='/projects'>
-									<Projects menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
-								</Route>
-								<Route path='/blender'>
-									<Blender menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
-								</Route>
-								<Route path='/home'>
-									<Home menuIsOpen={menuToggle} linkToPageHandler={linkToPageHandler} menuState={menuState} />
-								</Route>
-							</Switch>
+							<Routes>
+								<Route index element={<Navigate to='/home' replace />} />
+								<Route path='/about' element={<About menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
+								<Route path='/art' element={<Art menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
+								<Route path='/flatiron' element={<Flatiron menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
+								<Route path='/projects' element={<Projects menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
+								<Route path='/blender' element={<Blender menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
+								<Route path='/home' element={<Home menuIsOpen={menuToggle} linkToPageHandler={linkToPageHandler} menuState={menuState} />} />
+							</Routes>
 						</div>
 					</div>
 				</div>

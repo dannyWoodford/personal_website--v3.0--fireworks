@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
+import 'react-tooltip/dist/react-tooltip.css'
 import App from './js/App.js'
 import * as serviceWorker from './serviceWorker'
 

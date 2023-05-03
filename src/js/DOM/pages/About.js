@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSpring, a } from 'react-spring'
+import { useSpring, a } from '@react-spring/web'
 
 export default function About({ ...props }) {
 	const menuStateCurrentName = props.menuState.currentName
@@ -33,7 +33,7 @@ export default function About({ ...props }) {
 			className='page about-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'about' ? 1 : 0,
+				opacity: menuStateCurrentName === 'about' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>

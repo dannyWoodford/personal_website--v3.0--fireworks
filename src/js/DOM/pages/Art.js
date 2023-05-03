@@ -47,7 +47,7 @@ export default function Art({ ...props }) {
 			className='page art-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'art' ? 1 : 0,
+				opacity: menuStateCurrentName === 'art' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>
