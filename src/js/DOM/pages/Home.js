@@ -5,8 +5,7 @@ import { Tooltip } from 'react-tooltip'
 import DelayLink from '../DelayLink.js'
 import Clock from '../Clock.js'
 
-export default function Home({ ...props }) {
-	const menuStateCurrentName = props.menuState.currentName
+export default function Home({ currentName, linkToPageHandler }) {
 	const delay = 700
 	const [iconHasBeenCopied, setIconHasBeenCopied] = useState({
 		copyPhoneNumber: false,
@@ -25,12 +24,12 @@ export default function Home({ ...props }) {
 			className='page home-page'
 			style={{
 				transition: 'opacity 2s ease-in-out .6s',
-				opacity: menuStateCurrentName === 'home' ? 1 : 0,
+				opacity: currentName === 'home' ? 1 : 0,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='double-item top-row'>
-						{/* <div className='item medium neonText' onClick={() => props.linkToPageHandler(delay)}>
+						{/* <div className='item medium neonText' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/about'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<img
@@ -43,7 +42,7 @@ export default function Home({ ...props }) {
 								</div>
 							</DelayLink>
 						</div> */}
-						<div className='item neonText medium' onClick={() => props.linkToPageHandler(delay)}>
+						<div className='item neonText medium' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/about'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<img
@@ -56,7 +55,7 @@ export default function Home({ ...props }) {
 								</div>
 							</DelayLink>
 						</div>
-						<div className='item neonText large' onClick={() => props.linkToPageHandler(delay)}>
+						<div className='item neonText large' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/projects'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<h1>Projects</h1>
@@ -67,7 +66,7 @@ export default function Home({ ...props }) {
 						</div>
 					</div>
 					<div className='double-item'>
-						<div className='item' onClick={() => props.linkToPageHandler(delay)}>
+						<div className='item' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/blender'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<img
@@ -80,7 +79,7 @@ export default function Home({ ...props }) {
 								</div>
 							</DelayLink>
 						</div>
-						<div className='item' onClick={() => props.linkToPageHandler(delay)}>
+						<div className='item' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/art'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/art-logo.png'} />

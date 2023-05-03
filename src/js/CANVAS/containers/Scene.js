@@ -8,6 +8,7 @@ import Firework from '../components/models/Firework.js'
 export default function Scene({ ...props }) {
 	const canvas = document.querySelector('canvas')
 	const currentCanvasColor = props.menuState.currentCanvasColor
+	const currentName = props.menuState.currentName
 
 	useEffect(() => {
 		if (canvas && currentCanvasColor) {
@@ -15,12 +16,20 @@ export default function Scene({ ...props }) {
 		}
 	}, [canvas, currentCanvasColor])
 
+	useEffect(() => {
+		console.log('currentName', currentName)
+	}, [currentName])
+
 	return (
-		<Canvas camera={{ fov: 80 }}>
-			<Suspense fallback={<Loading />}>
-				<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
-			</Suspense>
-			{/* <Stats className="stats" /> */}
-		</Canvas>
+		<>
+			{currentName !== 'about' && (
+				<Canvas camera={{ fov: 80 }}>
+					<Suspense fallback={<Loading />}>
+						<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
+					</Suspense>
+					{/* <Stats className="stats" /> */}
+				</Canvas>
+			)}
+		</>
 	)
 }

@@ -355,9 +355,7 @@ const displayCategoryArray = {
 	},
 }
 
-export default function Projects({ ...props }) {
-	const menuStateCurrentName = props.menuState.currentName
-
+export default function Projects({ currentName }) {
 	// Brandgage, Rocket, PersonalProjects
 	const [displayCategory, setDisplayCategory] = useState('Rocket')
 	const [displayItem, setDisplayItem] = useState(rocketItemArray[1])
@@ -411,7 +409,7 @@ export default function Projects({ ...props }) {
 			className='page projects-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'projects' ? 1 : 0.5,
+				opacity: currentName === 'projects' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>

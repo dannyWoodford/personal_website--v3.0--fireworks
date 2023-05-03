@@ -1,8 +1,7 @@
 import React from 'react'
 import ItemCarousel from '../ItemCarousel.js'
 
-export default function Art({ ...props }) {
-	const menuStateCurrentName = props.menuState.currentName
+export default function Art({ currentName }) {
 
 	const itemArray = [
 		{
@@ -47,7 +46,7 @@ export default function Art({ ...props }) {
 			className='page art-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'art' ? 1 : 0.5,
+				opacity: currentName === 'art' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>

@@ -1,9 +1,7 @@
 import React from 'react'
 import ItemCarousel from '../ItemCarousel.js'
 
-export default function Blender({ ...props }) {
-	const menuStateCurrentName = props.menuState.currentName
-
+export default function Blender({ currentName }) {
 	const itemArray = [
 		{
 			_id: 'blender-wile-e-coyote',
@@ -47,7 +45,7 @@ export default function Blender({ ...props }) {
 			className='page blender-page'
 			style={{
 				transition: 'opacity 1.5s ease-in-out',
-				opacity: menuStateCurrentName === 'blender' ? 1 : 0.5,
+				opacity: currentName === 'blender' ? 1 : 0.5,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>

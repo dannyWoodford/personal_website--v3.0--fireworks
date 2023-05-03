@@ -7,11 +7,10 @@ import Menu from './DOM/Menu'
 import Home from './DOM/pages/Home'
 import About from './DOM/pages/About'
 import Art from './DOM/pages/Art'
-import Flatiron from './DOM/pages/Flatiron'
 import Projects from './DOM/pages/Projects'
 import Blender from './DOM/pages/Blender'
 
-const App = props => {
+export default function App() {
 	const [menuToggle, setMenuToggle] = useState(false)
 	const [menuState, setMenuState] = useState({
 		currentName: '',
@@ -28,10 +27,6 @@ const App = props => {
 			{
 				name: 'art',
 				canvasColor: '#3e54b0',
-			},
-			{
-				name: 'flatiron',
-				canvasColor: '#f175f6',
 			},
 			{
 				name: 'projects',
@@ -84,15 +79,14 @@ const App = props => {
 				<div className='max-width-container'>
 					<div className='content'>
 						<div className='content_inner'>
-							<Scene menuIsOpen={menuToggle} menuState={menuState} toggleMenuHandler={toggleMenuHandler} />
+							<Scene menuIsOpen={menuToggle} menuState={menuState} />
 							<Routes>
 								<Route index element={<Navigate to='/home' replace />} />
-								<Route path='/about' element={<About menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
-								<Route path='/art' element={<Art menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
-								<Route path='/flatiron' element={<Flatiron menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
-								<Route path='/projects' element={<Projects menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
-								<Route path='/blender' element={<Blender menuIsOpen={menuToggle} toggleMenuHandler={toggleMenuHandler} menuState={menuState} />} />
-								<Route path='/home' element={<Home menuIsOpen={menuToggle} linkToPageHandler={linkToPageHandler} menuState={menuState} />} />
+								<Route path='/about' element={<About currentName={menuState.currentName} />} />
+								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
+								<Route path='/projects' element={<Projects currentName={menuState.currentName} />} />
+								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
+								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />
 							</Routes>
 						</div>
 					</div>
@@ -101,5 +95,3 @@ const App = props => {
 		</div>
 	)
 }
-
-export default App
