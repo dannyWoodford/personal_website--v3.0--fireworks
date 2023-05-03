@@ -16,20 +16,12 @@ export default function Scene({ ...props }) {
 		}
 	}, [canvas, currentCanvasColor])
 
-	useEffect(() => {
-		console.log('currentName', currentName)
-	}, [currentName])
-
 	return (
-		<>
-			{currentName !== 'about' && (
-				<Canvas camera={{ fov: 80 }}>
-					<Suspense fallback={<Loading />}>
-						<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
-					</Suspense>
-					{/* <Stats className="stats" /> */}
-				</Canvas>
-			)}
-		</>
+		<Canvas camera={{ fov: 80 }}>
+			<Suspense fallback={<Loading />}>
+				<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
+			</Suspense>
+			{/* <Stats className="stats" /> */}
+		</Canvas>
 	)
 }
