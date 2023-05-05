@@ -1,6 +1,21 @@
 .about-page {
 	overflow: auto;
 	background: $color-bg--about;
+	// display: block;
+
+	.about-canvas {
+		display: block;
+		height: 100%;
+		width: 100%;
+
+		canvas {
+			display: block;
+			height: 100vh !important;
+			width: 100vw !important;
+			outline: none;
+			// background: red;
+		}
+	}
 
 	.glass-container {
 		background: $color-bg-gradient-opacity;

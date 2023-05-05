@@ -19,13 +19,21 @@ export default function Scene({ ...props }) {
 	return (
 		<>
 			{currentName !== 'about' && (
+				<div className='bg-canvas'>
+					<Canvas camera={{ fov: 80 }}>
+						<Suspense fallback={<Loading />}>
+							<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
+						</Suspense>
+					</Canvas>
+				</div>
+			)}
+			{/* <div className='bg-canvas'>
 				<Canvas camera={{ fov: 80 }}>
 					<Suspense fallback={<Loading />}>
 						<Firework menuIsOpen={props.menuIsOpen} menuState={props.menuState} />
 					</Suspense>
-					{/* <Stats className="stats" /> */}
 				</Canvas>
-			)}
+			</div> */}
 		</>
 	)
 }
