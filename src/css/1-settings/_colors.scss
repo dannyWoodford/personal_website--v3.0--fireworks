@@ -24,7 +24,7 @@ $color-bg-blue-clock-shadow-dark: adjust-color($color-bg-blue, $red: 0, $green: 
 
 
 $color-bg-gradient: linear-gradient(90deg, $color-bg-pink, $color-bg-blue);
-$color-bg-gradient-opacity: linear-gradient(90deg, rgba($color-bg-pink, 0.4), rgba($color-bg-blue, 0.4));
+$color-bg-gradient-opacity: rgba($color-bg-pink, 0.4);
 
 $color-bg--home: $color-bg-gradient;
 $color-bg--about: $transparent;

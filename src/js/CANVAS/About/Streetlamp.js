@@ -10,7 +10,7 @@ export default function Streetlamp({ pos, hasLight = true, args = [15, 30] }) {
 	return (
 		<group>
 			<Plane name='streetlamp' args={args} position={pos}>
-				<meshBasicMaterial map={streetlamp} side={THREE.FrontSide} transparent opacity={1} alphaTest={0.5} />
+				<meshBasicMaterial map={streetlamp} side={THREE.DoubleSide} transparent opacity={1} alphaTest={0.5} />
 			</Plane>
 
 			{hasLight && (
@@ -21,11 +21,12 @@ export default function Streetlamp({ pos, hasLight = true, args = [15, 30] }) {
 						intensity={1.9}
 						penumbra={0.6}
 						distance={100}
-						angle={Math.PI / 2}
+						angle={Math.PI / 3}
 						// intensity={0.8}
 						// penumbra={0.6}
 						// distance={0}
 						color={'#ffe094'}
+						// color={'white'}
 						castShadow
 					/>
 					<primitive object={spotlightLeft.target} position={[pos[0], pos[1] - 12.7, pos[2]]} />
