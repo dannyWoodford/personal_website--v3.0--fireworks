@@ -417,24 +417,12 @@ export default function Projects({ currentName }) {
 						<h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2>
 
 						<div className='tab-switch-container'>
-							<div className='item medium' onClick={() => updateDisplayCategory('Rocket')}>
+							<div className='item medium' onClick={() => updateDisplayCategory('Flatiron')}>
 								<div className='item__border'>
-									<img
-										className='item__image add-padding'
-										draggable='false'
-										alt=''
-										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/rocket-logo.png'}
-									/>
-									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
+									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'} />
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
 								</div>
-								<h3 className='duration'>{displayCategoryArray['Rocket'].duration}</h3>
-							</div>
-							<div className='item medium' onClick={() => updateDisplayCategory('Brandgage')}>
-								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
-									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
-								</div>
-								<h3 className='duration'>{displayCategoryArray['Brandgage'].duration}</h3>
+								<h3 className='duration'>{displayCategoryArray['Flatiron'].duration}</h3>
 							</div>
 							<div className='item medium' onClick={() => updateDisplayCategory('PersonalProjects')}>
 								<div className='item__border'>
@@ -448,12 +436,24 @@ export default function Projects({ currentName }) {
 								</div>
 								<h3 className='duration'>{displayCategoryArray['PersonalProjects'].duration}</h3>
 							</div>
-							<div className='item medium' onClick={() => updateDisplayCategory('Flatiron')}>
+							<div className='item medium' onClick={() => updateDisplayCategory('Brandgage')}>
 								<div className='item__border'>
-									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'} />
-									<img alt='' className='item__image hover-image blur-on-hover' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
+									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
 								</div>
-								<h3 className='duration'>{displayCategoryArray['Flatiron'].duration}</h3>
+								<h3 className='duration'>{displayCategoryArray['Brandgage'].duration}</h3>
+							</div>
+							<div className='item medium' onClick={() => updateDisplayCategory('Rocket')}>
+								<div className='item__border'>
+									<img
+										className='item__image add-padding'
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/rocket-logo.png'}
+									/>
+									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
+								</div>
+								<h3 className='duration'>{displayCategoryArray['Rocket'].duration}</h3>
 							</div>
 						</div>
 

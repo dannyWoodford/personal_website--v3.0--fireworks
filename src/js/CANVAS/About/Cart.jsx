@@ -15,7 +15,7 @@ export default function Cart() {
   return (
 		<group dispose={null}>
 			<BakeShadows />
-			<group scale={0.1} rotation={[0, -Math.PI / 2, 0]} position={[-25, -4.9, -30]}>
+			<group scale={0.1} rotation={[0, -Math.PI / 2, 0]} position={[-28, -4.9, -30]}>
 				<mesh
 					geometry={nodes['b02_low_hot-dog_0'].geometry}
 					material={materials['hot-dog']}

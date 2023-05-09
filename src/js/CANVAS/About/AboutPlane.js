@@ -2,12 +2,11 @@ import { Html } from '@react-three/drei'
 
 export default function AboutPlane({ glassIsOpen }) {
 	return (
-		<Html position={[0, 1, -15]} transform occlude>
+		<Html position={[0, 0, -7]} transform occlude>
 			<div className={`glass-container about-container ${glassIsOpen ? 'open-glass' : ''}`}>
 				<h1 className='title'>About</h1>
 				<p className='text'>
-					After I discovered Canvas for the first time 3D became my obsession. In my personal life, I like to write jokes, read philosophy, and create things
-					like paintings, replica movie props, and woodworking projects for fun.
+				Professional who appreciates a ballance between art and engineering.
 				</p>
 
 				<div className='tab-info-flex'>

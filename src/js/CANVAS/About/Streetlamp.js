@@ -2,14 +2,14 @@ import * as THREE from 'three'
 import React, { useMemo } from 'react'
 import { useTexture, Plane } from '@react-three/drei'
 
-export default function Streetlamp({ pos, hasLight = true, args = [15, 30] }) {
+export default function Streetlamp({ pos, hasLight = true, rot = [0, 0, 0], args = [15, 30] }) {
 	const spotlightLeft = useMemo(() => new THREE.SpotLight('#fff'), [])
 
 	const [streetlamp] = useTexture([process.env.PUBLIC_URL + '/assets-by-page/about/streetlamp.png'])
 
 	return (
 		<group>
-			<Plane name='streetlamp' args={args} position={pos}>
+			<Plane name='streetlamp' args={args} position={pos} rotation={[rot[0], rot[1] + 6.3, rot[2]]}>
 				<meshBasicMaterial map={streetlamp} side={THREE.DoubleSide} transparent opacity={1} alphaTest={0.5} />
 			</Plane>
 

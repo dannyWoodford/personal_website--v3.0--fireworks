@@ -82,7 +82,7 @@
 
 		@include breakpoint($bp-medium) {
 			width: 700px;
-			transform: translate(-500px, -200px);
+			transform: translate(-500px, -170px);
 		}
 
 		p {
@@ -130,7 +130,7 @@
 		@include breakpoint($bp-medium) {
 			display: block;
 			width: 230px;
-			transform: translate(250px, -285px);
+			transform: translate(230px, -285px);
 		}
 
 		p {

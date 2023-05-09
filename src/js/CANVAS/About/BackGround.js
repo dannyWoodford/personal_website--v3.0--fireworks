@@ -23,7 +23,7 @@ export default function BackGround() {
 
 	return (
 		<group>
-			<Plane name='city' position={[40, 120, -380]} args={[700, 300]} rotation={[0, 0, 0]}>
+			<Plane name='city' position={[40, 120, -380]} args={[700, 300]}>
 				<meshLambertMaterial map={city} side={THREE.FrontSide} transparent alphaTest={0.8} />
 			</Plane>
 			<Plane name='empire' position={[140, 220, -530]} args={[100, 500]}>
@@ -54,7 +54,7 @@ export default function BackGround() {
 			<Plane name='pinkTree-left' position={[-155, 26, -80]} args={[150, 80]}>
 				<meshLambertMaterial map={pinkTree} side={THREE.FrontSide} transparent alphaTest={0.5} />
 			</Plane>
-			<Plane name='pinkTree-middle' position={[-50, 31, -110]} args={[140, 80]}>
+			<Plane name='pinkTree-middle' position={[-50, 23, -110]} args={[140, 80]}>
 				<meshLambertMaterial map={pinkTree} side={THREE.FrontSide} transparent alphaTest={0.5} />
 			</Plane>
 			<Plane name='pinkTree-right' position={[80, 23, -65]} args={[120, 60]}>
