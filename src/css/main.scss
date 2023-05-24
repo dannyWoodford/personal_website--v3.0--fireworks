@@ -53,6 +53,16 @@
 .stats {
 	left: auto !important;
 	right: 0 !important;
+	top: auto !important;
+	bottom: 0 !important;
+}
+
+#LastFrame {
+	position: absolute;
+	left: auto !important;
+	right: 0 !important;
+	top: auto !important;
+	bottom: 100px !important;
 }
 
 .nav-link {

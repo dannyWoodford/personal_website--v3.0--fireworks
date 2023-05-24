@@ -5,7 +5,6 @@ import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 
 import Scene from '../../CANVAS/About/Scene'
-import Resize from '../../CANVAS/About/Resize'
 import Loading from '../../CANVAS/components/setup/Loading'
 
 import LoadingGif from './loading.gif'
@@ -32,14 +31,11 @@ export default function About({ currentName }) {
 					backgroundRepeat: 'no-repeat',
 					backgroundPosition: 'center',
 				}}>
-				<>
-					<Canvas shadows={true} dpr={[1, 2]}>
-						<Suspense fallback={<Loading />}>
-							<Scene currentName={currentName} setCanvasLoaded={setCanvasLoaded} />
-							<Resize />
-						</Suspense>
-					</Canvas>
-				</>
+				<Canvas shadows={true} dpr={[1, 2]}>
+					<Suspense fallback={<Loading />}>
+						<Scene currentName={currentName} setCanvasLoaded={setCanvasLoaded} />
+					</Suspense>
+				</Canvas>
 			</div>
 		</div>
 	)
