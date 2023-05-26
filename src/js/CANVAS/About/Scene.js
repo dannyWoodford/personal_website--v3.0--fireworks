@@ -40,7 +40,7 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 			},
 			KeyLightTarget: { position: { x: 44, y: 0, z: -5 }, visible: types.boolean(false) },
 			FillLight: { position: { x: 37, y: 102, z: 64 }, intensity: 1.1, visible: types.boolean(true) },
-			HemisphereLight: { intensity: 0.2, visible: types.boolean(true) },
+			HemisphereLight: { intensity: 0.3, visible: types.boolean(true) },
 		},
 	})
 	const { cameraGrid, cameraTarget } = useControls(

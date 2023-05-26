@@ -50,7 +50,7 @@ export default function Lighting({ LightingCon }) {
 				</primitive>
 			</group>
 
-			<Stars radius={790} depth={30} count={8000} factor={24} speed={1} />
+			<Stars radius={790} depth={0} count={12000} factor={30} speed={2} />
 		</group>
 	)
 }
