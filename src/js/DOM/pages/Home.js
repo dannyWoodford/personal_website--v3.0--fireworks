@@ -121,7 +121,7 @@ export default function Home({ currentName, linkToPageHandler }) {
 							</div>
 						</div>
 					</a>
-					<a href={process.env.PUBLIC_URL + '/Danny_Woodford_Resume_2023.pdf'} target='_blank' rel='noopener noreferrer' className='display-contents'>
+					<a href={process.env.PUBLIC_URL + '/2023_Resume.pdf'} target='_blank' rel='noopener noreferrer' className='display-contents'>
 						<div className='item small'>
 							<div className='item__border'>
 								<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/resume-logo.png'} />
