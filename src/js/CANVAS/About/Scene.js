@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { OrbitControls, Stats, Plane, useTexture, Preload, BakeShadows } from '@react-three/drei'
+import { OrbitControls, Preload, BakeShadows } from '@react-three/drei'
 import { getProject, onChange, val, createRafDriver } from '@theatre/core'
 import { SheetProvider, PerspectiveCamera, editable } from '@theatre/r3f'
-import { useControls, types } from 'theatric'
+// import { useControls, types } from 'theatric'
 
 import aboutState from './Setup/AboutScene.theatre-project-state-taxi.json'
 
@@ -14,7 +14,7 @@ import Resize from './Setup/Resize'
 const dopeSheet = getProject('AboutScene', { state: aboutState }).sheet('Dope Sheet')
 
 export default function Scene({ currentName, setCanvasLoaded }) {
-	const [cameraGridMap] = useTexture([process.env.PUBLIC_URL + '/assets-by-page/about/Rule-of-Thirds-grid.webp'])
+	// const [cameraGridMap] = useTexture([process.env.PUBLIC_URL + '/assets-by-page/about/Rule-of-Thirds-grid.webp'])
 
 	// const GPUTier = useDetectGPU()
 
@@ -30,26 +30,26 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 	const orbitCon = useRef()
 	const [animationOver, setAnimationOver] = useState(false)
 
-	const { LightingCon } = useControls({
-		LightingCon: {
-			KeyLight: {
-				position: { x: 5, y: 20, z: 16 },
-				intensity: 0.5,
-				visible: types.boolean(true),
-				helperVisible: types.boolean(false),
-			},
-			KeyLightTarget: { position: { x: 44, y: 0, z: -5 }, visible: types.boolean(false) },
-			FillLight: { position: { x: 37, y: 102, z: 64 }, intensity: 1.1, visible: types.boolean(true) },
-			HemisphereLight: { intensity: 0.3, visible: types.boolean(true) },
-		},
-	})
-	const { cameraGrid, cameraTarget } = useControls(
-		{
-			cameraGrid: { size: { x: types.number(2.15, { nudgeMultiplier: 0.1 }), y: types.number(1.24, { nudgeMultiplier: 0.1 }) }, visible: types.boolean(false) },
-			cameraTarget: { visible: types.boolean(false) },
-		},
-		{ folder: 'Camera' }
-	)
+	// const { LightingCon } = useControls({
+	// 	LightingCon: {
+	// 		KeyLight: {
+	// 			position: { x: 5, y: 20, z: 16 },
+	// 			intensity: 0.5,
+	// 			visible: types.boolean(true),
+	// 			helperVisible: types.boolean(false),
+	// 		},
+	// 		KeyLightTarget: { position: { x: 44, y: 0, z: -5 }, visible: types.boolean(false) },
+	// 		FillLight: { position: { x: 37, y: 102, z: 64 }, intensity: 1.1, visible: types.boolean(true) },
+	// 		HemisphereLight: { intensity: 0.3, visible: types.boolean(true) },
+	// 	},
+	// })
+	// const { cameraGrid, cameraTarget } = useControls(
+	// 	{
+	// 		cameraGrid: { size: { x: types.number(2.15, { nudgeMultiplier: 0.1 }), y: types.number(1.24, { nudgeMultiplier: 0.1 }) }, visible: types.boolean(false) },
+	// 		cameraTarget: { visible: types.boolean(false) },
+	// 	},
+	// 	{ folder: 'Camera' }
+	// )
 
 	const rafDriver = createRafDriver({ name: 'a custom 30fps raf driver' })
 
@@ -127,17 +127,17 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				// enableZoom={false}
 			/>
 			<PerspectiveCamera theatreKey='Camera' makeDefault far={2300} lookAt={cameraTargetRef}>
-				<Plane name='camera-grid' args={[cameraGrid.size.x, cameraGrid.size.y]} position={[0, 0, -1.5]} visible={cameraGrid.visible}>
+				{/* <Plane name='camera-grid' args={[cameraGrid.size.x, cameraGrid.size.y]} position={[0, 0, -1.5]} visible={cameraGrid.visible}>
 					<meshBasicMaterial map={cameraGridMap} transparent alphaTest={0.5} />
-				</Plane>
+				</Plane> */}
 			</PerspectiveCamera>
 
-			<editable.mesh ref={cameraTargetRef} theatreKey='CameraTarget' visible={cameraTarget.visible}>
+			<editable.mesh ref={cameraTargetRef} theatreKey='CameraTarget' visible={false}>
 				<sphereGeometry args={[2]} />
 				<meshBasicMaterial color={'red'} />
 			</editable.mesh>
 
-			<Lighting LightingCon={LightingCon} />
+			<Lighting />
 
 			<BackGround animationOver={animationOver} />
 			<Floor animationOver={animationOver} />
