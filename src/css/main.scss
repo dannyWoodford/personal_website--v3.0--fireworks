@@ -36,12 +36,16 @@
 		height: 100vh; // compensate for higher .content
 		overflow-y: hidden; // set expected overflow
 
-		canvas {
-			display: block;
-			outline: none;
-			background: $color-black;
-			transition: background 0.9s ease-in-out;
-			z-index: $z-Index-canvas;
+		.bg-canvas {
+			display: contents;
+			
+			canvas {
+				display: block;
+				outline: none;
+				background: $color-black;
+				transition: background 0.9s ease-in-out;
+				z-index: $z-Index-canvas;
+			}
 		}
 	}
 }
@@ -49,6 +53,16 @@
 .stats {
 	left: auto !important;
 	right: 0 !important;
+	top: auto !important;
+	bottom: 0 !important;
+}
+
+#LastFrame {
+	position: absolute;
+	left: auto !important;
+	right: 0 !important;
+	top: auto !important;
+	bottom: 100px !important;
 }
 
 .nav-link {

@@ -1,24 +1,41 @@
 .about-page {
 	overflow: auto;
-	background: $color-bg--about;
+
+	.about-canvas {
+		canvas {
+			display: block;
+			height: 100vh !important;
+			width: 100vw !important;
+			outline: none;
+		}
+	}
 
 	.glass-container {
 		background: $color-bg-gradient-opacity;
-		box-shadow: inset 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(13.5px);
-		-webkit-backdrop-filter: blur(13.5px);
+		// background: rgba($color-white, 0.6);
+		color: $color-white;
+		// box-shadow: inset 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		// backdrop-filter: blur(13.5px);
+		// -webkit-backdrop-filter: blur(13.5px);
 		border-radius: 10px;
-		border: 1px solid rgba(255, 255, 255, 0.18);
-		height: min-content;
-		padding: 20px;
+		// border: 1px solid rgba(255, 255, 255, 0.18);
+		// border: none;
 		display: block;
 		position: relative;
+		max-height: 0;
+		user-select: none;
+		overflow: hidden;
 		z-index: 1;
 
 		@include breakpoint($bp-medium) {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+		}
+
+		.title {
+			text-align: center;
+			margin-top: 0;
 		}
 	}
 
@@ -62,27 +79,58 @@
 	.about-container {
 		width: 100%;
 		margin: 5%;
-		border: 1px solid $color-white;
 
 		@include breakpoint($bp-medium) {
-			border: none;
-			width: 500px;
-			transform: translate(-500px, -300px);
+			width: 700px;
+			transform: translate(-500px, -170px);
 		}
 
 		p {
 			font-size: 20px;
+			font-weight: 700;
+		}
+		
+		.text {
+			text-indent: 2em;
+		}
+
+		.tab-info-flex {
+			display: flex;
+			flex-direction: row;
+
+			.strong {
+				font-weight: 900;
+				margin-right: 8px;
+				white-space: nowrap;
+				margin-top: 0;
+			}
+
+			.location {
+				margin-left: 5px;
+				margin-top: 0;
+			}
+		}
+
+		&.open-glass {
+			max-height: 600px;
+			padding: 20px 30px;
+			transition: max-height 0.5s ease-in;
 		}
 	}
 
 	.skills-container {
 		width: 100%;
-		display: none;
+
+		&.open-glass {
+			max-height: 600px;
+			transition: max-height 0.5s ease-in;
+			padding: 30px 20px;
+		}
 
 		@include breakpoint($bp-medium) {
 			display: block;
 			width: 230px;
-			transform: translate(200px, -70px);
+			transform: translate(230px, -285px);
 		}
 
 		p {
@@ -98,24 +146,6 @@
 
 		ul {
 			margin: 0;
-		}
-
-		&.--mobile {
-			display: table;
-			width: auto;
-			text-align: left;
-			border: 1px solid $color-white;
-			border-radius: 19px;
-			padding: 0 10px 20px;
-			margin: auto;
-
-			@include breakpoint($bp-medium) {
-				display: none;
-			}
-
-			.title {
-				text-align: center;
-			}
 		}
 	}
 }
