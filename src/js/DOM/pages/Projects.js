@@ -3,6 +3,14 @@ import ReactPlayer from 'react-player'
 
 const personalProjectsItemArray = [
 	{
+		name: 'Three.js AI Generator',
+		description: 'Three.js AI Generator which connects to openAI to return a three.js scene based on a prompt.',
+		language: 'React / Three.js / node',
+		demo: 'https://threejs-ai-generator.web.app/',
+		type: 'video',
+		itemUrl: '/assets-by-page/projects/THREEjs-AI-Generator.mp4',
+	},
+	{
 		name: 'R3F False3D Photosphere Face Tracker (360\u00b0 Glasses-less 3D Image)',
 		description:
 			'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
@@ -457,7 +465,7 @@ export default function Projects({ currentName }) {
 							</div>
 						</div>
 
-						<div className={`display-item-panel ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}>
+						<div className={`display-item-panel ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : 'has-no-tab-info'}`}>
 							<div className='display-item tab-info'>
 								<h1 className='tab-info-name'>{displayCategoryArray[displayCategory].name}</h1>
 								<div className='tab-info-details'>

@@ -1,3 +1,15 @@
 .blender-page {
 	background: $color-bg--blender;
+
+	// .page-container {
+	// 	max-width: none;
+	// }
+
+	.display-item {
+		max-width: none;
+
+		.text-container {
+			min-height: auto;
+		}
+	}
 }

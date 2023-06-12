@@ -61,6 +61,36 @@
 			display: none;
 		}
 
+		&.has-no-tab-info {
+			.display-item {
+				margin: 0;
+				height: auto;
+
+				@include breakpoint($bp-xlarge) {
+					max-width: none;
+				}
+			}
+
+			.react-player {
+				width: 100% !important;
+				height: 100% !important;
+				margin: auto;
+				display: flex;
+				align-items: center;
+
+				@include breakpoint($bp-xlarge) {
+					min-height: 550px !important;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					min-height: 758px !important;
+				}
+				@include breakpoint($bp-xxxlarge) {
+					min-height: 871px !important;
+				}
+			}
+		}
+
 		&.has-tab-info {
 			.display-item {
 				margin: 0;
@@ -190,16 +220,19 @@
 		display: flex;
 		flex-direction: row;
 		padding-bottom: 15px;
+		flex-wrap: wrap;
 
 		.item {
 			padding: 10px;
 			display: flex;
 			flex-direction: column;
+			flex-basis: 50%;
 		}
 
 		@include breakpoint($bp-large) {
 			.item {
 				padding: 12px;
+				flex-basis: min-content;
 			}
 		}
 	}
