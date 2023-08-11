@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+// import { createBrowserRouter, RouterProvider, createRoutesFromElements } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useNavigation } from 'react-router-dom'
+
+// import ErrorPage from './ErrorPage'
 
 import Scene from './CANVAS/containers/Scene'
 import Menu from './DOM/Menu'
@@ -39,12 +42,13 @@ export default function App() {
 		],
 	})
 
-	let location = useLocation()
+	// let location = useLocation()
+	let navigation = useNavigation()
 	let menuItems = menuState.menuItems
 
 	useEffect(() => {
-		if (location) {
-			let strippedLocation = location.pathname.replace(/^\/|\/$/g, '')
+		if (navigation.location) {
+			let strippedLocation = navigation.location.pathname.replace(/^\/|\/$/g, '')
 
 			let findMenuItem = menuItems.filter(x => {
 				return x.name === strippedLocation
@@ -58,7 +62,7 @@ export default function App() {
 				}
 			})
 		}
-	}, [location, menuItems])
+	}, [navigation, menuItems])
 
 	const toggleMenuHandler = () => {
 		setMenuToggle(!menuToggle)
@@ -75,19 +79,20 @@ export default function App() {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
-				<Menu toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
+				{/* <Menu toggleMenuHandler={toggleMenuHandler} menuState={menuState} /> */}
 				<div className='max-width-container'>
 					<div className='content'>
 						<div className='content_inner'>
-							<Scene menuIsOpen={menuToggle} menuState={menuState} />
-							<Routes>
+							{/* <Scene menuIsOpen={menuToggle} menuState={menuState} /> */}
+
+							{/* <Route path='/' element={<Navigate to='/home' replace />}> */}
 								<Route index element={<Navigate to='/home' replace />} />
 								<Route path='/about' element={<About currentName={menuState.currentName} />} />
 								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
 								<Route path='/projects' element={<Projects currentName={menuState.currentName} />} />
 								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
 								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />
-							</Routes>
+							{/* </Route> */}
 						</div>
 					</div>
 				</div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Tooltip } from 'react-tooltip'
 
-import DelayLink from '../DelayLink.js'
+// import DelayLink from '../DelayLink.js'
 import Clock from '../Clock.js'
 
 export default function Home({ currentName, linkToPageHandler }) {
@@ -24,7 +24,7 @@ export default function Home({ currentName, linkToPageHandler }) {
 			className='page home-page'
 			style={{
 				transition: 'opacity 2s ease-in-out .6s',
-				opacity: currentName === 'home' ? 1 : 0,
+				// opacity: currentName === 'home' ? 1 : 0,
 			}}>
 			<div className='max-width-container'>
 				<div className='container'>
@@ -43,7 +43,8 @@ export default function Home({ currentName, linkToPageHandler }) {
 							</DelayLink>
 						</div> */}
 						<div className='item neonText medium' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/about'} delay={delay} className='nav-link'>
+							{/* <DelayLink to={'/about'} delay={delay} className='nav-link'> */}
+							<div className='nav-link'>
 								<div className='item__border'>
 									<img
 										className='item__image about-padding'
@@ -53,21 +54,25 @@ export default function Home({ currentName, linkToPageHandler }) {
 									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
 								</div>
-							</DelayLink>
+							</div>
+							{/* </DelayLink> */}
 						</div>
 						<div className='item neonText large' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/projects'} delay={delay} className='nav-link'>
+							{/* <DelayLink to={'/projects'} delay={delay} className='nav-link'> */}
+							<div className='nav-link'>
 								<div className='item__border'>
 									<h1>Projects</h1>
 									{/* <img className="item__image invert-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/> */}
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/projects-gif.gif'} />
 								</div>
-							</DelayLink>
+							</div>
+							{/* </DelayLink> */}
 						</div>
 					</div>
 					<div className='double-item'>
 						<div className='item' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/blender'} delay={delay} className='nav-link'>
+							{/* <DelayLink to={'/blender'} delay={delay} className='nav-link'> */}
+							<div className='nav-link'>
 								<div className='item__border'>
 									<img
 										className='item__image add-padding'
@@ -77,15 +82,18 @@ export default function Home({ currentName, linkToPageHandler }) {
 									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/blender-gif.gif'} />
 								</div>
-							</DelayLink>
+							</div>
+							{/* </DelayLink> */}
 						</div>
 						<div className='item' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/art'} delay={delay} className='nav-link'>
+							{/* <DelayLink to={'/art'} delay={delay} className='nav-link'> */}
+							<div className='nav-link'>
 								<div className='item__border'>
 									<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/art-logo.png'} />
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/art-gif.gif'} />
 								</div>
-							</DelayLink>
+								</div>
+							{/* </DelayLink> */}
 						</div>
 					</div>
 					<div className='item is-welcome-item'>
