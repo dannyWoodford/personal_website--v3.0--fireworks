@@ -39,12 +39,20 @@ export default function App() {
 		],
 	})
 
+	function extractWordsFromURL(url) {
+		const regex = /\/([^/]+)/g
+		const matches = [...url.matchAll(regex)]
+
+		const words = matches.map(match => match[1])
+		return words
+	}
+
 	let location = useLocation()
 	let menuItems = menuState.menuItems
 
 	useEffect(() => {
 		if (location) {
-			let strippedLocation = location.pathname.replace(/^\/|\/$/g, '')
+			let strippedLocation = extractWordsFromURL(location.pathname)[0]
 
 			let findMenuItem = menuItems.filter(x => {
 				return x.name === strippedLocation
@@ -84,7 +92,8 @@ export default function App() {
 								<Route index element={<Navigate to='/home' replace />} />
 								<Route path='/about' element={<About currentName={menuState.currentName} />} />
 								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
-								<Route path='/projects' element={<Projects currentName={menuState.currentName} />} />
+								<Route path='/projects' element={<Navigate to='/projects/rocket' replace />} />
+								<Route path='/projects/*' element={<Projects currentName={menuState.currentName} />} />
 								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
 								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />
 							</Routes>
