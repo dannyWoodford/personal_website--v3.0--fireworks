@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import '../css/main.scss'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 
+import { extractWordsFromURL } from './helpers/Helpers'
+
 import Scene from './CANVAS/containers/Scene'
 import Menu from './DOM/Menu'
 import Home from './DOM/pages/Home'
@@ -38,14 +40,6 @@ export default function App() {
 			},
 		],
 	})
-
-	function extractWordsFromURL(url) {
-		const regex = /\/([^/]+)/g
-		const matches = [...url.matchAll(regex)]
-
-		const words = matches.map(match => match[1])
-		return words
-	}
 
 	let location = useLocation()
 	let menuItems = menuState.menuItems

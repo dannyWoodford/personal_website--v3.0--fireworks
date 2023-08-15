@@ -3,7 +3,6 @@ import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
 import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, flatironItemArray, displayCategoryArray } from './ProjectsData'
-import { transformNameToURLString } from './ProjectsHelpers'
 
 export default function ProjectsContent({ updateDisplayCategory, updateDisplayItem, displayCategory, displayItem }) {
 	const displayItemsFactory = useCallback(
@@ -11,7 +10,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 			return categoryArray.map(item => {
 				return (
 					<div className='item' key={item.name}>
-						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${transformNameToURLString(item.name)}`}>
+						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
 							{item.thumbnail ? (
 								<div className='item__thumbnail overview'>
 									<img className='item__image add-padding' draggable='false' alt='' src={process.env.PUBLIC_URL + item.thumbnail} />
@@ -28,7 +27,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 				)
 			})
 		},
-		[transformNameToURLString, updateDisplayItem]
+		[updateDisplayItem]
 	)
 
 	const displayItems = useMemo(() => {
@@ -150,7 +149,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 								|
 							</span>
 							<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.demo ? 'block' : 'none' }}>
-								Demo
+								View Demo
 							</a>
 						</div>
 						<p className='display-item-message' style={{ display: displayItem.message ? 'block' : 'none' }}>
