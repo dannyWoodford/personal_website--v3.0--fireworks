@@ -42,14 +42,14 @@ export default function Home({ currentName, linkToPageHandler }) {
 								</div>
 							</DelayLink>
 						</div> */}
-						<div className='item neonText medium' onClick={() => linkToPageHandler(delay)}>
+						<div className='item medium' onClick={() => linkToPageHandler(delay)}>
 							<DelayLink to={'/about'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<img
 										className='item__image about-padding'
 										draggable='false'
 										alt=''
-										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/about-me-logo.png'}
+										src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/about-me-logo.svg'}
 									/>
 									<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
 								</div>

@@ -95,16 +95,16 @@
 			}
 
 			@keyframes pulsate {
-						100% {
-							text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px $color-bg-pink-neon, 0 0 80px $color-bg-pink-neon, 0 0 90px $color-bg-pink-neon,
-								0 0 100px $color-bg-pink-neon, 0 0 150px $color-bg-pink-neon;
-						}
+				100% {
+					text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px $color-bg-pink-neon, 0 0 80px $color-bg-pink-neon, 0 0 90px $color-bg-pink-neon,
+						0 0 100px $color-bg-pink-neon, 0 0 150px $color-bg-pink-neon;
+				}
 
-						0% {
-							text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px $color-bg-pink-neon, 0 0 45px $color-bg-pink-neon, 0 0 55px $color-bg-pink-neon,
-								0 0 70px $color-bg-pink-neon, 0 0 80px $color-bg-pink-neon;
-						}
-					}
+				0% {
+					text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px $color-bg-pink-neon, 0 0 45px $color-bg-pink-neon, 0 0 55px $color-bg-pink-neon,
+						0 0 70px $color-bg-pink-neon, 0 0 80px $color-bg-pink-neon;
+				}
+			}
 		}
 
 		.double-item {
@@ -130,12 +130,12 @@
 				.item__border {
 					padding: 0;
 				}
-				
+
 				.large {
 					width: 66%;
 				}
 			}
-			
+
 			.item__clock {
 				display: none;
 				width: 23.995vw;
@@ -211,7 +211,23 @@
 			}
 
 			&.about-padding {
-				padding: 10px 0;
+				padding: 17px 20px;
+
+				@include breakpoint($bp-medium) {
+					padding: 40px 67px;
+				}
+
+				@include breakpoint($bp-large) {
+					padding: 39px 44px;
+				}
+
+				@include breakpoint($bp-xxlarge) {
+					padding: 40px 67px;
+				}
+
+				@include breakpoint($bp-xxxlarge) {
+					padding: 39px 78px;
+				}
 			}
 		}
 
