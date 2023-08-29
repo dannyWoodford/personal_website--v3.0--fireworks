@@ -94,16 +94,11 @@
 						align-items: center;
 						min-height: 55vh;
 
-						.react-player {
-							width: 100% !important;
-							height: min-content !important;
-						}
-
 						.displayed-item,
 						.react-player video {
 							transition: box-shadow 250ms ease-in-out;
-							max-width: 100%;
-							margin: auto;
+							// max-width: 100%;
+							// margin: auto;
 							-khtml-user-select: none;
 							-o-user-select: none;
 							-moz-user-select: none;
@@ -170,27 +165,6 @@
 			margin-top: 50px;
 			margin-bottom: 0;
 			text-align: center;
-		}
-	}
-
-	.react-player {
-		width: 100% !important;
-		height: 100% !important;
-		margin: auto;
-		display: flex;
-		align-items: center;
-
-		&.has-tab-info {
-			@include breakpoint($bp-xlarge) {
-				height: 360px !important;
-			}
-
-			@include breakpoint($bp-xxlarge) {
-				height: 510px !important;
-			}
-			@include breakpoint($bp-xxxlarge) {
-				height: 630px !important;
-			}
 		}
 	}
 

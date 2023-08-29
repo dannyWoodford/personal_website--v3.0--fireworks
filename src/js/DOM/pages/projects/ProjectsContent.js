@@ -122,13 +122,23 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 					</div>
 					<div className='display-item-video' style={{ display: displayItem.type === 'video' ? 'block' : 'none' }}>
 						<ReactPlayer
-							className={`react-player ${displayCategoryArray[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}
+							className='react-player'
 							url={process.env.PUBLIC_URL + displayItem.itemUrl}
+							config={{
+								file: {
+									attributes: {
+										crossOrigin: 'true',
+									},
+								},
+								youtube: { playerVars: { origin: 'https://www.youtube.com' } },
+							}}
 							playing={true}
 							autoPlay={true}
 							loop={true}
 							controls={false}
 							muted={true}
+							width='100%'
+							height='100%'
 						/>
 					</div>
 					<div className='display-item-description'>

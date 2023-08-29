@@ -5,9 +5,10 @@ export const personalProjectsItemArray = [
 		hashName: 'three-js-ai-generator',
 		description: 'Three.js AI Generator which connects to openAI to return a three.js scene based on a prompt.',
 		language: 'React / Three.js / node',
+		github: 'https://github.com/dannyWoodford/THREEjs-AI-Generator/tree/main',
 		demo: 'https://threejs-ai-generator.web.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/THREEjs-AI-Generator.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=sGs82TnY4oU&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -16,9 +17,10 @@ export const personalProjectsItemArray = [
 		description:
 			'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
 		language: 'React / React-Three-Fiber / Zapworks AR / Drei',
+		github: 'https://github.com/dannyWoodford/r3f-false3D-photosphere-face-tracker',
 		demo: 'https://mfwj.zappar.io/5957180484379593482/1.0.0/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/r3f-false3D-photosphere-face-tracker.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=N1YX4zjV4cU&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -28,7 +30,7 @@ export const personalProjectsItemArray = [
 		language: 'React / React-Three-Fiber / Postprocessing / Drei',
 		demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/StereographicProjection--VolumetricLight.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=ydMWL3Yx4oY&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -37,7 +39,7 @@ export const personalProjectsItemArray = [
 		description: 'React-Three-Fiber demo with editable textures and transform controls.',
 		language: 'React / React-Three-Fiber',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/Chess-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=7rGMzZUsnHE&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -47,7 +49,7 @@ export const personalProjectsItemArray = [
 		language: 'JavaScript / Three.js',
 		demo: 'https://stormflight-threejs.firebaseapp.com/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/trimed-storm-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=i3-sXiW7NZo&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -57,7 +59,7 @@ export const personalProjectsItemArray = [
 		language: 'React / React-Three-Fiber / React-Spring / Drei',
 		demo: 'https://codesandbox.io/s/zb5ps?file=/src/components/ResponsiveText.js:141-145',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/responsive-text.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=HiDRTBzMkYM&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -68,7 +70,7 @@ export const personalProjectsItemArray = [
 		github: 'https://github.com/dannyWoodford/sunrise_sunset-THREE.js',
 		demo: 'https://sunrise-sunset-2a89d.web.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/sunrise_sunset_demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=lazIFokJGxk&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -77,7 +79,7 @@ export const personalProjectsItemArray = [
 		language: 'JavaScript / Three.js',
 		demo: 'https://ali-tribute.web.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/ali-tribute-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=E1KAVCdJOV4&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -86,7 +88,7 @@ export const personalProjectsItemArray = [
 		description: 'UI demo website.',
 		language: 'JavaScript',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/indika_demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=ULEDKq0hV7o&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -97,7 +99,7 @@ export const personalProjectsItemArray = [
 		github: 'https://github.com/dannyWoodford/dannyWoodford.github.io',
 		demo: 'https://dannywoodford.github.io/',
 		type: 'video',
-		itemUrl: '/assets-by-page/projects/personal_website_demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=sOm3vocFRBE&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'personalProjects',
@@ -129,7 +131,7 @@ export const brandgageItemArray = [
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		demo: 'https://3d.gesvirtualexhibits.com/show/gjk39k/esmo-2021/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/msd.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=_kksQSCewsY&ab_channel=DannyWoodford',
 		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
@@ -140,7 +142,7 @@ export const brandgageItemArray = [
 		language: 'JavaScript / Three.js / SASS',
 		demo: 'https://www.brandgage.com/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/brandgage-website_resized.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=FDy65DuAmbI&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'brandgage',
@@ -150,7 +152,7 @@ export const brandgageItemArray = [
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		demo: 'https://cibinqovirtualexperience.com/show/zx93mk/aad-2021/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/Cibinqo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=EE2Uf9bLRpg&ab_channel=DannyWoodford',
 		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
@@ -161,7 +163,7 @@ export const brandgageItemArray = [
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		demo: 'https://pfizerrarediseasecongressresources.com/show/jl09pa/endo-2021/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/Pfizer-Rare-Disease.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=guQXZciGo9E&ab_channel=DannyWoodford',
 		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
@@ -172,7 +174,7 @@ export const brandgageItemArray = [
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		demo: 'https://everymileofthejourney.com/show/booth/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/Takeda-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=xqyhc_7OVvk&ab_channel=DannyWoodford',
 		message: <>** Website, usually, is only up during the trade show it is built for, so the link may or may not work **</>,
 	},
 	{
@@ -184,7 +186,7 @@ export const brandgageItemArray = [
 		language: 'React / React-Three-Fiber',
 		demo: 'http://phpstack-95367-1945343.cloudwaysapps.com/baked-models-live-lights-working-nav/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/R&D.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=p4rODhstcOA&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'brandgage',
@@ -195,7 +197,7 @@ export const brandgageItemArray = [
 		language: 'React / React-Three-Fiber',
 		demo: 'https://phpstack-95367-1945343.cloudwaysapps.com/drag-and-drop-reduced-models/',
 		type: 'video',
-		itemUrl: '/assets-by-page/brandgage/R&D-previous.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=nb-Pbs6yhRw&ab_channel=DannyWoodford',
 	},
 ]
 
@@ -208,7 +210,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Theatre.js / Drei',
 		demo: 'https://codesandbox.io/s/rocket-logo-animation-22wpji?file=/src/Scene.js:702-810',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/rocket_animated_logo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=_Y8PbDfS2T8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -219,7 +221,7 @@ export const rocketItemArray = [
 		language: 'React / TypeScript / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/space-acme-logo.png',
 		thumbnailName: 'Overview',
 	},
@@ -232,7 +234,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei / Theatre.js',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/intro-v2.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=LulXIReUzb4&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -243,7 +245,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -254,7 +256,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -265,7 +267,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -275,7 +277,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/sat-search.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=7wAG2bqM_lg&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -286,7 +288,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -297,7 +299,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -308,7 +310,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: '/assets-by-page/rocket/acme-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=PZE5u3HCYf8&ab_channel=DannyWoodford',
 	},
 ]
 
@@ -321,7 +323,7 @@ export const flatironItemArray = [
 		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
 		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
 		type: 'video',
-		itemUrl: '/assets-by-page/flatiron/3d-spotify-visualizer-trimmed.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=RbTKJSewIp0&ab_channel=DannyWoodford',
 	},
 	{
 		_id: 'Mod 4 Project',
@@ -332,7 +334,7 @@ export const flatironItemArray = [
 		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
 		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
 		type: 'video',
-		itemUrl: '/assets-by-page/flatiron/ZSL-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=SPYrkIHU7Ag&ab_channel=DannyWoodford',
 	},
 	{
 		_id: 'Mod 3 Project',
@@ -344,7 +346,7 @@ export const flatironItemArray = [
 		github: 'https://github.com/TenNga/Maze-Game-Front-End',
 		demo: 'https://pure-reaches-70099.herokuapp.com/',
 		type: 'video',
-		itemUrl: '/assets-by-page/flatiron/labryinth-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=lIqzqiVWwNE&ab_channel=DannyWoodford',
 	},
 	{
 		_id: 'Mod 2 Project',
@@ -355,7 +357,7 @@ export const flatironItemArray = [
 		language: 'Ruby on Rails',
 		github: 'https://github.com/ntel-91/mod2-project',
 		type: 'video',
-		itemUrl: '/assets-by-page/flatiron/notflix-demo.mp4',
+		itemUrl: 'https://www.youtube.com/watch?v=9JIzq3XZhvo&ab_channel=DannyWoodford',
 	},
 	{
 		_id: 'Flatiron Cross-Discipline Collaboration Event',

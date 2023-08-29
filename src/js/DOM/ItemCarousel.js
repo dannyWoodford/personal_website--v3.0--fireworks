@@ -17,20 +17,34 @@ const DUMMY_VIDEOS = [
 	},
 ]
 
-const SlideItem = ({ url, isSelected, type, name }) => (
+const SlideItem = ({ url, isSelected, type, name, isSpecialAspect }) => (
 	<div className='display-item-wrapper' key={url}>
 		{type === 'image' ? (
-			<img src={process.env.PUBLIC_URL + url} alt={name} className='displayed-item' />
+			<div className='display-item-image'>
+				<img src={process.env.PUBLIC_URL + url} alt={name} className='displayed-item' />
+			</div>
 		) : (
-			<ReactPlayer
-				className='react-player'
-				url={process.env.PUBLIC_URL + url}
-				playing={isSelected ? isSelected : false}
-				autoPlay={true}
-				loop={false}
-				controls={true}
-				volume={0.05}
-			/>
+			<div className={`display-item-video ${isSpecialAspect ? '--special-aspect' : ''}`} style={{ display: 'block', width: '100%' }}>
+				<ReactPlayer
+					className='react-player'
+					url={process.env.PUBLIC_URL + url}
+					config={{
+						file: {
+							attributes: {
+								crossOrigin: 'true',
+							},
+						},
+						youtube: { playerVars: { origin: 'https://www.youtube.com' } },
+					}}
+					playing={isSelected ? isSelected : false}
+					autoPlay={true}
+					loop={false}
+					controls={false}
+					volume={0.05}
+					width='100%'
+					height='100%'
+				/>
+			</div>
 		)}
 	</div>
 )
@@ -68,7 +82,14 @@ const ItemCarousel = ({ data }) => {
 			onSwipeStart={onSwipeStartHandler}
 			onSwipeEnd={onSwipeEndHandler}>
 			{data.map(item => (
-				<SlideItem url={item.itemUrl} type={item.type} name={item._id} isSelected={item.isSelected} key={item._id ? item._id : item.id} />
+				<SlideItem
+					url={item.itemUrl}
+					type={item.type}
+					name={item._id}
+					isSelected={item.isSelected}
+					isSpecialAspect={item.specialAspect}
+					key={item._id ? item._id : item.id}
+				/>
 			))}
 		</Carousel>
 	)

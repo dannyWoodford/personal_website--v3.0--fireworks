@@ -38,7 +38,7 @@
 
 		.bg-canvas {
 			display: contents;
-			
+
 			canvas {
 				display: block;
 				outline: none;
@@ -72,3 +72,26 @@
 .display-contents {
 	display: contents;
 }
+
+.display-item-video {
+	position: relative;
+	padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.--special-aspect {
+		width: 100% !important;
+		height: 100% !important;
+		margin: auto;
+		display: flex !important;
+		align-items: center;
+
+		.react-player {
+			height: auto !important;
+		}
+	}

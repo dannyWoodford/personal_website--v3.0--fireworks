@@ -32,6 +32,7 @@ export default function Blender({ currentName }) {
 			_id: 'blender-chair',
 			type: 'video',
 			itemUrl: '/assets-by-page/blender/blender-chair.mp4',
+			specialAspect: true,
 		},
 		{
 			_id: 'blender-donut',
