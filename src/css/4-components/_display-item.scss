@@ -6,7 +6,7 @@
 	background: rgba(0, 0, 0, 0.5);
 	box-shadow: 5px 5px 15px $color-bg-pink-border-dark, -5px -5px 15px $color-bg-pink-border-light;
 	border: 4px solid $color-bg-pink-border;
-	transition: transform 250ms ease-in-out, border 250ms ease-in-out, box-shadow 250ms ease-in-out, border-radius 250ms ease-in-out;
+	transition: transform 150ms ease-in-out, border 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out;
 	overflow: hidden;
 	margin: auto;
 
@@ -75,7 +75,7 @@
 
 					.slide {
 						vertical-align: middle;
-						transition: transform 250ms ease-in-out;
+						transition: transform 150ms ease-in-out;
 					}
 
 					.selected {
@@ -96,7 +96,7 @@
 
 						.displayed-item,
 						.react-player video {
-							transition: box-shadow 250ms ease-in-out;
+							transition: box-shadow 150ms ease-in-out;
 							// max-width: 100%;
 							// margin: auto;
 							-khtml-user-select: none;
@@ -116,7 +116,7 @@
 		margin: auto;
 		height: 360px;
 		display: block;
-		transition: opacity 250ms ease-in-out;
+		transition: opacity 150ms ease-in-out;
 
 		&.has-tab-info {
 			@include breakpoint($bp-large) {
@@ -132,7 +132,7 @@
 		text-align: left;
 
 		@include breakpoint($bp-xlarge) {
-			min-height: 240px;
+			min-height: 255px;
 		}
 
 		p {

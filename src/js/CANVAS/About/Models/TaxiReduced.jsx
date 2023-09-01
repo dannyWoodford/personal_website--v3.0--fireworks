@@ -9,9 +9,10 @@ export default function TaxiReduced() {
 	const { nodes, materials } = useGLTF(process.env.PUBLIC_URL + '/assets-by-page/about/models/taxi_with_ad_reduced-transformed.glb')
 	return (
 		<editable.group theatreKey='Taxi' scale={25} rotation={[0, Math.PI / 2, 0]}>
-			<mesh geometry={nodes.defaultMaterial004.geometry} material={materials.TaxiCar01Glass} />
-			<mesh geometry={nodes.defaultMaterial005.geometry} material={materials.TaxiCar01}>
+			<mesh castShadow geometry={nodes.defaultMaterial004.geometry} material={materials.TaxiCar01Glass} />
+			<mesh castShadow geometry={nodes.defaultMaterial005.geometry} material={materials.TaxiCar01}>
 				<mesh
+					castShadow
 					geometry={nodes.BurgerBillboard.geometry}
 					material={materials.BurgerBillboard}
 					position={[-0.05, 0.28, -0.14]}
@@ -19,9 +20,9 @@ export default function TaxiReduced() {
 					scale={0.13}
 				/>
 			</mesh>
-			<mesh geometry={nodes.defaultMaterial002.geometry} material={materials.TaxiCar01} />
-			<mesh geometry={nodes.defaultMaterial.geometry} material={materials.TaxiCar01} position={[-0.3, -0.2, -0.48]} />
-			<mesh geometry={nodes.defaultMaterial003.geometry} material={materials.TaxiCar01} />
+			<mesh castShadow geometry={nodes.defaultMaterial002.geometry} material={materials.TaxiCar01} />
+			<mesh castShadow geometry={nodes.defaultMaterial.geometry} material={materials.TaxiCar01} position={[-0.3, -0.2, -0.48]} />
+			<mesh castShadow geometry={nodes.defaultMaterial003.geometry} material={materials.TaxiCar01} />
 			<editable.mesh
 				theatreKey='front-wheel'
 				geometry={nodes.defaultMaterial001.geometry}

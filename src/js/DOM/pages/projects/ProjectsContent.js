@@ -44,7 +44,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 
 	return (
 		<div>
-			<h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2>
+			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
 
 			<div className='tab-switch-container'>
 				<div className={`item medium ${displayCategory === 'flatiron' ? 'item--selected' : ''}`}>
@@ -135,7 +135,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 							playing={true}
 							autoPlay={true}
 							loop={true}
-							controls={false}
+							controls={true}
 							muted={true}
 							width='100%'
 							height='100%'

@@ -121,102 +121,106 @@ export default function Floor({ animationOver }) {
 				</Box>
 			</group>
 
-			<group name='trees' visible={!animationOver}>
+			<group name='trees' 
+				// visible={!animationOver}
+			>
 				<group name='group-0' position={[0, 0, -140]}>
 					<Plane name='tree-left' args={[0 + 75, 62]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 
 					<Plane name='tree-right' args={[0 + 90, 63]} rotation={[0, 0, 0]} position={[38, 23, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 
 				<group name='group-1' position={[0, 0, -100]}>
 					<Plane name='tree-left' args={[0 + 75, 62]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 
 					<Plane name='tree-right' args={[0 + 90, 63]} rotation={[0, 0, 0]} position={[38, 23, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 
 				<group name='group-2' position={[0, 0, -60]}>
 					<Plane name='tree-left' args={[0 + 81, 60]} rotation={[0, 0, 0]} position={[-38, 23, 155]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[-50, 9.7, 130]} />
 
 					<Plane name='tree-right' args={[0 + 86, 59]} rotation={[0, 0, 0]} position={[38, 23, 150]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[45, 9.7, 130]} />
 				</group>
 
 				<group name='group-3' position={[0, 0, -20]}>
 					<Plane name='tree-left' args={[0 + 91, 62]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Plane name='tree-right' args={[0 + 83, 60]} rotation={[0, 0, 0]} position={[38, 23, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 
 				<group name='group-4' position={[0, 0, 20]}>
 					<Plane name='tree-left' args={[0 + 82, 63]} rotation={[0, 0, 0]} position={[-38, 23, 155]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 
 					<Plane name='tree-right' args={[0 + 90, 61]} rotation={[0, 0, 0]} position={[38, 23, 150]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 
 				<group name='group-5' position={[0, 0, 60]}>
 					<Plane name='tree-left' args={[0 + 81, 62]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[-50, 9.7, 130]} />
 
 					<Plane name='tree-right' args={[0 + 86, 60]} rotation={[0, 0, 0]} position={[38, 23, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[45, 9.7, 130]} />
 				</group>
 
 				<group name='group-6' position={[0, 0, 100]}>
 					<Plane name='tree-left' args={[0 + 110, 68]} rotation={[0, 0, 0]} position={[-35, 27, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 
 					<Plane name='tree-right' args={[0 + 81, 63]} rotation={[0, 0, 0]} position={[38, 23, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 				<group name='group-7' position={[0, 0, 140]}>
 					<Plane name='tree-left' args={[0 + 80, 65]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 
 					<Plane name='tree-right' args={[0 + 110, 80]} rotation={[0, 0, 0]} position={[38, 30, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 				</group>
 				<group name='group-8' position={[0, 0, 180]}>
 					<Plane name='tree-left' args={[0 + 85, 74]} rotation={[0, 0, 0]} position={[-38, 30, 150]}>
-						<meshLambertMaterial map={tree} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={tree} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[-50, 9.7, 130]} />
 
 					<Plane name='tree-right' args={[0 + 100, 75]} rotation={[0, 0, 0]} position={[38, 30, 155]}>
-						<meshLambertMaterial map={treeFlip} side={THREE.FrontSide} transparent alphaTest={0.98} />
+						<meshLambertMaterial map={treeFlip} side={THREE.DoubleSide} transparent alphaTest={0.98} />
 					</Plane>
 					<Streetlamp pos={[45, 9.7, 130]} />
 				</group>
 			</group>
 
-			<group name='left' visible={!animationOver}>
+			<group name='left' 
+				// visible={!animationOver}
+			>
 				<Plane name='buildings-left' args={[400, 100]} rotation={[0, Math.PI / 2, 0]} position={[-80, 45, 220]}>
 					<meshLambertMaterial map={building} side={THREE.FrontSide} />
 				</Plane>
@@ -237,7 +241,9 @@ export default function Floor({ animationOver }) {
 				</Plane>
 			</group>
 
-			<group name='right' visible={!animationOver}>
+			<group name='right' 
+				// visible={!animationOver}
+			>
 				<Plane name='buildings-right' args={[400, 100]} rotation={[0, -Math.PI / 2, 0]} position={[80, 45, 220]}>
 					<meshLambertMaterial map={building} side={THREE.FrontSide} />
 				</Plane>

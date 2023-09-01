@@ -69,9 +69,9 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				// console.log('animation end')
 				orbitCon.current.target = cameraTargetRef.current.position
 				orbitCon.current.enabled = true
-				orbitCon.current.maxDistance = 40
-				orbitCon.current.minAzimuthAngle = -Math.PI / 4.3
-				orbitCon.current.maxAzimuthAngle = Math.PI / 14
+				orbitCon.current.maxDistance = 700
+				// orbitCon.current.minAzimuthAngle = -Math.PI / 4.3
+				// orbitCon.current.maxAzimuthAngle = Math.PI / 14
 
 				setAnimationOver(true)
 			}
@@ -143,7 +143,7 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 			<Floor animationOver={animationOver} />
 
 			<Resize />
-			<BakeShadows />
+			{animationOver && <BakeShadows />}
 			<Preload all />
 		</SheetProvider>
 	)
