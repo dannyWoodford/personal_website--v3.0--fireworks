@@ -221,7 +221,7 @@ export const rocketItemArray = [
 		language: 'React / TypeScript / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/space-acme-logo.png',
 		thumbnailName: 'Overview',
 	},
@@ -234,7 +234,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei / Theatre.js',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=T-7fWxYAcdc&ab_channel=DannyWoodford',
+		itemUrl: 'https://www.youtube.com/watch?v=cyIciRX7h4A&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -245,7 +245,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -256,7 +256,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -267,7 +267,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -277,7 +277,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=DiCLFVjiUmg&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/CrGRMXDBr_w&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -288,7 +288,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -299,7 +299,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 	{
 		category: 'rocket',
@@ -310,7 +310,7 @@ export const rocketItemArray = [
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=fcT_zNJuChA&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
 	},
 ]
 
