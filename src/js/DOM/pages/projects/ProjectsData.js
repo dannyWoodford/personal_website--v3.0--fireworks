@@ -1,3 +1,60 @@
+export const flatironItemArray = [
+	{
+		category: 'flatiron',
+		name: 'Spotify 3D music Visualizer',
+		hashName: 'spotify-3d-music-visualizer',
+		description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
+		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
+		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
+		type: 'video',
+		itemUrl: 'https://www.youtube.com/watch?v=plxzb_HcO38&ab_channel=DannyWoodford',
+	},
+	{
+		_id: 'Mod 4 Project',
+		category: 'flatiron',
+		name: 'Ziehbare Stimme Leinwand',
+		hashName: 'ziehbare-stimme-leinwand',
+		description: 'This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.',
+		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
+		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
+		type: 'video',
+		itemUrl: 'https://www.youtube.com/watch?v=mxqVsnrPhgQ&ab_channel=DannyWoodford',
+	},
+	{
+		_id: 'Mod 3 Project',
+		category: 'flatiron',
+		name: 'Enter the Labyrinth',
+		hashName: 'enter-the-labyrinth',
+		description: 'Complete the maze before the fire catches you.',
+		language: 'JavaScript / Ruby on Rails Backend / Canvas',
+		github: 'https://github.com/TenNga/Maze-Game-Front-End',
+		demo: 'https://pure-reaches-70099.herokuapp.com/',
+		type: 'video',
+		itemUrl: 'https://www.youtube.com/watch?v=ZZM6cyUwNhk&ab_channel=DannyWoodford',
+	},
+	{
+		_id: 'Mod 2 Project',
+		category: 'flatiron',
+		name: 'NOTFLIX',
+		hashName: 'notflix',
+		description: 'Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.',
+		language: 'Ruby on Rails',
+		github: 'https://github.com/ntel-91/mod2-project',
+		type: 'video',
+		itemUrl: 'https://www.youtube.com/watch?v=zEl4K58iNqs&ab_channel=DannyWoodford',
+	},
+	{
+		_id: 'Flatiron Cross-Discipline Collaboration Event',
+		category: 'flatiron',
+		name: 'Flatiron Cross-Discipline Collaboration Event',
+		hashName: 'flatiron-cross-discipline-collaboration-event',
+		description:
+			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
+		type: 'image',
+		itemUrl: '/assets-by-page/projects/flatiron/cross-colab.jpg',
+	},
+]
+
 export const personalProjectsItemArray = [
 	{
 		category: 'personalProjects',
@@ -222,7 +279,7 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
-		thumbnail: '/assets-by-page/home/thumbnails/space-acme-logo.png',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
 		thumbnailName: 'Overview',
 	},
 
@@ -314,70 +371,101 @@ export const rocketItemArray = [
 	},
 ]
 
-export const flatironItemArray = [
+export const atlasItemArray = [
 	{
-		category: 'flatiron',
-		name: 'Spotify 3D music Visualizer',
-		hashName: 'spotify-3d-music-visualizer',
-		description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
-		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
-		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
-		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=plxzb_HcO38&ab_channel=DannyWoodford',
-	},
-	{
-		_id: 'Mod 4 Project',
-		category: 'flatiron',
-		name: 'Ziehbare Stimme Leinwand',
-		hashName: 'ziehbare-stimme-leinwand',
-		description: 'This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.',
-		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
-		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
-		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=mxqVsnrPhgQ&ab_channel=DannyWoodford',
-	},
-	{
-		_id: 'Mod 3 Project',
-		category: 'flatiron',
-		name: 'Enter the Labyrinth',
-		hashName: 'enter-the-labyrinth',
-		description: 'Complete the maze before the fire catches you.',
-		language: 'JavaScript / Ruby on Rails Backend / Canvas',
-		github: 'https://github.com/TenNga/Maze-Game-Front-End',
-		demo: 'https://pure-reaches-70099.herokuapp.com/',
-		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=ZZM6cyUwNhk&ab_channel=DannyWoodford',
-	},
-	{
-		_id: 'Mod 2 Project',
-		category: 'flatiron',
-		name: 'NOTFLIX',
-		hashName: 'notflix',
-		description: 'Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.',
-		language: 'Ruby on Rails',
-		github: 'https://github.com/ntel-91/mod2-project',
-		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=zEl4K58iNqs&ab_channel=DannyWoodford',
-	},
-	{
-		_id: 'Flatiron Cross-Discipline Collaboration Event',
-		category: 'flatiron',
-		name: 'Flatiron Cross-Discipline Collaboration Event',
-		hashName: 'flatiron-cross-discipline-collaboration-event',
+		category: 'atlas',
+		name: 'Atlas Studio',
+		hashName: 'atlas-studio-overview',
 		description:
-			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
-		type: 'image',
-		itemUrl: '/assets-by-page/flatiron/cross-colab.jpg',
+			'I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own land or trade on the marketplace.',
+		language: 'React / React-Three-Fiber / react-three/xr',
+		demo: 'https://studio.earth.atlasreality.dev/',
+		type: 'video',
+		itemUrl: 'https://youtu.be/NaNG4Tw0rKI&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/atlas-studio-logo.png',
+		thumbnailName: 'Overview',
+	},
+]
+
+export const questItemArray = [
+	{
+		category: 'quest',
+		name: 'Scan Your Own Room',
+		hashName: 'scan-your-own-room',
+		description: "Utilizing the LiDAR sensors in your smartphone's camera you can scan a physical room and a 3D facsimile is generated using AI.",
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
+	},
+	{
+		category: 'quest',
+		name: 'CITY Furniture',
+		hashName: 'city-furniture-overview',
+		description:
+			"This tool allows customers to seamlessly place furniture in customizable room templates or utilize AI-generated 3D replicas of their actual rooms by scanning their surroundings using the LiDAR sensors in their smartphone's camera.",
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
+		thumbnailName: 'Overview',
+	},
+	{
+		category: 'quest',
+		name: 'Collision Physics',
+		hashName: 'collision-physics',
+		description: 'I implemented realistic collision interactions between furniture and the environment using @react-three/rapier physics engine.',
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/Hd4UoqmH-e8&ab_channel=DannyWoodford',
+	},
+	{
+		category: 'quest',
+		name: 'Editable Room Templates',
+		hashName: 'editable-room-templates',
+		description: 'Modify the dimensions of the room templates, select alternative wall colors, or opt for a different flooring from a wide range of choices.',
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/FP_tXKjyoaI&ab_channel=DannyWoodford',
+	},
+	{
+		category: 'quest',
+		name: 'Save and Checkout',
+		hashName: 'save-and-checkout',
+		description: 'Save multiple room layouts and furniture arrangements, then effortlessly purchase your chosen items.',
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/-o9uoxFbZdY&ab_channel=DannyWoodford',
 	},
 ]
 
 export const displayCategoryArray = {
+	flatiron: {
+		hasTabInfo: true,
+		name: 'Flatiron School',
+		duration: '2019',
+		location: 'Manhattan, NY (On-Site)',
+		website: 'https://flatironschool.com/',
+		websiteDisplayName: 'Flatironschool.com',
+		description: (
+			<>
+				<p>Flatiron School is a coding bootcamp that was rated the number 1# by Course Report when I attended in 2019.</p>
+			</>
+		),
+	},
+	personalProjects: {
+		duration: '2019 - Present',
+		message: (
+			<>
+				<h3>Here are some of the personal projects I've built in my free time.</h3>
+			</>
+		),
+	},
 	brandgage: {
 		hasTabInfo: true,
 		name: 'Brandgage',
 		title: '3D Javascript Developer',
 		duration: 'June 2020 - March 2022',
-		location: 'Pittsburgh, Pa (On-Site)',
+		location: 'Pittsburgh, PA (On-Site)',
 		website: 'https://www.brandgage.com/',
 		websiteDisplayName: 'Brandgage.com',
 		description: (
@@ -395,7 +483,7 @@ export const displayCategoryArray = {
 		name: 'Rocket Communications, Inc.',
 		title: '3D Developer / 3D Artist',
 		duration: 'March 2022 - Feb 2023',
-		location: 'San Francisco, Ca (Remote)',
+		location: 'San Francisco, CA (Remote)',
 		website: 'https://www.rocketcom.com/',
 		websiteDisplayName: 'Rocketcom.com',
 		description: (
@@ -408,24 +496,37 @@ export const displayCategoryArray = {
 			</>
 		),
 	},
-	personalProjects: {
-		duration: '2019 - Present',
-		message: (
+	atlas: {
+		hasTabInfo: true,
+		name: 'Atlas Reality, Inc.',
+		title: '3D Application Developer',
+		duration: 'Feb 2023 - Jan 2023',
+		location: 'Cedar Park, TX (Remote)',
+		website: 'https://www.atlasreality.com/',
+		websiteDisplayName: 'Atlasreality.com',
+		description: (
 			<>
-				<h3>Here are some of the personal projects I've built in my free time.</h3>
+				<p>
+					I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
+					land or trade on the marketplace.
+				</p>
 			</>
 		),
 	},
-	flatiron: {
+	quest: {
 		hasTabInfo: true,
-		name: 'Flatiron School',
-		duration: '2019',
-		location: 'Manhattan, NY (On-Site)',
-		website: 'https://flatironschool.com/',
-		websiteDisplayName: 'Flatironschool.com',
+		name: 'Quest AI Solutions',
+		title: 'Senior Front End Developer',
+		duration: 'Oct 2023 - Present',
+		location: 'West Palm Beach, FL (Remote)',
+		website: 'https://questaisolutions.com/',
+		websiteDisplayName: 'Questaisolutions.com',
 		description: (
 			<>
-				<p>Flatiron School is a coding bootcamp that was rated the number 1# by Course Report when I attended in 2019.</p>
+				<p>
+					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
+					elevating the shopping experience.
+				</p>
 			</>
 		),
 	},

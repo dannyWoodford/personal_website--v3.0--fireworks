@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 
-import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, flatironItemArray } from './ProjectsData'
+import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, flatironItemArray, atlasItemArray, questItemArray } from './ProjectsData'
 import { extractWordsFromURL } from '../../../helpers/Helpers'
 
 export default function ProjectsRouting({ updateDisplayCategory, updateDisplayItem, displayItem }) {
@@ -24,6 +24,12 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 			} else if (pathArr[1] === 'flatiron') {
 				updateDisplayCategory(pathArr[1])
 				updateDisplayItem(flatironItemArray[0])
+			} else if (pathArr[1] === 'atlas') {
+				updateDisplayCategory(pathArr[1])
+				updateDisplayItem(atlasItemArray[0])
+			} else if (pathArr[1] === 'quest') {
+				updateDisplayCategory(pathArr[1])
+				updateDisplayItem(questItemArray[1])
 			}
 
 			// ____ Change DisplayItem ______________________________________________________________
@@ -40,6 +46,12 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'flatiron') {
 				let foundItem = flatironItemArray.find(x => x.hashName)
+				updateDisplayItem(foundItem)
+			} else if (pathArr[1] === 'atlas') {
+				let foundItem = atlasItemArray.find(x => x.hashName)
+				updateDisplayItem(foundItem)
+			} else if (pathArr[1] === 'quest') {
+				let foundItem = questItemArray.find(x => x.hashName)
 				updateDisplayItem(foundItem)
 			}
 		},

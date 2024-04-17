@@ -6,7 +6,7 @@ import ProjectsRouting from './projects/ProjectsRouting'
 import ProjectsContent from './projects/ProjectsContent'
 
 export default function Projects({ currentName }) {
-	// flatiron, brandgage, rocket, personalProjects
+	// flatiron, personalProjects, brandgage, rocket, atlas, questAi
 	const [displayCategory, setDisplayCategory] = useState('rocket')
 	const [displayItem, setDisplayItem] = useState(rocketItemArray[1])
 
@@ -17,7 +17,7 @@ export default function Projects({ currentName }) {
 	const updateDisplayItem = item => {
 		setDisplayItem(item)
 	}
-
+	
 	return (
 		<div
 			className='page projects-page'
@@ -66,6 +66,28 @@ export default function Projects({ currentName }) {
 							/>
 							<Route
 								path='rocket/*'
+								element={
+									<ProjectsContent
+										updateDisplayCategory={updateDisplayCategory}
+										updateDisplayItem={updateDisplayItem}
+										displayCategory={displayCategory}
+										displayItem={displayItem}
+									/>
+								}
+							/>
+							<Route
+								path='atlas/*'
+								element={
+									<ProjectsContent
+										updateDisplayCategory={updateDisplayCategory}
+										updateDisplayItem={updateDisplayItem}
+										displayCategory={displayCategory}
+										displayItem={displayItem}
+									/>
+								}
+							/>
+							<Route
+								path='quest/*'
 								element={
 									<ProjectsContent
 										updateDisplayCategory={updateDisplayCategory}

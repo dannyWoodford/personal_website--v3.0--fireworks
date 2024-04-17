@@ -1,21 +1,21 @@
-import React, { useMemo, useCallback } from 'react'
+import React, { useMemo, useCallback, useState, useEffect, useRef } from 'react'
 import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
-import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, flatironItemArray, displayCategoryArray } from './ProjectsData'
+import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, atlasItemArray, questItemArray, flatironItemArray, displayCategoryArray } from './ProjectsData'
 
 export default function ProjectsContent({ updateDisplayCategory, updateDisplayItem, displayCategory, displayItem }) {
 	const displayItemsFactory = useCallback(
 		categoryArray => {
 			return categoryArray.map(item => {
 				return (
-					<div className='item' key={item.name}>
+					<div key={item.name} className={`item ${item.hashName === displayItem.hashName ? 'item--selected' : ''}`}>
 						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
 							{item.thumbnail ? (
 								<div className='item__thumbnail overview'>
 									<img className='item__image add-padding' draggable='false' alt='' src={process.env.PUBLIC_URL + item.thumbnail} />
 									<img alt='' className='item__hover__image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
-									<p className='item__title'>{item.thumbnailName}</p>
+									<p className='item__title item__title__thumbnail__name'>{item.thumbnailName}</p>
 								</div>
 							) : (
 								<div className='item__thumbnail'>
@@ -27,7 +27,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 				)
 			})
 		},
-		[updateDisplayItem]
+		[updateDisplayItem, displayItem]
 	)
 
 	const displayItems = useMemo(() => {
@@ -39,51 +39,84 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 			return displayItemsFactory(personalProjectsItemArray)
 		} else if (displayCategory === 'flatiron') {
 			return displayItemsFactory(flatironItemArray)
+		} else if (displayCategory === 'atlas') {
+			return displayItemsFactory(atlasItemArray)
+		} else if (displayCategory === 'quest') {
+			return displayItemsFactory(questItemArray)
 		}
 	}, [displayCategory, displayItemsFactory])
-
+	
 	return (
 		<div>
 			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
 
 			<div className='tab-switch-container'>
-				<div className={`item medium ${displayCategory === 'flatiron' ? 'item--selected' : ''}`}>
+				<div className={`item medium ${displayCategory === 'flatiron' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('flatiron')} to={'/projects/flatiron'}>
-						<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/flatiron-logo.png'} />
+						<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/flatiron-logo.png'} />
 						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['flatiron'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'personalProjects' ? 'item--selected' : ''}`}>
+				<div className={`item medium ${displayCategory === 'personalProjects' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('personalProjects')} to={'/projects/personalProjects'}>
 						<img
 							className='item__image invert-on-hover'
 							draggable='false'
 							alt=''
-							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/personal-projects-logo.png'}
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/personal-projects-logo.png'}
 						/>
 						<img alt='' className='item__image hover-image blur-on-hover' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['personalProjects'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'brandgage' ? 'item--selected' : ''}`}>
+				<div className={`item medium ${displayCategory === 'brandgage' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('brandgage')} to={'/projects/brandgage'}>
-						<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/brandgage-logo.png'} />
+						<img
+							className='item__image'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/brandgage-logo.png'}
+						/>
 						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['brandgage'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'rocket' ? 'item--selected' : ''}`}>
+				<div className={`item medium ${displayCategory === 'rocket' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('rocket')} to={'/projects/rocket'}>
 						<img
-							className='item__image add-padding'
+							className='item__image add-padding '
 							draggable='false'
 							alt=''
-							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/rocket-logo.png'}
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/rocket-logo.png'}
 						/>
 						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['rocket'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'atlas' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('atlas')} to={'/projects/atlas'}>
+						<img
+							className='item__image add-padding back-drop'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/atlas-resize.png'}
+						/>
+						<img alt='' className='item__image hover-image blur-on-hover-low' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/atlas-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoryArray['atlas'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'quest' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('quest')} to={'/projects/quest'}>
+						<img
+							className='item__image add-padding back-drop-quest'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/quest-logo.png'}
+						/>
+						<img alt='' className='item__image hover-image blur-on-hover-low' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/city-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoryArray['quest'].duration}</h3>
 				</div>
 			</div>
 
@@ -130,7 +163,9 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 										crossOrigin: 'true',
 									},
 								},
-								youtube: { playerVars: { origin: 'https://www.youtube.com' } },
+								youtube: {
+									playerVars: { origin: 'https://www.youtube.com' },
+								},
 							}}
 							playing={true}
 							autoPlay={true}

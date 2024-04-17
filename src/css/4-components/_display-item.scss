@@ -84,7 +84,7 @@
 
 						.displayed-item,
 						.react-player video {
-							box-shadow: 0px 15px 40px 23px #151515;
+							box-shadow: 0 15px 40px 23px #151515;
 						}
 					}
 
@@ -131,9 +131,9 @@
 		padding-top: 15px;
 		text-align: left;
 
-		@include breakpoint($bp-xlarge) {
-			min-height: 255px;
-		}
+		// @include breakpoint($bp-xlarge) {
+		// 	min-height: 255px;
+		// }
 
 		p {
 			margin-top: 0;
