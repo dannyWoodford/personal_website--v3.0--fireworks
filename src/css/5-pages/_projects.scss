@@ -322,6 +322,29 @@
 		justify-content: center;
 		align-items: center;
 
+		&.normal {
+			.item__background__image {
+				// height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: 0;
+				border-radius: 14px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0.7;
+
+				&.is-feature {
+					opacity: 0.2;
+				}
+			}
+
+			.item__title {
+				text-shadow: 0 4px 14px $color-white;
+				// filter: drop-shadow(0 6px 8px $color-black);
+			}
+		}
+
 		&.overview {
 			.item__image {
 				width: 100%;
@@ -364,7 +387,7 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				opacity: 0.5;
+				opacity: 0.8;
 			}
 
 			.item__title {

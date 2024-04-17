@@ -11,14 +11,22 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 				return (
 					<div key={item.name} className={`item ${item.hashName === displayItem.hashName ? 'item--selected' : ''}`}>
 						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
-							{item.thumbnail ? (
+							{item.thumbnailName ? (
 								<div className='item__thumbnail overview'>
 									<img className='item__image add-padding' draggable='false' alt='' src={process.env.PUBLIC_URL + item.thumbnail} />
 									<img alt='' className='item__hover__image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
 									<p className='item__title item__title__thumbnail__name'>{item.thumbnailName}</p>
 								</div>
 							) : (
-								<div className='item__thumbnail'>
+								<div className='item__thumbnail normal'>
+									{item.thumbnail && (
+										<img
+											className={`item__background__image ${item.isFeature ? 'is-feature' : ''}`}
+											draggable='false'
+											alt=''
+											src={process.env.PUBLIC_URL + item.thumbnail}
+										/>
+									)}
 									<p className='item__title'>{item.name}</p>
 								</div>
 							)}
@@ -85,7 +93,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 				<div className={`item medium ${displayCategory === 'rocket' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('rocket')} to={'/projects/rocket'}>
 						<img
-							className='item__image add-padding '
+							className='item__image add-padding'
 							draggable='false'
 							alt=''
 							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/rocket-logo.png'}

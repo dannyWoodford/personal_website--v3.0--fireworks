@@ -8,6 +8,7 @@ export const flatironItemArray = [
 		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=plxzb_HcO38&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/spotify-thumbnail.jpeg',
 	},
 	{
 		_id: 'Mod 4 Project',
@@ -19,6 +20,7 @@ export const flatironItemArray = [
 		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=mxqVsnrPhgQ&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/ziehbare-stimme-leinwand.jpeg',
 	},
 	{
 		_id: 'Mod 3 Project',
@@ -31,6 +33,7 @@ export const flatironItemArray = [
 		demo: 'https://pure-reaches-70099.herokuapp.com/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=ZZM6cyUwNhk&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/enter-the-labyrinth.jpeg',
 	},
 	{
 		_id: 'Mod 2 Project',
@@ -42,6 +45,7 @@ export const flatironItemArray = [
 		github: 'https://github.com/ntel-91/mod2-project',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=zEl4K58iNqs&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/notflix.jpeg',
 	},
 	{
 		_id: 'Flatiron Cross-Discipline Collaboration Event',
@@ -52,6 +56,7 @@ export const flatironItemArray = [
 			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/flatiron/cross-colab.jpg',
+		thumbnail: '/assets-by-page/projects/flatiron/cross-colab.jpg',
 	},
 ]
 
@@ -66,6 +71,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://threejs-ai-generator.web.app/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=cWk3I5z9DGk&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/three-js-ai-generator.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -78,6 +84,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://mfwj.zappar.io/5957180484379593482/1.0.0/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=N1YX4zjV4cU&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/r3f-glasses-less-2d-to-3d-with-face-tracking.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -88,6 +95,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=ZVnf0EqW8gQ&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/stereographic-projection.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -97,6 +105,7 @@ export const personalProjectsItemArray = [
 		language: 'React / React-Three-Fiber',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=FbwCUF3Vo0o&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/chess.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -107,6 +116,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://stormflight-threejs.firebaseapp.com/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=pBiciyoSH4U&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/storm.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -117,6 +127,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://codesandbox.io/s/zb5ps?file=/src/components/ResponsiveText.js:141-145',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=4fbjUTfhDkE&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/responsive-text.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -128,6 +139,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://sunrise-sunset-2a89d.web.app/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=Git2C66fpNY&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/sunrise-sunset.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -137,6 +149,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://ali-tribute.web.app/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=wdqdx9UEf1s&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/ali.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -146,6 +159,7 @@ export const personalProjectsItemArray = [
 		language: 'JavaScript',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=fFb0jhT5lcQ&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/indika.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -157,6 +171,7 @@ export const personalProjectsItemArray = [
 		demo: 'https://dannywoodford.github.io/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=3iz6G3kzCfg&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/former-personal-website.jpeg',
 	},
 	{
 		category: 'personalProjects',
@@ -166,6 +181,7 @@ export const personalProjectsItemArray = [
 		language: 'JavaScript / Chromium',
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/chrome-logo.jpg',
+		thumbnail: '/assets-by-page/projects/chrome-logo.jpg',
 	},
 	{
 		category: 'personalProjects',
@@ -176,6 +192,7 @@ export const personalProjectsItemArray = [
 		language: 'JavaScript / Chromium',
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/chrome-logo.jpg',
+		thumbnail: '/assets-by-page/projects/chrome-logo.jpg',
 	},
 ]
 
@@ -190,6 +207,7 @@ export const brandgageItemArray = [
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=_kksQSCewsY&ab_channel=DannyWoodford',
 		message: <>** Website was only live during the trade show it was built for **</>,
+		thumbnail: '/assets-by-page/projects/thumbnails/merck-3d.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -200,6 +218,7 @@ export const brandgageItemArray = [
 		demo: 'https://www.brandgage.com/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=izoj6CgjUbg&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/brandgage-company-website.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -211,6 +230,7 @@ export const brandgageItemArray = [
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=EE2Uf9bLRpg&ab_channel=DannyWoodford',
 		message: <>** Website was only live during the trade show it was built for **</>,
+		thumbnail: '/assets-by-page/projects/thumbnails/pfizer-cibinqo.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -222,6 +242,7 @@ export const brandgageItemArray = [
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=guQXZciGo9E&ab_channel=DannyWoodford',
 		message: <>** Website was only live during the trade show it was built for **</>,
+		thumbnail: '/assets-by-page/projects/thumbnails/pfizer-rare-disease.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -233,6 +254,7 @@ export const brandgageItemArray = [
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=xqyhc_7OVvk&ab_channel=DannyWoodford',
 		message: <>** Website was only live during the trade show it was built for **</>,
+		thumbnail: '/assets-by-page/projects/thumbnails/takeda.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -244,6 +266,7 @@ export const brandgageItemArray = [
 		demo: 'http://phpstack-95367-1945343.cloudwaysapps.com/baked-models-live-lights-working-nav/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=p4rODhstcOA&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/3d-virtual-booth-improved.jpeg',
 	},
 	{
 		category: 'brandgage',
@@ -255,6 +278,7 @@ export const brandgageItemArray = [
 		demo: 'https://phpstack-95367-1945343.cloudwaysapps.com/drag-and-drop-reduced-models/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=nb-Pbs6yhRw&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/3d-virtual-booth-earlier-version.jpeg',
 	},
 ]
 
@@ -268,6 +292,7 @@ export const rocketItemArray = [
 		demo: 'https://codesandbox.io/s/rocket-logo-animation-22wpji?file=/src/Scene.js:702-810',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=_Y8PbDfS2T8&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/animated-rocket-logo.jpeg',
 	},
 	{
 		category: 'rocket',
@@ -292,6 +317,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=cyIciRX7h4A&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -303,6 +330,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -314,6 +343,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -325,6 +356,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -335,6 +368,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/CrGRMXDBr_w&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -346,6 +381,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -357,6 +394,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 	{
 		category: 'rocket',
@@ -368,6 +407,8 @@ export const rocketItemArray = [
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://youtu.be/s56flzGpq4Q?si=cLCZwtHT_oLbXHF3&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
+		isFeature: true,
 	},
 ]
 
@@ -396,6 +437,8 @@ export const questItemArray = [
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
+		isFeature: true,
 	},
 	{
 		category: 'quest',
@@ -417,6 +460,8 @@ export const questItemArray = [
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/Hd4UoqmH-e8&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
+		isFeature: true,
 	},
 	{
 		category: 'quest',
@@ -426,6 +471,8 @@ export const questItemArray = [
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/FP_tXKjyoaI&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
+		isFeature: true,
 	},
 	{
 		category: 'quest',
@@ -435,6 +482,8 @@ export const questItemArray = [
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/-o9uoxFbZdY&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
+		isFeature: true,
 	},
 ]
 
