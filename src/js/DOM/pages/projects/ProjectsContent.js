@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useState, useEffect, useRef } from 'react'
+import React, { useMemo, useCallback } from 'react'
 import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
