@@ -20,7 +20,7 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				updateDisplayItem(rocketItemArray[1])
 			} else if (pathArr[1] === 'personalProjects') {
 				updateDisplayCategory(pathArr[1])
-				updateDisplayItem(personalProjectsItemArray[0])
+				updateDisplayItem(personalProjectsItemArray[1])
 			} else if (pathArr[1] === 'flatiron') {
 				updateDisplayCategory(pathArr[1])
 				updateDisplayItem(flatironItemArray[0])

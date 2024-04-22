@@ -324,11 +324,9 @@
 
 		&.normal {
 			.item__background__image {
-				// height: 100%;
 				width: 100%;
 				position: absolute;
 				z-index: 0;
-				border-radius: 14px;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
@@ -336,6 +334,9 @@
 
 				&.is-feature {
 					opacity: 0.2;
+					height: 100%;
+					width: auto;
+					max-width: 95%;
 				}
 			}
 

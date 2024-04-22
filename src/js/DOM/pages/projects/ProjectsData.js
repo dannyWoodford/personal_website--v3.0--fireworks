@@ -63,6 +63,17 @@ export const flatironItemArray = [
 export const personalProjectsItemArray = [
 	{
 		category: 'personalProjects',
+		name: 'About Section',
+		hashName: 'about-section',
+		description: 'Into I made using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
+		language: 'React / React-Three-Fiber / Theatre.js',
+		demo: 'https://dannywoodforddev.web.app/about',
+		type: 'video',
+		itemUrl: 'https://youtu.be/a_-u9dzlY2s&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/about-section.jpeg',
+	},
+	{
+		category: 'personalProjects',
 		name: 'Three.js AI Generator',
 		hashName: 'three-js-ai-generator',
 		description: 'Three.js AI Generator which connects to openAI to return a three.js scene based on a prompt.',
@@ -312,13 +323,12 @@ export const rocketItemArray = [
 		category: 'rocket',
 		name: 'Stylized Intro',
 		hashName: 'stylized-intro',
-		description: 'Into I made for the project using Theatre.js . This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
+		description: 'Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
 		language: 'React / React-Three-Fiber / Drei / Theatre.js',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=cyIciRX7h4A&ab_channel=DannyWoodford',
-		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
-		isFeature: true,
+		thumbnail: '/assets-by-page/projects/thumbnails/stylized-intro.jpeg',
 	},
 	{
 		category: 'rocket',
