@@ -9,7 +9,7 @@ import aboutState from './Setup/AboutScene.theatre-project-state-taxi.json'
 import Floor from './Floor'
 import BackGround from './BackGround'
 import Lighting from './Setup/Lighting'
-// import Resize from './Setup/Resize'
+import Resize from './Setup/Resize'
 
 const dopeSheet = getProject('AboutScene', { state: aboutState }).sheet('Dope Sheet')
 
@@ -142,7 +142,7 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 			<BackGround animationOver={animationOver} />
 			<Floor animationOver={animationOver} />
 
-			{/* <Resize /> */}
+			<Resize />
 			{animationOver && <BakeShadows />}
 			<Preload all />
 		</SheetProvider>
