@@ -77,6 +77,7 @@ export default function App() {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
+				<div id="background" />
 				<Menu toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 				<div className='max-width-container'>
 					<div className='content'>

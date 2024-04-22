@@ -62,7 +62,8 @@
 		}
 
 		.menu-item {
-			// display: block;
+			display: flex;
+			align-items: center;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -71,17 +72,10 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			letter-spacing: 2px;
-			color: darken($color-white, 0%);
+			color: $color-white;
+			font-weight: 900;
 			transition: color 0.1s ease-in-out;
 
-			display: flex;
-			align-items: center;
-
-			// background: rgb(52,96,183);
-			// background: -moz-linear-gradient(-90deg, rgba(52,96,183,0) 0%, rgba(52,96,183,0.48923319327731096) 8%, rgba(52,96,183,0.8701855742296919) 24%, rgba(52,96,183,0.9682247899159664) 37%, rgba(52,96,183,1) 100%);
-			// background: -webkit-linear-gradient(-90deg, rgba(52,96,183,0) 0%, rgba(52,96,183,0.48923319327731096) 8%, rgba(52,96,183,0.8701855742296919) 24%, rgba(52,96,183,0.9682247899159664) 37%, rgba(52,96,183,1) 100%);
-			// background: linear-gradient(-90deg, rgba(52,96,183,0) 0%, rgba(52,96,183,0.48923319327731096) 8%, rgba(52,96,183,0.8701855742296919) 24%, rgba(52,96,183,0.9682247899159664) 37%, rgba(52,96,183,1) 100%);
-			// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3460b7",endColorstr="#3460b7",GradientType=1);
 
 			&.is-selected {
 				filter: drop-shadow(0 0 10px $color-white);

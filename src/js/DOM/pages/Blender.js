@@ -9,6 +9,11 @@ export default function Blender({ currentName }) {
 			itemUrl: '/assets-by-page/blender/blender-wile-e-coyote.jpeg',
 		},
 		{
+			_id: 'blender-city-furniture',
+			type: 'image',
+			itemUrl: '/assets-by-page/blender/blender-city-furniture.jpeg',
+		},
+		{
 			_id: 'blender-booth',
 			type: 'image',
 			itemUrl: '/assets-by-page/blender/blender-booth.jpg',
