@@ -322,6 +322,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Stylized Intro',
+		prefix: '(Space ACME feature)',
 		hashName: 'stylized-intro',
 		description: 'Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
 		language: 'React / React-Three-Fiber / Drei / Theatre.js',
@@ -333,6 +334,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Real-Time Sun Position',
+		prefix: '(Space ACME feature)',
 		hashName: 'real-time-sun-position',
 		description:
 			'The "sun" responds to the draggable timeline at the bottom of the render window and is accurately positioned to match its real world counterpart.',
@@ -346,6 +348,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'State Vector Plotting / Interpolation',
+		prefix: '(Space ACME feature)',
 		hashName: 'state-vector-plotting-interpolation',
 		description:
 			'Probably the most challenging feature was plotting orbital state vectors and interpolating between them to position the satellites and achieve a smooth animation. 4 other companies failed to achieve this feat and solving this is ultimately what won us the defense department contract.',
@@ -359,6 +362,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Event Creation / Editing',
+		prefix: '(Space ACME feature)',
 		hashName: 'event-creation-editing',
 		description:
 			'Users can create and edit events to visualize a change in altitude, inclination, period or suppress satellites entirely. The orbit and satellite label turn green after the start of an event to distinguish between the two.',
@@ -372,6 +376,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Search Satellites',
+		prefix: '(Space ACME feature)',
 		hashName: 'search-satellites',
 		description: 'Users can search for satellites and visualize thousands of instances at once.',
 		language: 'React / React-Three-Fiber / Drei',
@@ -384,6 +389,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Orbits and Mouse Interaction',
+		prefix: '(Space ACME feature)',
 		hashName: 'orbits-and-mouse-interaction',
 		description:
 			'Users can visualize orbits that also respond to hover and selected states. These states affect the list (outside of the canvas) in the left panel. Interacting with the list, conversely, affects the orbits.',
@@ -397,6 +403,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Shaders',
+		prefix: '(Space ACME feature)',
 		hashName: 'shaders',
 		description:
 			"There are several custom GLSL shaders at play to get the final appearance of the earth. Including 2 for the atmosphere (earth's surface and outer glow), moving clouds, and city lights that respond to the position of the sun. (Special thanks to Faraz Shaikh, whose CodeSandbox provided the basis for which my city lights shader is based)",
@@ -410,6 +417,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Helper Tools',
+		prefix: '(Space ACME feature)',
 		hashName: 'helper-tools',
 		description:
 			'To aid in the development of the app it was necessary to build several tools and global settings. Including a sun positioning helper, altitude lines, interpolation helper, and setting up GUI controls with Theatre.js(s) new Theatric api to fine tune almost all aesthetic features.',
@@ -442,6 +450,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Scan Your Own Room',
+		prefix: '(CITY Furniture feature)',
 		hashName: 'scan-your-own-room',
 		description: "Utilizing the LiDAR sensors in your smartphone's camera you can scan a physical room and a 3D facsimile is generated using AI.",
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
@@ -465,6 +474,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Collision Physics',
+		prefix: '(CITY Furniture feature)',
 		hashName: 'collision-physics',
 		description: 'I implemented realistic collision interactions between furniture and the environment using @react-three/rapier physics engine.',
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
@@ -476,6 +486,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Editable Room Templates',
+		prefix: '(CITY Furniture feature)',
 		hashName: 'editable-room-templates',
 		description: 'Modify the dimensions of the room templates, select alternative wall colors, or opt for a different flooring from a wide range of choices.',
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
@@ -487,6 +498,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Save and Checkout',
+		prefix: '(CITY Furniture feature)',
 		hashName: 'save-and-checkout',
 		description: 'Save multiple room layouts and furniture arrangements, then effortlessly purchase your chosen items.',
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',

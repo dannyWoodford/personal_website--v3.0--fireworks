@@ -184,17 +184,18 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 							height='100%'
 						/>
 					</div>
-					<div className='display-item-description'>
-						<p>
-							<span className='strong'>Name:</span> {displayItem.name}
+					<div className='display-item-info'>
+						<p className='display-item-name'>
+							<span className='display-item-name-main'>{displayItem.name}</span>
+							{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
 						</p>
-						<p style={{ display: displayItem.description ? 'block' : 'none' }}>
-							<span className='strong'>Description:</span> {displayItem.description}
+						<p className='display-item-description' style={{ display: displayItem.description ? 'block' : 'none' }}>
+							{displayItem.description}
 						</p>
-						<p style={{ display: displayItem.language ? 'block' : 'none' }}>
-							<span className='strong'>Built with:</span> {displayItem.language}
+						<p className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
+							{displayItem.language}
 						</p>
-						<div className='link-container'>
+						<div className='link-container' style={{ display: displayItem.demo || displayItem.github ? 'block' : 'none' }}>
 							<a href={displayItem.github} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.github ? 'block' : 'none' }}>
 								Github
 							</a>
@@ -202,7 +203,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 								|
 							</span>
 							<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.demo ? 'block' : 'none' }}>
-								View Demo
+								Demo
 							</a>
 						</div>
 						<p className='display-item-message' style={{ display: displayItem.message ? 'block' : 'none' }}>
