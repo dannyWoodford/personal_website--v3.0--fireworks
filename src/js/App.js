@@ -20,7 +20,7 @@ export default function App() {
 		menuItems: [
 			{
 				name: 'home',
-				canvasColor: '#FF7F7F',
+				canvasColor: '#003cff',
 			},
 			{
 				name: 'about',

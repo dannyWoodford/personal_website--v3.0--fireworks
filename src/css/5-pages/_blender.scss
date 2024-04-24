@@ -1,6 +1,23 @@
 .blender-page {
 	background: $color-bg--blender;
 
+	&:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: cover;
+		
+		opacity: 0.03;
+		background-image: url('../../../public/background-transparent-3.jpeg');
+		filter: invert(100%);
+	}
+
 	// .page-container {
 	// 	max-width: none;
 	// }
