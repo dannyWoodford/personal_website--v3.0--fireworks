@@ -36,22 +36,22 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 			if (!pathArr[2]) return
 
 			if (pathArr[1] === 'brandgage') {
-				let foundItem = brandgageItemArray.find(x => x.hashName)
+				let foundItem = brandgageItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'rocket') {
-				let foundItem = rocketItemArray.find(x => x.hashName)
+				let foundItem = rocketItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'personalProjects') {
-				let foundItem = personalProjectsItemArray.find(x => x.hashName)
+				let foundItem = personalProjectsItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'flatiron') {
-				let foundItem = flatironItemArray.find(x => x.hashName)
+				let foundItem = flatironItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'atlas') {
-				let foundItem = atlasItemArray.find(x => x.hashName)
+				let foundItem = atlasItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'quest') {
-				let foundItem = questItemArray.find(x => x.hashName)
+				let foundItem = questItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			}
 		},
