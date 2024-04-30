@@ -195,7 +195,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 						<p className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
 							{displayItem.language}
 						</p>
-						<div className='link-container' style={{ display: displayItem.demo || displayItem.github ? 'block' : 'none' }}>
+						<div className='link-container' style={{ display: displayItem.demo || displayItem.github ? 'flex' : 'none' }}>
 							<a href={displayItem.github} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.github ? 'block' : 'none' }}>
 								Github
 							</a>
