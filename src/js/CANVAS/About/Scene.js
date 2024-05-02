@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { OrbitControls, Preload, BakeShadows } from '@react-three/drei'
+import { OrbitControls, Preload, BakeShadows, Stats, useTexture, Plane } from '@react-three/drei'
 import { getProject, onChange, val, createRafDriver } from '@theatre/core'
 import { SheetProvider, PerspectiveCamera, editable } from '@theatre/r3f'
-// import { useControls, types } from 'theatric'
+import { useControls, types } from 'theatric'
 
 import aboutState from './Setup/AboutScene.theatre-project-state-taxi.json'
 
@@ -69,9 +69,14 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				// console.log('animation end')
 				orbitCon.current.target = cameraTargetRef.current.position
 				orbitCon.current.enabled = true
-				orbitCon.current.maxDistance = 700
-				// orbitCon.current.minAzimuthAngle = -Math.PI / 4.3
-				// orbitCon.current.maxAzimuthAngle = Math.PI / 14
+				// old
+				// orbitCon.current.maxDistance = 700
+
+				// limit view
+				orbitCon.current.maxDistance = 60
+				orbitCon.current.minAzimuthAngle = -Math.PI / 4.3
+				orbitCon.current.maxAzimuthAngle = Math.PI / 14
+				orbitCon.current.maxPolarAngle = Math.PI / 1.7
 
 				setAnimationOver(true)
 			}
@@ -100,15 +105,15 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				// console.log('setup')
 			}
 
-			const timer = setTimeout(() => {
-				dopeSheet.project.ready.then(() => {
-					// console.log('PLAY')
-					dopeSheet.sequence.play({ iterationCount: 1 })
-				})
-			}, 3000)
+			// const timer = setTimeout(() => {
+			// }, 3000)
+			dopeSheet.project.ready.then(() => {
+				// console.log('PLAY')
+				dopeSheet.sequence.play({ iterationCount: 1 })
+			})
 
 			return () => {
-				clearTimeout(timer)
+				// clearTimeout(timer)
 				setCanvasLoaded(false)
 				dopeSheet.sequence.position = 0
 				setAnimationOver(false)
@@ -133,8 +138,8 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 			</PerspectiveCamera>
 
 			<editable.mesh ref={cameraTargetRef} theatreKey='CameraTarget' visible={false}>
-				<sphereGeometry args={[2]} />
-				<meshBasicMaterial color={'red'} />
+				{/* <sphereGeometry args={[2]} />
+				<meshBasicMaterial color={'red'} /> */}
 			</editable.mesh>
 
 			<Lighting />
@@ -144,7 +149,6 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 
 			<Resize />
 			{animationOver && <BakeShadows />}
-			<Preload all />
 		</SheetProvider>
 	)
 }

@@ -21,6 +21,7 @@
 		"react-scripts": "^5.0.1",
 		"react-tooltip": "^5.11.1",
 		"sass": "^1.62.1",
+		"theatric": "^0.6.0",
 		"three": "^0.151.3"
 	},
 	"scripts": {

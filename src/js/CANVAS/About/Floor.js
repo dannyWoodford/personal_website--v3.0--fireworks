@@ -122,7 +122,7 @@ export default function Floor({ animationOver }) {
 			</group>
 
 			<group name='trees' 
-				// visible={!animationOver}
+				visible={!animationOver}
 			>
 				<group name='group-0' position={[0, 0, -140]}>
 					<Plane name='tree-left' args={[0 + 75, 62]} rotation={[0, 0, 0]} position={[-38, 23, 150]}>
@@ -219,7 +219,7 @@ export default function Floor({ animationOver }) {
 			</group>
 
 			<group name='left' 
-				// visible={!animationOver}
+				visible={!animationOver}
 			>
 				<Plane name='buildings-left' args={[400, 100]} rotation={[0, Math.PI / 2, 0]} position={[-80, 45, 220]}>
 					<meshLambertMaterial map={building} side={THREE.FrontSide} />
@@ -242,7 +242,7 @@ export default function Floor({ animationOver }) {
 			</group>
 
 			<group name='right' 
-				// visible={!animationOver}
+				visible={!animationOver}
 			>
 				<Plane name='buildings-right' args={[400, 100]} rotation={[0, -Math.PI / 2, 0]} position={[80, 45, 220]}>
 					<meshLambertMaterial map={building} side={THREE.FrontSide} />
