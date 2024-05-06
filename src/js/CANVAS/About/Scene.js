@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { OrbitControls, Preload, BakeShadows, Stats, useTexture, Plane } from '@react-three/drei'
+import { OrbitControls, BakeShadows, Stats, useTexture, Plane } from '@react-three/drei'
 import { getProject, onChange, val, createRafDriver } from '@theatre/core'
 import { SheetProvider, PerspectiveCamera, editable } from '@theatre/r3f'
 import { useControls, types } from 'theatric'
+
+import * as THREE from 'three'
+import { useFrame, useThree } from '@react-three/fiber'
+
 
 import aboutState from './Setup/AboutScene.theatre-project-state-taxi.json'
 
@@ -78,6 +82,8 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				orbitCon.current.maxAzimuthAngle = Math.PI / 14
 				orbitCon.current.maxPolarAngle = Math.PI / 1.7
 
+				// console.log('%canimation end', 'color:red;font-size:14px;')
+
 				setAnimationOver(true)
 			}
 		},
@@ -105,15 +111,15 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 				// console.log('setup')
 			}
 
-			// const timer = setTimeout(() => {
-			// }, 3000)
-			dopeSheet.project.ready.then(() => {
-				// console.log('PLAY')
-				dopeSheet.sequence.play({ iterationCount: 1 })
-			})
+			const timer = setTimeout(() => {
+				dopeSheet.project.ready.then(() => {
+					// console.log('PLAY')
+					dopeSheet.sequence.play({ iterationCount: 1 })
+				})
+			}, 1000)
 
 			return () => {
-				// clearTimeout(timer)
+				clearTimeout(timer)
 				setCanvasLoaded(false)
 				dopeSheet.sequence.position = 0
 				setAnimationOver(false)
@@ -121,6 +127,25 @@ export default function Scene({ currentName, setCanvasLoaded }) {
 			}
 		}
 	}, [currentName, setCanvasLoaded])
+
+	// first attempt at moving camera with mouse after animation ends
+	// const { camera, mouse } = useThree()
+	// const vec = new THREE.Vector3()
+
+	// useFrame(() => {
+	// 	if (animationOver) {
+	// 		// camera.position.lerp(vec.set(mouse.x * 2, mouse.y * 1, camera.position.z), 0.02)
+
+	// 				const newX = (1 + mouse.y) / 2900
+	// 				const newY = (1 + mouse.x) / 2900
+
+	// 				console.log('newX, newY', newX, newY)
+	// 				console.log('-(newY * 25 - 1.9)', -(newY * 25 - 1.9))
+
+	// 		  camera.position.lerp(vec.set(camera.position.x + newX, mouse.y + newY, camera.position.z), 0.5)
+	// 			// camera.lookAt(0, 0, 0)
+	// 	}
+	// })
 
 	return (
 		<SheetProvider sheet={dopeSheet}>

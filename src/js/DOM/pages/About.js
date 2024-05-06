@@ -2,14 +2,13 @@ import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Preload, AdaptiveDpr } from '@react-three/drei'
 
-
 import studio from '@theatre/studio'
 import extension from '@theatre/r3f/dist/extension'
 
 import Scene from '../../CANVAS/About/Scene'
 import Loading from '../../CANVAS/components/setup/Loading'
 
-import LoadingGif from './loading.gif'
+// import LoadingGif from './loading.gif'
 
 if (process.env.NODE_ENV === 'development') {
 	studio.initialize()
@@ -31,10 +30,21 @@ export default function About({ currentName }) {
 				className='about-canvas'
 				style={{
 					backgroundColor: 'black',
-					backgroundImage: canvasLoaded ? '' : `url(${LoadingGif})`,
-					backgroundRepeat: 'no-repeat',
-					backgroundPosition: 'center',
+					// backgroundImage: canvasLoaded ? '' : `url(${LoadingGif})`,
+					// backgroundRepeat: 'no-repeat',
+					// backgroundPosition: 'center',
 				}}>
+
+				<div 
+					className={` ${canvasLoaded ? 'loaded' : ''}`}
+				>
+					<div id='loader-wrapper'>
+						<div id='loader'></div>
+						<div className='loader-section section-left'></div>
+						<div className='loader-section section-right'></div>
+					</div>
+				</div>
+
 				<Canvas shadows={true} dpr={[1, 2]}>
 					<Suspense fallback={<Loading />}>
 						<Scene currentName={currentName} setCanvasLoaded={setCanvasLoaded} />

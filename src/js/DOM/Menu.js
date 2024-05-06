@@ -6,10 +6,10 @@ export default function Menu({ toggleMenuHandler }) {
 		<>
 			<div className='menu_toggle' onClick={() => toggleMenuHandler()}>
 				<i className='menu_open'>
-					<img src={process.env.PUBLIC_URL + '/icons/menu.svg'} alt='menu-icon' />
+					<img src={process.env.PUBLIC_URL + '/icons/menu.svg'} alt='menu-icon' draggable='false' />
 				</i>
 				<i className='menu_close'>
-					<img src={process.env.PUBLIC_URL + '/icons/exit.svg'} alt='close-icon' />
+					<img src={process.env.PUBLIC_URL + '/icons/exit.svg'} alt='close-icon' draggable='false' />
 				</i>
 			</div>
 			<div className='menu_items'>

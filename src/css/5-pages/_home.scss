@@ -13,7 +13,7 @@
 		background-position: 50% 0;
 		background-size: cover;
 		
-		opacity: 0.09;
+		opacity: 0.14;
 		background-image: url('../../../public/background-transparent-3.jpeg');
 		filter: invert(100%);
 	}
@@ -215,7 +215,7 @@
 			transition: transform 150ms ease-in-out, border 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out;
 			padding: 30px 0;
 			border-radius: 19px;
-			background: linear-gradient(145deg, rgba($color-bg-pink, 0.5), $color-bg-blue);
+			background: linear-gradient(145deg, rgba($color-bg-pink, 0.2), $color-bg-blue);
 			overflow: hidden;
 			cursor: pointer;
 			width: 100%;
