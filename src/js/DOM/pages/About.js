@@ -2,18 +2,9 @@ import React, { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Preload, AdaptiveDpr } from '@react-three/drei'
 
-import studio from '@theatre/studio'
-import extension from '@theatre/r3f/dist/extension'
-
 import Scene from '../../CANVAS/About/Scene'
 import Loading from '../../CANVAS/components/setup/Loading'
 
-// import LoadingGif from './loading.gif'
-
-if (process.env.NODE_ENV === 'development') {
-	studio.initialize()
-	studio.extend(extension)
-}
 
 export default function About({ currentName }) {
 	const [canvasLoaded, setCanvasLoaded] = useState(false)
