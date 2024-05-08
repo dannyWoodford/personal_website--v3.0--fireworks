@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { OrbitControls, BakeShadows, Stats, useTexture, Plane } from '@react-three/drei'
+import { OrbitControls, BakeShadows } from '@react-three/drei'
 import { getProject, onChange, val, createRafDriver } from '@theatre/core'
 import { SheetProvider, PerspectiveCamera, editable } from '@theatre/r3f'
-import { useControls, types } from 'theatric'
-
-import * as THREE from 'three'
-import { useFrame, useThree } from '@react-three/fiber'
-
 
 import aboutState from './Setup/AboutScene.theatre-project-state-taxi.json'
 
