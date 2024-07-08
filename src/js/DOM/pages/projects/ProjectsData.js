@@ -86,6 +86,31 @@ export const personalProjectsItemArray = [
 	},
 	{
 		category: 'personalProjects',
+		name: 'Gaussian Splatting w/ Face Tracking',
+		hashName: 'gauss-splatting-face-tracking',
+		description:
+			"I made this demo to show off the potential of 3D Gaussian Splatting using LumaAI's WebGL Library. Also, I added FaceControls to give it an AR/VR quality to enhance perspective and mixed them with OrbitControls so you can still navigate the scene easily.",
+		language: 'React / React-Three-Fiber / LumaAI / Drei',
+		github: 'https://github.com/dannyWoodford/gaussian-splatting-face-tracking-controls',
+		demo: 'https://gauss-splatting-face-tracking.web.app',
+		type: 'video',
+		itemUrl: 'https://youtu.be/g5OJDLzT7jI&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/gauss-splatting-face-tracking.jpg',
+	},
+	{
+		category: 'personalProjects',
+		name: 'R3F shader transition',
+		hashName: 'r3f-shader-transition',
+		description:
+			'Hide switching between materials with a custom GLSL transition shader. This is designed for situations where you cannot directly access the materials, so the transition shader fades in to hide swapping the materials.',
+		language: 'React / React-Three-Fiber / GLSL',
+		demo: 'https://codesandbox.io/p/sandbox/relaxed-curie-r6cct8?file=%2Fsrc%2Fobjects%2FAnimatedSphere.jsx%3A75%2C22',
+		type: 'video',
+		itemUrl: 'https://youtu.be/8Atd3N-6u_s&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/projects/thumbnails/r3f-shader-transition.jpg',
+	},
+	{
+		category: 'personalProjects',
 		name: 'R3F Glasses-less 2D to 3D with Face Tracking',
 		hashName: 'r3f-glasses-less-2d-to-3d-with-face-tracking',
 		description:

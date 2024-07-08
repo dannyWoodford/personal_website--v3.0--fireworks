@@ -55,7 +55,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 	}, [displayCategory, displayItemsFactory])
 	
 	return (
-		<div>
+		<div className='projects-content'>
 			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
 
 			<div className='tab-switch-container'>

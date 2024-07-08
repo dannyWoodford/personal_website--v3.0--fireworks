@@ -18,6 +18,11 @@
 		filter: invert(100%);
 	}
 
+	.projects-content {
+		display: block;
+		width: 100%;
+	}
+
 	.container {
 		max-width: $projects-max-width;
 	}
