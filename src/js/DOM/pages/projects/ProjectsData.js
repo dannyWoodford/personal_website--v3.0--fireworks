@@ -106,7 +106,7 @@ export const personalProjectsItemArray = [
 		language: 'React / React-Three-Fiber / GLSL',
 		demo: 'https://codesandbox.io/p/sandbox/relaxed-curie-r6cct8?file=%2Fsrc%2Fobjects%2FAnimatedSphere.jsx%3A75%2C22',
 		type: 'video',
-		itemUrl: 'https://youtu.be/8Atd3N-6u_s&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/fJN0_mlCU9E&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/projects/thumbnails/r3f-shader-transition.jpg',
 	},
 	{
