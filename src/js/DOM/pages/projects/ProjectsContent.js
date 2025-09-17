@@ -223,31 +223,39 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 						/>
 					</div>
 					<div className='display-item-info'>
-						<p className='display-item-name'>
-							<span className='display-item-name-main'>{displayItem.name}</span>
-							{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
-						</p>
-						<span className='display-item-description' style={{ display: displayItem.description ? 'block' : 'none' }}>
-							{displayItem.description}
-						</span>
-						<span className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
-							<h3>Tech Stack:</h3>
-							<p>{displayItem.language}</p>
-						</span>
-						<div className='link-container' style={{ display: displayItem.demo || displayItem.github ? 'flex' : 'none' }}>
-							<a href={displayItem.github} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.github ? 'block' : 'none' }}>
-								Github
-							</a>
-							<span className='link-separator' style={{ display: displayItem.demo && displayItem.github ? 'block' : 'none' }}>
-								|
-							</span>
-							<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.demo ? 'block' : 'none' }}>
-								Demo
-							</a>
+						<div className='display-item-header'>
+							<h2 className='display-item-name'>
+								<span className='display-item-name-main'>{displayItem.name}</span>
+								{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
+							</h2>
 						</div>
-						<p className='display-item-message' style={{ display: displayItem.message ? 'block' : 'none' }}>
-							{displayItem.message}
-						</p>
+
+						{displayItem.description && <div className='display-item-description'>{displayItem.description}</div>}
+
+						{displayItem.language && (
+							<section className='display-item-tools'>
+								<h3>Tech Stack:</h3>
+								<p>{displayItem.language}</p>
+							</section>
+						)}
+
+						{(displayItem.demo || displayItem.github) && (
+							<nav className='link-container'>
+								{displayItem.github && (
+									<a href={displayItem.github} target='_blank' rel='noreferrer' className='link'>
+										GitHub
+									</a>
+								)}
+								{displayItem.demo && displayItem.github && <span className='link-separator'>|</span>}
+								{displayItem.demo && (
+									<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link'>
+										Demo
+									</a>
+								)}
+							</nav>
+						)}
+
+						{displayItem.message && <aside className='display-item-message'>{displayItem.message}</aside>}
 					</div>
 				</div>
 			</div>

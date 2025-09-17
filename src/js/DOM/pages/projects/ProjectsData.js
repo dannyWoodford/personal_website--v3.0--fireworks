@@ -108,7 +108,7 @@ export const personalProjectsItemArray = [
 				<p>Three.js AI Generator which connects to openAI to return a three.js or d3.js scene based on a prompt.</p>
 			</>
 		),
-		language: 'React / Three.js / D3.js / node',
+		language: 'React / Three.js / D3.js / Node.js',
 		github: 'https://github.com/dannyWoodford/THREEjs-AI-Generator',
 		demo: 'https://threejs-ai-generator.web.app/',
 		type: 'video',
@@ -743,11 +743,11 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
+				<h3>Product Description:</h3>
 				<p>
 					Enabled users to remix, animate, and generate unique outputs (similar to CapCut) by scanning a QR code on the back of millions of Coca-Cola cans
 					worldwide.
 				</p>
-				<br />
 				<h3>Technical Description:</h3>
 				<p>
 					Frontend allowed users to choose from 7 different unique templates, then crop, trim, and re-order uploaded images/videos as well as adding

@@ -11,6 +11,10 @@
 	padding: 15px;
 	animation: 1s ease-out 0s 1 slideInFromLeft;
 
+	h1, h2, h3 {
+		color: $color-white;
+	}
+
 	@include breakpoint($bp-large) {
 		margin-top: 20px;
 		padding: 20px;
