@@ -76,15 +76,26 @@
 		h3 {
 			font-size: 16px;
 			font-weight: 600;
+			width: 50%;
 			margin-bottom: 0.75em;
 			margin-top: 1em;
 			margin-left: -0.5em;
 			padding: 0.4em 0.8em;
 			text-transform: uppercase;
 			letter-spacing: 0.5px;
-			color: $color-white;
-			background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 159, 64, 0.15));
-			border-left: 3px solid #ff6b6b;
+			// color: #fdff6b;
+			// color: #bf7600;
+			// background: linear-gradient(135deg, rgba(253, 255, 107, 0.15), rgba(255, 159, 64, 0.15));
+			// border-left: 3px solid #bf7600;
+
+			// color: $color-white;
+			// background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 159, 64, 0.15));
+			// border-left: 3px solid #ff6b6b;
+
+			color: #dadada;
+			// background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(53, 111, 143, 0.15));
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(11, 19, 71, 0.15));
+			border-left: 3px solid #9f9f9f;
 			border-radius: 0 8px 8px 0;
 			display: inline-block;
 
@@ -166,33 +177,66 @@
 		display: flex;
 		flex-direction: row;
 		margin-top: 2em;
+		margin-left: 0.8em;
+		gap: 1em;
+		align-items: center;
 	}
 
 	.link-separator {
-		padding: 0 5px;
-		font-size: 25px;
-		margin-top: -4px;
+		padding: 0 8px;
+		font-size: 20px;
+		color: rgba(255, 255, 255, 0.4);
+		font-weight: 300;
 	}
 
 	.link {
 		color: $color-white;
-		font-weight: bold;
+		font-weight: 600;
 		font-size: 14px;
+		padding: 0.6em 1.2em;
+		border-radius: 8px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		text-decoration: none;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+			transition: left 0.5s ease;
+		}
+
+		&:hover {
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+			border-color: rgba(255, 255, 255, 0.4);
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+			&::before {
+				left: 100%;
+			}
+		}
 
 		@include breakpoint($bp-large) {
 			font-size: 17px;
+			padding: 0.7em 1.4em;
 		}
 
 		@include breakpoint($bp-xxlarge) {
 			font-size: 22px;
+			padding: 0.8em 1.6em;
 		}
 	}
 
 	.display-item-message {
-		color: $color-off-white;
-		margin-top: 50px;
-		margin-bottom: 0;
-		text-align: center;
+		color: #6e6e6e;
 	}
 }
 

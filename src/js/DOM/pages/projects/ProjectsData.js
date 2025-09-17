@@ -5,6 +5,7 @@ export const flatironItemArray = [
 		hashName: 'spotify-3d-music-visualizer',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>3D music visualizer that connects to your Spotify account and allows for web playback.</p>
 			</>
 		),
@@ -21,6 +22,7 @@ export const flatironItemArray = [
 		hashName: 'ziehbare-stimme-leinwand',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.</p>
 			</>
 		),
@@ -37,6 +39,7 @@ export const flatironItemArray = [
 		hashName: 'enter-the-labyrinth',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Complete the maze before the fire catches you.</p>
 			</>
 		),
@@ -54,6 +57,7 @@ export const flatironItemArray = [
 		hashName: 'notflix',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.</p>
 			</>
 		),
@@ -70,6 +74,7 @@ export const flatironItemArray = [
 		hashName: 'flatiron-cross-discipline-collaboration-event',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks
 					together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one
@@ -90,6 +95,7 @@ export const personalProjectsItemArray = [
 		hashName: 'about-section',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Into I made using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.</p>
 			</>
 		),
@@ -105,6 +111,7 @@ export const personalProjectsItemArray = [
 		hashName: 'three-js-ai-generator',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Three.js AI Generator which connects to openAI to return a three.js or d3.js scene based on a prompt.</p>
 			</>
 		),
@@ -121,6 +128,7 @@ export const personalProjectsItemArray = [
 		hashName: 'gauss-splatting-face-tracking',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					I made this demo to show off the potential of 3D Gaussian Splatting using LumaAI's WebGL Library. Also, I added FaceControls to give it an AR/VR
 					quality to enhance perspective and mixed them with OrbitControls so you can still navigate the scene easily.
@@ -140,6 +148,7 @@ export const personalProjectsItemArray = [
 		hashName: 'r3f-shader-transition',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					Hide switching between materials with a custom GLSL transition shader. This is designed for situations where you cannot directly access the materials,
 					so the transition shader fades in to hide swapping the materials.
@@ -158,6 +167,7 @@ export const personalProjectsItemArray = [
 		hashName: 'r3f-glasses-less-2d-to-3d-with-face-tracking',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.
 				</p>
@@ -176,6 +186,7 @@ export const personalProjectsItemArray = [
 		hashName: 'stereographic-projection',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Demonstrating the concept of stereographic projection in react-three-fiber with some volumetric light thrown in there just for fun.</p>
 			</>
 		),
@@ -191,6 +202,7 @@ export const personalProjectsItemArray = [
 		hashName: 'chess',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>React-Three-Fiber demo with editable textures and transform controls.</p>
 			</>
 		),
@@ -205,6 +217,7 @@ export const personalProjectsItemArray = [
 		hashName: 'storm',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>Interactive homepage demo. features(Positional Audio, model animation bound to key interactions)</p>
 			</>
 		),
@@ -220,6 +233,7 @@ export const personalProjectsItemArray = [
 		hashName: 'responsive-text',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>React-Three-Fiber demo.</p>
 			</>
 		),
@@ -235,6 +249,7 @@ export const personalProjectsItemArray = [
 		hashName: 'sunrise-sunset',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>The idea for this project was a literal light and dark mode.</p>
 			</>
 		),
@@ -261,6 +276,7 @@ export const personalProjectsItemArray = [
 		hashName: 'indika',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>UI demo website.</p>
 			</>
 		),
@@ -275,6 +291,7 @@ export const personalProjectsItemArray = [
 		hashName: 'former-personal-website',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>My original website made shortly after graduating Flatiron School in 2019.</p>
 			</>
 		),
@@ -291,6 +308,7 @@ export const personalProjectsItemArray = [
 		hashName: 'quick-search-chrome-extension',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>I made a simple chrome extension for myself so I can highlight text and search for it with a single keypress to be more efficient.</p>
 			</>
 		),
@@ -305,6 +323,7 @@ export const personalProjectsItemArray = [
 		hashName: 'linkedin-connecter-chrome-extension',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					I made a chrome extension that automates browser events to grow your LinkedIn network. From manpower to horsepower, analog to digital, technology
 					increases our speed and efficiency. As programmers, speed and efficiency should ring especially cogent as largely the goal of our code, taking the
@@ -327,14 +346,15 @@ export const brandgageItemArray = [
 		hashName: 'merck-3d',
 		description: (
 			<>
-				<p>VR experience created for pharmaceutical trade shows.</p>
+				<h3>Project Overview</h3>
+				<p>Virtual experience created for pharmaceutical trade show.</p>
 			</>
 		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://3d.gesvirtualexhibits.com/show/gjk39k/esmo-2021/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=_kksQSCewsY&ab_channel=DannyWoodford',
-		message: <>** Website was only live during the trade show it was built for **</>,
+		message: <>Site was only live during the trade show it was built for.</>,
 		thumbnail: '/assets-by-page/projects/thumbnails/merck-3d.jpeg',
 	},
 	{
@@ -343,7 +363,8 @@ export const brandgageItemArray = [
 		hashName: 'company-website',
 		description: (
 			<>
-				<p>VR experience created for pharmaceutical trade shows.</p>
+				<h3>Project Overview</h3>
+				<p>Virtual experience created for pharmaceutical trade show.</p>
 			</>
 		),
 		language: 'JavaScript / Three.js / SASS',
@@ -358,14 +379,15 @@ export const brandgageItemArray = [
 		hashName: 'pfizer-cibinqo',
 		description: (
 			<>
-				<p>VR experience created for pharmaceutical trade shows.</p>
+				<h3>Project Overview</h3>
+				<p>Virtual experience created for pharmaceutical trade show.</p>
 			</>
 		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://cibinqovirtualexperience.com/show/zx93mk/aad-2021/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=EE2Uf9bLRpg&ab_channel=DannyWoodford',
-		message: <>** Website was only live during the trade show it was built for **</>,
+		message: <>Site was only live during the trade show it was built for.</>,
 		thumbnail: '/assets-by-page/projects/thumbnails/pfizer-cibinqo.jpeg',
 	},
 	{
@@ -374,14 +396,15 @@ export const brandgageItemArray = [
 		hashName: 'pfizer-rare-disease',
 		description: (
 			<>
-				<p>Virtual Booth created for pharmaceutical trade shows.</p>
+				<h3>Project Overview</h3>
+				<p>Virtual Booth created for pharmaceutical trade show.</p>
 			</>
 		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://pfizerrarediseasecongressresources.com/show/jl09pa/endo-2021/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=guQXZciGo9E&ab_channel=DannyWoodford',
-		message: <>** Website was only live during the trade show it was built for **</>,
+		message: <>Site was only live during the trade show it was built for.</>,
 		thumbnail: '/assets-by-page/projects/thumbnails/pfizer-rare-disease.jpeg',
 	},
 	{
@@ -390,14 +413,15 @@ export const brandgageItemArray = [
 		hashName: 'takeda',
 		description: (
 			<>
-				<p>Virtual Booth created for pharmaceutical trade shows.</p>
+				<h3>Project Overview</h3>
+				<p>Virtual Booth created for pharmaceutical trade show.</p>
 			</>
 		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://everymileofthejourney.com/show/booth/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=xqyhc_7OVvk&ab_channel=DannyWoodford',
-		message: <>** Website was only live during the trade show it was built for **</>,
+		message: <>Site was only live during the trade show it was built for.</>,
 		thumbnail: '/assets-by-page/projects/thumbnails/takeda.jpeg',
 	},
 	{
@@ -406,6 +430,7 @@ export const brandgageItemArray = [
 		hashName: '3d-virtual-booth-improved',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					Experimental Virtual Booth I am building alone as an R&D project for Brandgage. It is the same as the next project but with many of the features to
 					edit the scene taken out as the idea evolved from a Virtual Booth Builder to a Virtual Booth Experience. However, the model used in this version is
@@ -426,6 +451,7 @@ export const brandgageItemArray = [
 		hashName: '3d-virtual-booth-earlier-version',
 		description: (
 			<>
+				<h3>Project Overview</h3>
 				<p>
 					An earlier version of the previous project. Originally the idea was a Virtual Booth Builder/Editor, so many of the objects can be transformed and
 					select meshes edited. However, this was before I optimized the model.
@@ -462,7 +488,7 @@ export const rocketItemArray = [
 		hashName: 'space-acme',
 		description: (
 			<>
-				<h3>Project Overview:</h3>
+				<h3>Project Overview</h3>
 				<p>
 					A 3D visualization tool, built for the Space Force, to aid satellite operators to envision system status, orbits, and predicted events; easily create
 					multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.
@@ -637,7 +663,7 @@ export const atlasItemArray = [
 		hashName: 'atlas-studio-overview',
 		description: (
 			<>
-				<h3>Project Overview:</h3>
+				<h3>Project Overview</h3>
 				<p>
 					I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
 					land or trade on the marketplace.
@@ -676,7 +702,7 @@ export const questItemArray = [
 		hashName: 'city-furniture-overview',
 		description: (
 			<>
-				<h3>Project Overview:</h3>
+				<h3>Project Overview</h3>
 				<p>
 					This tool allows customers to seamlessly place furniture in customizable room templates or utilize AI-generated 3D replicas of their actual rooms by
 					scanning their surroundings using the LiDAR sensors in their smartphone's camera.
@@ -746,12 +772,12 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
-				<h3>Project Overview:</h3>
+				<h3>Project Overview</h3>
 				<p>
 					Enabled users to remix, animate, and generate unique outputs (similar to CapCut) by scanning a QR code on the back of millions of Coca-Cola cans
 					worldwide.
 				</p>
-				<h3>Technical Description:</h3>
+				<h3>Technical Description</h3>
 				<p>
 					Frontend allowed users to choose from 7 different unique templates, then crop, trim, and re-order uploaded images/videos as well as adding
 					coke-branded decals before submitting.
@@ -778,7 +804,7 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-templates',
 		description: (
 			<>
-				<h3>Technical Description:</h3>
+				<h3>Technical Description</h3>
 				<p> Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
 				<br />
 				<p>
@@ -811,11 +837,6 @@ export const displayCategoryArray = {
 	},
 	personalProjects: {
 		duration: '2019 - Present',
-		message: (
-			<>
-				<h3>Here are some of the personal projects I've built in my free time.</h3>
-			</>
-		),
 	},
 	brandgage: {
 		hasTabInfo: true,

@@ -230,11 +230,16 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 							</h2>
 						</div>
 
-						{displayItem.description && <div className='display-item-description'>{displayItem.description}</div>}
+						{displayItem.description && (
+							<div className='display-item-description'>
+								{displayItem.description}
+								{displayItem.message && <p className='display-item-message'>{displayItem.message}</p>}
+							</div>
+						)}
 
 						{displayItem.language && (
 							<section className='display-item-tools'>
-								<h3>Tech Stack:</h3>
+								<h3>Tech Stack</h3>
 								<p>{displayItem.language}</p>
 							</section>
 						)}
@@ -254,8 +259,6 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 								)}
 							</nav>
 						)}
-
-						{displayItem.message && <aside className='display-item-message'>{displayItem.message}</aside>}
 					</div>
 				</div>
 			</div>
