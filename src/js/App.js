@@ -87,7 +87,7 @@ export default function App() {
 								<Route index element={<Navigate to='/home' replace />} />
 								<Route path='/about' element={<About currentName={menuState.currentName} />} />
 								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
-								<Route path='/projects' element={<Navigate to='/projects/rocket' replace />} />
+								<Route path='/projects' element={<Navigate to='/projects/subvrsive' replace />} />
 								<Route path='/projects/*' element={<Projects currentName={menuState.currentName} />} />
 								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
 								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />

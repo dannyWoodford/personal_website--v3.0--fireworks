@@ -2,7 +2,16 @@ import React, { useMemo, useCallback } from 'react'
 import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
-import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, atlasItemArray, questItemArray, flatironItemArray, displayCategoryArray } from './ProjectsData'
+import {
+	displayCategoryArray,
+	personalProjectsItemArray,
+	brandgageItemArray,
+	rocketItemArray,
+	atlasItemArray,
+	questItemArray,
+	flatironItemArray,
+	subvrsiveItemArray
+} from './ProjectsData'
 
 export default function ProjectsContent({ updateDisplayCategory, updateDisplayItem, displayCategory, displayItem }) {
 	const displayItemsFactory = useCallback(
@@ -13,8 +22,19 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
 							{item.thumbnailName ? (
 								<div className='item__thumbnail overview'>
-									<img className='item__image add-padding' draggable='false' alt='' src={process.env.PUBLIC_URL + item.thumbnail} />
-									<img alt='' className='item__hover__image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'} />
+									<img
+										className={`item__image add-padding ${item.thumbnailHover ? 'logo-extra-padding' : ''}`}
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + item.thumbnail}
+									/>
+									<img
+										alt=''
+										className={`item__hover__image ${item.thumbnailHover ? 'blur-low' : ''}`}
+										src={
+											item.thumbnailHover ? process.env.PUBLIC_URL + item.thumbnailHover : process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'
+										}
+									/>
 									<p className='item__title item__title__thumbnail__name'>{item.thumbnailName}</p>
 								</div>
 							) : (
@@ -51,6 +71,8 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 			return displayItemsFactory(atlasItemArray)
 		} else if (displayCategory === 'quest') {
 			return displayItemsFactory(questItemArray)
+		} else if (displayCategory === 'subvrsive') {
+			return displayItemsFactory(subvrsiveItemArray)
 		}
 	}, [displayCategory, displayItemsFactory])
 	
@@ -59,14 +81,14 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
 
 			<div className='tab-switch-container'>
-				<div className={`item medium ${displayCategory === 'flatiron' ? 'category--selected' : ''}`}>
+				<div className={`item quarter ${displayCategory === 'flatiron' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('flatiron')} to={'/projects/flatiron'}>
 						<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/flatiron-logo.png'} />
 						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['flatiron'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'personalProjects' ? 'category--selected' : ''}`}>
+				<div className={`item quarter ${displayCategory === 'personalProjects' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('personalProjects')} to={'/projects/personalProjects'}>
 						<img
 							className='item__image invert-on-hover'
@@ -78,7 +100,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['personalProjects'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'brandgage' ? 'category--selected' : ''}`}>
+				<div className={`item quarter ${displayCategory === 'brandgage' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('brandgage')} to={'/projects/brandgage'}>
 						<img
 							className='item__image'
@@ -90,7 +112,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['brandgage'].duration}</h3>
 				</div>
-				<div className={`item medium ${displayCategory === 'rocket' ? 'category--selected' : ''}`}>
+				<div className={`item quarter ${displayCategory === 'rocket' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('rocket')} to={'/projects/rocket'}>
 						<img
 							className='item__image add-padding'
@@ -117,7 +139,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 				<div className={`item medium ${displayCategory === 'quest' ? 'category--selected' : ''}`}>
 					<Link className='item__border' onClick={() => updateDisplayCategory('quest')} to={'/projects/quest'}>
 						<img
-							className='item__image add-padding back-drop-quest'
+							className='item__image add-padding back-drop-strong back-drop-stronger-on-hover'
 							draggable='false'
 							alt=''
 							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/quest-logo.png'}
@@ -125,6 +147,22 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 						<img alt='' className='item__image hover-image blur-on-hover-low' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/city-gif.gif'} />
 					</Link>
 					<h3 className='duration'>{displayCategoryArray['quest'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'subvrsive' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('subvrsive')} to={'/projects/subvrsive'}>
+						<img
+							className='item__image add-padding back-drop-strong-on-hover'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/subvrisve-logo.svg'}
+						/>
+						<img
+							alt=''
+							className='item__image hover-image blur-on-hover-low'
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/memorey-maker-sizzle-2.gif'}
+						/>
+					</Link>
+					<h3 className='duration'>{displayCategoryArray['subvrsive'].duration}</h3>
 				</div>
 			</div>
 
@@ -189,9 +227,9 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 							<span className='display-item-name-main'>{displayItem.name}</span>
 							{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
 						</p>
-						<p className='display-item-description' style={{ display: displayItem.description ? 'block' : 'none' }}>
+						<span className='display-item-description' style={{ display: displayItem.description ? 'block' : 'none' }}>
 							{displayItem.description}
-						</p>
+						</span>
 						<p className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
 							{displayItem.language}
 						</p>

@@ -55,8 +55,8 @@ export const flatironItemArray = [
 		description:
 			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
 		type: 'image',
-		itemUrl: '/assets-by-page/projects/flatiron/cross-colab.jpg',
-		thumbnail: '/assets-by-page/projects/flatiron/cross-colab.jpg',
+		itemUrl: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
+		thumbnail: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
 	},
 ]
 
@@ -534,6 +534,49 @@ export const questItemArray = [
 	},
 ]
 
+export const subvrsiveItemArray = [
+	{
+		category: 'subvrsive',
+		name: 'Memory Maker',
+		hashName: 'memory-maker-overview',
+		description: (
+			<>
+				<p>Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
+				<br />
+				<p>Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled with FFmpeg, and returned output to the user.</p>
+			</>
+		),
+		language: 'React / Typescript / Three.js / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker',
+		type: 'video',
+		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
+		thumbnailHover: '/assets-by-page/home/gifs/memorey-maker-sizzle-2.gif',
+		thumbnailName: 'Overview',
+		demo: 'https://www.coca-cola.com/za/en/offerings/share-a-coke/memory',
+	},
+	{
+		category: 'subvrsive',
+		name: 'Templates',
+		prefix: '(Memory Maker feature)',
+		hashName: 'memory-maker-templates',
+		description: (
+			<>
+				<p> Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
+				<br />
+				<p>
+					Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled
+					with FFmpeg, and returned output to the user.
+				</p>
+			</>
+		),
+		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		type: 'video',
+		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
+		isFeature: true,
+	},
+]
+
 export const displayCategoryArray = {
 	flatiron: {
 		hasTabInfo: true,
@@ -613,7 +656,7 @@ export const displayCategoryArray = {
 		hasTabInfo: true,
 		name: 'Quest AI Solutions',
 		title: 'Senior Front End Developer',
-		duration: 'Oct 2023 - Present',
+		duration: 'Oct 2023 - Aug 2024',
 		location: 'West Palm Beach, FL (Remote)',
 		website: 'https://questaisolutions.com/',
 		websiteDisplayName: 'Questaisolutions.com',
@@ -623,6 +666,24 @@ export const displayCategoryArray = {
 					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
 					elevating the shopping experience.
 				</p>
+			</>
+		),
+	},
+	subvrsive: {
+		hasTabInfo: true,
+		name: 'Subvrsive',
+		title: 'Tech Lead (3D Web)',
+		duration: 'Aug 2024 - Aug 2025',
+		location: 'New York, NY (On-Site)',
+		website: 'https://subvrsive.com//',
+		websiteDisplayName: 'Subvrsive.com',
+		description: (
+			<>
+				<p>Led development teams and global release of experiences for major brands like Coca-Cola, Disney, Loreal, and more.</p>
+				<br />
+				<p>Coordinated closely with design, QA, and creative teams to ensure seamless execution.</p>
+				<br />
+				<p>Partnered directly with clients to translate business goals into innovative interactive solutions.</p>
 			</>
 		),
 	},

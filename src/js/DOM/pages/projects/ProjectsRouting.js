@@ -1,7 +1,15 @@
 import { useEffect, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 
-import { personalProjectsItemArray, brandgageItemArray, rocketItemArray, flatironItemArray, atlasItemArray, questItemArray } from './ProjectsData'
+import {
+	personalProjectsItemArray,
+	brandgageItemArray,
+	rocketItemArray,
+	flatironItemArray,
+	atlasItemArray,
+	questItemArray,
+	subvrsiveItemArray,
+} from './ProjectsData'
 import { extractWordsFromURL } from '../../../helpers/Helpers'
 
 export default function ProjectsRouting({ updateDisplayCategory, updateDisplayItem, displayItem }) {
@@ -30,10 +38,16 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 			} else if (pathArr[1] === 'quest') {
 				updateDisplayCategory(pathArr[1])
 				updateDisplayItem(questItemArray[1])
+			} else if (pathArr[1] === 'subvrsive') {
+				updateDisplayCategory(pathArr[1])
+				updateDisplayItem(subvrsiveItemArray[0])
 			}
+
+			console.log('pathArr', pathArr)
 
 			// ____ Change DisplayItem ______________________________________________________________
 			if (!pathArr[2]) return
+
 
 			if (pathArr[1] === 'brandgage') {
 				let foundItem = brandgageItemArray.find(item => item.hashName === pathArr[2])
@@ -52,6 +66,9 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'quest') {
 				let foundItem = questItemArray.find(item => item.hashName === pathArr[2])
+				updateDisplayItem(foundItem)
+			} else if (pathArr[1] === 'subvrsive') {
+				let foundItem = subvrsiveItemArray.find(item => item.hashName === pathArr[0])
 				updateDisplayItem(foundItem)
 			}
 		},

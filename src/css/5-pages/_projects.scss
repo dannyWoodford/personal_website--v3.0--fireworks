@@ -412,6 +412,10 @@
 		width: 15%;
 	}
 
+	.quarter {
+		width: 25%;
+	}
+
 	.medium {
 		width: 33%;
 	}
@@ -467,9 +471,10 @@
 
 				&.is-feature {
 					opacity: 0.2;
-					height: 100%;
+					// height: 100%;
 					width: auto;
 					max-width: 95%;
+					max-height: 90%;
 				}
 
 				@include breakpoint($bp-xxlarge) {
@@ -524,6 +529,14 @@
 				@include breakpoint($bp-xxxlarge) {
 					padding: 0 80px;
 					max-width: 450px;
+				}
+			}
+
+			.logo-extra-padding {
+				max-height: 62%;
+				
+				@include breakpoint($bp-medium) {
+					width: 90%;
 				}
 			}
 
@@ -604,8 +617,18 @@
 		filter: drop-shadow(0 4px 8px #ffffff);
 	}
 
-	.back-drop-quest {
+	.back-drop-strong {
 		filter: drop-shadow(0 0 26px #ffffff);
+	}
+
+	.blur {
+		filter: blur(8px);
+		opacity: 0.3 !important;
+	}
+
+	.blur-low {
+		// filter: blur(2px);
+		opacity: 0.5 !important;
 	}
 
 	.item__image.hover-image {
@@ -633,6 +656,14 @@
 				filter: drop-shadow(0 0 15px $color-white) hue-rotate(142deg);
 			}
 
+			.back-drop-strong-on-hover {
+				filter: drop-shadow(0 0 26px #ffffff);
+			}
+
+			.back-drop-stronger-on-hover {
+				filter: drop-shadow(0 0 16px #ffffff);
+			}
+
 			.back-drop {
 				filter: drop-shadow(0 4px 8px #ffffff);
 			}
@@ -645,6 +676,10 @@
 			.blur-on-hover-low {
 				filter: blur(2px);
 				opacity: 0.5 !important;
+			}
+
+			.blur-on-hover-strong {
+				filter: drop-shadow(0 0 26px #ffffff);
 			}
 		}
 
@@ -664,6 +699,14 @@
 
 		.invert-on-hover {
 			filter: drop-shadow(0 0 15px $color-white) hue-rotate(142deg);
+		}
+
+		.back-drop-strong-on-hover {
+			filter: drop-shadow(0 0 26px #ffffff);
+		}
+	
+		.back-drop-stronger-on-hover {
+			filter: drop-shadow(0 0 16px #ffffff);
 		}
 
 		.back-drop {

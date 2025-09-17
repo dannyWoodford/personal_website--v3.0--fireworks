@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { rocketItemArray } from './projects/ProjectsData'
+import { subvrsiveItemArray } from './projects/ProjectsData'
 import ProjectsRouting from './projects/ProjectsRouting'
 import ProjectsContent from './projects/ProjectsContent'
 
 export default function Projects({ currentName }) {
-	// flatiron, personalProjects, brandgage, rocket, atlas, questAi
-	const [displayCategory, setDisplayCategory] = useState('rocket')
-	const [displayItem, setDisplayItem] = useState(rocketItemArray[1])
+	// flatiron, personalProjects, brandgage, rocket, atlas, questAi, subvrsive
+	const [displayCategory, setDisplayCategory] = useState('subvrsive')
+	const [displayItem, setDisplayItem] = useState(subvrsiveItemArray[1])
 
 	const updateDisplayCategory = category => {
 		setDisplayCategory(category)
@@ -17,7 +17,7 @@ export default function Projects({ currentName }) {
 	const updateDisplayItem = item => {
 		setDisplayItem(item)
 	}
-	
+
 	return (
 		<div
 			className='page projects-page'
@@ -88,6 +88,17 @@ export default function Projects({ currentName }) {
 							/>
 							<Route
 								path='quest/*'
+								element={
+									<ProjectsContent
+										updateDisplayCategory={updateDisplayCategory}
+										updateDisplayItem={updateDisplayItem}
+										displayCategory={displayCategory}
+										displayItem={displayItem}
+									/>
+								}
+							/>
+							<Route
+								path='subvrsive/*'
 								element={
 									<ProjectsContent
 										updateDisplayCategory={updateDisplayCategory}

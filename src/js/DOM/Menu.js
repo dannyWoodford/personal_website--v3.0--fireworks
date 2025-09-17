@@ -39,7 +39,7 @@ export default function Menu({ toggleMenuHandler }) {
 						</NavLink>
 					</li>
 					<li onClick={() => toggleMenuHandler()}>
-						<NavLink to='/projects/rocket' className='menu-item' activeclassname='is-selected'>
+						<NavLink to='/projects/subvrsive' className='menu-item' activeclassname='is-selected'>
 							{/* <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i> */}
 							Projects
 						</NavLink>

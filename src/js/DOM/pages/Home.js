@@ -56,7 +56,7 @@ export default function Home({ currentName, linkToPageHandler }) {
 							</DelayLink>
 						</div>
 						<div className='item neonText large' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/projects/rocket'} delay={delay} className='nav-link'>
+							<DelayLink to={'/projects/subvrsive'} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<h1>Projects</h1>
 									{/* <img className="item__image invert-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/> */}
