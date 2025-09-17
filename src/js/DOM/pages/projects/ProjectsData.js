@@ -768,7 +768,7 @@ export const questItemArray = [
 export const subvrsiveItemArray = [
 	{
 		category: 'subvrsive',
-		name: 'Memory Maker',
+		name: 'Memory Maker - Coca-Cola',
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
@@ -783,8 +783,8 @@ export const subvrsiveItemArray = [
 					coke-branded decals before submitting.
 				</p>
 				<p>
-					Result would then be rendered on GPU-accelerated AWS server instances leveraging a Puppeteer headless Chrome browser. We'd then apply GLSL shaders,
-					image segmentation effects, animations, and generative AI based on the chosen template before emailing the user the result.
+					Result would then be rendered on GPU-accelerated AWS server instances running a Puppeteer headless Chrome browser. We'd then apply GLSL shaders, image
+					segmentation effects, animations, and generative AI based on the chosen template before compositing the result and emailing it to the user.
 				</p>
 				<p>Project also featured localization into 80+ languages, Amazon Rekognition for NSFW moderation, and prizing mechanics.</p>
 			</>
