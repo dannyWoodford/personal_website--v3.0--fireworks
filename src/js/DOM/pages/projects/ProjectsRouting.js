@@ -43,11 +43,9 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				updateDisplayItem(subvrsiveItemArray[0])
 			}
 
-			console.log('pathArr', pathArr)
-
+			
 			// ____ Change DisplayItem ______________________________________________________________
 			if (!pathArr[2]) return
-
 
 			if (pathArr[1] === 'brandgage') {
 				let foundItem = brandgageItemArray.find(item => item.hashName === pathArr[2])
@@ -68,7 +66,7 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				let foundItem = questItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			} else if (pathArr[1] === 'subvrsive') {
-				let foundItem = subvrsiveItemArray.find(item => item.hashName === pathArr[0])
+				let foundItem = subvrsiveItemArray.find(item => item.hashName === pathArr[2])
 				updateDisplayItem(foundItem)
 			}
 		},

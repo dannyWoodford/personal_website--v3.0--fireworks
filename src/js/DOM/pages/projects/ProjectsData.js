@@ -743,15 +743,24 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
-				<p>Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
-				<br />
 				<p>
-					Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled
-					with FFmpeg, and returned output to the user.
+					Enabled users to remix, animate, and generate unique outputs (similar to CapCut) by scanning a QR code on the back of millions of Coca-Cola cans
+					worldwide.
 				</p>
+				<br />
+				<h3>Technical Description:</h3>
+				<p>
+					Frontend allowed users to choose from 7 different unique templates, then crop, trim, and re-order uploaded images/videos as well as adding
+					coke-branded decals before submitting.
+				</p>
+				<p>
+					Result would then be rendered on GPU-accelerated AWS server instances leveraging a Puppeteer headless Chrome browser. We'd then apply GLSL shaders,
+					image segmentation effects, animations, and generative AI based on the chosen template before emailing the user the result.
+				</p>
+				<p>Project also featured localization into 80+ languages, Amazon Rekognition for NSFW moderation, and prizing mechanics.</p>
 			</>
 		),
-		language: 'React / Typescript / Three.js / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker',
+		language: 'React / Typescript / Three.js / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / OneXP',
 		type: 'video',
 		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
@@ -844,7 +853,7 @@ export const displayCategoryArray = {
 		hasTabInfo: true,
 		name: 'Atlas Reality, Inc.',
 		title: '3D Application Developer',
-		duration: 'Feb 2023 - Jan 2023',
+		duration: 'July 2023 - Jan 2024',
 		location: 'Cedar Park, TX (Remote)',
 		website: 'https://www.atlasreality.com/',
 		websiteDisplayName: 'Atlasreality.com',

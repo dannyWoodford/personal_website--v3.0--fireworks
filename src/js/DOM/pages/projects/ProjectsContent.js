@@ -230,9 +230,10 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 						<span className='display-item-description' style={{ display: displayItem.description ? 'block' : 'none' }}>
 							{displayItem.description}
 						</span>
-						<p className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
-							{displayItem.language}
-						</p>
+						<span className='display-item-tools' style={{ display: displayItem.language ? 'block' : 'none' }}>
+							<h3>Tech Stack:</h3>
+							<p>{displayItem.language}</p>
+						</span>
 						<div className='link-container' style={{ display: displayItem.demo || displayItem.github ? 'flex' : 'none' }}>
 							<a href={displayItem.github} target='_blank' rel='noreferrer' className='link' style={{ display: displayItem.github ? 'block' : 'none' }}>
 								Github
