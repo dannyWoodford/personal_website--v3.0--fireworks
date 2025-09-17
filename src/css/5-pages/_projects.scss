@@ -146,20 +146,19 @@
 				}
 
 				& > div:last-of-type {
-					
 					@include breakpoint($bp-xlarge) {
 						margin-top: 1.5em;
 						line-height: 1.35;
 					}
-			
+
 					@include breakpoint($bp-xxlarge) {
 						margin-top: 2em;
 					}
-					
+
 					@include breakpoint($bp-xxxlarge) {
 						margin-top: 3em;
 					}
-			
+
 					p {
 						white-space: break-spaces;
 						margin: 0;
@@ -251,9 +250,7 @@
 
 		.react-player {
 			border-radius: 19px;
-			box-shadow:
-				3px 3px 13px $color-bg-pink-border-dark,
-				-3px -3px 13px $color-bg-pink-border-light;
+			box-shadow: 3px 3px 13px $color-bg-pink-border-dark, -3px -3px 13px $color-bg-pink-border-light;
 			border: 1px solid $color-bg-pink-border;
 			overflow: hidden;
 		}
@@ -264,13 +261,12 @@
 			border-radius: 19px;
 			color: $color-off-white;
 			background: rgba(0, 0, 0, 0.3);
-			box-shadow:
-			3px 3px 13px $color-bg-pink-border-dark,
-			-3px -3px 13px $color-bg-pink-border-light;
+			box-shadow: 3px 3px 13px $color-bg-pink-border-dark, -3px -3px 13px $color-bg-pink-border-light;
 			border: 1px solid $color-bg-pink-border;
 			overflow: hidden;
 			margin-top: 2vh;
 			padding: 15px;
+			animation: 1s ease-out 0s 1 slideInFromLeft;
 
 			@include breakpoint($bp-large) {
 				margin-top: 20px;
@@ -283,28 +279,28 @@
 
 			.display-item-name {
 				margin-bottom: 1.75em;
-				
+
 				.display-item-name-main {
 					font-weight: 700;
 					margin-right: 8px;
 					white-space: nowrap;
-					
+
 					color: $color-white;
 					font-size: 20px;
-					
+
 					@include breakpoint($bp-large) {
 						font-size: 22px;
 					}
-					
+
 					@include breakpoint($bp-xlarge) {
 						font-size: 25px;
 					}
-	
+
 					@include breakpoint($bp-xxlarge) {
 						font-size: 28px;
 					}
 				}
-	
+
 				.display-item-prefix {
 					margin-right: 8px;
 					color: $color-white;
@@ -422,15 +418,9 @@
 
 	.item__border {
 		position: sticky;
-		box-shadow:
-			5px 5px 15px $color-bg-pink-border-dark,
-			-5px -5px 15px $color-bg-pink-border-light;
+		box-shadow: 5px 5px 15px $color-bg-pink-border-dark, -5px -5px 15px $color-bg-pink-border-light;
 		border: 4px solid $color-bg-pink-border;
-		transition:
-			transform 150ms ease-in-out,
-			border 150ms ease-in-out,
-			box-shadow 150ms ease-in-out,
-			border-radius 150ms ease-in-out;
+		transition: transform 150ms ease-in-out, border 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out;
 		padding: 10px 0;
 		border-radius: 19px;
 		background: linear-gradient(145deg, $color-bg-pink, $color-bg-blue);
@@ -534,7 +524,7 @@
 
 			.logo-extra-padding {
 				max-height: 62%;
-				
+
 				@include breakpoint($bp-medium) {
 					width: 90%;
 				}
@@ -626,8 +616,8 @@
 		opacity: 0.3 !important;
 	}
 
-	.blur-low {
-		// filter: blur(2px);
+	.subvrsive-hover-thumbnails {
+		height: auto !important;
 		opacity: 0.5 !important;
 	}
 
@@ -647,9 +637,7 @@
 
 	.category--selected {
 		&.item .item__border {
-			box-shadow:
-				15px 15px 30px $color-bg-pink-border-dark,
-				-15px -15px 30px $color-bg-pink-border-light;
+			box-shadow: 15px 15px 30px $color-bg-pink-border-dark, -15px -15px 30px $color-bg-pink-border-light;
 			transform: scale(1);
 
 			.invert-on-hover {
@@ -692,9 +680,7 @@
 	}
 
 	.item:hover .item__border {
-		box-shadow:
-			15px 15px 30px $color-bg-pink-border-dark,
-			-15px -15px 30px $color-bg-pink-border-light;
+		box-shadow: 15px 15px 30px $color-bg-pink-border-dark, -15px -15px 30px $color-bg-pink-border-light;
 		transform: scale(1.06);
 
 		.invert-on-hover {
@@ -704,7 +690,7 @@
 		.back-drop-strong-on-hover {
 			filter: drop-shadow(0 0 26px #ffffff);
 		}
-	
+
 		.back-drop-stronger-on-hover {
 			filter: drop-shadow(0 0 16px #ffffff);
 		}

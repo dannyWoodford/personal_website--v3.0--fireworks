@@ -10,7 +10,7 @@ import {
 	atlasItemArray,
 	questItemArray,
 	flatironItemArray,
-	subvrsiveItemArray
+	subvrsiveItemArray,
 } from './ProjectsData'
 
 export default function ProjectsContent({ updateDisplayCategory, updateDisplayItem, displayCategory, displayItem }) {
@@ -30,7 +30,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 									/>
 									<img
 										alt=''
-										className={`item__hover__image ${item.thumbnailHover ? 'blur-low' : ''}`}
+										className={`item__hover__image ${item.thumbnailHover ? 'subvrsive-hover-thumbnails' : ''}`}
 										src={
 											item.thumbnailHover ? process.env.PUBLIC_URL + item.thumbnailHover : process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'
 										}
@@ -75,7 +75,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 			return displayItemsFactory(subvrsiveItemArray)
 		}
 	}, [displayCategory, displayItemsFactory])
-	
+
 	return (
 		<div className='projects-content'>
 			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}

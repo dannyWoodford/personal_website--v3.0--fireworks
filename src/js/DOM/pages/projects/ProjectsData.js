@@ -3,7 +3,11 @@ export const flatironItemArray = [
 		category: 'flatiron',
 		name: 'Spotify 3D music Visualizer',
 		hashName: 'spotify-3d-music-visualizer',
-		description: '3D music visualizer that connects to your Spotify account and allows for web playback.',
+		description: (
+			<>
+				<p>3D music visualizer that connects to your Spotify account and allows for web playback.</p>
+			</>
+		),
 		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
 		github: 'https://github.com/dannyWoodford/3D-spotify-visualizer-',
 		type: 'video',
@@ -15,7 +19,11 @@ export const flatironItemArray = [
 		category: 'flatiron',
 		name: 'Ziehbare Stimme Leinwand',
 		hashName: 'ziehbare-stimme-leinwand',
-		description: 'This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.',
+		description: (
+			<>
+				<p>This Todo list app, apart from having full CRUD functionality, is designed specifically to frustrate the user.</p>
+			</>
+		),
 		language: 'JavaScript / React / Ruby on Rails Backend / Three.js',
 		github: 'https://github.com/jwsharpe/ZiehbareStimmeLeinwand',
 		type: 'video',
@@ -27,7 +35,11 @@ export const flatironItemArray = [
 		category: 'flatiron',
 		name: 'Enter the Labyrinth',
 		hashName: 'enter-the-labyrinth',
-		description: 'Complete the maze before the fire catches you.',
+		description: (
+			<>
+				<p>Complete the maze before the fire catches you.</p>
+			</>
+		),
 		language: 'JavaScript / Ruby on Rails Backend / Canvas',
 		github: 'https://github.com/TenNga/Maze-Game-Front-End',
 		demo: 'https://pure-reaches-70099.herokuapp.com/',
@@ -40,7 +52,11 @@ export const flatironItemArray = [
 		category: 'flatiron',
 		name: 'NOTFLIX',
 		hashName: 'notflix',
-		description: 'Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.',
+		description: (
+			<>
+				<p>Netflix inspired app is a library of TV shows and movies found on youtube with a smart clean look.</p>
+			</>
+		),
 		language: 'Ruby on Rails',
 		github: 'https://github.com/ntel-91/mod2-project',
 		type: 'video',
@@ -52,8 +68,15 @@ export const flatironItemArray = [
 		category: 'flatiron',
 		name: 'Flatiron Cross-Discipline Collaboration Event',
 		hashName: 'flatiron-cross-discipline-collaboration-event',
-		description:
-			'While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.',
+		description: (
+			<>
+				<p>
+					While at Flatiron I started and lead the first cross-discipline collaboration event bringing students from developer, data science, and UX/UI tracks
+					together to preform mock projects. Through these projects the students learned what each others role does and how they would interact with one
+					another. Of the 60 odd students involved several groups, as well as my own, have continued to bring there mock projects to life post graduation.
+				</p>
+			</>
+		),
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
 		thumbnail: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
@@ -65,7 +88,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'About Section',
 		hashName: 'about-section',
-		description: 'Into I made using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
+		description: (
+			<>
+				<p>Into I made using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Theatre.js',
 		demo: 'https://dannywoodforddev.web.app/about',
 		type: 'video',
@@ -76,7 +103,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'THREE.js / D3.js AI Generator',
 		hashName: 'three-js-ai-generator',
-		description: 'Three.js AI Generator which connects to openAI to return a three.js or d3.js scene based on a prompt.',
+		description: (
+			<>
+				<p>Three.js AI Generator which connects to openAI to return a three.js or d3.js scene based on a prompt.</p>
+			</>
+		),
 		language: 'React / Three.js / D3.js / node',
 		github: 'https://github.com/dannyWoodford/THREEjs-AI-Generator',
 		demo: 'https://threejs-ai-generator.web.app/',
@@ -88,8 +119,14 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Gaussian Splatting w/ Face Tracking',
 		hashName: 'gauss-splatting-face-tracking',
-		description:
-			"I made this demo to show off the potential of 3D Gaussian Splatting using LumaAI's WebGL Library. Also, I added FaceControls to give it an AR/VR quality to enhance perspective and mixed them with OrbitControls so you can still navigate the scene easily.",
+		description: (
+			<>
+				<p>
+					I made this demo to show off the potential of 3D Gaussian Splatting using LumaAI's WebGL Library. Also, I added FaceControls to give it an AR/VR
+					quality to enhance perspective and mixed them with OrbitControls so you can still navigate the scene easily.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / LumaAI / Drei',
 		github: 'https://github.com/dannyWoodford/gaussian-splatting-face-tracking-controls',
 		demo: 'https://gauss-splatting-face-tracking.web.app',
@@ -101,8 +138,14 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'R3F shader transition',
 		hashName: 'r3f-shader-transition',
-		description:
-			'Hide switching between materials with a custom GLSL transition shader. This is designed for situations where you cannot directly access the materials, so the transition shader fades in to hide swapping the materials.',
+		description: (
+			<>
+				<p>
+					Hide switching between materials with a custom GLSL transition shader. This is designed for situations where you cannot directly access the materials,
+					so the transition shader fades in to hide swapping the materials.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / GLSL',
 		demo: 'https://codesandbox.io/p/sandbox/relaxed-curie-r6cct8?file=%2Fsrc%2Fobjects%2FAnimatedSphere.jsx%3A75%2C22',
 		type: 'video',
@@ -113,8 +156,13 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'R3F Glasses-less 2D to 3D with Face Tracking',
 		hashName: 'r3f-glasses-less-2d-to-3d-with-face-tracking',
-		description:
-			'React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.',
+		description: (
+			<>
+				<p>
+					React-Three-Fiber demo of custom Three.js shader to make a 2D image appear 3D which is wrapped around a photosphere and controlled with face tracking.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Zapworks AR / Drei',
 		github: 'https://github.com/dannyWoodford/r3f-false3D-photosphere-face-tracker',
 		demo: 'https://mfwj.zappar.io/5957180484379593482/1.0.0/',
@@ -126,7 +174,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Stereographic Projection -- Volumetric Light',
 		hashName: 'stereographic-projection',
-		description: 'Demonstrating the concept of stereographic projection in react-three-fiber with some volumetric light thrown in there just for fun.',
+		description: (
+			<>
+				<p>Demonstrating the concept of stereographic projection in react-three-fiber with some volumetric light thrown in there just for fun.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Postprocessing / Drei',
 		demo: 'https://codesandbox.io/s/stereographic-projection--volumetric-light-67b5m?file=/src/index.js:428-442',
 		type: 'video',
@@ -137,7 +189,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Chess',
 		hashName: 'chess',
-		description: 'React-Three-Fiber demo with editable textures and transform controls.',
+		description: (
+			<>
+				<p>React-Three-Fiber demo with editable textures and transform controls.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=FbwCUF3Vo0o&ab_channel=DannyWoodford',
@@ -147,7 +203,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Storm',
 		hashName: 'storm',
-		description: 'Interactive homepage demo. features(Positional Audio, model animation bound to key interactions)',
+		description: (
+			<>
+				<p>Interactive homepage demo. features(Positional Audio, model animation bound to key interactions)</p>
+			</>
+		),
 		language: 'JavaScript / Three.js',
 		demo: 'https://stormflight-threejs.firebaseapp.com/',
 		type: 'video',
@@ -158,7 +218,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Responsive Text',
 		hashName: 'responsive-text',
-		description: 'React-Three-Fiber demo.',
+		description: (
+			<>
+				<p>React-Three-Fiber demo.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / React-Spring / Drei',
 		demo: 'https://codesandbox.io/s/zb5ps?file=/src/components/ResponsiveText.js:141-145',
 		type: 'video',
@@ -169,7 +233,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Sunrise / Sunset',
 		hashName: 'sunrise-sunset',
-		description: 'The idea for this project was a literal light and dark mode.',
+		description: (
+			<>
+				<p>The idea for this project was a literal light and dark mode.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js',
 		github: 'https://github.com/dannyWoodford/sunrise_sunset-THREE.js',
 		demo: 'https://sunrise-sunset-2a89d.web.app/',
@@ -191,7 +259,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Indika',
 		hashName: 'indika',
-		description: 'UI demo website.',
+		description: (
+			<>
+				<p>UI demo website.</p>
+			</>
+		),
 		language: 'JavaScript',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=fFb0jhT5lcQ&ab_channel=DannyWoodford',
@@ -201,7 +273,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Former Personal Website',
 		hashName: 'former-personal-website',
-		description: 'My original website made shortly after graduating Flatiron School in 2019.',
+		description: (
+			<>
+				<p>My original website made shortly after graduating Flatiron School in 2019.</p>
+			</>
+		),
 		language: 'JavaScript / WebGL',
 		github: 'https://github.com/dannyWoodford/dannyWoodford.github.io',
 		demo: 'https://dannywoodford.github.io/',
@@ -213,7 +289,11 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'Quick Search Chrome Extension',
 		hashName: 'quick-search-chrome-extension',
-		description: 'I made a simple chrome extension for myself so I can highlight text and search for it with a single keypress to be more efficient.',
+		description: (
+			<>
+				<p>I made a simple chrome extension for myself so I can highlight text and search for it with a single keypress to be more efficient.</p>
+			</>
+		),
 		language: 'JavaScript / Chromium',
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/chrome-logo.jpg',
@@ -223,8 +303,16 @@ export const personalProjectsItemArray = [
 		category: 'personalProjects',
 		name: 'LinkedIn Connecter Chrome Extension',
 		hashName: 'linkedin-connecter-chrome-extension',
-		description:
-			'I made a chrome extension that automates browser events to grow your LinkedIn network. From manpower to horsepower, analog to digital, technology increases our speed and efficiency. As programmers, speed and efficiency should ring especially cogent as largely the goal of our code, taking the heavy lifting off of us and on to the machine. However, when it comes to the advancement of our careers we take a step back to espouse twentieth-century conventions. Automation has been on my mind lately and largely the reason I created this chrome extension.',
+		description: (
+			<>
+				<p>
+					I made a chrome extension that automates browser events to grow your LinkedIn network. From manpower to horsepower, analog to digital, technology
+					increases our speed and efficiency. As programmers, speed and efficiency should ring especially cogent as largely the goal of our code, taking the
+					heavy lifting off of us and on to the machine. However, when it comes to the advancement of our careers we take a step back to espouse
+					twentieth-century conventions. Automation has been on my mind lately and largely the reason I created this chrome extension.
+				</p>
+			</>
+		),
 		language: 'JavaScript / Chromium',
 		type: 'image',
 		itemUrl: '/assets-by-page/projects/chrome-logo.jpg',
@@ -237,7 +325,11 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'Merck 3D',
 		hashName: 'merck-3d',
-		description: 'VR experience created for pharmaceutical trade shows.',
+		description: (
+			<>
+				<p>VR experience created for pharmaceutical trade shows.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://3d.gesvirtualexhibits.com/show/gjk39k/esmo-2021/',
 		type: 'video',
@@ -249,7 +341,11 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'Company Website',
 		hashName: 'company-website',
-		description: 'VR experience created for pharmaceutical trade shows.',
+		description: (
+			<>
+				<p>VR experience created for pharmaceutical trade shows.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js / SASS',
 		demo: 'https://www.brandgage.com/',
 		type: 'video',
@@ -260,7 +356,11 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'Pfizer Cibinqo',
 		hashName: 'pfizer-cibinqo',
-		description: 'VR experience created for pharmaceutical trade shows.',
+		description: (
+			<>
+				<p>VR experience created for pharmaceutical trade shows.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://cibinqovirtualexperience.com/show/zx93mk/aad-2021/',
 		type: 'video',
@@ -272,7 +372,11 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'Pfizer Rare Disease',
 		hashName: 'pfizer-rare-disease',
-		description: 'Virtual Booth created for pharmaceutical trade shows.',
+		description: (
+			<>
+				<p>Virtual Booth created for pharmaceutical trade shows.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://pfizerrarediseasecongressresources.com/show/jl09pa/endo-2021/',
 		type: 'video',
@@ -284,7 +388,11 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'Takeda',
 		hashName: 'takeda',
-		description: 'Virtual Booth created for pharmaceutical trade shows.',
+		description: (
+			<>
+				<p>Virtual Booth created for pharmaceutical trade shows.</p>
+			</>
+		),
 		language: 'JavaScript / Three.js / Twig / PHP / SASS',
 		// demo: 'https://everymileofthejourney.com/show/booth/',
 		type: 'video',
@@ -296,8 +404,16 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'R&D 3D Virtual Booth',
 		hashName: '3d-virtual-booth-improved',
-		description:
-			'Experimental Virtual Booth I am building alone as an R&D project for Brandgage. It is the same as the next project but with many of the features to edit the scene taken out as the idea evolved from a Virtual Booth Builder to a Virtual Booth Experience. However, the model used in this version is greatly improved and loads 12 times faster after I baked the lighting, normal maps, etc, reduced the poly count by 97%, and consolidated textures by UV-mapping multiple meshes to use the same texture to save space.',
+		description: (
+			<>
+				<p>
+					Experimental Virtual Booth I am building alone as an R&D project for Brandgage. It is the same as the next project but with many of the features to
+					edit the scene taken out as the idea evolved from a Virtual Booth Builder to a Virtual Booth Experience. However, the model used in this version is
+					greatly improved and loads 12 times faster after I baked the lighting, normal maps, etc, reduced the poly count by 97%, and consolidated textures by
+					UV-mapping multiple meshes to use the same texture to save space.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber',
 		demo: 'http://phpstack-95367-1945343.cloudwaysapps.com/baked-models-live-lights-working-nav/',
 		type: 'video',
@@ -308,8 +424,14 @@ export const brandgageItemArray = [
 		category: 'brandgage',
 		name: 'R&D 3D Virtual Booth (Earlier Version)',
 		hashName: '3d-virtual-booth-earlier-version',
-		description:
-			'An earlier version of the previous project. Originally the idea was a Virtual Booth Builder/Editor, so many of the objects can be transformed and select meshes edited. However, this was before I optimized the model.',
+		description: (
+			<>
+				<p>
+					An earlier version of the previous project. Originally the idea was a Virtual Booth Builder/Editor, so many of the objects can be transformed and
+					select meshes edited. However, this was before I optimized the model.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber',
 		demo: 'https://phpstack-95367-1945343.cloudwaysapps.com/drag-and-drop-reduced-models/',
 		type: 'video',
@@ -323,7 +445,11 @@ export const rocketItemArray = [
 		category: 'rocket',
 		name: 'Animated Rocket Logo',
 		hashName: 'animated-rocket-logo',
-		description: 'Animated logo I made for Rocket using Theatre.js.',
+		description: (
+			<>
+				<p>Animated logo I made for Rocket using Theatre.js.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Theatre.js / Drei',
 		demo: 'https://codesandbox.io/s/rocket-logo-animation-22wpji?file=/src/Scene.js:702-810',
 		type: 'video',
@@ -334,8 +460,14 @@ export const rocketItemArray = [
 		category: 'rocket',
 		name: 'Space ACME',
 		hashName: 'space-acme',
-		description:
-			'A 3D visualization tool, built for the Space Force, to aid satellite operators to envision system status, orbits, and predicted events; easily create multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.',
+		description: (
+			<>
+				<p>
+					A 3D visualization tool, built for the Space Force, to aid satellite operators to envision system status, orbits, and predicted events; easily create
+					multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.
+				</p>
+			</>
+		),
 		language: 'React / TypeScript / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -349,7 +481,11 @@ export const rocketItemArray = [
 		name: 'Stylized Intro',
 		prefix: '(Space ACME feature)',
 		hashName: 'stylized-intro',
-		description: 'Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.',
+		description: (
+			<>
+				<p>Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei / Theatre.js',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -361,8 +497,11 @@ export const rocketItemArray = [
 		name: 'Real-Time Sun Position',
 		prefix: '(Space ACME feature)',
 		hashName: 'real-time-sun-position',
-		description:
-			'The "sun" responds to the draggable timeline at the bottom of the render window and is accurately positioned to match its real world counterpart.',
+		description: (
+			<>
+				<p>The "sun" responds to the draggable timeline at the bottom of the render window and is accurately positioned to match its real world counterpart.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -375,8 +514,14 @@ export const rocketItemArray = [
 		name: 'State Vector Plotting / Interpolation',
 		prefix: '(Space ACME feature)',
 		hashName: 'state-vector-plotting-interpolation',
-		description:
-			'Probably the most challenging feature was plotting orbital state vectors and interpolating between them to position the satellites and achieve a smooth animation. 4 other companies failed to achieve this feat and solving this is ultimately what won us the defense department contract.',
+		description: (
+			<>
+				<p>
+					Probably the most challenging feature was plotting orbital state vectors and interpolating between them to position the satellites and achieve a
+					smooth animation. 4 other companies failed to achieve this feat and solving this is ultimately what won us the defense department contract.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -389,8 +534,14 @@ export const rocketItemArray = [
 		name: 'Event Creation / Editing',
 		prefix: '(Space ACME feature)',
 		hashName: 'event-creation-editing',
-		description:
-			'Users can create and edit events to visualize a change in altitude, inclination, period or suppress satellites entirely. The orbit and satellite label turn green after the start of an event to distinguish between the two.',
+		description: (
+			<>
+				<p>
+					Users can create and edit events to visualize a change in altitude, inclination, period or suppress satellites entirely. The orbit and satellite label
+					turn green after the start of an event to distinguish between the two.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -403,7 +554,11 @@ export const rocketItemArray = [
 		name: 'Search Satellites',
 		prefix: '(Space ACME feature)',
 		hashName: 'search-satellites',
-		description: 'Users can search for satellites and visualize thousands of instances at once.',
+		description: (
+			<>
+				<p>Users can search for satellites and visualize thousands of instances at once.</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -416,8 +571,14 @@ export const rocketItemArray = [
 		name: 'Orbits and Mouse Interaction',
 		prefix: '(Space ACME feature)',
 		hashName: 'orbits-and-mouse-interaction',
-		description:
-			'Users can visualize orbits that also respond to hover and selected states. These states affect the list (outside of the canvas) in the left panel. Interacting with the list, conversely, affects the orbits.',
+		description: (
+			<>
+				<p>
+					Users can visualize orbits that also respond to hover and selected states. These states affect the list (outside of the canvas) in the left panel.
+					Interacting with the list, conversely, affects the orbits.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -430,8 +591,15 @@ export const rocketItemArray = [
 		name: 'Shaders',
 		prefix: '(Space ACME feature)',
 		hashName: 'shaders',
-		description:
-			"There are several custom GLSL shaders at play to get the final appearance of the earth. Including 2 for the atmosphere (earth's surface and outer glow), moving clouds, and city lights that respond to the position of the sun. (Special thanks to Faraz Shaikh, whose CodeSandbox provided the basis for which my city lights shader is based)",
+		description: (
+			<>
+				<p>
+					There are several custom GLSL shaders at play to get the final appearance of the earth. Including 2 for the atmosphere (earth's surface and outer
+					glow), moving clouds, and city lights that respond to the position of the sun. (Special thanks to Faraz Shaikh, whose CodeSandbox provided the basis
+					for which my city lights shader is based)
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -444,8 +612,14 @@ export const rocketItemArray = [
 		name: 'Helper Tools',
 		prefix: '(Space ACME feature)',
 		hashName: 'helper-tools',
-		description:
-			'To aid in the development of the app it was necessary to build several tools and global settings. Including a sun positioning helper, altitude lines, interpolation helper, and setting up GUI controls with Theatre.js(s) new Theatric api to fine tune almost all aesthetic features.',
+		description: (
+			<>
+				<p>
+					To aid in the development of the app it was necessary to build several tools and global settings. Including a sun positioning helper, altitude lines,
+					interpolation helper, and setting up GUI controls with Theatre.js(s) new Theatric api to fine tune almost all aesthetic features.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / Drei',
 		demo: 'https://space-acme.netlify.app/',
 		type: 'video',
@@ -460,8 +634,14 @@ export const atlasItemArray = [
 		category: 'atlas',
 		name: 'Atlas Studio',
 		hashName: 'atlas-studio-overview',
-		description:
-			'I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own land or trade on the marketplace.',
+		description: (
+			<>
+				<p>
+					I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
+					land or trade on the marketplace.
+				</p>
+			</>
+		),
 		language: 'React / React-Three-Fiber / react-three/xr',
 		demo: 'https://studio.earth.atlasreality.dev/',
 		type: 'video',
@@ -477,7 +657,11 @@ export const questItemArray = [
 		name: 'Scan Your Own Room',
 		prefix: '(CITY Furniture feature)',
 		hashName: 'scan-your-own-room',
-		description: "Utilizing the LiDAR sensors in your smartphone's camera you can scan a physical room and a 3D facsimile is generated using AI.",
+		description: (
+			<>
+				<p>Utilizing the LiDAR sensors in your smartphone's camera you can scan a physical room and a 3D facsimile is generated using AI.</p>
+			</>
+		),
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
@@ -488,8 +672,14 @@ export const questItemArray = [
 		category: 'quest',
 		name: 'CITY Furniture',
 		hashName: 'city-furniture-overview',
-		description:
-			"This tool allows customers to seamlessly place furniture in customizable room templates or utilize AI-generated 3D replicas of their actual rooms by scanning their surroundings using the LiDAR sensors in their smartphone's camera.",
+		description: (
+			<>
+				<p>
+					This tool allows customers to seamlessly place furniture in customizable room templates or utilize AI-generated 3D replicas of their actual rooms by
+					scanning their surroundings using the LiDAR sensors in their smartphone's camera.
+				</p>
+			</>
+		),
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
@@ -501,7 +691,11 @@ export const questItemArray = [
 		name: 'Collision Physics',
 		prefix: '(CITY Furniture feature)',
 		hashName: 'collision-physics',
-		description: 'I implemented realistic collision interactions between furniture and the environment using @react-three/rapier physics engine.',
+		description: (
+			<>
+				<p>I implemented realistic collision interactions between furniture and the environment using @react-three/rapier physics engine.</p>
+			</>
+		),
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/Hd4UoqmH-e8&ab_channel=DannyWoodford',
@@ -513,7 +707,11 @@ export const questItemArray = [
 		name: 'Editable Room Templates',
 		prefix: '(CITY Furniture feature)',
 		hashName: 'editable-room-templates',
-		description: 'Modify the dimensions of the room templates, select alternative wall colors, or opt for a different flooring from a wide range of choices.',
+		description: (
+			<>
+				<p>Modify the dimensions of the room templates, select alternative wall colors, or opt for a different flooring from a wide range of choices.</p>
+			</>
+		),
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/FP_tXKjyoaI&ab_channel=DannyWoodford',
@@ -525,7 +723,11 @@ export const questItemArray = [
 		name: 'Save and Checkout',
 		prefix: '(CITY Furniture feature)',
 		hashName: 'save-and-checkout',
-		description: 'Save multiple room layouts and furniture arrangements, then effortlessly purchase your chosen items.',
+		description: (
+			<>
+				<p>Save multiple room layouts and furniture arrangements, then effortlessly purchase your chosen items.</p>
+			</>
+		),
 		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
 		type: 'video',
 		itemUrl: 'https://youtu.be/-o9uoxFbZdY&ab_channel=DannyWoodford',
@@ -543,7 +745,10 @@ export const subvrsiveItemArray = [
 			<>
 				<p>Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
 				<br />
-				<p>Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled with FFmpeg, and returned output to the user.</p>
+				<p>
+					Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled
+					with FFmpeg, and returned output to the user.
+				</p>
 			</>
 		),
 		language: 'React / Typescript / Three.js / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker',
