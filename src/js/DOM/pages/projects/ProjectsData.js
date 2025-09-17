@@ -462,6 +462,7 @@ export const rocketItemArray = [
 		hashName: 'space-acme',
 		description: (
 			<>
+				<h3>Project Overview:</h3>
 				<p>
 					A 3D visualization tool, built for the Space Force, to aid satellite operators to envision system status, orbits, and predicted events; easily create
 					multiple manoeuver options and view/compare them to help decision-makers quickly grasp implications and improve decisions.
@@ -479,7 +480,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Stylized Intro',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'stylized-intro',
 		description: (
 			<>
@@ -495,7 +496,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Real-Time Sun Position',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'real-time-sun-position',
 		description: (
 			<>
@@ -512,7 +513,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'State Vector Plotting / Interpolation',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'state-vector-plotting-interpolation',
 		description: (
 			<>
@@ -532,7 +533,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Event Creation / Editing',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'event-creation-editing',
 		description: (
 			<>
@@ -552,7 +553,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Search Satellites',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'search-satellites',
 		description: (
 			<>
@@ -569,7 +570,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Orbits and Mouse Interaction',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'orbits-and-mouse-interaction',
 		description: (
 			<>
@@ -589,7 +590,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Shaders',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'shaders',
 		description: (
 			<>
@@ -610,7 +611,7 @@ export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Helper Tools',
-		prefix: '(Space ACME feature)',
+		prefix: '(Space ACME)',
 		hashName: 'helper-tools',
 		description: (
 			<>
@@ -636,6 +637,7 @@ export const atlasItemArray = [
 		hashName: 'atlas-studio-overview',
 		description: (
 			<>
+				<h3>Project Overview:</h3>
 				<p>
 					I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
 					land or trade on the marketplace.
@@ -655,7 +657,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Scan Your Own Room',
-		prefix: '(CITY Furniture feature)',
+		prefix: '(CITY Furniture)',
 		hashName: 'scan-your-own-room',
 		description: (
 			<>
@@ -674,6 +676,7 @@ export const questItemArray = [
 		hashName: 'city-furniture-overview',
 		description: (
 			<>
+				<h3>Project Overview:</h3>
 				<p>
 					This tool allows customers to seamlessly place furniture in customizable room templates or utilize AI-generated 3D replicas of their actual rooms by
 					scanning their surroundings using the LiDAR sensors in their smartphone's camera.
@@ -689,7 +692,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Collision Physics',
-		prefix: '(CITY Furniture feature)',
+		prefix: '(CITY Furniture)',
 		hashName: 'collision-physics',
 		description: (
 			<>
@@ -705,7 +708,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Editable Room Templates',
-		prefix: '(CITY Furniture feature)',
+		prefix: '(CITY Furniture)',
 		hashName: 'editable-room-templates',
 		description: (
 			<>
@@ -721,7 +724,7 @@ export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Save and Checkout',
-		prefix: '(CITY Furniture feature)',
+		prefix: '(CITY Furniture)',
 		hashName: 'save-and-checkout',
 		description: (
 			<>
@@ -743,7 +746,7 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
-				<h3>Product Description:</h3>
+				<h3>Project Overview:</h3>
 				<p>
 					Enabled users to remix, animate, and generate unique outputs (similar to CapCut) by scanning a QR code on the back of millions of Coca-Cola cans
 					worldwide.
@@ -760,7 +763,7 @@ export const subvrsiveItemArray = [
 				<p>Project also featured localization into 80+ languages, Amazon Rekognition for NSFW moderation, and prizing mechanics.</p>
 			</>
 		),
-		language: 'React / Typescript / Three.js / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / OneXP',
+		language: 'React / Typescript / Three.js / React-Three-Fiber / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / Python / OneXP',
 		type: 'video',
 		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
@@ -771,10 +774,11 @@ export const subvrsiveItemArray = [
 	{
 		category: 'subvrsive',
 		name: 'Templates',
-		prefix: '(Memory Maker feature)',
+		prefix: '(Memory Maker)',
 		hashName: 'memory-maker-templates',
 		description: (
 			<>
+				<h3>Technical Description:</h3>
 				<p> Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
 				<br />
 				<p>
@@ -783,7 +787,7 @@ export const subvrsiveItemArray = [
 				</p>
 			</>
 		),
-		language: 'React / Typescript / React-Three-Fiber / @react-three/rapier',
+		language: 'GLSL / React-Three-Fiber / Theatre.js / Stable Diffusion / Transparent Background',
 		type: 'video',
 		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',

@@ -11,7 +11,9 @@
 	padding: 15px;
 	animation: 1s ease-out 0s 1 slideInFromLeft;
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		color: $color-white;
 	}
 
@@ -31,7 +33,6 @@
 			font-weight: 700;
 			margin-right: 8px;
 			white-space: nowrap;
-
 			color: $color-white;
 			font-size: 20px;
 
@@ -49,18 +50,79 @@
 		}
 
 		.display-item-prefix {
-			margin-right: 8px;
-			color: $color-white;
-			font-weight: 600;
+			color: rgba(255, 255, 255, 0.7);
+			font-weight: 300;
+			font-size: 14px;
+
+			@include breakpoint($bp-large) {
+				font-size: 15px;
+			}
+
+			@include breakpoint($bp-xlarge) {
+				font-size: 17px;
+			}
+
+			@include breakpoint($bp-xxlarge) {
+				font-size: 21px;
+			}
 		}
 	}
 
 	.display-item-description {
 		color: $color-off-white;
+		margin-bottom: 2em;
+
+		h3 {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+			margin-top: 1.5em;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			color: $color-white;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			@include breakpoint($bp-large) {
+				font-size: 18px;
+			}
+		}
+
+		p {
+			margin-bottom: 1em;
+			line-height: 1.6;
+		}
 	}
 
 	.display-item-tools {
-		margin: auto;
+		margin: 2em auto 0;
+		padding-top: 1.5em;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 0.75em;
+			color: $color-white;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+
+			@include breakpoint($bp-large) {
+				font-size: 20px;
+			}
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.5;
+			color: $color-off-white;
+
+			@include breakpoint($bp-large) {
+				font-size: 16px;
+			}
+		}
 	}
 
 	p {
