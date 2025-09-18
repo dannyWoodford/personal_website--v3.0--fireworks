@@ -804,7 +804,7 @@ export const subvrsiveItemArray = [
 		),
 		language: 'React / Typescript / Three.js / React-Three-Fiber / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / Python / OneXP',
 		type: 'video',
-		itemUrl: 'https://youtu.be/_11k_T4BtVg&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/pzhCbGhQKuc&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
 		thumbnailHover: '/assets-by-page/home/gifs/memorey-maker-sizzle-2.gif',
 		thumbnailName: 'Overview',
@@ -817,18 +817,16 @@ export const subvrsiveItemArray = [
 		hashName: 'memory-maker-templates',
 		description: (
 			<>
-				<h3>Technical Description</h3>
-				<p> Video templating platform (similar to CapCut) enabling user-submitted media to produce unique generative outputs.</p>
-				<br />
+				<h3>Overview</h3>
 				<p>
-					Rendered Three.js, Theatre.js, and Stable Diffusion effects on user- submitted media via GPU-accelerated headless Chrome using Puppeteer, compiled
-					with FFmpeg, and returned output to the user.
+					Users could choose from 7 templates: 2 applied generative AI transformations, 2 used image segmentation effects, and 3 featured custom GLSL shader
+					effects. All templates were dynamically animated with Theatre.js.
 				</p>
 			</>
 		),
 		language: 'GLSL / React-Three-Fiber / Theatre.js / Stable Diffusion / Transparent Background',
 		type: 'video',
-		itemUrl: 'https://youtu.be/GRdpuZ8-zqc&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/pzhCbGhQKuc&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
 		isFeature: true,
 	},
