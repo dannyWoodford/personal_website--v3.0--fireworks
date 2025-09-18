@@ -830,6 +830,38 @@ export const subvrsiveItemArray = [
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
 		isFeature: true,
 	},
+	{
+		category: 'subvrsive',
+		name: 'Holocreator - Coca-Cola x Star Wars',
+		hashName: 'Holocreator-overview',
+		description: (
+			<>
+				<h3>Project Overview</h3>
+				<p>
+					Enabled users to create Star Wars–style AR holograms of themselves by recording with their phone, accessible via a QR code on millions of Coca-Cola
+					cans worldwide.
+				</p>
+				<h3>Technical Description</h3>
+				<p>Users could choose from 5 characters—like a Jedi, Sith, or trooper—then record their face to see it projected onto an AR hologram.</p>
+				<p>
+					After receiving their hologram, users could scan the character on the Coke can to view it in 3D, with a parallax effect powered by Three.js and
+					controlled by their phone’s motion.
+				</p>
+				<p>
+					Carousel of characters that users could swipe through, animated on swipe and scroll to scrub sequenced PNG images that were batch-loaded for quick
+					load times and smooth playback.
+				</p>
+				<p>Project also featured localization into 30+ languages, Amazon Rekognition for NSFW moderation, and prizing mechanics.</p>
+			</>
+		),
+		language: 'React / Typescript / Three.js / React-Three-Fiber / 8th Wall / Tensorflow.js / MediaPipe / AWS / OneXP',
+		type: 'video',
+		itemUrl: 'https://www.youtube.com/watch?v=EwPd5GkCa0I',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/holocreator-logo.png',
+		thumbnailHover: '/assets-by-page/home/gifs/star-wars-lightspeed.gif',
+		thumbnailName: 'Overview',
+		demo: 'https://www.coca-cola.com/us/en/offerings/star-wars',
+	},
 ]
 
 export const displayCategoryArray = {
