@@ -189,7 +189,7 @@ export default function ProjectsContent({ updateDisplayCategory, updateDisplayIt
 							</div>
 						</div>
 					</div>
-					<div>{displayCategoryArray[displayCategory].description}</div>
+					<div className='tab-info-description'>{displayCategoryArray[displayCategory].description}</div>
 				</div>
 				<div className='display-item'>
 					<div className='display-item-image' style={{ display: displayItem.type === 'image' ? 'block' : 'none' }}>

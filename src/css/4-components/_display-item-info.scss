@@ -31,6 +31,7 @@
 		position: relative;
 
 		.display-item-name-main {
+			font-family: $font-family-alt-title;
 			font-weight: 800;
 			margin-right: 16px;
 			white-space: nowrap;
@@ -110,7 +111,7 @@
 			// background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 159, 64, 0.15));
 			// border-left: 3px solid #ff6b6b;
 
-			color: #dadada;
+			color: #e4e4e4;
 			// background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(53, 111, 143, 0.15));
 			background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(11, 19, 71, 0.15));
 			border-left: 3px solid #9f9f9f;
@@ -130,7 +131,8 @@
 		p {
 			margin-bottom: 1.2em;
 			margin-left: 0.3em;
-			line-height: 1.6;
+			line-height: 1.3;
+			font-family: $font-family-alt;
 		}
 	}
 
@@ -173,7 +175,7 @@
 		p {
 			font-size: 14px;
 			line-height: 1.5;
-			color: $color-off-white;
+			color: #d6d6d6;
 			margin-left: 0.2em;
 			margin-bottom: 0.5em;
 

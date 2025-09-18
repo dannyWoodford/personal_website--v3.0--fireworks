@@ -426,7 +426,7 @@ export const brandgageItemArray = [
 	},
 	{
 		category: 'brandgage',
-		name: 'R&D 3D Virtual Booth',
+		name: 'R&D 3D Virtual Booth - V2.0',
 		hashName: '3d-virtual-booth-improved',
 		description: (
 			<>
@@ -440,14 +440,14 @@ export const brandgageItemArray = [
 			</>
 		),
 		language: 'React / React-Three-Fiber',
-		demo: 'http://phpstack-95367-1945343.cloudwaysapps.com/baked-models-live-lights-working-nav/',
+		// demo: 'http://phpstack-95367-1945343.cloudwaysapps.com/baked-models-live-lights-working-nav/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=p4rODhstcOA&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/projects/thumbnails/3d-virtual-booth-improved.jpeg',
 	},
 	{
 		category: 'brandgage',
-		name: 'R&D 3D Virtual Booth (Earlier Version)',
+		name: 'R&D 3D Virtual Booth - V1.0',
 		hashName: '3d-virtual-booth-earlier-version',
 		description: (
 			<>
@@ -459,7 +459,7 @@ export const brandgageItemArray = [
 			</>
 		),
 		language: 'React / React-Three-Fiber',
-		demo: 'https://phpstack-95367-1945343.cloudwaysapps.com/drag-and-drop-reduced-models/',
+		// demo: 'https://phpstack-95367-1945343.cloudwaysapps.com/drag-and-drop-reduced-models/',
 		type: 'video',
 		itemUrl: 'https://www.youtube.com/watch?v=nb-Pbs6yhRw&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/projects/thumbnails/3d-virtual-booth-earlier-version.jpeg',
@@ -473,6 +473,7 @@ export const rocketItemArray = [
 		hashName: 'animated-rocket-logo',
 		description: (
 			<>
+				<h3>Overview</h3>
 				<p>Animated logo I made for Rocket using Theatre.js.</p>
 			</>
 		),
@@ -510,6 +511,7 @@ export const rocketItemArray = [
 		hashName: 'stylized-intro',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>Into I made for the project using Theatre.js. This is not a cut-scene. After the initial camera zoom in it is fully interactive.</p>
 			</>
 		),
@@ -526,6 +528,7 @@ export const rocketItemArray = [
 		hashName: 'real-time-sun-position',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>The "sun" responds to the draggable timeline at the bottom of the render window and is accurately positioned to match its real world counterpart.</p>
 			</>
 		),
@@ -543,6 +546,7 @@ export const rocketItemArray = [
 		hashName: 'state-vector-plotting-interpolation',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>
 					Probably the most challenging feature was plotting orbital state vectors and interpolating between them to position the satellites and achieve a
 					smooth animation. 4 other companies failed to achieve this feat and solving this is ultimately what won us the defense department contract.
@@ -563,6 +567,7 @@ export const rocketItemArray = [
 		hashName: 'event-creation-editing',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>
 					Users can create and edit events to visualize a change in altitude, inclination, period or suppress satellites entirely. The orbit and satellite label
 					turn green after the start of an event to distinguish between the two.
@@ -583,6 +588,7 @@ export const rocketItemArray = [
 		hashName: 'search-satellites',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>Users can search for satellites and visualize thousands of instances at once.</p>
 			</>
 		),
@@ -600,6 +606,7 @@ export const rocketItemArray = [
 		hashName: 'orbits-and-mouse-interaction',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>
 					Users can visualize orbits that also respond to hover and selected states. These states affect the list (outside of the canvas) in the left panel.
 					Interacting with the list, conversely, affects the orbits.
@@ -620,6 +627,7 @@ export const rocketItemArray = [
 		hashName: 'shaders',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>
 					There are several custom GLSL shaders at play to get the final appearance of the earth. Including 2 for the atmosphere (earth's surface and outer
 					glow), moving clouds, and city lights that respond to the position of the sun. (Special thanks to Faraz Shaikh, whose CodeSandbox provided the basis
@@ -641,6 +649,7 @@ export const rocketItemArray = [
 		hashName: 'helper-tools',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>
 					To aid in the development of the app it was necessary to build several tools and global settings. Including a sun positioning helper, altitude lines,
 					interpolation helper, and setting up GUI controls with Theatre.js(s) new Theatric api to fine tune almost all aesthetic features.
@@ -687,6 +696,7 @@ export const questItemArray = [
 		hashName: 'scan-your-own-room',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>Utilizing the LiDAR sensors in your smartphone's camera you can scan a physical room and a 3D facsimile is generated using AI.</p>
 			</>
 		),
@@ -722,6 +732,7 @@ export const questItemArray = [
 		hashName: 'collision-physics',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>I implemented realistic collision interactions between furniture and the environment using @react-three/rapier physics engine.</p>
 			</>
 		),
@@ -738,6 +749,7 @@ export const questItemArray = [
 		hashName: 'editable-room-templates',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>Modify the dimensions of the room templates, select alternative wall colors, or opt for a different flooring from a wide range of choices.</p>
 			</>
 		),
@@ -754,6 +766,7 @@ export const questItemArray = [
 		hashName: 'save-and-checkout',
 		description: (
 			<>
+				<h3>Feature</h3>
 				<p>Save multiple room layouts and furniture arrangements, then effortlessly purchase your chosen items.</p>
 			</>
 		),
@@ -831,7 +844,8 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Flatironschool.com',
 		description: (
 			<>
-				<p>Flatiron School is a coding bootcamp that was rated the number 1# by Course Report when I attended in 2019.</p>
+				<h3>Overview:</h3>
+				<p>Flatiron School is a coding bootcamp that was rated the number #1 by Course Report when I attended in 2019.</p>
 			</>
 		),
 	},
@@ -848,6 +862,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Brandgage.com',
 		description: (
 			<>
+				<h3>Role Overview:</h3>
 				<p>
 					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage, I worked on over 40 websites and apps, almost
 					exclusively for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade
@@ -866,6 +881,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Rocketcom.com',
 		description: (
 			<>
+				<h3>Role Overview:</h3>
 				<p>
 					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
 					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career, as well as
@@ -884,8 +900,9 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Atlasreality.com',
 		description: (
 			<>
+				<h3>Role Overview:</h3>
 				<p>
-					I led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
+					Led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
 					land or trade on the marketplace.
 				</p>
 			</>
@@ -901,6 +918,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Questaisolutions.com',
 		description: (
 			<>
+				<h3>Role Overview:</h3>
 				<p>
 					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
 					elevating the shopping experience.
@@ -918,11 +936,10 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Subvrsive.com',
 		description: (
 			<>
+				<h3>Role Overview:</h3>
 				<p>Led development teams and global release of experiences for major brands like Coca-Cola, Disney, Loreal, and more.</p>
 				<br />
-				<p>Coordinated closely with design, QA, and creative teams to ensure seamless execution.</p>
-				<br />
-				<p>Partnered directly with clients to translate business goals into innovative interactive solutions.</p>
+				<p>Partnered directly with clients and coordinated efforts between design, QA, and creative teams.</p>
 			</>
 		),
 	},
