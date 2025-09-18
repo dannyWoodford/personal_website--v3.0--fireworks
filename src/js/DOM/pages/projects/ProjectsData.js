@@ -781,7 +781,7 @@ export const questItemArray = [
 export const subvrsiveItemArray = [
 	{
 		category: 'subvrsive',
-		name: 'Memory Maker - Coca-Cola',
+		name: 'Memory Maker (Coca-Cola)',
 		hashName: 'memory-maker-overview',
 		description: (
 			<>
@@ -832,7 +832,7 @@ export const subvrsiveItemArray = [
 	},
 	{
 		category: 'subvrsive',
-		name: 'Holocreator - Coca-Cola x Star Wars',
+		name: 'Holocreator (Coca-Cola × Star Wars)',
 		hashName: 'Holocreator-overview',
 		description: (
 			<>
@@ -874,7 +874,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Flatironschool.com',
 		description: (
 			<>
-				<h3>Overview:</h3>
+				<h3>Overview</h3>
 				<p>Flatiron School is a coding bootcamp that was rated the number #1 by Course Report when I attended in 2019.</p>
 			</>
 		),
@@ -892,7 +892,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Brandgage.com',
 		description: (
 			<>
-				<h3>Role Overview:</h3>
+				<h3>Role Overview</h3>
 				<p>
 					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage, I worked on over 40 websites and apps, almost
 					exclusively for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade
@@ -911,7 +911,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Rocketcom.com',
 		description: (
 			<>
-				<h3>Role Overview:</h3>
+				<h3>Role Overview</h3>
 				<p>
 					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
 					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career, as well as
@@ -930,7 +930,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Atlasreality.com',
 		description: (
 			<>
-				<h3>Role Overview:</h3>
+				<h3>Role Overview</h3>
 				<p>
 					Led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
 					land or trade on the marketplace.
@@ -948,7 +948,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Questaisolutions.com',
 		description: (
 			<>
-				<h3>Role Overview:</h3>
+				<h3>Role Overview</h3>
 				<p>
 					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
 					elevating the shopping experience.
@@ -966,7 +966,7 @@ export const displayCategoryArray = {
 		websiteDisplayName: 'Subvrsive.com',
 		description: (
 			<>
-				<h3>Role Overview:</h3>
+				<h3>Role Overview</h3>
 				<p>Led development teams and global release of experiences for major brands like Coca-Cola, Disney, Loreal, and more.</p>
 				<br />
 				<p>Partnered directly with clients and coordinated efforts between design, QA, and creative teams.</p>

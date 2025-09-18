@@ -423,15 +423,12 @@
 
 			.logo-extra-padding {
 				max-height: 62%;
-
-				@include breakpoint($bp-medium) {
-					width: 90%;
-				}
+				width: auto;
+				max-width: 90%;
 			}
 
 			.item__hover__image {
-				height: 100%;
-				width: 100%;
+				min-width: 100%;
 				position: absolute;
 				z-index: 0;
 				border: 2px solid $color-bg-pink-border-inset;
@@ -516,7 +513,7 @@
 	}
 
 	.subvrsive-hover-thumbnails {
-		height: auto !important;
+		// height: auto !important;
 		opacity: 0.5 !important;
 	}
 
