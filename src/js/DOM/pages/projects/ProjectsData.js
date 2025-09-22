@@ -804,11 +804,31 @@ export const subvrsiveItemArray = [
 		),
 		language: 'React / Typescript / Three.js / React-Three-Fiber / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / Python / OneXP',
 		type: 'video',
-		itemUrl: 'https://youtu.be/pzhCbGhQKuc&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s4hUHDqrH5o&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
 		thumbnailHover: '/assets-by-page/home/gifs/memorey-maker-sizzle-2.gif',
 		thumbnailName: 'Overview',
 		demo: 'https://www.coca-cola.com/za/en/offerings/share-a-coke/memory',
+	},
+	{
+		category: 'subvrsive',
+		name: 'Memory Maker Advertisement',
+		hashName: 'memory-maker-advertisement',
+		description: (
+			<>
+				<h3>Project Overview</h3>
+				<p>
+					Enabled users to remix, animate, and generate unique outputs (similar to CapCut) by scanning a QR code on the back of millions of Coca-Cola cans
+					worldwide.
+				</p>
+			</>
+		),
+		language: 'React / Typescript / Three.js / React-Three-Fiber / Theatre.js / Stable Diffusion / Puppeteer / FFmpeg / AWS / Docker / Python / OneXP',
+		type: 'video',
+		itemUrl: 'https://youtu.be/pzhCbGhQKuc&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
+		demo: 'https://www.coca-cola.com/za/en/offerings/share-a-coke/memory',
+		isFeature: true,
 	},
 	{
 		category: 'subvrsive',
@@ -826,14 +846,15 @@ export const subvrsiveItemArray = [
 		),
 		language: 'GLSL / React-Three-Fiber / Theatre.js / Stable Diffusion / Transparent Background',
 		type: 'video',
-		itemUrl: 'https://youtu.be/pzhCbGhQKuc&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/s4hUHDqrH5o&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
+		demo: 'https://www.coca-cola.com/za/en/offerings/share-a-coke/memory',
 		isFeature: true,
 	},
 	{
 		category: 'subvrsive',
 		name: 'Holocreator (Coca-Cola × Star Wars)',
-		hashName: 'Holocreator-overview',
+		hashName: 'holocreator-overview',
 		description: (
 			<>
 				<h3>Project Overview</h3>
@@ -854,13 +875,59 @@ export const subvrsiveItemArray = [
 				<p>Project also featured localization into 30+ languages, Amazon Rekognition for NSFW moderation, and prizing mechanics.</p>
 			</>
 		),
-		language: 'React / Typescript / Three.js / React-Three-Fiber / 8th Wall / Tensorflow.js / MediaPipe / AWS / OneXP',
+		language: 'React / Typescript / Three.js / React-Three-Fiber / A-frame / 8th Wall / Tensorflow.js / MediaPipe / AWS / OneXP',
 		type: 'video',
-		itemUrl: 'https://www.youtube.com/watch?v=EwPd5GkCa0I',
+		itemUrl: 'https://youtu.be/7sWhm7SesfU&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/holocreator-logo.png',
 		thumbnailHover: '/assets-by-page/home/gifs/star-wars-lightspeed.gif',
 		thumbnailName: 'Overview',
 		demo: 'https://www.coca-cola.com/us/en/offerings/star-wars',
+	},
+	{
+		category: 'subvrsive',
+		name: 'Holocreator Advertisement',
+		hashName: 'holocreator-advertisement',
+		description: (
+			<>
+				<h3>Project Overview</h3>
+				<p>
+					Enabled users to create Star Wars–style AR holograms of themselves by recording with their phone, accessible via a QR code on millions of Coca-Cola
+					cans worldwide.
+				</p>
+			</>
+		),
+		language: 'React / Typescript / Three.js / React-Three-Fiber / A-frame / 8th Wall / Tensorflow.js / MediaPipe / AWS / OneXP',
+		type: 'video',
+		itemUrl: 'https://youtu.be/w74xviwQmgw&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/holocreator-logo.png',
+		demo: 'https://www.coca-cola.com/us/en/offerings/star-wars',
+		isFeature: true,
+	},
+	{
+		category: 'subvrsive',
+		name: 'Scan a Can & Parallax Characters',
+		hashName: 'holocreator-scan-and-parallax',
+		description: (
+			<>
+				<h3>Feature</h3>
+				<p>
+					After creating a hologram, users can scan Coke cans featuring different Star Wars characters to unlock and collect Parallax-effect versions of those
+					characters, which respond dynamically to the motion of their device.
+				</p>
+				<h3>Technical Description</h3>
+				<p>We used TensorFlow.js to train custom models that could recognize the Star Wars characters on the Coke cans.</p>
+				<p>
+					To create the Parallax effect, we leveraged Three.js, layering 2D character assets in a 3D space and dynamically adjusting the camera position based
+					on the user’s device motion.
+				</p>
+			</>
+		),
+		language: 'React / Typescript / Three.js / React-Three-Fiber / A-frame / 8th Wall / Tensorflow.js / MediaPipe / AWS / OneXP',
+		type: 'video',
+		itemUrl: 'https://youtu.be/JeKhJlKfOUA&ab_channel=DannyWoodford',
+		thumbnail: '/assets-by-page/home/thumbnails/projects/holocreator-logo.png',
+		demo: 'https://www.coca-cola.com/us/en/offerings/star-wars',
+		isFeature: true,
 	},
 ]
 
