@@ -887,6 +887,7 @@ export const subvrsiveItemArray = [
 		category: 'subvrsive',
 		name: 'Holocreator Advertisement',
 		hashName: 'holocreator-advertisement',
+		prefix: '(Holocreator)',
 		description: (
 			<>
 				<h3>Project Overview</h3>
@@ -907,6 +908,7 @@ export const subvrsiveItemArray = [
 		category: 'subvrsive',
 		name: 'Scan a Can & Parallax Characters',
 		hashName: 'holocreator-scan-and-parallax',
+		prefix: '(Holocreator)',
 		description: (
 			<>
 				<h3>Feature</h3>
