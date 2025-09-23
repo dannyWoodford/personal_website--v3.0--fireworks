@@ -3,6 +3,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Tooltip } from 'react-tooltip'
 
 import DelayLink from '../DelayLink.js'
+import { initialCategory } from '../../../store/ProjectStore.tsx'
 import Clock from '../Clock.js'
 
 export default function Home({ currentName, linkToPageHandler }) {
@@ -56,7 +57,7 @@ export default function Home({ currentName, linkToPageHandler }) {
 							</DelayLink>
 						</div>
 						<div className='item neonText large' onClick={() => linkToPageHandler(delay)}>
-							<DelayLink to={'/projects/subvrsive'} delay={delay} className='nav-link'>
+							<DelayLink to={`/projects/${initialCategory}`} delay={delay} className='nav-link'>
 								<div className='item__border'>
 									<h1>Projects</h1>
 									{/* <img className="item__image invert-on-hover" draggable="false" alt="" src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/PersonalProjects-logo.png'}/> */}

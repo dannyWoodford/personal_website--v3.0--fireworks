@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { initialCategory } from '../../store/ProjectStore.tsx'
 
 export default function Menu({ toggleMenuHandler }) {
 	return (
@@ -39,7 +40,7 @@ export default function Menu({ toggleMenuHandler }) {
 						</NavLink>
 					</li>
 					<li onClick={() => toggleMenuHandler()}>
-						<NavLink to='/projects/subvrsive' className='menu-item' activeclassname='is-selected'>
+						<NavLink to={`/projects/${initialCategory}`} className='menu-item' activeclassname='is-selected'>
 							{/* <i className='menu-icon'><img className='menu-icon-sgv' src={ process.env.PUBLIC_URL + '/icons/brain.svg' } alt='brain-icon' /></i> */}
 							Projects
 						</NavLink>

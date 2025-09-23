@@ -11,6 +11,7 @@ import About from './DOM/pages/About'
 import Art from './DOM/pages/Art'
 // import Projects from './DOM/pages/Projects'
 import ProjectsPage from './DOM/pages/ProjectsPage.tsx'
+import { initialCategory } from '../store/ProjectStore.tsx'
 import Blender from './DOM/pages/Blender'
 
 export default function App() {
@@ -88,7 +89,7 @@ export default function App() {
 								<Route index element={<Navigate to='/home' replace />} />
 								<Route path='/about' element={<About currentName={menuState.currentName} />} />
 								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
-								<Route path='/projects' element={<Navigate to='/projects/subvrsive' replace />} />
+								<Route path='/projects' element={<Navigate to={`/projects/${initialCategory}`} replace />} />
 								<Route path='/projects/*' element={<ProjectsPage currentName={menuState.currentName} />} />
 								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
 								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />

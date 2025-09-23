@@ -1069,7 +1069,7 @@ interface ProjectStore {
 }
 
 // Initialize defaults from a single source of truth (displayCategory)
-const initialCategory = 'subvrsive'
+export const initialCategory = 'subvrsive'
 const itemsForInitial = projectsData.filter(i => i.category === initialCategory)
 
 const useProjectStore = create<ProjectStore>((set, get) => ({
