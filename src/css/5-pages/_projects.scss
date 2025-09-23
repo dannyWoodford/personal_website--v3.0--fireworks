@@ -518,9 +518,10 @@
 	}
 
 	.item__image.hover-image {
+		min-width: 100%;
 		position: absolute;
 		// height: 100%;
-		width: 100%;
+		// width: 100%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);

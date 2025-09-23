@@ -39,6 +39,7 @@ const SlideItem = ({ url, isSelected, type, name, isSpecialAspect }) => (
 					playing={isSelected ? isSelected : false}
 					autoPlay={true}
 					loop={false}
+					playsInline={true}
 					controls={false}
 					volume={0.05}
 					width='100%'
