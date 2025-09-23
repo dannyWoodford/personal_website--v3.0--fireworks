@@ -1,0 +1,257 @@
+import React, { useMemo, useCallback } from 'react'
+import ReactPlayer from 'react-player'
+import { Link } from 'react-router-dom'
+import useProjectStore from '../../../../store/ProjectStore.tsx'
+
+export default function ProjectsPageContent() {
+	const {
+		projectsItemsObject,
+		displayCategoriesObject,
+		displayCategory,
+		displayItem,
+		updateDisplayCategory,
+		updateDisplayItem,
+	} = useProjectStore()
+
+	// No guard needed; displayItem is guaranteed by the store type
+	const displayItemsFactory = useCallback(
+		categoryArray => {
+			return categoryArray.map(item => {
+				return (
+					<div key={item.name} className={`item ${item.hashName === displayItem.hashName ? 'item--selected' : ''}`}>
+						<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
+							{item.thumbnailName ? (
+								<div className='item__thumbnail overview'>
+									<img
+										className={`item__image add-padding ${item.thumbnailHover ? 'logo-extra-padding' : ''}`}
+										draggable='false'
+										alt=''
+										src={process.env.PUBLIC_URL + item.thumbnail}
+									/>
+									<img
+										alt=''
+										className={`item__hover__image ${item.thumbnailHover ? 'subvrsive-hover-thumbnails' : ''}`}
+										src={
+											item.thumbnailHover ? process.env.PUBLIC_URL + item.thumbnailHover : process.env.PUBLIC_URL + '/assets-by-page/home/gifs/space-gif.gif'
+										}
+									/>
+									<p className='item__title item__title__thumbnail__name'>{item.thumbnailName}</p>
+								</div>
+							) : (
+								<div className='item__thumbnail normal'>
+									{item.thumbnail && (
+										<img
+											className={`item__background__image ${item.isFeature ? 'is-feature' : ''}`}
+											draggable='false'
+											alt=''
+											src={process.env.PUBLIC_URL + item.thumbnail}
+										/>
+									)}
+									<p className='item__title'>{item.name}</p>
+								</div>
+							)}
+						</Link>
+					</div>
+				)
+			})
+		},
+		[updateDisplayItem, displayItem]
+	)
+
+	const categoryItems = useMemo(
+		() => projectsItemsObject.filter(item => item.category === displayCategory),
+		[projectsItemsObject, displayCategory]
+	)
+
+	const displayItems = useMemo(() => displayItemsFactory(categoryItems), [categoryItems, displayItemsFactory])
+
+	return (
+		<div className='projects-content'>
+			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
+
+			<div className='tab-switch-container'>
+				<div className={`item quarter ${displayCategory === 'flatiron' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('flatiron')} to={'/projects/flatiron'}>
+						<img className='item__image' draggable='false' alt='' src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/flatiron-logo.png'} />
+						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/flatiron-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['flatiron'].duration}</h3>
+				</div>
+				<div className={`item quarter ${displayCategory === 'personalProjects' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('personalProjects')} to={'/projects/personalProjects'}>
+						<img
+							className='item__image invert-on-hover'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/personal-projects-logo.png'}
+						/>
+						<img alt='' className='item__image hover-image blur-on-hover' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/welcome-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['personalProjects'].duration}</h3>
+				</div>
+				<div className={`item quarter ${displayCategory === 'brandgage' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('brandgage')} to={'/projects/brandgage'}>
+						<img
+							className='item__image'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/brandgage-logo.png'}
+						/>
+						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/brandgage-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['brandgage'].duration}</h3>
+				</div>
+				<div className={`item quarter ${displayCategory === 'rocket' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('rocket')} to={'/projects/rocket'}>
+						<img
+							className='item__image add-padding'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/rocket-logo.png'}
+						/>
+						<img alt='' className='item__image hover-image' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/acme-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['rocket'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'atlas' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('atlas')} to={'/projects/atlas'}>
+						<img
+							className='item__image add-padding back-drop'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/atlas-resize.png'}
+						/>
+						<img alt='' className='item__image hover-image blur-on-hover-low' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/atlas-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['atlas'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'quest' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('quest')} to={'/projects/quest'}>
+						<img
+							className='item__image add-padding back-drop-strong back-drop-stronger-on-hover'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/quest-logo.png'}
+						/>
+						<img alt='' className='item__image hover-image blur-on-hover-low' src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/city-gif.gif'} />
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['quest'].duration}</h3>
+				</div>
+				<div className={`item medium ${displayCategory === 'subvrsive' ? 'category--selected' : ''}`}>
+					<Link className='item__border' onClick={() => updateDisplayCategory('subvrsive')} to={'/projects/subvrsive'}>
+						<img
+							className='item__image add-padding back-drop-strong-on-hover'
+							draggable='false'
+							alt=''
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/thumbnails/projects/subvrisve-logo.svg'}
+						/>
+						<img
+							alt=''
+							className='item__image hover-image blur-on-hover-low'
+							src={process.env.PUBLIC_URL + '/assets-by-page/home/gifs/memorey-maker-sizzle-2.gif'}
+						/>
+					</Link>
+					<h3 className='duration'>{displayCategoriesObject['subvrsive'].duration}</h3>
+				</div>
+			</div>
+
+			<div className={`display-item-panel ${displayCategoriesObject[displayCategory].hasTabInfo ? 'has-tab-info' : 'has-no-tab-info'}`}>
+				<div className='display-item tab-info'>
+					<h1 className='tab-info-name'>{displayCategoriesObject[displayCategory].name}</h1>
+					<div className='tab-info-details'>
+						<div className='tab-info-columns'>
+							<div className={`tab-info-flex ${displayCategoriesObject[displayCategory].title ? '' : 'no-title'}`}>
+								<p className='strong'>Title:</p>
+								<p>{displayCategoriesObject[displayCategory].title}</p>
+							</div>
+							<div className='tab-info-flex'>
+								<p className='strong'>Location:</p>
+								<p>{displayCategoriesObject[displayCategory].location}</p>
+							</div>
+						</div>
+						<div>
+							<div className='tab-info-flex'>
+								<p className='strong'>Website:</p>
+								<a href={displayCategoriesObject[displayCategory].website} target='_blank' rel='noreferrer' className='link'>
+									{displayCategoriesObject[displayCategory].websiteDisplayName}
+								</a>
+							</div>
+						</div>
+					</div>
+					<div className='tab-info-description'>{displayCategoriesObject[displayCategory].description}</div>
+				</div>
+				<div className='display-item'>
+					<div className='display-item-image' style={{ display: displayItem.type === 'image' ? 'block' : 'none' }}>
+						<img
+							className={`display-item-target ${displayCategoriesObject[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}
+							alt=''
+							src={process.env.PUBLIC_URL + displayItem.itemUrl}
+						/>
+					</div>
+					<div className='display-item-video' style={{ display: displayItem.type === 'video' ? 'block' : 'none' }}>
+						<ReactPlayer
+							className='react-player'
+							url={process.env.PUBLIC_URL + displayItem.itemUrl}
+							config={{
+								file: {
+									attributes: {
+										crossOrigin: 'true',
+									},
+								},
+								youtube: {
+									playerVars: { origin: 'https://www.youtube.com' },
+								},
+							}}
+							playing={true}
+							autoPlay={true}
+							loop={true}
+							controls={true}
+							muted={true}
+							width='100%'
+							height='100%'
+						/>
+					</div>
+					<div className='display-item-info'>
+						<div className='display-item-header'>
+							<h2 className='display-item-name'>
+								<span className='display-item-name-main'>{displayItem.name}</span>
+								{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
+							</h2>
+						</div>
+
+						{displayItem.description && (
+							<div className='display-item-description'>
+								{displayItem.description}
+								{displayItem.message && <p className='display-item-message'>{displayItem.message}</p>}
+							</div>
+						)}
+
+						{displayItem.language && (
+							<section className='display-item-tools'>
+								<h3>Tech Stack</h3>
+								<p>{displayItem.language}</p>
+							</section>
+						)}
+
+						{(displayItem.demo || displayItem.github) && (
+							<nav className='link-container'>
+								{displayItem.github && (
+									<a href={displayItem.github} target='_blank' rel='noreferrer' className='link'>
+										GitHub
+									</a>
+								)}
+								{displayItem.demo && displayItem.github && <span className='link-separator'>|</span>}
+								{displayItem.demo && (
+									<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link'>
+										Demo
+									</a>
+								)}
+							</nav>
+						)}
+					</div>
+				</div>
+			</div>
+			<div className={'display-items-container'}>{displayItems}</div>
+		</div>
+	)
+}

@@ -9,7 +9,8 @@ import Menu from './DOM/Menu'
 import Home from './DOM/pages/Home'
 import About from './DOM/pages/About'
 import Art from './DOM/pages/Art'
-import Projects from './DOM/pages/Projects'
+// import Projects from './DOM/pages/Projects'
+import ProjectsPage from './DOM/pages/ProjectsPage.tsx'
 import Blender from './DOM/pages/Blender'
 
 export default function App() {
@@ -77,7 +78,7 @@ export default function App() {
 	return (
 		<div className='App'>
 			<div className={menuToggle ? 'main is-opened' : 'main'}>
-				<div id="background" />
+				<div id='background' />
 				<Menu toggleMenuHandler={toggleMenuHandler} menuState={menuState} />
 				<div className='max-width-container'>
 					<div className='content'>
@@ -88,7 +89,7 @@ export default function App() {
 								<Route path='/about' element={<About currentName={menuState.currentName} />} />
 								<Route path='/art' element={<Art currentName={menuState.currentName} />} />
 								<Route path='/projects' element={<Navigate to='/projects/subvrsive' replace />} />
-								<Route path='/projects/*' element={<Projects currentName={menuState.currentName} />} />
+								<Route path='/projects/*' element={<ProjectsPage currentName={menuState.currentName} />} />
 								<Route path='/blender' element={<Blender currentName={menuState.currentName} />} />
 								<Route path='/home' element={<Home linkToPageHandler={linkToPageHandler} currentName={menuState.currentName} />} />
 							</Routes>

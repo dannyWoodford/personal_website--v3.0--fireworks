@@ -30,8 +30,9 @@
 		.item--selected {
 			&.item .item__border {
 				background: linear-gradient(145deg, #0724a1, #3564ff);
-				border: 4px solid #2c54c4;
-				transition: transform 150ms ease-in-out, border 350ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out, background 3s ease-in-out;
+				// border: 4px solid #2c54c4;
+				border: 4px solid #5577d4;
+				transition: transform 150ms ease-in-out, border 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out, background 3s ease-in-out;
 			}
 		}
 

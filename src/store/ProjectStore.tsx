@@ -19,6 +19,21 @@ export type ProjectsItem = {
 	isFeature?: boolean;
 };
 
+export type DisplayCategory = {
+	hasTabInfo?: boolean;
+	name?: string;
+	title?: string;
+	duration?: string;
+	location?: string;
+	website?: string;
+	websiteDisplayName?: string;
+	description?: React.ReactNode;
+};
+
+export type DisplayCategoryObject = {
+	[key: string]: DisplayCategory;
+};
+
 export const projectsData: ProjectsItem[] = [
 	{
 		category: 'flatiron',
@@ -931,12 +946,145 @@ export const projectsData: ProjectsItem[] = [
 	},
 ];
 
+export const displayCategoryData: DisplayCategoryObject = {
+	flatiron: {
+		hasTabInfo: true,
+		name: 'Flatiron School',
+		duration: '2019',
+		location: 'Manhattan, NY (On-Site)',
+		website: 'https://flatironschool.com/',
+		websiteDisplayName: 'Flatironschool.com',
+		description: (
+			<>
+				<h3>Overview</h3>
+				<p>Flatiron School is a coding bootcamp that was rated the number #1 by Course Report when I attended in 2019.</p>
+			</>
+		),
+	},
+	personalProjects: {
+		duration: '2019 - Present',
+	},
+	brandgage: {
+		hasTabInfo: true,
+		name: 'Brandgage',
+		title: '3D Javascript Developer',
+		duration: 'June 2020 - March 2022',
+		location: 'Pittsburgh, PA (On-Site)',
+		website: 'https://www.brandgage.com/',
+		websiteDisplayName: 'Brandgage.com',
+		description: (
+			<>
+				<h3>Role Overview</h3>
+				<p>
+					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage, I worked on over 40 websites and apps, almost
+					exclusively for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade
+					shows mixing standard web development, video transitions, and virtual reality.
+				</p>
+			</>
+		),
+	},
+	rocket: {
+		hasTabInfo: true,
+		name: 'Rocket Communications, Inc.',
+		title: '3D Developer / 3D Artist',
+		duration: 'March 2022 - Feb 2023',
+		location: 'San Francisco, CA (Remote)',
+		website: 'https://www.rocketcom.com/',
+		websiteDisplayName: 'Rocketcom.com',
+		description: (
+			<>
+				<h3>Role Overview</h3>
+				<p>
+					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
+					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career, as well as
+					creatively fulfilling since I was given almost full creative control over the look of the 3D.
+				</p>
+			</>
+		),
+	},
+	atlas: {
+		hasTabInfo: true,
+		name: 'Atlas Reality, Inc.',
+		title: '3D Application Developer',
+		duration: 'July 2023 - Jan 2024',
+		location: 'Cedar Park, TX (Remote)',
+		website: 'https://www.atlasreality.com/',
+		websiteDisplayName: 'Atlasreality.com',
+		description: (
+			<>
+				<h3>Role Overview</h3>
+				<p>
+					Led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
+					land or trade on the marketplace.
+				</p>
+			</>
+		),
+	},
+	quest: {
+		hasTabInfo: true,
+		name: 'Quest AI Solutions',
+		title: 'Senior Front End Developer',
+		duration: 'Oct 2023 - Aug 2024',
+		location: 'West Palm Beach, FL (Remote)',
+		website: 'https://questaisolutions.com/',
+		websiteDisplayName: 'Questaisolutions.com',
+		description: (
+			<>
+				<h3>Role Overview</h3>
+				<p>
+					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
+					elevating the shopping experience.
+				</p>
+			</>
+		),
+	},
+	subvrsive: {
+		hasTabInfo: true,
+		name: 'Subvrsive',
+		title: 'Tech Lead (3D Web)',
+		duration: 'Aug 2024 - Aug 2025',
+		location: 'New York, NY (On-Site)',
+		website: 'https://subvrsive.com//',
+		websiteDisplayName: 'Subvrsive.com',
+		description: (
+			<>
+				<h3>Role Overview</h3>
+				<p>Led development teams and global release of experiences for major brands like Coca-Cola, Disney, Loreal, and more.</p>
+				<br />
+				<p>Partnered directly with clients and coordinated efforts between design, QA, and creative teams.</p>
+			</>
+		),
+	},
+};
+
 interface ProjectStore {
-	projectsItems: ProjectsItem[]
+	projectsItemsObject: ProjectsItem[];
+	displayCategoriesObject: DisplayCategoryObject;
+	// Display states
+	displayCategory: string;
+	displayItem: ProjectsItem;
+	// Update functions
+	updateDisplayCategory: (category: string) => void;
+	updateDisplayItem: (item: ProjectsItem) => void;
 }
 
+// Initialize defaults from a single source of truth (displayCategory)
+const initialCategory = 'subvrsive'
+const itemsForInitial = projectsData.filter(i => i.category === initialCategory)
+
 const useProjectStore = create<ProjectStore>((set, get) => ({
-	projectsItems: projectsData,
+	projectsItemsObject: projectsData,
+	displayCategoriesObject: displayCategoryData,
+	// Display states - initialize with default values
+	displayCategory: initialCategory,
+	displayItem: (itemsForInitial[0] ?? projectsData[0]) as ProjectsItem,
+	// Update functions
+	updateDisplayCategory: (category: string) => {
+		set({ displayCategory: category });
+	},
+	updateDisplayItem: (item: ProjectsItem) => {
+		set({ displayItem: item });
+	},
 }))
 
 export default useProjectStore

@@ -43,7 +43,6 @@ export default function ProjectsRouting({ updateDisplayCategory, updateDisplayIt
 				updateDisplayItem(subvrsiveItemArray[0])
 			}
 
-			
 			// ____ Change DisplayItem ______________________________________________________________
 			if (!pathArr[2]) return
 
