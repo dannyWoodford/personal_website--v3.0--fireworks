@@ -1,4 +1,25 @@
-export const flatironItemArray = [
+import { create } from 'zustand'
+import React from 'react'  // Add this line
+
+export type ProjectsItem = {
+	category: string;
+	name: string;
+	prefix?: string;
+	hashName: string;
+	description?: React.ReactNode;
+	language?: string;
+	github?: string;
+	type: 'video' | 'image';
+	itemUrl: string;
+	message?: React.ReactNode;
+	thumbnail: string;
+	thumbnailHover?: string;  // Make optional with ?
+	thumbnailName?: string;   // Make optional with ?
+	demo?: string;            // Make optional with ?
+	isFeature?: boolean;
+};
+
+export const projectsData: ProjectsItem[] = [
 	{
 		category: 'flatiron',
 		name: 'Spotify 3D music Visualizer',
@@ -16,7 +37,6 @@ export const flatironItemArray = [
 		thumbnail: '/assets-by-page/projects/thumbnails/spotify-thumbnail.jpeg',
 	},
 	{
-		_id: 'Mod 4 Project',
 		category: 'flatiron',
 		name: 'Ziehbare Stimme Leinwand',
 		hashName: 'ziehbare-stimme-leinwand',
@@ -33,7 +53,6 @@ export const flatironItemArray = [
 		thumbnail: '/assets-by-page/projects/thumbnails/ziehbare-stimme-leinwand.jpeg',
 	},
 	{
-		_id: 'Mod 3 Project',
 		category: 'flatiron',
 		name: 'Enter the Labyrinth',
 		hashName: 'enter-the-labyrinth',
@@ -51,7 +70,6 @@ export const flatironItemArray = [
 		thumbnail: '/assets-by-page/projects/thumbnails/enter-the-labyrinth.jpeg',
 	},
 	{
-		_id: 'Mod 2 Project',
 		category: 'flatiron',
 		name: 'NOTFLIX',
 		hashName: 'notflix',
@@ -68,7 +86,6 @@ export const flatironItemArray = [
 		thumbnail: '/assets-by-page/projects/thumbnails/notflix.jpeg',
 	},
 	{
-		_id: 'Flatiron Cross-Discipline Collaboration Event',
 		category: 'flatiron',
 		name: 'Flatiron Cross-Discipline Collaboration Event',
 		hashName: 'flatiron-cross-discipline-collaboration-event',
@@ -86,9 +103,6 @@ export const flatironItemArray = [
 		itemUrl: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
 		thumbnail: '/assets-by-page/projects/thumbnails/cross-colab.jpg',
 	},
-]
-
-export const personalProjectsItemArray = [
 	{
 		category: 'personalProjects',
 		name: 'About Section',
@@ -337,9 +351,6 @@ export const personalProjectsItemArray = [
 		itemUrl: '/assets-by-page/projects/chrome-logo.jpg',
 		thumbnail: '/assets-by-page/projects/chrome-logo.jpg',
 	},
-]
-
-export const brandgageItemArray = [
 	{
 		category: 'brandgage',
 		name: 'Merck 3D',
@@ -464,9 +475,6 @@ export const brandgageItemArray = [
 		itemUrl: 'https://www.youtube.com/watch?v=nb-Pbs6yhRw&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/projects/thumbnails/3d-virtual-booth-earlier-version.jpeg',
 	},
-]
-
-export const rocketItemArray = [
 	{
 		category: 'rocket',
 		name: 'Animated Rocket Logo',
@@ -503,7 +511,6 @@ export const rocketItemArray = [
 		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
 		thumbnailName: 'Overview',
 	},
-
 	{
 		category: 'rocket',
 		name: 'Stylized Intro',
@@ -663,9 +670,6 @@ export const rocketItemArray = [
 		thumbnail: '/assets-by-page/home/thumbnails/projects/space-acme-logo.png',
 		isFeature: true,
 	},
-]
-
-export const atlasItemArray = [
 	{
 		category: 'atlas',
 		name: 'Atlas Studio',
@@ -686,9 +690,6 @@ export const atlasItemArray = [
 		thumbnail: '/assets-by-page/home/thumbnails/projects/atlas-studio-logo.png',
 		thumbnailName: 'Overview',
 	},
-]
-
-export const questItemArray = [
 	{
 		category: 'quest',
 		name: 'Scan Your Own Room',
@@ -776,9 +777,6 @@ export const questItemArray = [
 		thumbnail: '/assets-by-page/home/thumbnails/projects/city-furniture-logo-invert.png',
 		isFeature: true,
 	},
-]
-
-export const subvrsiveItemArray = [
 	{
 		category: 'subvrsive',
 		name: 'Memory Maker (Coca-Cola)',
@@ -931,115 +929,14 @@ export const subvrsiveItemArray = [
 		demo: 'https://www.coca-cola.com/us/en/offerings/star-wars',
 		isFeature: true,
 	},
-]
+];
 
-export const displayCategoryArray = {
-	flatiron: {
-		hasTabInfo: true,
-		name: 'Flatiron School',
-		duration: '2019',
-		location: 'Manhattan, NY (On-Site)',
-		website: 'https://flatironschool.com/',
-		websiteDisplayName: 'Flatironschool.com',
-		description: (
-			<>
-				<h3>Overview</h3>
-				<p>Flatiron School is a coding bootcamp that was rated the number #1 by Course Report when I attended in 2019.</p>
-			</>
-		),
-	},
-	personalProjects: {
-		duration: '2019 - Present',
-	},
-	brandgage: {
-		hasTabInfo: true,
-		name: 'Brandgage',
-		title: '3D Javascript Developer',
-		duration: 'June 2020 - March 2022',
-		location: 'Pittsburgh, PA (On-Site)',
-		website: 'https://www.brandgage.com/',
-		websiteDisplayName: 'Brandgage.com',
-		description: (
-			<>
-				<h3>Role Overview</h3>
-				<p>
-					Brandgage is all about brand engagement and leaving a lasting impression. While at Brandgage, I worked on over 40 websites and apps, almost
-					exclusively for pharmaceutical companies like Pfizer, Merck, Takeda, and Bayer. I mostly worked on "virtual booths" for virtual and in-person trade
-					shows mixing standard web development, video transitions, and virtual reality.
-				</p>
-			</>
-		),
-	},
-	rocket: {
-		hasTabInfo: true,
-		name: 'Rocket Communications, Inc.',
-		title: '3D Developer / 3D Artist',
-		duration: 'March 2022 - Feb 2023',
-		location: 'San Francisco, CA (Remote)',
-		website: 'https://www.rocketcom.com/',
-		websiteDisplayName: 'Rocketcom.com',
-		description: (
-			<>
-				<h3>Role Overview</h3>
-				<p>
-					The entirety of my time at Rocket has been spent working on the Space ACME project, a 3D visualization tool built for the Space Force to aid satellite
-					operators. As the sole 3D developer of this project, it has afforded me some of the most intellectually fulfilling work of my career, as well as
-					creatively fulfilling since I was given almost full creative control over the look of the 3D.
-				</p>
-			</>
-		),
-	},
-	atlas: {
-		hasTabInfo: true,
-		name: 'Atlas Reality, Inc.',
-		title: '3D Application Developer',
-		duration: 'July 2023 - Jan 2024',
-		location: 'Cedar Park, TX (Remote)',
-		website: 'https://www.atlasreality.com/',
-		websiteDisplayName: 'Atlasreality.com',
-		description: (
-			<>
-				<h3>Role Overview</h3>
-				<p>
-					Led the Atlas Studio project, an in-browser VR-enabled editor using react-three-fiber for building and exporting 3D structures to place on your own
-					land or trade on the marketplace.
-				</p>
-			</>
-		),
-	},
-	quest: {
-		hasTabInfo: true,
-		name: 'Quest AI Solutions',
-		title: 'Senior Front End Developer',
-		duration: 'Oct 2023 - Aug 2024',
-		location: 'West Palm Beach, FL (Remote)',
-		website: 'https://questaisolutions.com/',
-		websiteDisplayName: 'Questaisolutions.com',
-		description: (
-			<>
-				<h3>Role Overview</h3>
-				<p>
-					I was contracted to PeakActivity by Quest AI to develop an in-browser, photorealistic 3D furniture visualization tool for CITY Furniture, aimed at
-					elevating the shopping experience.
-				</p>
-			</>
-		),
-	},
-	subvrsive: {
-		hasTabInfo: true,
-		name: 'Subvrsive',
-		title: 'Tech Lead (3D Web)',
-		duration: 'Aug 2024 - Aug 2025',
-		location: 'New York, NY (On-Site)',
-		website: 'https://subvrsive.com//',
-		websiteDisplayName: 'Subvrsive.com',
-		description: (
-			<>
-				<h3>Role Overview</h3>
-				<p>Led development teams and global release of experiences for major brands like Coca-Cola, Disney, Loreal, and more.</p>
-				<br />
-				<p>Partnered directly with clients and coordinated efforts between design, QA, and creative teams.</p>
-			</>
-		),
-	},
+interface ProjectStore {
+	projectsItems: ProjectsItem[]
 }
+
+const useProjectStore = create<ProjectStore>((set, get) => ({
+	projectsItems: projectsData,
+}))
+
+export default useProjectStore
