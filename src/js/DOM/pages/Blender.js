@@ -27,16 +27,19 @@ export default function Blender({ currentName }) {
 			_id: 'blender-steve',
 			type: 'video',
 			itemUrl: '/assets-by-page/blender/blender-steve.mp4',
+			// itemUrl: 'https://youtu.be/-8RaFQAGaQ8?si=4Q-6QTgdJ-UHgwXs&ab_channel=DannyWoodford',
 		},
 		{
 			_id: 'blender-al',
 			type: 'video',
 			itemUrl: '/assets-by-page/blender/blender-al.mp4',
+			// itemUrl: 'https://youtu.be/6bW-b2ldlTw?si=SyOgyTgIjKMmhc6T&ab_channel=DannyWoodford',
 		},
 		{
 			_id: 'blender-chair',
 			type: 'video',
 			itemUrl: '/assets-by-page/blender/blender-chair.mp4',
+			// itemUrl: 'https://youtu.be/6bW-b2ldlTw?si=SyOgyTgIjKMmhc6T&ab_channel=DannyWoodford',
 			specialAspect: true,
 		},
 		{
