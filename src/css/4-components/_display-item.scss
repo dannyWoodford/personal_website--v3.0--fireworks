@@ -4,15 +4,9 @@
 	padding: 5vh 2vh;
 	border-radius: 19px;
 	background: rgba(0, 0, 0, 0.5);
-	box-shadow:
-		5px 5px 15px $color-bg-pink-border-dark,
-		-5px -5px 15px $color-bg-pink-border-light;
+	box-shadow: 5px 5px 15px $color-bg-pink-border-dark, -5px -5px 15px $color-bg-pink-border-light;
 	border: 4px solid $color-bg-pink-border;
-	transition:
-		transform 150ms ease-in-out,
-		border 150ms ease-in-out,
-		box-shadow 150ms ease-in-out,
-		border-radius 150ms ease-in-out;
+	transition: transform 150ms ease-in-out, border 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease-in-out;
 	overflow: hidden;
 	margin: auto;
 
@@ -28,8 +22,21 @@
 		padding: 30px;
 	}
 
-	.non-project-display-item {
-		min-height: 81vh;
+	&.non-project-display-item {
+		max-width: none;
+		padding: 1.5em;
+		
+		@include breakpoint($bp-medium) {
+			padding: 5vh 1.5em;
+		}
+
+		.text-container {
+			min-height: auto;
+
+			.text {
+				padding: 0;
+			}
+		}
 	}
 
 	.text-container {
@@ -47,7 +54,8 @@
 
 	.carousel-root {
 		height: 100%;
-		min-height: 58vh;
+		// min-height: 58vh;
+		padding: 4em 0;
 
 		.carousel-slider,
 		.carousel {
@@ -98,7 +106,7 @@
 						display: flex;
 						height: 100% !important;
 						align-items: center;
-						min-height: 55vh;
+						// min-height: 55vh;
 
 						.displayed-item,
 						.react-player video {
@@ -113,6 +121,14 @@
 						}
 					}
 				}
+			}
+
+			.carousel-status {
+				margin-top: -2em;
+			}
+
+			.control-dots {
+				margin-bottom: -2em;
 			}
 		}
 	}

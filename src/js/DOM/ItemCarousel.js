@@ -1,5 +1,5 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
-import React from 'react'
+import React, { useMemo } from 'react'
 import ReactPlayer from 'react-player'
 import { Carousel } from 'react-responsive-carousel'
 import { PropTypes } from 'prop-types'
@@ -32,16 +32,19 @@ const SlideItem = ({ url, isSelected, type, name, isSpecialAspect }) => (
 						file: {
 							attributes: {
 								crossOrigin: 'true',
+								playsInline: true,
+								'webkit-playsinline': 'true',
+								controlsList: 'nofullscreen',
+								disablePictureInPicture: true,
 							},
 						},
-						youtube: { playerVars: { origin: 'https://www.youtube.com' } },
+						youtube: { playerVars: { origin: 'https://www.youtube.com', playsinline: 1, fs: 0 } },
 					}}
 					playing={isSelected ? isSelected : false}
 					autoPlay={true}
 					loop={false}
-					playsInline={true}
 					controls={false}
-					volume={0.05}
+					// volume={0.05}
 					width='100%'
 					height='100%'
 				/>
@@ -69,6 +72,19 @@ const ItemCarousel = ({ data }) => {
 
 	const customRenderItem = (item, props) => <item.type {...item.props} {...props} />
 
+	const carouselItem = useMemo(() => {
+		return data.map( item => (
+			<SlideItem
+				url={item.itemUrl}
+				type={item.type}
+				name={item._id}
+				isSelected={item.isSelected}
+				isSpecialAspect={item.specialAspect}
+				key={item._id ? item._id : item.id}
+			/>
+		))
+	}, [data])
+
 	return (
 		<Carousel
 			showArrows={true}
@@ -82,16 +98,7 @@ const ItemCarousel = ({ data }) => {
 			centerMode={true}
 			onSwipeStart={onSwipeStartHandler}
 			onSwipeEnd={onSwipeEndHandler}>
-			{data.map(item => (
-				<SlideItem
-					url={item.itemUrl}
-					type={item.type}
-					name={item._id}
-					isSelected={item.isSelected}
-					isSpecialAspect={item.specialAspect}
-					key={item._id ? item._id : item.id}
-				/>
-			))}
+			{carouselItem}
 		</Carousel>
 	)
 }

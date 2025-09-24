@@ -112,13 +112,15 @@
 }
 
 .--special-aspect {
-	width: 100% !important;
-	height: 100% !important;
-	margin: auto;
+	position: absolute;
+	padding: 0;
 	display: flex !important;
 	align-items: center;
+	justify-content: center;
 
 	.react-player {
+		position: static !important; // override absolute for centering
+		width: 100% !important;
 		height: auto !important;
 	}
 }
