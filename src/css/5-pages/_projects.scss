@@ -78,28 +78,6 @@
 				font-size: 20px;
 			}
 		}
-
-		&.has-no-category-info {
-			.display-item {
-				margin: 0;
-				height: auto;
-
-				@include breakpoint($bp-xlarge) {
-					max-width: none;
-				}
-			}
-		}
-
-		&.has-category-info {
-			.display-item {
-				margin: 0;
-				height: auto;
-
-				@include breakpoint($bp-xlarge) {
-					max-width: none;
-				}
-			}
-		}
 	}
 
 	.tab-switch-message {
