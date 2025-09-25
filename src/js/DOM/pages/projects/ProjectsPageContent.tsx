@@ -20,8 +20,6 @@ export default function ProjectsPageContent() {
 		return categoryArray.map((item) => <ProjectListContainer key={item.hashName} item={item} />)
 	}, [projectsItemsObject, displayCategory])
 
-	// console.log('displayCategoriesObject[displayCategory]', displayCategoriesObject[displayCategory]?.hasCategoryInfo)
-
 	return (
 		<div className='projects-content'>
 			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
@@ -29,8 +27,7 @@ export default function ProjectsPageContent() {
 			<CategorySwitchContainer />
 
 			<div className="display-item-panel">
-				{displayCategoriesObject[displayCategory].hasCategoryInfo === true ? <CategoryInfoContainer /> : null}
-				{/* {displayCategoriesObject[displayCategory].hasCategoryInfo ?? <CategoryInfoContainer /> } */}
+				{displayCategoriesObject[displayCategory].hasCategoryInfo && <CategoryInfoContainer /> }
 
 				<div className='display-item'>
 					{displayItem.type === 'image' ? (
