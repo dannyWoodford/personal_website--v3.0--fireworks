@@ -26,7 +26,7 @@ export default function ProjectsPageContent() {
 			<CategorySwitchContainer />
 
 			<div className={`display-item-panel ${displayCategoriesObject[displayCategory].hasTabInfo ? 'has-tab-info' : 'has-no-tab-info'}`}>
-				<div className='display-item tab-info'>
+				<div className='tab-info'>
 					<h1 className='tab-info-name'>{displayCategoriesObject[displayCategory].name}</h1>
 					<div className='tab-info-details'>
 						<div className='tab-info-columns'>
