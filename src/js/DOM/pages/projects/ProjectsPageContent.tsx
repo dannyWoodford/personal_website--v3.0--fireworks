@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react'
+import React, { useMemo } from 'react'
 import ReactPlayer from 'react-player'
 import useProjectStore from '../../../../store/ProjectStore.tsx'
 
@@ -13,20 +13,11 @@ export default function ProjectsPageContent() {
 		displayItem,
 	} = useProjectStore()
 
-	// No guard needed; displayItem is guaranteed by the store type
-	const displayItemsFactory = useCallback(
-		(categoryArray) => {
-			return categoryArray.map((item) => <ProjectListContainer key={item.name} item={item} />)
-		},
-		[]
-	)
+	const displayItemFactory = useMemo(() => {
+		let categoryArray = projectsItemsObject.filter(item => item.category === displayCategory)
 
-	const categoryItems = useMemo(
-		() => projectsItemsObject.filter(item => item.category === displayCategory),
-		[projectsItemsObject, displayCategory]
-	)
-
-	const displayItems = useMemo(() => displayItemsFactory(categoryItems), [categoryItems, displayItemsFactory])
+		return categoryArray.map((item) => <ProjectListContainer key={item.hashName} item={item} />)
+	}, [projectsItemsObject, displayCategory])
 
 	return (
 		<div className='projects-content'>
@@ -131,7 +122,7 @@ export default function ProjectsPageContent() {
 					</div>
 				</div>
 			</div>
-			<div className={'display-items-container'}>{displayItems}</div>
+			<div className={'display-items-container'}>{displayItemFactory}</div>
 		</div>
 	)
 }

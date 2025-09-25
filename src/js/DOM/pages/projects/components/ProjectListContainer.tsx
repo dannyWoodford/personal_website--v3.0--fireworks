@@ -3,15 +3,11 @@ import useProjectStore, { type ProjectsItem } from '../../../../../store/Project
 import { Link } from 'react-router-dom'
 
 export default function ProjectListContainer({ item }: {item: ProjectsItem}) {
-	const {
-		displayItem,
-		updateDisplayItem,
-	} = useProjectStore()
-
-	console.log('item', item)
+	const displayItemHash = useProjectStore(s => s.displayItem.hashName)
+	const updateDisplayItem = useProjectStore(s => s.updateDisplayItem)
 
 	return (
-		<div className={`item ${item.hashName === displayItem.hashName ? 'item--selected' : ''}`}>
+		<div className={`item ${item.hashName === displayItemHash ? 'item--selected' : ''}`}>
 			<Link className='item__border' onClick={() => updateDisplayItem(item)} to={`/projects/${item.category}/${item.hashName}`}>
 				{item.thumbnailName ? (
 					<div className='item__thumbnail overview'>
