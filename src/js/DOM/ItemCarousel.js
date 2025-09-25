@@ -20,7 +20,7 @@ const DUMMY_VIDEOS = [
 const SlideItem = ({ url, isSelected, type, name, isSpecialAspect }) => (
 	<div className='display-item-wrapper' key={url}>
 		{type === 'image' ? (
-			<div className='display-item-image'>
+			<div>
 				<img src={process.env.PUBLIC_URL + url} alt={name} className='displayed-item' />
 			</div>
 		) : (

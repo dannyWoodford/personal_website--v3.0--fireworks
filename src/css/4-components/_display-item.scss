@@ -22,133 +22,23 @@
 		padding: 30px;
 	}
 
-	&.non-project-display-item {
-		max-width: none;
-		padding: 1.5em;
-		
-		@include breakpoint($bp-medium) {
-			padding: 2.5em;
+	.display-item-image {
+		position: relative;
+		padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+		border-radius: 19px;
+		box-shadow: 3px 3px 13px $color-bg-pink-border-dark, -3px -3px 13px $color-bg-pink-border-light;
+		border: 1px solid $color-bg-pink-border;
+		overflow: hidden;
+		display: flex;
+
+		.display-item-target {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: auto;
+			transform: translate(-50%, -50%);
 		}
-
-		.text-container {
-			min-height: auto;
-
-			.text {
-				padding: 0;
-			}
-		}
-	}
-
-	.text-container {
-		display: block;
-		width: 100%;
-		min-height: 16vh;
-	}
-
-	.text {
-		padding: 1vh 0 5vh 0;
-		font-weight: 300;
-		margin: 0;
-		font-size: 24px;
-	}
-
-	.carousel-root {
-		height: 100%;
-		// min-height: 58vh;
-		padding: 4em 0;
-
-		.carousel-slider,
-		.carousel {
-			height: 100%;
-			margin: auto;
-			overflow: visible;
-
-			.control-arrow {
-				padding: 10px;
-				transform: scale(1.02);
-
-				@include breakpoint($bp-large) {
-					padding: 30px;
-				}
-			}
-
-			.control-prev {
-				margin-left: -3vh;
-			}
-
-			.control-next {
-				margin-right: -3vh;
-			}
-
-			.slider-wrapper {
-				height: 100% !important;
-				overflow: visible;
-
-				.slider {
-					height: 100% !important;
-
-					.slide {
-						vertical-align: middle;
-						transition: transform 150ms ease-in-out;
-					}
-
-					.selected {
-						transform: scale(1.05);
-						z-index: 1;
-
-						.displayed-item,
-						.react-player video {
-							box-shadow: 0 15px 40px 23px #151515;
-						}
-					}
-
-					.display-item-wrapper {
-						display: flex;
-						height: 100% !important;
-						align-items: center;
-						// min-height: 55vh;
-
-						.displayed-item,
-						.react-player video {
-							transition: box-shadow 150ms ease-in-out;
-							// max-width: 100%;
-							// margin: auto;
-							-khtml-user-select: none;
-							-o-user-select: none;
-							-moz-user-select: none;
-							-webkit-user-select: none;
-							user-select: none;
-						}
-					}
-				}
-			}
-
-			.carousel-status {
-				margin-top: -2em;
-			}
-
-			.control-dots {
-				margin-bottom: -2em;
-			}
-		}
-	}
-
-	.display-item-target {
-		width: auto;
-		margin: auto;
-		height: 360px;
-		display: block;
-		transition: opacity 150ms ease-in-out;
-
-		&.has-tab-info {
-			@include breakpoint($bp-large) {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
-
-	.no-pointer-events {
-		pointer-events: none;
 	}
 }

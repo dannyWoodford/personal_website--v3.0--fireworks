@@ -4,6 +4,7 @@ import useProjectStore from '../../../../store/ProjectStore.tsx'
 
 import CategorySwitchContainer from './components/CategorySwitchContainer.tsx'
 import ProjectListContainer from './components/ProjectListContainer.tsx'
+import CategoryInfoContainer from './components/CategoryInfoContainer.tsx'
 
 export default function ProjectsPageContent() {
 	const {
@@ -25,63 +26,43 @@ export default function ProjectsPageContent() {
 
 			<CategorySwitchContainer />
 
-			<div className={`display-item-panel ${displayCategoriesObject[displayCategory].hasTabInfo ? 'has-tab-info' : 'has-no-tab-info'}`}>
-				<div className='tab-info'>
-					<h1 className='tab-info-name'>{displayCategoriesObject[displayCategory].name}</h1>
-					<div className='tab-info-details'>
-						<div className='tab-info-columns'>
-							<div className={`tab-info-flex ${displayCategoriesObject[displayCategory].title ? '' : 'no-title'}`}>
-								<p className='strong'>Title:</p>
-								<p>{displayCategoriesObject[displayCategory].title}</p>
-							</div>
-							<div className='tab-info-flex'>
-								<p className='strong'>Location:</p>
-								<p>{displayCategoriesObject[displayCategory].location}</p>
-							</div>
-						</div>
-						<div>
-							<div className='tab-info-flex'>
-								<p className='strong'>Website:</p>
-								<a href={displayCategoriesObject[displayCategory].website} target='_blank' rel='noreferrer' className='link'>
-									{displayCategoriesObject[displayCategory].websiteDisplayName}
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className='tab-info-description'>{displayCategoriesObject[displayCategory].description}</div>
-				</div>
+			<div className={`display-item-panel ${displayCategoriesObject[displayCategory].hasCategoryInfo ? 'has-category-info' : 'has-no-category-info'}`}>
+			{/* <div className="display-item-panel">
+				{displayCategoriesObject[displayCategory]?.hasCategoryInfo ?? <CategoryInfoContainer />} */}
 				
+				<CategoryInfoContainer />
+
 				<div className='display-item'>
-					<div className='display-item-image' style={{ display: displayItem.type === 'image' ? 'block' : 'none' }}>
-						<img
-							className={`display-item-target ${displayCategoriesObject[displayCategory].hasTabInfo ? 'has-tab-info' : ''}`}
-							alt=''
-							src={process.env.PUBLIC_URL + displayItem.itemUrl}
-						/>
-					</div>
-					<div className='display-item-video' style={{ display: displayItem.type === 'video' ? 'block' : 'none' }}>
-						<ReactPlayer
-							className='react-player'
-							url={process.env.PUBLIC_URL + displayItem.itemUrl}
-							config={{
-								file: {
-									attributes: {
-										crossOrigin: 'true',
+					{displayItem.type === 'image' ? (
+						<div className='display-item-image'>
+							<img className="display-item-target" alt='' src={process.env.PUBLIC_URL + displayItem.itemUrl} />
+						</div>
+					) : (
+						<div className='display-item-video'>
+							<ReactPlayer
+								className='react-player'
+								url={process.env.PUBLIC_URL + displayItem.itemUrl}
+								config={{
+									file: {
+										attributes: {
+											crossOrigin: 'true',
+										},
 									},
-								},
-								youtube: {
-									playerVars: { origin: 'https://www.youtube.com' },
-								},
-							}}
-							playing={true}
-							autoPlay={true}
-							loop={true}
-							controls={true}
-							muted={true}
-							width='100%'
-							height='100%'
-						/>
-					</div>
+									youtube: {
+										playerVars: { origin: 'https://www.youtube.com' },
+									},
+								}}
+								playing={true}
+								autoPlay={true}
+								loop={true}
+								controls={true}
+								muted={true}
+								width='100%'
+								height='100%'
+							/>
+						</div>
+					)}
+
 					<div className='display-item-info'>
 						<div className='display-item-header'>
 							<h2 className='display-item-name'>

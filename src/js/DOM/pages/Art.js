@@ -51,7 +51,7 @@ export default function Art({ currentName }) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<div className='display-item non-project-display-item'>
+						<div className='non-project-display-item'>
 							<div className='text-container'>
 								<h2 className='text'>
 									I've added a few paintings/drawings I've done which may not seem relevant but gives credence to my visual sense which I believe to be hugely

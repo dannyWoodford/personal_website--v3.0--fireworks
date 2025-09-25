@@ -1,10 +1,10 @@
-.tab-info {
+.category-info {
 	@extend .display-item;
 	display: none;
 }
 
-.has-tab-info {
-	.tab-info {
+.has-category-info {
+	.category-info {
 		display: flex;
 		justify-content: flex-start;
 		flex-direction: column;
@@ -20,7 +20,7 @@
 			white-space: nowrap;
 		}
 
-		& > .tab-info-details {
+		& > .category-info-details {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
@@ -35,7 +35,7 @@
 				flex-direction: column;
 			}
 
-			.tab-info-columns {
+			.category-info-columns {
 				display: block;
 				width: 50%;
 
@@ -78,7 +78,7 @@
 			min-width: 400px;
 		}
 
-		.tab-info-name {
+		.category-info-name {
 			font-weight: 900;
 			font-size: 20px;
 			margin-top: 0;
@@ -97,7 +97,7 @@
 			}
 		}
 
-		.tab-info-flex {
+		.category-info-flex {
 			display: flex;
 			flex-wrap: wrap;
 

@@ -16,4 +16,11 @@
 		background-image: url('../../../public/background-transparent-3.jpeg');
 		filter: invert(100%);
 	}
+
+	// to get rid of double border
+	// .page-container {
+	// 	box-shadow: none;
+	// 	border: none;
+	// 	padding: 0;
+	// }
 }

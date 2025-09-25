@@ -20,7 +20,7 @@ export type ProjectsItem = {
 };
 
 export type DisplayCategory = {
-	hasTabInfo?: boolean;
+	hasCategoryInfo?: boolean;
 	name?: string;
 	title?: string;
 	duration?: string;
@@ -948,7 +948,7 @@ export const projectsData: ProjectsItem[] = [
 
 export const displayCategoryData: DisplayCategoryObject = {
 	flatiron: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Flatiron School',
 		duration: '2019',
 		location: 'Manhattan, NY (On-Site)',
@@ -965,7 +965,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		duration: '2019 - Present',
 	},
 	brandgage: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Brandgage',
 		title: '3D Javascript Developer',
 		duration: 'June 2020 - March 2022',
@@ -984,7 +984,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		),
 	},
 	rocket: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Rocket Communications, Inc.',
 		title: '3D Developer / 3D Artist',
 		duration: 'March 2022 - Feb 2023',
@@ -1003,7 +1003,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		),
 	},
 	atlas: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Atlas Reality, Inc.',
 		title: '3D Application Developer',
 		duration: 'July 2023 - Jan 2024',
@@ -1021,7 +1021,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		),
 	},
 	quest: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Quest AI Solutions',
 		title: 'Senior Front End Developer',
 		duration: 'Oct 2023 - Aug 2024',
@@ -1039,7 +1039,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		),
 	},
 	subvrsive: {
-		hasTabInfo: true,
+		hasCategoryInfo: true,
 		name: 'Subvrsive',
 		title: 'Tech Lead (3D Web)',
 		duration: 'Aug 2024 - Aug 2025',

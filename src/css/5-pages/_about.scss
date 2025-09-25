@@ -64,14 +64,14 @@
 				height: 100%;
 				background: $background-color;
 				// background: #0026B3;
-				
+
 				// opacity: 0.7;
 				// background-image: url('../../../public/background.jpeg');
-// 				background-image: url('../../../public/background-transparent-3.jpeg');
-// 				background-repeat: no-repeat;
-// background-position: 50% 0;
-// background-size: cover;
-// 		filter: invert(100%);
+				// 				background-image: url('../../../public/background-transparent-3.jpeg');
+				// 				background-repeat: no-repeat;
+				// background-position: 50% 0;
+				// background-size: cover;
+				// 		filter: invert(100%);
 
 				z-index: 1000;
 				-webkit-transform: translateX(0);
@@ -79,23 +79,23 @@
 				transform: translateX(0);
 
 				&:after {
-				content: '';
-				position: fixed;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				opacity: 0.06;
-				background-image: url('../../../public/background-transparent-3.jpeg');
-				background-repeat: no-repeat;
-				background-position: 50% 0;
-				background-size: cover;
-				filter: invert(100%);
+					content: '';
+					position: fixed;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0.06;
+					background-image: url('../../../public/background-transparent-3.jpeg');
+					background-repeat: no-repeat;
+					background-position: 50% 0;
+					background-size: cover;
+					filter: invert(100%);
 
-				z-index: 1000;
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
-			}
+					z-index: 1000;
+					-webkit-transform: translateX(0);
+					-ms-transform: translateX(0);
+					transform: translateX(0);
+				}
 			}
 
 			.loader-section.section-left {
@@ -141,7 +141,7 @@
 				bottom: 25px;
 				border-radius: 50%;
 				border: 10px solid transparent;
-				
+
 				border-top-color: $border-top-color_2;
 				filter: url(#round) drop-shadow(-0px -8px 14px rgba(173, 167, 224, 0.5));
 				-webkit-animation: spin 3s linear infinite;
@@ -161,7 +161,7 @@
 				border: 8px solid transparent;
 				border-top-color: $border-top-color_3;
 				background: $background-color;
-				
+
 				filter: url(#round) drop-shadow(-0px -8px 14px rgba(173, 167, 224, 0.5));
 				-webkit-animation: spin 1.5s linear infinite;
 				animation: spin 1.5s linear infinite;
@@ -293,7 +293,7 @@
 	// 		text-indent: 2em;
 	// 	}
 
-	// 	.tab-info-flex {
+	// 	.category-info-flex {
 	// 		display: flex;
 	// 		flex-direction: row;
 

@@ -59,7 +59,7 @@ export default function Blender({ currentName }) {
 			<div className='max-width-container'>
 				<div className='container'>
 					<div className='page-container'>
-						<div className='display-item non-project-display-item'>
+						<div className='non-project-display-item'>
 							<div className='text-container'>
 								<h2 className='text'>
 									Here are some original blender models I have created. However, much of my experience with blender has been optimizing already built models to
