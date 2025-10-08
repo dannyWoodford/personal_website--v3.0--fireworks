@@ -1,15 +1,91 @@
+
 .display-item-info {
+	// height: 100%;
 	display: block;
-	text-align: left;
+	position: relative;
 	border-radius: 19px;
-	color: $color-off-white;
 	background: rgba(0, 0, 0, 0.3);
 	box-shadow: 3px 3px 13px $color-bg-pink-border-dark, -3px -3px 13px $color-bg-pink-border-light;
 	border: 1px solid $color-bg-pink-border;
-	overflow: hidden;
 	margin-top: 2vh;
-	padding: 15px;
+	padding-right: 5px;
+	overflow: hidden;
 	animation: 1s ease-out 0s 1 slideInFromLeft;
+
+	@include breakpoint($bp-large) {
+		margin-top: 20px;
+	}
+
+	.display-item-info-expand {
+		border: none;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 65px;
+		width: 100%;
+		cursor: pointer;
+		background: linear-gradient(transparent 0,rgba(0,0,0,0.9) 38px,rgb(0, 0, 0) 65px);
+		
+		.expand-btn-content {
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+			border: 2px solid;
+			border-color:rgba(94, 94, 94, 0.8);
+			padding: 4px 30px;
+			border-radius: 15px;
+			color: rgba(94, 94, 94, 0.8);
+			margin-bottom: 8px;
+			transition: color 0.3s ease, border-color 0.3s ease;
+			font-family: $font-family-alt-title;
+			letter-spacing: -0.5px;
+			
+			p, span {
+				margin: auto !important;
+			}
+
+			p {
+				color: rgba(135, 135, 135, 0.8);
+				font-weight: 700;
+				font-size: 18px !important;
+			}
+			
+			span {
+				font-size: 18px !important;
+				transform: rotate(90deg);
+				margin: 0;
+			}
+		}
+		
+		&:hover {
+			.expand-btn-content {
+				color: rgb(135, 135, 135);
+				border-color: rgb(135, 135, 135);
+
+				p {
+					color: rgb(172, 172, 172);
+				}
+			}
+		}
+	}
+	
+	.display-item-info-inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		color: $color-off-white;
+		overflow: auto;
+		padding: 15px;
+		
+		@include breakpoint($bp-large) {
+			padding: 20px;
+		}
+	}
 
 	h1,
 	h2,
@@ -17,10 +93,6 @@
 		color: $color-white;
 	}
 
-	@include breakpoint($bp-large) {
-		margin-top: 20px;
-		padding: 20px;
-	}
 
 	// @include breakpoint($bp-xlarge) {
 	// 	min-height: 255px;
@@ -138,11 +210,19 @@
 			margin-left: 0.3em;
 			line-height: 1.3;
 			font-family: $font-family-alt;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 	}
 
+	.display-item-bottom {
+		margin-top: auto
+	}
+
 	.display-item-tools {
-		margin: 3em 0 0 1em;
+		margin: 0 0 0 1em;
 		padding: 1em 1em 1em 2em;
 		border-top: 2px solid rgba(100, 200, 255, 0.3);
 		border-radius: 0 0 12px 12px;

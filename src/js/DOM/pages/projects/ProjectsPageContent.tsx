@@ -1,6 +1,7 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import useProjectStore from '../../../../store/ProjectStore.tsx'
+import { useLocation } from 'react-router-dom'
 
 import CategorySwitchContainer from './components/CategorySwitchContainer.tsx'
 import ProjectListContainer from './components/ProjectListContainer.tsx'
@@ -14,6 +15,14 @@ export default function ProjectsPageContent() {
 		displayItem,
 	} = useProjectStore()
 
+	const [expandInfo, setExpandInfo] = useState(false)
+
+	const location = useLocation()
+
+	useEffect(() => {
+		setExpandInfo(false)
+	}, [location.pathname])
+
 	const displayItemFactory = useMemo(() => {
 		let categoryArray = projectsItemsObject.filter(item => item.category === displayCategory)
 
@@ -22,13 +31,9 @@ export default function ProjectsPageContent() {
 
 	return (
 		<div className='projects-content'>
-			{/* <h2 className='tab-switch-message'>Choose between these tabs to see some of the projects I've worked on</h2> */}
-
 			<CategorySwitchContainer />
 
-			<div className="display-item-panel">
-				{displayCategoriesObject[displayCategory].hasCategoryInfo && <CategoryInfoContainer /> }
-
+			<div className="display-item-panel" style={{ maxHeight: expandInfo ? "none" : "85vh" }}>
 				<div className='display-item'>
 					{displayItem.type === 'image' ? (
 						<div className='display-item-image'>
@@ -61,46 +66,60 @@ export default function ProjectsPageContent() {
 					)}
 
 					<div className='display-item-info'>
-						<div className='display-item-header'>
-							<h2 className='display-item-name'>
-								<span className='display-item-name-main'>{displayItem.name}</span>
-								{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
-							</h2>
-						</div>
-
-						{displayItem.description && (
-							<div className='display-item-description'>
-								{displayItem.description}
-								{displayItem.message && <p className='display-item-message'>{displayItem.message}</p>}
+						<div className='display-item-info-inner' style={{ paddingBottom: expandInfo ? "20px" : "70px" }}>
+							<div className='display-item-header'>
+								<h2 className='display-item-name'>
+									<span className='display-item-name-main'>{displayItem.name}</span>
+									{displayItem.prefix && <span className='display-item-prefix'>{displayItem.prefix}</span>}
+								</h2>
 							</div>
-						)}
 
-						{displayItem.language && (
-							<section className='display-item-tools'>
-								<h3>Tech Stack</h3>
-								<p>{displayItem.language}</p>
-							</section>
-						)}
+							{displayItem.description && (
+								<div className='display-item-description'>
+									{displayItem.description}
+									{displayItem.message && <p className='display-item-message'>{displayItem.message}</p>}
+								</div>
+							)}
 
-						{(displayItem.demo || displayItem.github) && (
-							<nav className='link-container'>
-								{displayItem.github && (
-									<a href={displayItem.github} target='_blank' rel='noreferrer' className='link'>
-										GitHub
-									</a>
+							<div className='display-item-bottom'>
+								{displayItem.language && (
+									<section className='display-item-tools'>
+										<h3>Tech Stack</h3>
+										<p>{displayItem.language}</p>
+									</section>
 								)}
-								{displayItem.demo && displayItem.github && <span className='link-separator'>|</span>}
-								{displayItem.demo && (
-									<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link'>
-										Demo
-									</a>
+
+								{(displayItem.demo || displayItem.github) && (
+									<nav className='link-container'>
+										{displayItem.github && (
+											<a href={displayItem.github} target='_blank' rel='noreferrer' className='link'>
+												GitHub
+											</a>
+										)}
+										{displayItem.demo && displayItem.github && <span className='link-separator'>|</span>}
+										{displayItem.demo && (
+											<a href={displayItem.demo} target='_blank' rel='noreferrer' className='link'>
+												Demo
+											</a>
+										)}
+									</nav>
 								)}
-							</nav>
-						)}
+							</div>
+
+							<button className='display-item-info-expand' onClick={() => setExpandInfo(true)} style={{ display: expandInfo ? "none" : "flex" }}>
+								<div className='expand-btn-content'>
+									<p>Show more</p> <span>&#10095;</span>
+								</div>
+							</button>
+						</div>
 					</div>
 				</div>
+
+				<div className={'display-items-side-container'}>
+					{displayCategoriesObject[displayCategory].hasCategoryInfo && <CategoryInfoContainer />}
+					<div className={'display-items-container'}>{displayItemFactory}</div>
+				</div>
 			</div>
-			<div className={'display-items-container'}>{displayItemFactory}</div>
 		</div>
 	)
 }

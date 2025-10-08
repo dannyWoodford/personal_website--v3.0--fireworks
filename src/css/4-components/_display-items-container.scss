@@ -1,10 +1,15 @@
 .page-container {
 	.display-items-container {
+		@extend .display-item;
+
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		width: 100%;
-		padding: 3vh 0;
-		justify-content: center;
+		padding: 10px 0;
+		justify-content: flex-start;
+		flex-grow: 1;
+		overflow: auto;
+		// max-height: 1000px;
 
 		.item {
 			position: relative;
@@ -12,12 +17,12 @@
 			cursor: auto;
 			display: flex;
 			align-items: center;
-			width: 50%;
+			// width: 50%;
+			width: 100%;
 			margin: 0;
 			flex-grow: 1;
 
 			@include breakpoint($bp-medium) {
-				width: 33%;
 				padding: 15px 25px;
 				flex-grow: 0;
 			}
