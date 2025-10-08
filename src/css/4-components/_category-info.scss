@@ -12,10 +12,6 @@
 	overflow-y: auto; /* or scroll */
 	overflow-x: hidden; /* Prevent horizontal scrolling */
 
-	@include breakpoint($bp-xxlarge) {
-		padding: 30px;
-	}
-
 	p {
 		white-space: nowrap;
 	}
