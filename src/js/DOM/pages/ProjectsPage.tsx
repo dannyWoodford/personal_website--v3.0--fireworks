@@ -55,7 +55,7 @@ export default function ProjectsPage({ currentName }) {
 								}
 							/>
 							<Route
-								path='subvrsive/*'
+								path='rocket/*'
 								element={
 									<ProjectsPageContent />
 								}
