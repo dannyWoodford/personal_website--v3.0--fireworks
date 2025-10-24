@@ -1044,7 +1044,7 @@ export const displayCategoryData: DisplayCategoryObject = {
 		title: 'Tech Lead (3D Web)',
 		duration: 'Aug 2024 - Aug 2025',
 		location: 'New York, NY (On-Site)',
-		website: 'https://subvrsive.com//',
+		website: 'https://subvrsive.com/',
 		websiteDisplayName: 'Subvrsive.com',
 		description: (
 			<>
