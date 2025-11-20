@@ -859,7 +859,7 @@ export const projectsData: ProjectsItem[] = [
 		),
 		language: 'GLSL / React-Three-Fiber / Theatre.js / Stable Diffusion / Transparent Background',
 		type: 'video',
-		itemUrl: 'https://youtu.be/s4hUHDqrH5o&ab_channel=DannyWoodford',
+		itemUrl: 'https://youtu.be/h67GQO-KWwQ&ab_channel=DannyWoodford',
 		thumbnail: '/assets-by-page/home/thumbnails/projects/sac-logo-5.svg',
 		demo: 'https://www.coca-cola.com/za/en/offerings/share-a-coke/memory',
 		isFeature: true,
